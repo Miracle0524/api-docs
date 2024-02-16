@@ -1,0 +1,1371 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Manual Score Service",
+    "description": "This service takes care to calculate the score of the business based on the integration data.",
+    "contact": {},
+    "version": "1.0"
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://api.dev.joinworth.com/manual-score/api/v1",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/score/business/{businessID}": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Get Score",
+        "operationId": "GetScore",
+        "parameters": [
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": [
+                "f17295d4-5237-4079-8b18-8786eddf49f3"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Fri, 09 Feb 2024 09:30:58 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "3260"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"cbc-xnz7CmA0rwXQMhPkHXsVw0FeDZA\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/cutsomer/score-decision": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "SET customer Score Decision Matrix",
+        "operationId": "SETcustomerScoreDecisionMatrix",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SETcustomerScoreDecisionMatrixRequest"
+                  },
+                  {
+                    "examples": [
+                      {
+                        "customer_id": "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1"
+                      }
+                    ]
+                  }
+                ],
+                "contentMediaType": "application/json"
+              },
+              "example": {
+                "customer_id": "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Tue, 13 Feb 2024 06:26:34 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "706"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"2c2-31hvsRz2A9c8QZthiQSNiO6V2ZQ\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Success2"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "Success",
+                          "data": [
+                            {
+                              "id": "d85f7652-be8a-4829-aff6-a69798bcfa2c",
+                              "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                              "range_start": 700,
+                              "range_end": 850,
+                              "risk_level": "LOW",
+                              "decision": "APPROVE",
+                              "created_at": "2024-02-13T06:26:34.608Z"
+                            },
+                            {
+                              "id": "d0df9f38-dfaa-4f8a-833d-cce92cefc183",
+                              "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                              "range_start": 550,
+                              "range_end": 699,
+                              "risk_level": "MODERATE",
+                              "decision": "FURTHER_REVIEW_NEEDED",
+                              "created_at": "2024-02-13T06:26:34.608Z"
+                            },
+                            {
+                              "id": "34693167-ad09-4e59-bc59-9a1f4edb1e66",
+                              "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                              "range_start": 0,
+                              "range_end": 549,
+                              "risk_level": "HIGH",
+                              "decision": "DECLINE",
+                              "created_at": "2024-02-13T06:26:34.608Z"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Success",
+                  "data": [
+                    {
+                      "id": "d85f7652-be8a-4829-aff6-a69798bcfa2c",
+                      "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                      "range_start": 700,
+                      "range_end": 850,
+                      "risk_level": "LOW",
+                      "decision": "APPROVE",
+                      "created_at": "2024-02-13T06:26:34.608Z"
+                    },
+                    {
+                      "id": "d0df9f38-dfaa-4f8a-833d-cce92cefc183",
+                      "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                      "range_start": 550,
+                      "range_end": 699,
+                      "risk_level": "MODERATE",
+                      "decision": "FURTHER_REVIEW_NEEDED",
+                      "created_at": "2024-02-13T06:26:34.608Z"
+                    },
+                    {
+                      "id": "34693167-ad09-4e59-bc59-9a1f4edb1e66",
+                      "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                      "range_start": 0,
+                      "range_end": 549,
+                      "risk_level": "HIGH",
+                      "decision": "DECLINE",
+                      "created_at": "2024-02-13T06:26:34.608Z"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/score/cases/{caseID}": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Get Case Score",
+        "operationId": "GetCaseScore",
+        "parameters": [
+          {
+            "name": "caseID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": [
+                "c05df668-b968-446e-85a8-61b35635576c"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Tue, 13 Feb 2024 06:27:18 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "3237"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"ca5-AFSaZcEywDoF6tdGX2fEZwo84w0\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success3"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "Success": {
+        "title": "Success",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data"
+          }
+        }
+      },
+      "Data": {
+        "title": "Data",
+        "required": [
+          "id",
+          "created_at",
+          "business_id",
+          "customer_id",
+          "status",
+          "weighted_score_100",
+          "weighted_score_850",
+          "risk_level",
+          "score_decision",
+          "score_distribution",
+          "is_score_calculated"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "business_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "weighted_score_100": {
+            "type": "string"
+          },
+          "weighted_score_850": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "score_decision": {
+            "type": "string"
+          },
+          "score_distribution": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScoreDistribution"
+            },
+            "description": ""
+          },
+          "is_score_calculated": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ScoreDistribution": {
+        "title": "ScoreDistribution",
+        "required": [
+          "id",
+          "code",
+          "label",
+          "is_deleted",
+          "total_weightage",
+          "factors",
+          "score",
+          "score_100",
+          "score_850"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "is_deleted": {
+            "type": "boolean"
+          },
+          "total_weightage": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "factors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor"
+            },
+            "description": ""
+          },
+          "score": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "score_100": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "score_850": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          }
+        },
+        "examples": [
+          {
+            "id": 1,
+            "code": "CREDIT_UTILIZATION",
+            "label": "Credit Utilization",
+            "is_deleted": false,
+            "total_weightage": 20,
+            "factors": [
+              {
+                "id": 5,
+                "code": "CREDIT_UTILIZATION",
+                "label": "Credit Utilization",
+                "category_id": 1,
+                "is_deleted": false,
+                "parent_factor_id": null,
+                "weightage": 20,
+                "factor_id": 5,
+                "value": 0,
+                "score_100": 0,
+                "weighted_score_100": 0,
+                "score_850": 0,
+                "weighted_score_850": 0,
+                "status": "SUCCESS",
+                "log": "Success"
+              }
+            ],
+            "score": 0,
+            "score_100": 0,
+            "score_850": 0
+          }
+        ]
+      },
+      "Factor": {
+        "title": "Factor",
+        "required": [
+          "id",
+          "code",
+          "label",
+          "category_id",
+          "is_deleted",
+          "parent_factor_id",
+          "weightage",
+          "factor_id",
+          "value",
+          "score_100",
+          "weighted_score_100",
+          "score_850",
+          "weighted_score_850",
+          "status",
+          "log"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "category_id": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "is_deleted": {
+            "type": "boolean"
+          },
+          "parent_factor_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weightage": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "factor_id": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "value": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "score_100": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "weighted_score_100": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "score_850": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "weighted_score_850": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "contentEncoding": "int32"
+              },
+              {
+                "oneOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer",
+                    "contentEncoding": "int32"
+                  }
+                ]
+              }
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "log": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "id": 5,
+            "code": "CREDIT_UTILIZATION",
+            "label": "Credit Utilization",
+            "category_id": 1,
+            "is_deleted": false,
+            "parent_factor_id": null,
+            "weightage": 20,
+            "factor_id": 5,
+            "value": 0,
+            "score_100": 0,
+            "weighted_score_100": 0,
+            "score_850": 0,
+            "weighted_score_850": 0,
+            "status": "SUCCESS",
+            "log": "Success"
+          }
+        ]
+      },
+      "Success1": {
+        "title": "Success1",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data1"
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Success",
+            "data": {
+              "is_score_calculated": false
+            }
+          }
+        ]
+      },
+      "Data1": {
+        "title": "Data1",
+        "required": [
+          "is_score_calculated"
+        ],
+        "type": "object",
+        "properties": {
+          "is_score_calculated": {
+            "type": "boolean"
+          }
+        },
+        "examples": [
+          {
+            "is_score_calculated": false
+          }
+        ]
+      },
+      "SETcustomerScoreDecisionMatrixRequest": {
+        "title": "SETcustomerScoreDecisionMatrixRequest",
+        "required": [
+          "customer_id"
+        ],
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "customer_id": "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1"
+          }
+        ]
+      },
+      "Success2": {
+        "title": "Success2",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Data2"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Success",
+            "data": [
+              {
+                "id": "d85f7652-be8a-4829-aff6-a69798bcfa2c",
+                "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                "range_start": 700,
+                "range_end": 850,
+                "risk_level": "LOW",
+                "decision": "APPROVE",
+                "created_at": "2024-02-13T06:26:34.608Z"
+              },
+              {
+                "id": "d0df9f38-dfaa-4f8a-833d-cce92cefc183",
+                "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                "range_start": 550,
+                "range_end": 699,
+                "risk_level": "MODERATE",
+                "decision": "FURTHER_REVIEW_NEEDED",
+                "created_at": "2024-02-13T06:26:34.608Z"
+              },
+              {
+                "id": "34693167-ad09-4e59-bc59-9a1f4edb1e66",
+                "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+                "range_start": 0,
+                "range_end": 549,
+                "risk_level": "HIGH",
+                "decision": "DECLINE",
+                "created_at": "2024-02-13T06:26:34.608Z"
+              }
+            ]
+          }
+        ]
+      },
+      "Data2": {
+        "title": "Data2",
+        "required": [
+          "id",
+          "customer_id",
+          "range_start",
+          "range_end",
+          "risk_level",
+          "decision",
+          "created_at"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "range_start": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "range_end": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "decision": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "id": "d85f7652-be8a-4829-aff6-a69798bcfa2c",
+            "customer_id": "c268ef66-5ff0-4e69-85d9-9fbda147988a",
+            "range_start": 700,
+            "range_end": 850,
+            "risk_level": "LOW",
+            "decision": "APPROVE",
+            "created_at": "2024-02-13T06:26:34.608Z"
+          }
+        ]
+      },
+      "Success3": {
+        "title": "Success3",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data3"
+          }
+        }
+      },
+      "Data3": {
+        "title": "Data3",
+        "required": [
+          "id",
+          "created_at",
+          "case_id",
+          "status",
+          "weighted_score_100",
+          "weighted_score_850",
+          "risk_level",
+          "score_decision",
+          "score_distribution",
+          "is_score_calculated"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "weighted_score_100": {
+            "type": "string"
+          },
+          "weighted_score_850": {
+            "type": "string"
+          },
+          "risk_level": {
+            "type": "string"
+          },
+          "score_decision": {
+            "type": "string"
+          },
+          "score_distribution": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScoreDistribution"
+            },
+            "description": ""
+          },
+          "is_score_calculated": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
