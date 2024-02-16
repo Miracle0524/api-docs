@@ -59,15 +59,9 @@
       ]
     },
     {
-      "group": "Invitations",
-      "pages": [
-        "api-reference/auth/invites/invite-business",
-        "api-reference/auth/invites/accept-invitation"
-      ]
-    },
-    {
       "group": "Customers",
       "pages": [
+        "api-reference/auth/invites/accept-invitation",
         "api-reference/auth/customers/get-customer-subroles"
       ]
     },
@@ -84,6 +78,7 @@
     {
       "group": "Business",
       "pages": [
+        "api-reference/auth/invites/invite-business",
         "api-reference/case/businesses/get-customer-businesses",
         "api-reference/case/businesses/get-business-cases",
         "api-reference/case/cases/get-customer-case-by-id",
