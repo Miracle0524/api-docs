@@ -19,21 +19,17 @@
           "default": "e309149e-2bbc-4b4e-9272-c77f7fffb19c"
         }
       }
-    },
-    {
-      "url": "http://localhost:3000/api/v1/verification/businesses/6f983451-e8c3-4442-8d10-7a15d2af8863",
-      "variables": {}
     }
   ],
   "paths": {
-    "/banking/business/{businessID}/plaid/connect": {
+    "/banking/business/{businessID}/connect": {
       "post": {
         "tags": [
           "Banking"
         ],
-        "summary": "Plain Link Init",
+        "summary": "Connection Link Init",
         "description": "Creates a plaid link to get started with the banking flow.",
-        "operationId": "PlainLinkInit",
+        "operationId": "ConnectionLinkInit",
         "parameters": [
           {
             "name": "businessID",
@@ -558,14 +554,14 @@
       },
       "parameters": []
     },
-    "/banking/business/{businessID}/plaid/token/exchange": {
+    "/banking/business/{businessID}/authenticate": {
       "post": {
         "tags": [
           "Banking"
         ],
-        "summary": "Plaid Exchange Token",
+        "summary": "Exchange Token",
         "description": "This exchanges the public token with the plaid.",
-        "operationId": "PlaidExchangeToken",
+        "operationId": "ExchangeToken",
         "parameters": [
           {
             "name": "businessID",
@@ -601,7 +597,7 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/PlaidExchangeTokenRequest"
+                    "$ref": "#/components/schemas/ExchangeTokenRequest"
                   },
                   {
                     "examples": [
@@ -864,14 +860,14 @@
       },
       "parameters": []
     },
-    "/banking/business/{businessID}/plaid/refresh": {
+    "/banking/business/{businessID}/refresh": {
       "post": {
         "tags": [
           "Banking"
         ],
-        "summary": "Continue with existing Plaid Account",
+        "summary": "Continue with existing Banking Account",
         "description": "Continues the flow with existing linked plaid account.",
-        "operationId": "ContinuewithexistingPlaidAccount",
+        "operationId": "ContinuewithexistingBankingAccount",
         "parameters": [
           {
             "name": "businessID",
@@ -13736,13 +13732,13 @@
       },
       "parameters": []
     },
-    "/accounting/business/{businessID}/tax-status/consent/init": {
+    "/accounting/business/{businessID}/tax-filing/consent/init": {
       "get": {
         "tags": [
           "Taxation"
         ],
-        "summary": "Tax Status Consent Link Init",
-        "operationId": "TaxStatusConsentLinkInit",
+        "summary": "Tax Filing Consent Link Init",
+        "operationId": "TaxFilingConsentLinkInit",
         "parameters": [
           {
             "name": "businessID",
@@ -14010,7 +14006,7 @@
       },
       "parameters": []
     },
-    "/accounting/cases/{caseID}/tax-status": {
+    "/accounting/cases/{caseID}/tax-filing": {
       "get": {
         "tags": [
           "Taxation"
@@ -14312,13 +14308,13 @@
       },
       "parameters": []
     },
-    "/verification/businesses/{businessID}/persona/create-inquiry": {
+    "/verification/businesses/{businessID}/create-inquiry": {
       "post": {
         "tags": [
           "Verification"
         ],
-        "summary": "Persona Create Inquiry",
-        "operationId": "PersonaCreateInquiry",
+        "summary": "Create Inquiry",
+        "operationId": "CreateInquiry",
         "parameters": [
           {
             "name": "businessID",
@@ -14862,13 +14858,13 @@
       },
       "parameters": []
     },
-    "/verification/businesses/{businessID}/persona/complete-inquiry": {
+    "/verification/businesses/{businessID}/complete-inquiry": {
       "post": {
         "tags": [
           "Verification"
         ],
-        "summary": "Persona Complete Inquiry",
-        "operationId": "PersonaCompleteInquiry",
+        "summary": "Complete Inquiry",
+        "operationId": "CompleteInquiry",
         "parameters": [
           {
             "name": "businessID",
@@ -15128,13 +15124,13 @@
       },
       "parameters": []
     },
-    "/verification/businesses/{businessID}/persona": {
+    "/verification/businesses/{businessID}/details": {
       "get": {
         "tags": [
           "Verification"
         ],
-        "summary": "Get Persona Details",
-        "operationId": "GetPersonaDetails",
+        "summary": "Get Verification Details",
+        "operationId": "GetVerificationDetails",
         "parameters": [
           {
             "name": "businessID",
@@ -15679,13 +15675,13 @@
       },
       "parameters": []
     },
-    "/business-entity": {
+    "/verification/businesses/9ca483df-ce3b-4795-a6ad-a3f5177e3964/business-entity": {
       "get": {
         "tags": [
           "Middesk"
         ],
         "summary": "Get Verification Details",
-        "operationId": "GetVerificationDetails",
+        "operationId": "GetVerificationDetails1",
         "parameters": [],
         "responses": {
           "200": {
@@ -16428,7 +16424,574 @@
         ],
         "servers": [
           {
-            "url": "http://localhost:3000/api/v1/verification/businesses/6f983451-e8c3-4442-8d10-7a15d2af8863",
+            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "variables": {}
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/verification/businesses/{businessID}/create-business-entity": {
+      "post": {
+        "tags": [
+          "Middesk"
+        ],
+        "summary": "Update Business",
+        "operationId": "UpdateBusiness",
+        "parameters": [
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateBusinessRequest"
+                  },
+                  {
+                    "examples": [
+                      {
+                        "name": "Test Partial Inactive - rename"
+                      }
+                    ]
+                  }
+                ],
+                "contentMediaType": "application/json"
+              },
+              "example": {
+                "name": "Test Partial Inactive - rename"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "69"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"45-HOaQAFgPs+oebGy70zvOQ65Yux8\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Thu, 14 Dec 2023 05:35:42 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Keep-Alive": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "timeout=5"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Nointegrationsfound"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "No integration data found.",
+                          "data": []
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "No integration data found.",
+                  "data": []
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "variables": {}
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/verification/businesses/2c261e34-8697-4346-9a06-d33b242b106e/verify-business-entity": {
+      "post": {
+        "tags": [
+          "Middesk"
+        ],
+        "summary": "Verify Business",
+        "operationId": "VerifyBusiness",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "69"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"45-HOaQAFgPs+oebGy70zvOQ65Yux8\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Thu, 14 Dec 2023 05:35:42 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Keep-Alive": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "timeout=5"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Nointegrationsfound"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "No integration data found.",
+                          "data": []
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "No integration data found.",
+                  "data": []
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.dev.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -16576,8 +17139,8 @@
           }
         ]
       },
-      "PlaidExchangeTokenRequest": {
-        "title": "PlaidExchangeTokenRequest",
+      "ExchangeTokenRequest": {
+        "title": "ExchangeTokenRequest",
         "required": [
           "public_token"
         ],
@@ -48713,6 +49276,166 @@
                 "Business entity verification not found for 6f983451-e8c3-4442-8d10-7a15d2af8864"
               ]
             }
+          }
+        ]
+      },
+      "UpdateBusinessRequest": {
+        "title": "UpdateBusinessRequest",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "name": "Test Partial Inactive - rename"
+          }
+        ]
+      },
+      "Nointegrationsfound": {
+        "title": "Nointegrationsfound",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "No integration data found.",
+            "data": []
+          }
+        ]
+      },
+      "Getallintegraionstatusdetails": {
+        "title": "Getallintegraionstatusdetails",
+        "required": [
+          "status",
+          "message",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Data26"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Integrations data fetch successfully.",
+            "data": [
+              {
+                "category": "Verification",
+                "integrations": [
+                  {
+                    "id": 3,
+                    "status": "COMPLETED",
+                    "name": "Persona"
+                  }
+                ]
+              },
+              {
+                "category": "Accounting",
+                "integrations": [
+                  {
+                    "id": 2,
+                    "status": "COMPLETED",
+                    "name": "Quickbooks"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "Data26": {
+        "title": "Data26",
+        "required": [
+          "category",
+          "integrations"
+        ],
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "integrations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Integration"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "category": "Verification",
+            "integrations": [
+              {
+                "id": 3,
+                "status": "COMPLETED",
+                "name": "Persona"
+              }
+            ]
+          }
+        ]
+      },
+      "Integration": {
+        "title": "Integration",
+        "required": [
+          "id",
+          "status",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "id": 3,
+            "status": "COMPLETED",
+            "name": "Persona"
           }
         ]
       }
