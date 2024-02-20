@@ -103,5 +103,8 @@
       ]
     }
   ],
-  "footerSocials": {}
+  "footerSocials": {},
+  "feedback": {
+    "thumbsRating": true
+  }
 }
