@@ -9,7 +9,7 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "servers": [
     {
-      "url": "https://api.dev.joinworth.com/case/api/v1",
+      "url": "https://api.joinworth.com/case/api/v1",
       "variables": {}
     },
     {
@@ -531,7 +531,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -809,7 +809,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -1346,7 +1346,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -1857,7 +1857,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -2364,7 +2364,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -2640,7 +2640,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -2997,7 +2997,7 @@
                             "metadata": {
                               "applicant": "John Doe",
                               "applicant_id": "a4d9f3f3-8211-4fcd-bfa5-3b790774ce58",
-                              "email": "applicant@joinworth.com",
+                              "email": "applicant@email.com",
                               "subscription_id": "c42dd3da-85ed-425f-961c-d3a60c63038c",
                               "subscription_plan_id": "price_1OeFz5G10BvzIqLfgEcH4ggr"
                             },
@@ -3168,7 +3168,7 @@
                     "metadata": {
                       "applicant": "John Doe",
                       "applicant_id": "a4d9f3f3-8211-4fcd-bfa5-3b790774ce58",
-                      "email": "applicant@joinworth.com",
+                      "email": "applicant@email.com",
                       "subscription_id": "c42dd3da-85ed-425f-961c-d3a60c63038c",
                       "subscription_plan_id": "price_1OeFz5G10BvzIqLfgEcH4ggr"
                     },
@@ -3701,7 +3701,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -4019,7 +4019,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -4572,7 +4572,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -5116,7 +5116,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -5448,7 +5448,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -6310,7 +6310,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -6560,7 +6560,7 @@
                                 "id": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
                                 "first_name": "Sandbox",
                                 "last_name": "Customer Admin",
-                                "email": "sandbox-test+customer@joinworth.com",
+                                "email": "dummy.customer@email.com",
                                 "mobile": null,
                                 "is_email_verified": true,
                                 "is_first_login": false,
@@ -6602,7 +6602,7 @@
                         "id": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
                         "first_name": "Sandbox",
                         "last_name": "Customer Admin",
-                        "email": "sandbox-test+customer@joinworth.com",
+                        "email": "dummy.customer@email.com",
                         "mobile": null,
                         "is_email_verified": true,
                         "is_first_login": false,
@@ -6642,7 +6642,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -6964,7 +6964,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -7242,7 +7242,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -7552,7 +7552,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -7604,7 +7604,7 @@
                           {
                             "first_name": "Charles",
                             "last_name": "Setyu",
-                            "email": "setu.singh+765@joinworth.com"
+                            "email": "applicant@email.com"
                           }
                         ]
                       }
@@ -7625,7 +7625,7 @@
                   {
                     "first_name": "Charles",
                     "last_name": "Setyu",
-                    "email": "setu.singh+765@joinworth.com"
+                    "email": "applicant@email.com"
                   }
                 ]
               }
@@ -7647,7 +7647,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -7929,7 +7929,7 @@
         "deprecated": false,
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -8220,7 +8220,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -8564,7 +8564,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -8893,7 +8893,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -9203,7 +9203,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -9757,7 +9757,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -10053,7 +10053,7 @@
                               "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                               "first_name": "Sandbox",
                               "last_name": "Applicant",
-                              "email": "sandbox-test+applicant@joinworth.com",
+                              "email": "dummy.applicant@email.com",
                               "mobile": null,
                               "is_email_verified": true,
                               "is_first_login": false,
@@ -10079,7 +10079,7 @@
                                 "first_name": "Sandbox",
                                 "last_name": "Applicant",
                                 "ssn": "844148259",
-                                "email": "sandbox-test+applicant+1@joinworth.com",
+                                "email": "dummy.applicant@email.com",
                                 "mobile": "6073213231",
                                 "date_of_birth": "2024-02-08",
                                 "address_apartment": null,
@@ -10154,7 +10154,7 @@
                       "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                       "first_name": "Sandbox",
                       "last_name": "Applicant",
-                      "email": "sandbox-test+applicant@joinworth.com",
+                      "email": "dummy.applicant@email.com",
                       "mobile": null,
                       "is_email_verified": true,
                       "is_first_login": false,
@@ -10180,7 +10180,7 @@
                         "first_name": "Sandbox",
                         "last_name": "Applicant",
                         "ssn": "844148259",
-                        "email": "sandbox-test+applicant+1@joinworth.com",
+                        "email": "dummy.applicant@email.com",
                         "mobile": "6073213231",
                         "date_of_birth": "2024-02-08",
                         "address_apartment": null,
@@ -10220,7 +10220,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/case/api/v1",
+            "url": "https://api.joinworth.com/case/api/v1",
             "variables": {}
           }
         ]
@@ -11575,7 +11575,7 @@
               "metadata": {
                 "applicant": "John Doe",
                 "applicant_id": "a4d9f3f3-8211-4fcd-bfa5-3b790774ce58",
-                "email": "applicant@joinworth.com",
+                "email": "applicant@email.com",
                 "subscription_id": "c42dd3da-85ed-425f-961c-d3a60c63038c",
                 "subscription_plan_id": "price_1OeFz5G10BvzIqLfgEcH4ggr"
               },
@@ -12005,7 +12005,7 @@
             "metadata": {
               "applicant": "John Doe",
               "applicant_id": "a4d9f3f3-8211-4fcd-bfa5-3b790774ce58",
-              "email": "applicant@joinworth.com",
+              "email": "applicant@email.com",
               "subscription_id": "c42dd3da-85ed-425f-961c-d3a60c63038c",
               "subscription_plan_id": "price_1OeFz5G10BvzIqLfgEcH4ggr"
             },
@@ -12720,7 +12720,7 @@
           {
             "applicant": "John Doe",
             "applicant_id": "a4d9f3f3-8211-4fcd-bfa5-3b790774ce58",
-            "email": "applicant@joinworth.com",
+            "email": "applicant@email.com",
             "subscription_id": "c42dd3da-85ed-425f-961c-d3a60c63038c",
             "subscription_plan_id": "price_1OeFz5G10BvzIqLfgEcH4ggr"
           }
@@ -14171,7 +14171,7 @@
                   "id": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
                   "first_name": "Sandbox",
                   "last_name": "Customer Admin",
-                  "email": "sandbox-test+customer@joinworth.com",
+                  "email": "dummy.customer@email.com",
                   "mobile": null,
                   "is_email_verified": true,
                   "is_first_login": false,
@@ -14232,7 +14232,7 @@
                 "id": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
                 "first_name": "Sandbox",
                 "last_name": "Customer Admin",
-                "email": "sandbox-test+customer@joinworth.com",
+                "email": "dummy.customer@email.com",
                 "mobile": null,
                 "is_email_verified": true,
                 "is_first_login": false,
@@ -14336,7 +14336,7 @@
             "id": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
             "first_name": "Sandbox",
             "last_name": "Customer Admin",
-            "email": "sandbox-test+customer@joinworth.com",
+            "email": "dummy.customer@email.com",
             "mobile": null,
             "is_email_verified": true,
             "is_first_login": false,
@@ -14989,7 +14989,7 @@
               {
                 "first_name": "Charles",
                 "last_name": "Setyu",
-                "email": "setu.singh+765@joinworth.com"
+                "email": "applicant@email.com"
               }
             ]
           }
@@ -15040,7 +15040,7 @@
           {
             "first_name": "Charles",
             "last_name": "Setyu",
-            "email": "setu.singh+765@joinworth.com"
+            "email": "applicant@email.com"
           }
         ]
       },
@@ -16200,7 +16200,7 @@
                 "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                 "first_name": "Sandbox",
                 "last_name": "Applicant",
-                "email": "sandbox-test+applicant@joinworth.com",
+                "email": "dummy.applicant@email.com",
                 "mobile": null,
                 "is_email_verified": true,
                 "is_first_login": false,
@@ -16226,7 +16226,7 @@
                   "first_name": "Sandbox",
                   "last_name": "Applicant",
                   "ssn": "844148259",
-                  "email": "sandbox-test+applicant+1@joinworth.com",
+                  "email": "dummy.applicant@email.com",
                   "mobile": "6073213231",
                   "date_of_birth": "2024-02-08",
                   "address_apartment": null,
@@ -16363,7 +16363,7 @@
               "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
               "first_name": "Sandbox",
               "last_name": "Applicant",
-              "email": "sandbox-test+applicant@joinworth.com",
+              "email": "dummy.applicant@email.com",
               "mobile": null,
               "is_email_verified": true,
               "is_first_login": false,
@@ -16389,7 +16389,7 @@
                 "first_name": "Sandbox",
                 "last_name": "Applicant",
                 "ssn": "844148259",
-                "email": "sandbox-test+applicant+1@joinworth.com",
+                "email": "dummy.applicant@email.com",
                 "mobile": "6073213231",
                 "date_of_birth": "2024-02-08",
                 "address_apartment": null,

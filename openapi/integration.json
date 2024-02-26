@@ -9,7 +9,7 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "servers": [
     {
-      "url": "https://api.dev.joinworth.com/integration/api/v1",
+      "url": "https://api.joinworth.com/integration/api/v1",
       "variables": {}
     },
     {
@@ -547,7 +547,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -853,7 +853,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -1147,7 +1147,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -2604,7 +2604,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -2910,7 +2910,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -3212,7 +3212,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -12665,7 +12665,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -12718,7 +12718,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -12781,7 +12781,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -13034,7 +13034,7 @@
         "deprecated": false,
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -13090,7 +13090,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -13385,7 +13385,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -13725,7 +13725,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -13999,7 +13999,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -14301,7 +14301,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -14581,7 +14581,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -15117,7 +15117,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -15668,7 +15668,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -16424,7 +16424,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -16726,7 +16726,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
@@ -16991,7 +16991,7 @@
         ],
         "servers": [
           {
-            "url": "https://api.dev.joinworth.com/integration/api/v1",
+            "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
           }
         ]
