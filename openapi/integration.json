@@ -13630,7 +13630,7 @@
                           "status": "success",
                           "message": "Success",
                           "data": {
-                            "verdata": {
+                            "public_records": {
                               "id": "3dbd27f1-bd40-4484-9da3-0dbcfa3bfe3b",
                               "business_integration_task_id": "2e054b6e-2096-4f31-9cea-ccd611439b91",
                               "number_of_business_liens": "None Found",
@@ -13676,7 +13676,7 @@
                   "status": "success",
                   "message": "Success",
                   "data": {
-                    "verdata": {
+                    "public_records": {
                       "id": "3dbd27f1-bd40-4484-9da3-0dbcfa3bfe3b",
                       "business_integration_task_id": "2e054b6e-2096-4f31-9cea-ccd611439b91",
                       "number_of_business_liens": "None Found",
@@ -47594,7 +47594,7 @@
             "status": "success",
             "message": "Success",
             "data": {
-              "verdata": {
+              "public_records": {
                 "id": "3dbd27f1-bd40-4484-9da3-0dbcfa3bfe3b",
                 "business_integration_task_id": "2e054b6e-2096-4f31-9cea-ccd611439b91",
                 "number_of_business_liens": "None Found",
@@ -47636,17 +47636,17 @@
       "Data12": {
         "title": "Data12",
         "required": [
-          "verdata"
+          "public_records"
         ],
         "type": "object",
         "properties": {
-          "verdata": {
-            "$ref": "#/components/schemas/Verdata"
+          "public_records": {
+            "$ref": "#/components/schemas/public_records"
           }
         },
         "examples": [
           {
-            "verdata": {
+            "public_records": {
               "id": "3dbd27f1-bd40-4484-9da3-0dbcfa3bfe3b",
               "business_integration_task_id": "2e054b6e-2096-4f31-9cea-ccd611439b91",
               "number_of_business_liens": "None Found",
@@ -47684,8 +47684,8 @@
           }
         ]
       },
-      "Verdata": {
-        "title": "Verdata",
+      "public_records": {
+        "title": "public_records",
         "required": [
           "id",
           "business_integration_task_id",
