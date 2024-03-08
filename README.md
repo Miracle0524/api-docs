@@ -63,5 +63,11 @@ For example:
 npx @mintlify/scraping@latest openapi-file openapi/file -o api-reference/folder
 ```
 
+If you want to overwrite existing files use `--overwrite` flag
+```
+npx @mintlify/scraping@latest openapi-file openapi/file -o api-reference/folder --overwrite
+```
+
+
 ## Summary
 Now you're all set towork with Mintlify locally. Happy coding!
