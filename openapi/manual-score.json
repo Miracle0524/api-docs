@@ -19,8 +19,8 @@
         "tags": [
           "Misc"
         ],
-        "summary": "Get Score",
-        "operationId": "GetScore",
+        "summary": "Get Business Score",
+        "operationId": "GetBusinessScore",
         "parameters": [
           {
             "name": "businessID",
