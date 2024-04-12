@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Manual Score Service",
+    "title": "Score Service",
     "description": "This service takes care to calculate the score of the business based on the integration data.",
     "contact": {},
     "version": "1.0"
@@ -9,7 +9,7 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "servers": [
     {
-      "url": "https://api.joinworth.com/manual-score/api/v1",
+      "url": "https://api.joinworth.com/score/api/v1",
       "variables": {}
     }
   ],

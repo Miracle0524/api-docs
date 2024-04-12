@@ -5,7 +5,7 @@
     "openapi/auth.json",
     "openapi/case.json",
     "openapi/integration.json",
-    "openapi/manual-score.json"
+    "openapi/score.json"
   ],
   "logo": {
     "dark": "/logo/worth-horizontal-logo-dark.svg",
@@ -96,7 +96,7 @@
     {
       "group": "Case Details",
       "pages": [
-        "api-reference/manual-score/score/get-case-score",
+        "api-reference/score/score/get-case-score",
         "api-reference/integration/banking/banking-information",
         "api-reference/integration/accounting/get-reports",
         "api-reference/integration/taxation/tax-filing",
