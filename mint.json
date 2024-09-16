@@ -31,6 +31,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Webhooks (Beta)",
+      "url": "webhooks"
     }
   ],
   "primaryTab": {
@@ -101,6 +105,21 @@
         "api-reference/integration/accounting/get-reports",
         "api-reference/integration/taxation/tax-filing",
         "api-reference/integration/public-records/public-records"
+      ]
+    },
+    {
+      "group": "Webhooks (Beta)",
+      "pages": [
+        "webhooks/webhooks"
+      ]
+    },
+    {
+      "group": "Sample Payloads",
+      "pages": [
+        "webhooks/business",
+        "webhooks/score",
+        "webhooks/case",
+        "webhooks/integration"
       ]
     }
   ],

@@ -1,0 +1,83 @@
+---
+title: Business - Sample Payload
+description: 'Sample payload for Business'
+sidebarTitle: Business
+---
+
+## Business events
+The table below lists the Webhook events available for business.
+
+
+| Event                       | Description                                                                       |
+| --------                    | -------------------------------------------------------                           |
+| `business.invited`          | Triggered when a business is created and invitation has been sent.                |
+| `business.updated`          | Triggered when a business is updated.                                             |
+
+
+## business.invited / business.updated
+Below payload is dispatched on business creation or updation. Each event will have the business object.
+<Note>The update event will dispatch the whole business even if you have updated few fields for a business</Note>
+
+```json
+{
+  "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
+  "eventType": "business.created",
+  "payload": {
+    "id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
+    "name": "refresh score test 1",
+    "tin": "XXXXX7204",
+    "address_apartment": null,
+    "address_line_1": "3614, Cassopolis Street,",
+    "address_line_2": null,
+    "address_city": "Elkhart",
+    "address_state": "Indiana",
+    "address_postal_code": "46514",
+    "address_country": "USA",
+    "created_at": "2024-08-01T09:24:36.049Z",
+    "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+    "updated_at": "2024-08-01T09:40:40.605Z",
+    "updated_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+    "mobile": null,
+    "official_website": null,
+    "public_website": null,
+    "social_account": null,
+    "status": "VERIFIED",
+    "naics_code": null,
+    "naics_title": null,
+    "industry": {
+      "id": 1,
+      "name": "Agriculture, Forestry, Fishing and Hunting",
+      "code": "agriculture_forestry_fishing_and_hunting",
+      "sector_code": "11",
+      "created_at": "2024-04-24T17:56:46.034418",
+      "updated_at": "2024-04-24T17:56:46.034418"
+    },
+    "is_monitoring_enabled": true,
+    "subscription": {
+      "status": "SUBSCRIBED",
+      "created_at": "2024-08-01T09:42:20.686Z",
+      "updated_at": "2024-09-01T10:45:54.972Z"
+    },
+    "business_names": [
+      {
+        "name": "refresh score test 1",
+        "is_primary": true
+      }
+    ],
+    "business_addresses": [
+      {
+        "line_1": "3614, Cassopolis Street,",
+        "apartment": null,
+        "city": "Elkhart",
+        "state": "Indiana",
+        "country": "USA",
+        "postal_code": "46514",
+        "mobile": null,
+        "is_primary": true
+      }
+    ]
+  },
+  "id": "msg_d3frOrhsgdvvtrXKQmoEYga2",
+  "timestamp": "2024-09-10T17:15:22Z"
+}
+```

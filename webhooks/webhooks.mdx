@@ -1,0 +1,33 @@
+---
+title: About Webhooks
+description: 'Use webhooks to get notified about events related to the WorthAI flow such as Business, Applicant, Score.'
+
+---
+
+## Example
+Suppose you have subscribed to the `business.created` webhook event, you will receive a notification every time a new business is created.
+
+## Webhook Vs API
+
+APIs send you the data when you request it. For Webhooks, you do not need to make a request. You receive the data when it is available.
+
+> ### Example
+> If you need to know whether a Applicant has accepted the invtation using APIs, you need to keep polling every few seconds until applicant has accepted the invitation. However, if you are using Webhooks, you can configure a webhook event business.onboarded to receive notifications when a business has accepted invitation and onboarded.
+
+
+> ## Webhooks
+
+<CardGroup cols={2}>
+  <Card title="Business Webhooks" icon="square-1" href="../webhooks/business">
+    Webhooks for events related to Business
+  </Card>
+  <Card title="Score Webhooks" icon="square-2" href="../webhooks/score">
+    Webhooks for events related to Score
+  </Card>
+  <Card title="Case Webhooks" icon="square-3" href="../webhooks/score">
+    Webhooks for events related to Case
+  </Card>
+  <Card title="Integration Webhooks" icon="square-4" href="../webhooks/integration">
+    Webhooks for events related to Integrations
+  </Card>
+</CardGroup>

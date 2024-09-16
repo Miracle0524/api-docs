@@ -1,0 +1,145 @@
+---
+title: Case - Sample Payload
+description: 'Sample payload for Case'
+sidebarTitle: Case
+---
+
+## Score events
+The table below lists the Webhook events available for case.
+
+
+| Event                             | Description                                                                       |
+| --------                          | -------------------------------------------------------                           |
+| `case.created`                    | Triggered when a case is created for a business.                                  |
+| `case.status_updated`             | Triggered when the status of a case is updated for a business.                    |
+
+
+## case.created
+Below payload is dispatched on case creation.
+
+```json
+{
+    "status": "success",
+    "message": "Success",
+    "data": {
+        "id": "52e8a7b1-0de4-4e1b-81e7-b3d656419059",
+        "applicant_id": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+        "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+        "status": {
+            "id": "UNDER_MANUAL_REVIEW",
+            "code": 4,
+            "label": "UNDER MANUAL REVIEW"
+        },
+        "created_at": "2024-08-01T09:40:22.186012",
+        "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+        "updated_at": "2024-09-01T05:00:04.256657",
+        "updated_by": "e9d43901-3fc6-4ee9-97be-74cd23b39aa0",
+        "business_id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
+        "case_type": 1,
+        "assignee": {},
+        "assigner": null,
+        "business": {
+            "id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
+            "name": "refresh score test 1",
+            "tin": "XXXXX7204",
+            "address_apartment": null,
+            "address_line_1": "3614, Cassopolis Street,",
+            "address_line_2": null,
+            "address_city": "Elkhart",
+            "address_state": "Indiana",
+            "address_postal_code": "46514",
+            "address_country": "USA",
+            "created_at": "2024-08-01T09:24:36.0497",
+            "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+            "updated_at": "2024-08-01T09:40:40.605416",
+            "updated_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+            "mobile": null,
+            "official_website": null,
+            "public_website": null,
+            "social_account": null,
+            "status": "VERIFIED",
+            "naics_code": null,
+            "naics_title": null,
+            "industry": {
+                "id": 1,
+                "name": "Agriculture, Forestry, Fishing and Hunting",
+                "code": "agriculture_forestry_fishing_and_hunting",
+                "sector_code": "11",
+                "created_at": "2024-04-24T17:56:46.034418",
+                "updated_at": "2024-04-24T17:56:46.034418"
+            }
+        },
+        "status_history": [
+            {
+                "id": 3,
+                "status": "ONBOARDING",
+                "created_at": "2024-08-01T09:40:22.186Z",
+                "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb"
+            },
+            {
+                "id": 12,
+                "status": "SUBMITTED",
+                "created_at": "2024-08-01T09:42:15.966Z",
+                "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb"
+            }
+        ],
+        "business_names": [
+            {
+                "name": "refresh score test 1",
+                "is_primary": true
+            }
+        ],
+        "business_addresses": [
+            {
+                "line_1": "3614, Cassopolis Street,",
+                "apartment": null,
+                "city": "Elkhart",
+                "state": "Indiana",
+                "country": "USA",
+                "postal_code": "46514",
+                "mobile": null,
+                "is_primary": true
+            }
+        ]
+    }
+}
+```
+
+## case.status_updated
+Below payload is dispatched on case stauts change.
+
+```json
+{
+    "status": "success",
+    "message": "Success",
+    "data": {
+        "id": "52e8a7b1-0de4-4e1b-81e7-b3d656419059",
+        "applicant_id": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+        "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+        "status": {
+            "id": "UNDER_MANUAL_REVIEW",
+            "code": 4,
+            "label": "UNDER MANUAL REVIEW"
+        },
+        "created_at": "2024-08-01T09:40:22.186012",
+        "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
+        "updated_at": "2024-09-01T05:00:04.256657",
+        "updated_by": "e9d43901-3fc6-4ee9-97be-74cd23b39aa0",
+        "business_id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
+        "status_history": [
+            {
+                "id": 3,
+                "status": "ONBOARDING",
+                "created_at": "2024-08-01T09:40:22.186Z",
+                "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb"
+            },
+            {
+                "id": 12,
+                "status": "SUBMITTED",
+                "created_at": "2024-08-01T09:42:15.966Z",
+                "created_by": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb"
+            }
+        ]
+    }
+}
+```
