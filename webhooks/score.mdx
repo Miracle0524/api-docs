@@ -11,7 +11,7 @@ The table below lists the Webhook events available for score.
 | Event                       | Description                                                                       |
 | --------                    | -------------------------------------------------------                           |
 | `score.generated`           | Triggered when a score is generated for a business.                |
-| `score.refresh`             | Triggered when a score is refreshed for a business.                               |
+| `score.refreshed`           | Triggered when a score is refreshed for a business.                               |
 
 
 ## score.generated / score.refresh
@@ -19,7 +19,7 @@ Below payload is dispatched on business's score gneration or refresh.
 ```json
 {
   "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
-  "eventType": "business.created",
+  "eventType": "score.generated | score.refreshed",
   "payload": {
     "score_trigger_id": "bbde8bb6-316f-4121-ac77-f17c35a0e8ea",
     "business_id": "2f2616ae-d695-42c8-ba94-da023abee546",
