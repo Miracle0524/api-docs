@@ -119,7 +119,9 @@
         "webhooks/business",
         "webhooks/score",
         "webhooks/case",
-        "webhooks/integration"
+        "webhooks/integration",
+        "webhooks/onboarding",
+        "webhooks/risk"
       ]
     }
   ],

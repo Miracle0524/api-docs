@@ -1,13 +1,34 @@
 ---
 title: Integation - Sample Payload
 description: 'Sample payload for Integation'
-sidebarTitle: Integration (WIP)
+sidebarTitle: Integration
 ---
 
 ## Integtation events
 
 | Event                             | Description                                                                       |
 | --------                          | -------------------------------------------------------                           |
-| `integration.added`               | Triggered when applicant (business) adds an integration.                          |
-| `integration.removed`             | Triggered when applicant (business) removes an integration.                       |
-| `integration.failed`              | Triggered when an integration fails.                                              |
+| `integration.connected`           | Triggered when an integration is connected for a business.                        |
+| `integration.disconnected`        | Triggered when an integration is disconnected for a business.                     |
+| `integration.failed`              | Triggered when an integration fails for a business                                |
+
+
+## integration.connected / integration.disconnected / integration.failed
+Below payload is dispatched whenever an integration for a business is connected, disconnected or failed.. 
+
+```json
+{
+  "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
+  "eventType": "integration.connected | integration.disconnected | integration.failed",
+  "payload": {
+    "case_id": "bbde8bb6-316f-4121-ac77-f17c35a0e8ea",
+    "business_id": "2f2616ae-d695-42c8-ba94-da023abee546",
+    "business_name": "XYZ LTD.",
+    "integration_category": "Banking",
+    "integration_platform": "Plaid"
+    "status": "CONNECTED | DISCONNECTED | FAILED"
+  },
+  "id": "msg_d3frOrhsgdvvtrXKQmoEYga2",
+  "timestamp": "2024-09-10T17:15:22Z"
+}
+```
