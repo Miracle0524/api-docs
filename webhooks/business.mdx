@@ -14,14 +14,13 @@ The table below lists the Webhook events available for business.
 | `business.updated`          | Triggered when a business is updated.                                             |
 
 
-## business.invited / business.updated
+## business.invited | business.updated
 Below payload is dispatched on business creation or updation. Each event will have the business object.
 <Note>The update event will dispatch the whole business even if you have updated few fields for a business</Note>
 
 ```json
 {
-  "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
-  "eventType": "business.created",
+  "event_type": "business.created",
   "payload": {
     "id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
     "name": "refresh score test 1",
@@ -76,8 +75,6 @@ Below payload is dispatched on business creation or updation. Each event will ha
         "is_primary": true
       }
     ]
-  },
-  "id": "msg_d3frOrhsgdvvtrXKQmoEYga2",
-  "timestamp": "2024-09-10T17:15:22Z"
+  }
 }
 ```

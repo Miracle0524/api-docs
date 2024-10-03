@@ -19,9 +19,8 @@ Below payload is dispatched on case creation.
 
 ```json
 {
-    "status": "success",
-    "message": "Success",
-    "data": {
+    "event_type": "case.created",
+    "payload": {
         "id": "52e8a7b1-0de4-4e1b-81e7-b3d656419059",
         "applicant_id": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
         "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
@@ -110,9 +109,8 @@ Below payload is dispatched on case stauts change.
 
 ```json
 {
-    "status": "success",
-    "message": "Success",
-    "data": {
+    "event_type": "case.status_updated",
+    "payload": {
         "id": "52e8a7b1-0de4-4e1b-81e7-b3d656419059",
         "applicant_id": "846ced9e-45ff-44fe-b180-0a54ec1dc5cb",
         "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",

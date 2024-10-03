@@ -15,13 +15,12 @@ sidebarTitle: Onboarding
 
 
 
-## onboarding.invited / onboarding.invite_accepted / onboarding.invite_completed / onboarding.invite_expired
+## onboarding.invited | onboarding.invite_accepted | onboarding.invite_completed | onboarding.invite_expired
 Below payload is dispatched whenever an onboarding invitation is sent, accepted, completed or expired.
 
 ```json
 {
-  "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
-  "eventType": "integration.connected | integration.disconnected | integration.failed",
+  "event_type": "integration.connected | integration.disconnected | integration.failed",
   "payload": {
     "case_id": "bbde8bb6-316f-4121-ac77-f17c35a0e8ea",
     "business_id": "2f2616ae-d695-42c8-ba94-da023abee546",
@@ -29,8 +28,6 @@ Below payload is dispatched whenever an onboarding invitation is sent, accepted,
     "is_no_login": "true | false",
     "create_business": "true | false",
     "status": "INVITED | ACCEPTED | COMPLETED | EXPIRED"
-  },
-  "id": "msg_d3frOrhsgdvvtrXKQmoEYga2",
-  "timestamp": "2024-09-10T17:15:22Z"
+  }
 }
 ```
