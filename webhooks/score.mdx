@@ -18,16 +18,13 @@ The table below lists the Webhook events available for score.
 Below payload is dispatched on business's score gneration or refresh. 
 ```json
 {
-  "eventId": "fdcf230f-fdcx-wsaq-xcvb-wsas5cujqsw4",
-  "eventType": "score.generated | score.refreshed",
+  "event_type": "score.generated | score.refreshed",
   "payload": {
     "score_trigger_id": "bbde8bb6-316f-4121-ac77-f17c35a0e8ea",
     "business_id": "2f2616ae-d695-42c8-ba94-da023abee546",
     "score": "646.0662513971329",
     "risk": "HIGH | Medium | Low",
     "is_new": "NEW | REFRESH"
-  },
-  "id": "msg_d3frOrhsgdvvtrXKQmoEYga2",
-  "timestamp": "2024-09-10T17:15:22Z"
+  }
 }
 ```
