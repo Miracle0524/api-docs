@@ -5,7 +5,7 @@ sidebarTitle: Business
 ---
 
 ## Business events
-The table below lists the Webhook events available for business.
+The table below lists the Webhook events for business.
 
 
 | Event                       | Description                                                                       |
@@ -16,14 +16,14 @@ The table below lists the Webhook events available for business.
 
 ## business.invited | business.updated
 Below payload is dispatched on business creation or updation. Each event will have the business object.
-<Note>The update event will dispatch the whole business even if you have updated few fields for a business</Note>
+<Note>The update event will dispatch the whole business even if only few fields for a business are updated</Note>
 
 ```json
 {
-  "event_type": "business.created",
+  "event_type": "business.invited | business.updated",
   "payload": {
     "id": "81c92b78-9ce1-4ba0-9557-6dce4a5ccbdb",
-    "name": "refresh score test 1",
+    "name": "XYZ BIZ",
     "tin": "XXXXX7204",
     "address_apartment": null,
     "address_line_1": "3614, Cassopolis Street,",
@@ -59,7 +59,7 @@ Below payload is dispatched on business creation or updation. Each event will ha
     },
     "business_names": [
       {
-        "name": "refresh score test 1",
+        "name": "XYZ BIZ",
         "is_primary": true
       }
     ],
