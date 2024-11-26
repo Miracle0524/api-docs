@@ -43,9 +43,7 @@
   "navigation": [
     {
       "group": "Welcome",
-      "pages": [
-        "introduction"
-      ]
+      "pages": ["introduction"]
     },
     {
       "group": "Sign In",
@@ -61,6 +59,10 @@
         "api-reference/auth/forgot-password/forgot-password-init",
         "api-reference/auth/forgot-password/reset-password"
       ]
+    },
+    {
+      "group": "Bulk Imports",
+      "pages": ["api-reference/bulk/bulk-import/import-business"]
     },
     {
       "group": "Customers",
@@ -109,9 +111,7 @@
     },
     {
       "group": "Webhooks (Beta)",
-      "pages": [
-        "webhooks/webhooks"
-      ]
+      "pages": ["webhooks/webhooks"]
     },
     {
       "group": "Sample Payloads",

@@ -55,17 +55,17 @@ mintlify dev --port 3333
 To add your own api endpoints use below command:
 
 ```
-npx @mintlify/scraping@latest openapi-file <path-of-openapi-json-file> -o <path-to-folder-to-extract-json-file-data>
+npx @mintlify/scraping@latest openapi-file <path-of-openapi-json-file-with-extension> -o <path-to-folder-to-extract-json-file-data>
 ```
 
 For example:
 ```
-npx @mintlify/scraping@latest openapi-file openapi/file -o api-reference/folder
+npx @mintlify/scraping@latest openapi-file openapi/file.json -o api-reference/folder
 ```
 
 If you want to overwrite existing files use `--overwrite` flag
 ```
-npx @mintlify/scraping@latest openapi-file openapi/file -o api-reference/folder --overwrite
+npx @mintlify/scraping@latest openapi-file openapi/file.json -o api-reference/folder --overwrite
 ```
 
 
