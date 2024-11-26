@@ -106,7 +106,8 @@
         "api-reference/integration/banking/banking-information",
         "api-reference/integration/accounting/get-reports",
         "api-reference/integration/taxation/tax-filing",
-        "api-reference/integration/public-records/public-records"
+        "api-reference/integration/public-records/public-records",
+        "api-reference/integration/middesk/get-verification-details"
       ]
     },
     {

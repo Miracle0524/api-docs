@@ -24,9 +24,7 @@
   "paths": {
     "/banking/business/{businessID}/connect": {
       "post": {
-        "tags": [
-          "Banking"
-        ],
+        "tags": ["Banking"],
         "summary": "Connection Link Init",
         "description": "Creates a plaid link to get started with the banking flow.",
         "operationId": "ConnectionLinkInit",
@@ -39,9 +37,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "5429e0e0-a812-4252-a8cf-61ab91aa2af2"
-              ]
+              "examples": ["5429e0e0-a812-4252-a8cf-61ab91aa2af2"]
             }
           },
           {
@@ -53,9 +49,7 @@
             "schema": {
               "const": "application/json",
               "type": "string",
-              "examples": [
-                "application/json"
-              ]
+              "examples": ["application/json"]
             }
           }
         ],
@@ -556,9 +550,7 @@
     },
     "/banking/business/{businessID}/authenticate": {
       "post": {
-        "tags": [
-          "Banking"
-        ],
+        "tags": ["Banking"],
         "summary": "Exchange Token",
         "description": "This exchanges the public token with the plaid.",
         "operationId": "ExchangeToken",
@@ -571,9 +563,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "5429e0e0-a812-4252-a8cf-61ab91aa2af2"
-              ]
+              "examples": ["5429e0e0-a812-4252-a8cf-61ab91aa2af2"]
             }
           },
           {
@@ -584,9 +574,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "2020-09-14"
-              ]
+              "examples": ["2020-09-14"]
             }
           }
         ],
@@ -862,9 +850,7 @@
     },
     "/banking/business/{businessID}/refresh": {
       "post": {
-        "tags": [
-          "Banking"
-        ],
+        "tags": ["Banking"],
         "summary": "Continue with existing Banking Account",
         "description": "Continues the flow with existing linked plaid account.",
         "operationId": "ContinuewithexistingBankingAccount",
@@ -877,9 +863,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           },
           {
@@ -891,9 +875,7 @@
             "schema": {
               "const": "application/json",
               "type": "string",
-              "examples": [
-                "application/json"
-              ]
+              "examples": ["application/json"]
             }
           },
           {
@@ -904,9 +886,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "2020-09-14"
-              ]
+              "examples": ["2020-09-14"]
             }
           }
         ],
@@ -1156,9 +1136,7 @@
     },
     "/cases/{caseID}/banking": {
       "get": {
-        "tags": [
-          "Banking"
-        ],
+        "tags": ["Banking"],
         "summary": "Banking Information",
         "operationId": "BankingInformation",
         "parameters": [
@@ -1170,9 +1148,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "eb7aa8d8-18e6-49b1-b7e7-6311cae51acd"
-              ]
+              "examples": ["eb7aa8d8-18e6-49b1-b7e7-6311cae51acd"]
             }
           }
         ],
@@ -2613,9 +2589,7 @@
     },
     "/accounting/integrations/{business_id}": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Get Accounting Integrations",
         "operationId": "GetAccountingIntegrations",
         "parameters": [
@@ -2627,9 +2601,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -2919,9 +2891,7 @@
     },
     "/accounting/report/{business_id}/{report}/{id}": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Get Report By ID",
         "operationId": "GetReportByID",
         "parameters": [
@@ -2933,9 +2903,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           },
           {
@@ -2946,9 +2914,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "accounting_balancesheet"
-              ]
+              "examples": ["accounting_balancesheet"]
             }
           },
           {
@@ -2959,9 +2925,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "06bab239-af92-458d-bd68-04a1f43ff85e"
-              ]
+              "examples": ["06bab239-af92-458d-bd68-04a1f43ff85e"]
             }
           }
         ],
@@ -3221,9 +3185,7 @@
     },
     "/accounting/report/{business_id}/{report}": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Get Reports",
         "operationId": "GetReports",
         "parameters": [
@@ -3235,9 +3197,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "f17295d4-5237-4079-8b18-8786eddf49f3"
-              ]
+              "examples": ["f17295d4-5237-4079-8b18-8786eddf49f3"]
             }
           },
           {
@@ -3248,9 +3208,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "accounting_balancesheet"
-              ]
+              "examples": ["accounting_balancesheet"]
             }
           }
         ],
@@ -12674,9 +12632,7 @@
     },
     "/accounting/object/{businessId}/{object}": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Get Object",
         "operationId": "GetObject",
         "parameters": [
@@ -12698,9 +12654,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "business_info"
-              ]
+              "examples": ["business_info"]
             }
           }
         ],
@@ -12727,9 +12681,7 @@
     },
     "/accounting/object/{businessId}/{object}/{id}": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Get Object By ID",
         "operationId": "GetObjectByID",
         "parameters": [
@@ -12751,9 +12703,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "business_info"
-              ]
+              "examples": ["business_info"]
             }
           },
           {
@@ -12790,9 +12740,7 @@
     },
     "/rutter/pubkey": {
       "get": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Rutter Token",
         "operationId": "RutterToken",
         "parameters": [],
@@ -13043,9 +12991,7 @@
     },
     "/rutter/sync-connection/{business_id}/{access_token}": {
       "post": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Sync Rutter Connection",
         "operationId": "SyncRutterConnection",
         "parameters": [
@@ -13057,9 +13003,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           },
           {
@@ -13070,9 +13014,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "{{access_token}}"
-              ]
+              "examples": ["{{access_token}}"]
             }
           }
         ],
@@ -13099,9 +13041,7 @@
     },
     "/rutter/create/{business_id}/{public_token}": {
       "post": {
-        "tags": [
-          "Accounting"
-        ],
+        "tags": ["Accounting"],
         "summary": "Create Rutter Connection",
         "operationId": "CreateRutterConnection",
         "parameters": [
@@ -13113,9 +13053,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           },
           {
@@ -13126,9 +13064,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "{{public_token}}"
-              ]
+              "examples": ["{{public_token}}"]
             }
           }
         ],
@@ -13394,9 +13330,7 @@
     },
     "/cases/{caseID}/public-records": {
       "get": {
-        "tags": [
-          "Public Records"
-        ],
+        "tags": ["Public Records"],
         "summary": "Public Records",
         "operationId": "PublicRecords",
         "parameters": [
@@ -13408,9 +13342,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "d36da080-89e3-4689-91f5-ee00584621d4"
-              ]
+              "examples": ["d36da080-89e3-4689-91f5-ee00584621d4"]
             }
           }
         ],
@@ -13734,9 +13666,7 @@
     },
     "/accounting/business/{businessID}/tax-filing/consent/init": {
       "get": {
-        "tags": [
-          "Taxation"
-        ],
+        "tags": ["Taxation"],
         "summary": "Tax Filing Consent Link Init",
         "operationId": "TaxFilingConsentLinkInit",
         "parameters": [
@@ -13748,9 +13678,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "bdaafaef-1607-4e45-9ba6-cfde6baeb48e"
-              ]
+              "examples": ["bdaafaef-1607-4e45-9ba6-cfde6baeb48e"]
             }
           }
         ],
@@ -14008,9 +13936,7 @@
     },
     "/accounting/cases/{caseID}/tax-filing": {
       "get": {
-        "tags": [
-          "Taxation"
-        ],
+        "tags": ["Taxation"],
         "summary": "Tax Filing",
         "operationId": "TaxFiling",
         "parameters": [
@@ -14022,9 +13948,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "272ddbff-4ae2-4a0e-be50-3a8c315148f7"
-              ]
+              "examples": ["272ddbff-4ae2-4a0e-be50-3a8c315148f7"]
             }
           }
         ],
@@ -14310,9 +14234,7 @@
     },
     "/verification/businesses/{businessID}/create-inquiry": {
       "post": {
-        "tags": [
-          "Verification"
-        ],
+        "tags": ["Verification"],
         "summary": "Create Inquiry",
         "operationId": "CreateInquiry",
         "parameters": [
@@ -14324,9 +14246,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "7d32466c-f1fd-43d0-94fa-bae467bbde48"
-              ]
+              "examples": ["7d32466c-f1fd-43d0-94fa-bae467bbde48"]
             }
           }
         ],
@@ -14590,9 +14510,7 @@
     },
     "/enroll": {
       "post": {
-        "tags": [
-          "Verification"
-        ],
+        "tags": ["Verification"],
         "summary": "Plaid IDV: Enroll Business",
         "operationId": "PlaidIDV:EnrollBusiness",
         "parameters": [],
@@ -14860,9 +14778,7 @@
     },
     "/verification/businesses/{businessID}/complete-inquiry": {
       "post": {
-        "tags": [
-          "Verification"
-        ],
+        "tags": ["Verification"],
         "summary": "Complete Inquiry",
         "operationId": "CompleteInquiry",
         "parameters": [
@@ -14874,9 +14790,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "0ba551e4-a7b4-4409-a821-bc940ce0cb46"
-              ]
+              "examples": ["0ba551e4-a7b4-4409-a821-bc940ce0cb46"]
             }
           }
         ],
@@ -15126,9 +15040,7 @@
     },
     "/verification/businesses/{businessID}/details": {
       "get": {
-        "tags": [
-          "Verification"
-        ],
+        "tags": ["Verification"],
         "summary": "Get Verification Details",
         "operationId": "GetVerificationDetails",
         "parameters": [
@@ -15140,9 +15052,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "7d32466c-f1fd-43d0-94fa-bae467bbde48"
-              ]
+              "examples": ["7d32466c-f1fd-43d0-94fa-bae467bbde48"]
             }
           }
         ],
@@ -15675,11 +15585,9 @@
       },
       "parameters": []
     },
-    "/verification/businesses/9ca483df-ce3b-4795-a6ad-a3f5177e3964/business-entity": {
+    "/verification/businesses/{businessID}/business-entity": {
       "get": {
-        "tags": [
-          "Middesk"
-        ],
+        "tags": ["Middesk"],
         "summary": "Get Verification Details",
         "operationId": "GetVerificationDetails1",
         "parameters": [],
@@ -15900,265 +15808,340 @@
             "content": {
               "application/json; charset=utf-8": {
                 "schema": {
-                  "$ref": "#/components/schemas/Success15"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "headers": {
-              "Content-Security-Policy": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-                  }
-                }
-              },
-              "Cross-Origin-Opener-Policy": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "same-origin"
-                  }
-                }
-              },
-              "Cross-Origin-Resource-Policy": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "same-origin"
-                  }
-                }
-              },
-              "Origin-Agent-Cluster": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "?1"
-                  }
-                }
-              },
-              "Referrer-Policy": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "no-referrer"
-                  }
-                }
-              },
-              "Strict-Transport-Security": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "max-age=15552000; includeSubDomains"
-                  }
-                }
-              },
-              "X-Content-Type-Options": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "nosniff"
-                  }
-                }
-              },
-              "X-DNS-Prefetch-Control": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "off"
-                  }
-                }
-              },
-              "X-Download-Options": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "noopen"
-                  }
-                }
-              },
-              "X-Frame-Options": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "SAMEORIGIN"
-                  }
-                }
-              },
-              "X-Permitted-Cross-Domain-Policies": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "none"
-                  }
-                }
-              },
-              "X-XSS-Protection": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "0"
-                  }
-                }
-              },
-              "Vary": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "Origin"
-                  }
-                }
-              },
-              "Access-Control-Allow-Credentials": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "true"
-                  }
-                }
-              },
-              "Content-Length": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "142"
-                  }
-                }
-              },
-              "ETag": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "W/\"8e-4lR+9xqnJmzrJu41+9+y2WhBBQk\""
-                  }
-                }
-              },
-              "Date": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "Tue, 13 Feb 2024 13:13:16 GMT"
-                  }
-                }
-              },
-              "Connection": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "keep-alive"
-                  }
-                }
-              },
-              "Keep-Alive": {
-                "content": {
-                  "text/plain": {
-                    "schema": {
-                      "type": "string",
-                      "contentMediaType": "text/plain"
-                    },
-                    "example": "timeout=5"
-                  }
-                }
-              }
-            },
-            "content": {
-              "application/json; charset=utf-8": {
-                "schema": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/InvalidUUID1"
+                      "$ref": "#/components/schemas/Success15"
                     },
                     {
                       "examples": [
                         {
-                          "issues": [
-                            {
-                              "validation": "uuid",
-                              "code": "invalid_string",
-                              "message": "Invalid uuid",
-                              "path": [
-                                "params",
-                                "businessID"
-                              ]
-                            }
-                          ],
-                          "name": "InvalidSchemaError"
+                          "status": "success",
+                          "message": "Business Verification status fetched successfully.",
+                          "data": {
+                            "businessEntityVerification": {
+                              "id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                              "created_at": "2024-11-26T06:46:44.462Z",
+                              "updated_at": null,
+                              "business_integration_task_id": "dc279948-dcaa-4252-ba17-47c5c644cac7",
+                              "external_id": "2cc347d5-a64e-4ad5-bfd3-4332683546dc",
+                              "business_id": "80768728-ca4a-4e4f-8f96-5f3be0adaecd",
+                              "name": "banking test 1",
+                              "status": "in_review",
+                              "tin": "549858454",
+                              "formation_state": "IN",
+                              "formation_date": "2020-02-24T00:00:00.000Z",
+                              "year": null,
+                              "number_of_employees": null
+                            },
+                            "reviewTasks": [
+                              {
+                                "id": "1b60e304-c435-44ef-bbdb-572aa3a46684",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "name",
+                                "key": "name",
+                                "status": "success",
+                                "message": "Match identified to the submitted Business Name",
+                                "label": "Business Name",
+                                "sublabel": "Verified",
+                                "metadata": [
+                                  {
+                                    "id": "ac01034d-325e-455b-bc3d-c1852c6bb306",
+                                    "type": "name",
+                                    "metadata": {
+                                      "name": "banking test 1",
+                                      "submitted": true
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "a151663a-02ee-4b8b-97d8-b8d6d3758496",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "address",
+                                "key": "address_verification",
+                                "status": "success",
+                                "message": "Match identified to the submitted Office Address",
+                                "label": "Office Address",
+                                "sublabel": "Verified",
+                                "metadata": [
+                                  {
+                                    "id": "092528df-063d-4db0-b720-05bad17528d2",
+                                    "type": "address",
+                                    "metadata": {
+                                      "city": "Pawnee",
+                                      "state": "IN",
+                                      "submitted": true,
+                                      "postal_code": "46001",
+                                      "full_address": "123 Main St, Pawnee, IN 46001",
+                                      "address_line1": "123 Main St",
+                                      "address_line2": null
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "0dfc846b-91ad-4a45-b703-3fdba4385634",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "address",
+                                "key": "address_deliverability",
+                                "status": "success",
+                                "message": "The USPS is able to deliver mail to the submitted Office Address",
+                                "label": "Office Address",
+                                "sublabel": "Deliverable",
+                                "metadata": []
+                              },
+                              {
+                                "id": "08ba4b00-6768-4354-aa30-d6b16d0010a1",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "address",
+                                "key": "address_property_type",
+                                "status": "success",
+                                "message": "Submitted Office Address is a Commercial property",
+                                "label": "Office Address",
+                                "sublabel": "Commercial",
+                                "metadata": []
+                              },
+                              {
+                                "id": "ac3de7b5-d560-4639-b8c5-4a8b6ff796f0",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "address",
+                                "key": "location_frequency",
+                                "status": "success",
+                                "message": "1 business uses this location",
+                                "label": "Office Address",
+                                "sublabel": "Low frequency",
+                                "metadata": []
+                              },
+                              {
+                                "id": "3cbbc37c-e7c4-4126-91ca-3d1916e67456",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "address",
+                                "key": "address_risk",
+                                "status": "success",
+                                "message": "Address risk is low",
+                                "label": "Address Risk",
+                                "sublabel": "Low",
+                                "metadata": []
+                              },
+                              {
+                                "id": "12b65636-b6cc-4529-8729-77b4bea67bbf",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "sos",
+                                "key": "sos_match",
+                                "status": "success",
+                                "message": "The business is Active in the state of the submitted Office Address",
+                                "label": "SOS Filings",
+                                "sublabel": "Submitted Active",
+                                "metadata": []
+                              },
+                              {
+                                "id": "943db119-dc4f-444e-b3ca-a644f3544fbf",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "sos",
+                                "key": "sos_active",
+                                "status": "success",
+                                "message": "2 of 2 filings are Active",
+                                "label": "SOS Filings",
+                                "sublabel": "Active",
+                                "metadata": []
+                              },
+                              {
+                                "id": "1b88232b-471a-4ebf-bd9e-6fd5323f14bc",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "sos",
+                                "key": "sos_domestic_sub_status",
+                                "status": "success",
+                                "message": "The domestic registration is in Good Standing.",
+                                "label": "SOS Domestic Sub‑status",
+                                "sublabel": "Good Standing",
+                                "metadata": []
+                              },
+                              {
+                                "id": "d5df4844-c30b-4498-9cf7-1c72c2617b58",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "sos",
+                                "key": "sos_domestic",
+                                "status": "success",
+                                "message": "Active domestic filing found",
+                                "label": "SOS Filings",
+                                "sublabel": "Domestic Active",
+                                "metadata": []
+                              },
+                              {
+                                "id": "34ff1542-848b-4c1b-bdb1-2969cea3ad6a",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "tin",
+                                "key": "tin",
+                                "status": "success",
+                                "message": "The IRS has a record for the submitted TIN and Business Name combination",
+                                "label": "TIN Match",
+                                "sublabel": "Found",
+                                "metadata": []
+                              },
+                              {
+                                "id": "7b57c8d8-2c47-4fa1-8976-30f3bea0349a",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "watchlist",
+                                "key": "watchlist",
+                                "status": "success",
+                                "message": "No Watchlist hits were identified",
+                                "label": "Watchlist",
+                                "sublabel": "No Hits",
+                                "metadata": []
+                              },
+                              {
+                                "id": "cf09d227-08b2-4fa9-8e57-13a46d18ccf5",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.506Z",
+                                "updated_at": null,
+                                "category": "bankruptcies",
+                                "key": "bankruptcies",
+                                "status": "success",
+                                "message": "The business has no bankruptcy filings",
+                                "label": "Bankruptcies",
+                                "sublabel": "None Found",
+                                "metadata": []
+                              }
+                            ],
+                            "registrations": [
+                              {
+                                "id": "65948511-e748-44cd-b6f3-6f2663a4927a",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.538Z",
+                                "updated_at": null,
+                                "external_id": "8a473e02-9f08-49e6-bada-d0980ab19437",
+                                "name": "banking test 1",
+                                "status": "active",
+                                "sub_status": "GOOD_STANDING",
+                                "status_details": "Active-Good Standing",
+                                "jurisdiction": "DOMESTIC",
+                                "entity_type": "CORPORATION",
+                                "file_number": "FN-XXXXXXX",
+                                "full_addresses": [
+                                  "123 MAIN ST, PAWNEE, IN 46001",
+                                  "354 CIRCLE COURT,BRONX, NY 10468"
+                                ],
+                                "registration_date": "2020-02-24T00:00:00.000Z",
+                                "registration_state": "IN",
+                                "source": "https://secure.in.gov/sos/bus_service/online_corps/name_search.aspx"
+                              },
+                              {
+                                "id": "22dd49e9-a953-49cf-9639-2205a672e026",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.538Z",
+                                "updated_at": null,
+                                "external_id": "3ebe42c8-cd5e-4fea-929a-e00efa8854dc",
+                                "name": "banking test 1",
+                                "status": "active",
+                                "sub_status": null,
+                                "status_details": null,
+                                "jurisdiction": "FOREIGN",
+                                "entity_type": "CORPORATION",
+                                "file_number": "12345135135",
+                                "full_addresses": [
+                                  "123 MAIN ST, PAWNEE, IN 46001",
+                                  "354 CIRCLE COURT,BRONX, NY 10468"
+                                ],
+                                "registration_date": "2020-02-24T00:00:00.000Z",
+                                "registration_state": "CO",
+                                "source": "https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do"
+                              }
+                            ],
+                            "addressSources": [
+                              {
+                                "id": "527f39dd-4b7b-41c7-872d-754bc064a34e",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.529Z",
+                                "updated_at": null,
+                                "external_id": "092528df-063d-4db0-b720-05bad17528d2",
+                                "external_registration_id": "8a473e02-9f08-49e6-bada-d0980ab19437",
+                                "full_address": "123 Main St, Pawnee, IN 46001",
+                                "address_line_1": "123 Main St",
+                                "address_line_2": null,
+                                "city": "Pawnee",
+                                "state": "IN",
+                                "postal_code": "46001",
+                                "lat": 40.52,
+                                "long": 30.4,
+                                "submitted": true,
+                                "deliverable": true,
+                                "cmra": false,
+                                "address_property_type": null
+                              },
+                              {
+                                "id": "85204390-6265-4106-aae7-de45b460469f",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.529Z",
+                                "updated_at": null,
+                                "external_id": "a5d6b046-2609-42ef-b82e-46b943bfdc54",
+                                "external_registration_id": "8a473e02-9f08-49e6-bada-d0980ab19437",
+                                "full_address": "354 Circle Court,Bronx, NY 10468",
+                                "address_line_1": "354 Circle Ct",
+                                "address_line_2": null,
+                                "city": "Bronx",
+                                "state": "NY",
+                                "postal_code": "10468",
+                                "lat": null,
+                                "long": null,
+                                "submitted": false,
+                                "deliverable": true,
+                                "cmra": false,
+                                "address_property_type": null
+                              }
+                            ],
+                            "people": [],
+                            "names": [
+                              {
+                                "id": "ce49d078-79f0-44c0-a2cd-569e2a304072",
+                                "business_entity_verification_id": "b92456c7-b181-4a36-b841-90fed91b1cf0",
+                                "created_at": "2024-11-26T06:46:45.550Z",
+                                "updated_at": null,
+                                "name": "banking test 1",
+                                "type": "legal",
+                                "submitted": true,
+                                "source": [
+                                  {
+                                    "id": "8a473e02-9f08-49e6-bada-d0980ab19437",
+                                    "type": "registration",
+                                    "metadata": {
+                                      "state": "IN",
+                                      "status": "active",
+                                      "file_number": "FN-XXXXXXX",
+                                      "jurisdiction": "DOMESTIC"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
                       ]
                     }
-                  ],
-                  "contentMediaType": "application/json; charset=utf-8"
-                },
-                "example": {
-                  "issues": [
-                    {
-                      "validation": "uuid",
-                      "code": "invalid_string",
-                      "message": "Invalid uuid",
-                      "path": [
-                        "params",
-                        "businessID"
-                      ]
-                    }
-                  ],
-                  "name": "InvalidSchemaError"
+                  ]
                 }
               }
             }
@@ -16433,9 +16416,7 @@
     },
     "/verification/businesses/{businessID}/create-business-entity": {
       "post": {
-        "tags": [
-          "Middesk"
-        ],
+        "tags": ["Middesk"],
         "summary": "Update Business",
         "operationId": "UpdateBusiness",
         "parameters": [
@@ -16735,9 +16716,7 @@
     },
     "/verification/businesses/2c261e34-8697-4346-9a06-d33b242b106e/verify-business-entity": {
       "post": {
-        "tags": [
-          "Middesk"
-        ],
+        "tags": ["Middesk"],
         "summary": "Verify Business",
         "operationId": "VerifyBusiness",
         "parameters": [],
@@ -17003,11 +16982,7 @@
     "schemas": {
       "Success": {
         "title": "Success",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -17037,10 +17012,7 @@
       },
       "Data": {
         "title": "Data",
-        "required": [
-          "response",
-          "is_plaid_linked"
-        ],
+        "required": ["response", "is_plaid_linked"],
         "type": "object",
         "properties": {
           "response": {
@@ -17063,11 +17035,7 @@
       },
       "Response": {
         "title": "Response",
-        "required": [
-          "expiration",
-          "link_token",
-          "request_id"
-        ],
+        "required": ["expiration", "link_token", "request_id"],
         "type": "object",
         "properties": {
           "expiration": {
@@ -17090,9 +17058,7 @@
       },
       "Data1": {
         "title": "Data1",
-        "required": [
-          "errorName"
-        ],
+        "required": ["errorName"],
         "type": "object",
         "properties": {
           "errorName": {
@@ -17107,12 +17073,7 @@
       },
       "ErrorConnectionDoesNotExists1": {
         "title": "ErrorConnectionDoesNotExists1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -17141,9 +17102,7 @@
       },
       "ExchangeTokenRequest": {
         "title": "ExchangeTokenRequest",
-        "required": [
-          "public_token"
-        ],
+        "required": ["public_token"],
         "type": "object",
         "properties": {
           "public_token": {
@@ -17158,10 +17117,7 @@
       },
       "Success1": {
         "title": "Success1",
-        "required": [
-          "status",
-          "message"
-        ],
+        "required": ["status", "message"],
         "type": "object",
         "properties": {
           "status": {
@@ -17180,11 +17136,7 @@
       },
       "Success3": {
         "title": "Success3",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -17729,10 +17681,7 @@
             "type": "string"
           },
           "verification_status": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "balance_current": {
             "type": "string"
@@ -17741,10 +17690,7 @@
             "type": "string"
           },
           "balance_limit": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "currency": {
             "type": "string"
@@ -17756,10 +17702,7 @@
             "type": "string"
           },
           "mask": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "created_at": {
             "type": "string"
@@ -18060,12 +18003,7 @@
       },
       "ErrorCasedoesnotexists1": {
         "title": "ErrorCasedoesnotexists1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -18094,11 +18032,7 @@
       },
       "Success4": {
         "title": "Success4",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -18192,11 +18126,7 @@
       },
       "Success5": {
         "title": "Success5",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -18223,11 +18153,7 @@
       },
       "Data7": {
         "title": "Data7",
-        "required": [
-          "count",
-          "page",
-          "accounting_balancesheet"
-        ],
+        "required": ["count", "page", "accounting_balancesheet"],
         "type": "object",
         "properties": {
           "count": {
@@ -18256,11 +18182,7 @@
       },
       "SuccessBalanceSheet": {
         "title": "SuccessBalanceSheet",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -22869,12 +22791,7 @@
       },
       "Data8": {
         "title": "Data8",
-        "required": [
-          "count",
-          "page",
-          "accounting_balancesheet",
-          "total"
-        ],
+        "required": ["count", "page", "accounting_balancesheet", "total"],
         "type": "object",
         "properties": {
           "count": {
@@ -27800,12 +27717,7 @@
       },
       "Assets": {
         "title": "Assets",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -27822,10 +27734,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -27933,12 +27842,7 @@
       },
       "Item": {
         "title": "Item",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -27955,10 +27859,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -27985,12 +27886,7 @@
       },
       "Item1": {
         "title": "Item1",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -28004,10 +27900,7 @@
             "description": ""
           },
           "value": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "account_id": {
             "type": "string"
@@ -28024,12 +27917,7 @@
       },
       "Equity": {
         "title": "Equity",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -28046,10 +27934,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -28100,12 +27985,7 @@
       },
       "Liabilities": {
         "title": "Liabilities",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -28122,10 +28002,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -28200,9 +28077,7 @@
       },
       "Meta": {
         "title": "Meta",
-        "required": [
-          "note"
-        ],
+        "required": ["note"],
         "type": "object",
         "properties": {
           "note": {
@@ -28217,11 +28092,7 @@
       },
       "SuccessIncomeStatement": {
         "title": "SuccessIncomeStatement",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -37290,12 +37161,7 @@
       },
       "Data9": {
         "title": "Data9",
-        "required": [
-          "count",
-          "page",
-          "accounting_incomestatement",
-          "total"
-        ],
+        "required": ["count", "page", "accounting_incomestatement", "total"],
         "type": "object",
         "properties": {
           "count": {
@@ -46430,10 +46296,7 @@
             "type": "string"
           },
           "total_depreciation": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "total_expenses": {
             "type": "string"
@@ -46920,12 +46783,7 @@
       },
       "Revenue": {
         "title": "Revenue",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -46942,10 +46800,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -46996,12 +46851,7 @@
       },
       "Expenses": {
         "title": "Expenses",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -47018,10 +46868,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -47410,12 +47257,7 @@
       },
       "CostOfSales": {
         "title": "CostOfSales",
-        "required": [
-          "name",
-          "items",
-          "value",
-          "account_id"
-        ],
+        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -47432,10 +47274,7 @@
             "type": "string"
           },
           "account_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -47449,11 +47288,7 @@
       },
       "Success6": {
         "title": "Success6",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47478,9 +47313,7 @@
       },
       "Data10": {
         "title": "Data10",
-        "required": [
-          "publicKey"
-        ],
+        "required": ["publicKey"],
         "type": "object",
         "properties": {
           "publicKey": {
@@ -47495,11 +47328,7 @@
       },
       "Success7": {
         "title": "Success7",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47572,11 +47401,7 @@
       },
       "Success8": {
         "title": "Success8",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47635,9 +47460,7 @@
       },
       "Data12": {
         "title": "Data12",
-        "required": [
-          "public_records"
-        ],
+        "required": ["public_records"],
         "type": "object",
         "properties": {
           "public_records": {
@@ -47727,49 +47550,31 @@
             "type": "string"
           },
           "most_recent_business_lien_filing_date": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "most_recent_business_lien_status": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "number_of_bankruptcies": {
             "type": "string"
           },
           "most_recent_bankruptcy_filing_date": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "number_of_judgement_fillings": {
             "type": "string"
           },
           "most_recent_judgement_filling_date": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "corporate_filing_business_name": {
             "type": "string"
           },
           "corporate_filing_filling_date": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "corporate_filing_incorporation_state": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "corporate_filing_corporation_type": {
             "type": "string"
@@ -47781,10 +47586,7 @@
             "type": "string"
           },
           "corporate_filing_secretary_of_state_status_date": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "average_rating": {
             "type": "string"
@@ -47871,11 +47673,7 @@
       },
       "Review": {
         "title": "Review",
-        "required": [
-          "source",
-          "count",
-          "percentage"
-        ],
+        "required": ["source", "count", "percentage"],
         "type": "object",
         "properties": {
           "source": {
@@ -47900,11 +47698,7 @@
       },
       "NoDataFound": {
         "title": "NoDataFound",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47927,11 +47721,7 @@
       },
       "Success9": {
         "title": "Success9",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47957,10 +47747,7 @@
       },
       "Data13": {
         "title": "Data13",
-        "required": [
-          "is_tax_status_connected",
-          "consent_link"
-        ],
+        "required": ["is_tax_status_connected", "consent_link"],
         "type": "object",
         "properties": {
           "is_tax_status_connected": {
@@ -47979,11 +47766,7 @@
       },
       "SuccessTaxStatusconnectionalreadyexists": {
         "title": "SuccessTaxStatusconnectionalreadyexists",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48008,9 +47791,7 @@
       },
       "Data14": {
         "title": "Data14",
-        "required": [
-          "is_tax_status_connected"
-        ],
+        "required": ["is_tax_status_connected"],
         "type": "object",
         "properties": {
           "is_tax_status_connected": {
@@ -48025,11 +47806,7 @@
       },
       "Success10": {
         "title": "Success10",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48120,11 +47897,7 @@
       },
       "NotFound": {
         "title": "NotFound",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48151,11 +47924,7 @@
       },
       "Success11": {
         "title": "Success11",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48221,11 +47990,7 @@
       },
       "AlreadyConnected": {
         "title": "AlreadyConnected",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48250,9 +48015,7 @@
       },
       "Data17": {
         "title": "Data17",
-        "required": [
-          "is_persona_linked"
-        ],
+        "required": ["is_persona_linked"],
         "type": "object",
         "properties": {
           "is_persona_linked": {
@@ -48267,11 +48030,7 @@
       },
       "Success14": {
         "title": "Success14",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48369,11 +48128,7 @@
       },
       "GovernmentData": {
         "title": "GovernmentData",
-        "required": [
-          "verification_created_at",
-          "front",
-          "back"
-        ],
+        "required": ["verification_created_at", "front", "back"],
         "type": "object",
         "properties": {
           "verification_created_at": {
@@ -48400,9 +48155,7 @@
       },
       "Front": {
         "title": "Front",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "type": "object",
         "properties": {
           "url": {
@@ -48417,9 +48170,7 @@
       },
       "Back": {
         "title": "Back",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "type": "object",
         "properties": {
           "url": {
@@ -48472,9 +48223,7 @@
       },
       "LeftPhoto": {
         "title": "LeftPhoto",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "type": "object",
         "properties": {
           "url": {
@@ -48489,9 +48238,7 @@
       },
       "CenterPhoto": {
         "title": "CenterPhoto",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "type": "object",
         "properties": {
           "url": {
@@ -48506,9 +48253,7 @@
       },
       "RightPhoto": {
         "title": "RightPhoto",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "type": "object",
         "properties": {
           "url": {
@@ -48523,12 +48268,7 @@
       },
       "ErrorNotFound1": {
         "title": "ErrorNotFound1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48557,11 +48297,7 @@
       },
       "Success15": {
         "title": "Success15",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48633,10 +48369,7 @@
             "type": "string"
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "business_integration_task_id": {
             "type": "string"
@@ -48698,10 +48431,7 @@
             "type": "string"
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "category": {
             "type": "string"
@@ -48785,10 +48515,7 @@
       },
       "Metadata": {
         "title": "Metadata",
-        "required": [
-          "name",
-          "submitted"
-        ],
+        "required": ["name", "submitted"],
         "type": "object",
         "properties": {
           "name": {
@@ -48807,11 +48534,7 @@
       },
       "Metadatum1": {
         "title": "Metadatum1",
-        "required": [
-          "id",
-          "type",
-          "metadata"
-        ],
+        "required": ["id", "type", "metadata"],
         "type": "object",
         "properties": {
           "id": {
@@ -48837,9 +48560,7 @@
       },
       "Metadata1": {
         "title": "Metadata1",
-        "required": [
-          "submitted"
-        ],
+        "required": ["submitted"],
         "type": "object",
         "properties": {
           "name": {
@@ -48864,10 +48585,7 @@
             "type": "string"
           },
           "address_line2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -48924,10 +48642,7 @@
             "type": "string"
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "external_id": {
             "type": "string"
@@ -48939,16 +48654,10 @@
             "type": "string"
           },
           "sub_status": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status_details": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "jurisdiction": {
             "type": "string"
@@ -49034,10 +48743,7 @@
             "type": "string"
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "external_id": {
             "type": "string"
@@ -49052,10 +48758,7 @@
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "city": {
             "type": "string"
@@ -49069,16 +48772,10 @@
           "lat": {
             "oneOf": [
               {
-                "type": [
-                  "number",
-                  "null"
-                ]
+                "type": ["number", "null"]
               },
               {
-                "type": [
-                  "string",
-                  "null"
-                ]
+                "type": ["string", "null"]
               },
               {}
             ]
@@ -49086,16 +48783,10 @@
           "long": {
             "oneOf": [
               {
-                "type": [
-                  "number",
-                  "null"
-                ]
+                "type": ["number", "null"]
               },
               {
-                "type": [
-                  "string",
-                  "null"
-                ]
+                "type": ["string", "null"]
               },
               {}
             ]
@@ -49110,10 +48801,7 @@
             "type": "boolean"
           },
           "address_property_type": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -49141,12 +48829,7 @@
       },
       "Issue": {
         "title": "Issue",
-        "required": [
-          "validation",
-          "code",
-          "message",
-          "path"
-        ],
+        "required": ["validation", "code", "message", "path"],
         "type": "object",
         "properties": {
           "validation": {
@@ -49171,19 +48854,13 @@
             "validation": "uuid",
             "code": "invalid_string",
             "message": "Invalid uuid",
-            "path": [
-              "params",
-              "businessID"
-            ]
+            "path": ["params", "businessID"]
           }
         ]
       },
       "InvalidUUID1": {
         "title": "InvalidUUID1",
-        "required": [
-          "issues",
-          "name"
-        ],
+        "required": ["issues", "name"],
         "type": "object",
         "properties": {
           "issues": {
@@ -49204,10 +48881,7 @@
                 "validation": "uuid",
                 "code": "invalid_string",
                 "message": "Invalid uuid",
-                "path": [
-                  "params",
-                  "businessID"
-                ]
+                "path": ["params", "businessID"]
               }
             ],
             "name": "InvalidSchemaError"
@@ -49216,10 +48890,7 @@
       },
       "Data24": {
         "title": "Data24",
-        "required": [
-          "errorName",
-          "details"
-        ],
+        "required": ["errorName", "details"],
         "type": "object",
         "properties": {
           "errorName": {
@@ -49244,12 +48915,7 @@
       },
       "Businessidnotfound1": {
         "title": "Businessidnotfound1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -49281,9 +48947,7 @@
       },
       "UpdateBusinessRequest": {
         "title": "UpdateBusinessRequest",
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "type": "object",
         "properties": {
           "name": {
@@ -49298,11 +48962,7 @@
       },
       "Nointegrationsfound": {
         "title": "Nointegrationsfound",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -49329,11 +48989,7 @@
       },
       "Getallintegraionstatusdetails": {
         "title": "Getallintegraionstatusdetails",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -49381,10 +49037,7 @@
       },
       "Data26": {
         "title": "Data26",
-        "required": [
-          "category",
-          "integrations"
-        ],
+        "required": ["category", "integrations"],
         "type": "object",
         "properties": {
           "category": {
@@ -49413,11 +49066,7 @@
       },
       "Integration": {
         "title": "Integration",
-        "required": [
-          "id",
-          "status",
-          "name"
-        ],
+        "required": ["id", "status", "name"],
         "type": "object",
         "properties": {
           "id": {
