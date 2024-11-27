@@ -107,7 +107,8 @@
         "api-reference/integration/accounting/get-reports",
         "api-reference/integration/taxation/tax-filing",
         "api-reference/integration/public-records/public-records",
-        "api-reference/integration/middesk/get-verification-details"
+        "api-reference/integration/middesk/get-verification-details",
+        "api-reference/integration/middesk/get-business-website-data"
       ]
     },
     {

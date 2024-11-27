@@ -15590,7 +15590,19 @@
         "tags": ["Middesk"],
         "summary": "Get Verification Details",
         "operationId": "GetVerificationDetails1",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["ff26a409-0cc8-4084-a93b-3554d707ad9f"]
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -16972,6 +16984,347 @@
           {
             "url": "https://api.joinworth.com/integration/api/v1",
             "variables": {}
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/verification/businesses/{businessID}/website-data": {
+      "get": {
+        "tags": ["Middesk"],
+        "summary": "Get Business Website Data",
+        "operationId": "GetBusinessWebsiteData",
+        "parameters": [
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["ff26a409-0cc8-4084-a93b-3554d707ad9f"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "709"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"2c5-lCrG/1b9d4EGWB2s8Z9udicUuss\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Fri, 05 Jul 2024 09:25:42 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Keep-Alive": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "timeout=5"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Success2"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "Business website data fetched successfully.",
+                          "data": {
+                            "id": "7b8c673d-f513-413e-b29b-b53295dea5b3",
+                            "url": "<https://impressive-overcharge.com>",
+                            "error": null,
+                            "pages": [
+                              {
+                                "url": "<https://acrobatic-scrutiny.com>",
+                                "category": "home",
+                                "screenshot_url": "<https://loremflickr.com/640/480>"
+                              }
+                            ],
+                            "title": "itaque quisquam",
+                            "domain": {
+                              "domain": "damaged-classic.biz",
+                              "domain_id": "1885_DOMAIN_COM-VRSN",
+                              "registrar": {
+                                "url": "<http://www.godaddy.com>",
+                                "name": "GoDaddy.com, LLC",
+                                "organization": "GoDaddy.com, LLC"
+                              },
+                              "creation_date": "2024-05-01T19:22:16.051Z",
+                              "expiration_date": "2025-10-27T13:57:57.122Z"
+                            },
+                            "object": "website",
+                            "parked": false,
+                            "people": null,
+                            "status": "online",
+                            "addresses": [],
+                            "created_at": "2024-03-28T04:04:36.428Z",
+                            "updated_at": "2023-12-21T07:21:50.719Z",
+                            "business_id": "afc273b9-64ac-4ec4-a6a8-e514476c10dd",
+                            "description": "Aegrus cavus summopere votum ipsa fugiat uter.",
+                            "phone_numbers": [],
+                            "email_addresses": null,
+                            "http_status_code": null,
+                            "business_name_match": true
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Business website data fetched successfully.",
+                  "data": {
+                    "id": "7b8c673d-f513-413e-b29b-b53295dea5b3",
+                    "url": "<https://impressive-overcharge.com>",
+                    "error": null,
+                    "pages": [
+                      {
+                        "url": "<https://acrobatic-scrutiny.com>",
+                        "category": "home",
+                        "screenshot_url": "<https://loremflickr.com/640/480>"
+                      }
+                    ],
+                    "title": "itaque quisquam",
+                    "domain": {
+                      "domain": "damaged-classic.biz",
+                      "domain_id": "1885_DOMAIN_COM-VRSN",
+                      "registrar": {
+                        "url": "<http://www.godaddy.com>",
+                        "name": "GoDaddy.com, LLC",
+                        "organization": "GoDaddy.com, LLC"
+                      },
+                      "creation_date": "2024-05-01T19:22:16.051Z",
+                      "expiration_date": "2025-10-27T13:57:57.122Z"
+                    },
+                    "object": "website",
+                    "parked": false,
+                    "people": null,
+                    "status": "online",
+                    "addresses": [],
+                    "created_at": "2024-03-28T04:04:36.428Z",
+                    "updated_at": "2023-12-21T07:21:50.719Z",
+                    "business_id": "afc273b9-64ac-4ec4-a6a8-e514476c10dd",
+                    "description": "Aegrus cavus summopere votum ipsa fugiat uter.",
+                    "phone_numbers": [],
+                    "email_addresses": null,
+                    "http_status_code": null,
+                    "business_name_match": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
           }
         ]
       },
