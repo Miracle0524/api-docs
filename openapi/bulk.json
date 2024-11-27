@@ -33,14 +33,13 @@
                 "examples": [
                   [
                     {
+                      "external_id": "77388994455034",
                       "name": "Test Business",
-                      "address_line_1": "480 s Ronald Reagan Blvd",
                       "tin": "333444685",
-                      "address_postal_code": "32850",
+                      "address_line_1": "480 s Ronald Reagan Blvd",
                       "address_city": "Longwood",
                       "address_state": "FL",
-                      "annual_income": 1022233,
-                      "external_id": "77388994455034"
+                      "address_postal_code": "32850"
                     }
                   ]
                 ],
@@ -48,14 +47,13 @@
               },
               "example": [
                 {
+                  "external_id": "77388994455034",
                   "name": "Test Business",
-                  "address_line_1": "480 s Ronald Reagan Blvd",
                   "tin": "333444685",
-                  "address_postal_code": "32850",
+                  "address_line_1": "480 s Ronald Reagan Blvd",
                   "address_city": "Longwood",
                   "address_state": "FL",
-                  "annual_income": 1022233,
-                  "external_id": "77388994455034"
+                  "address_postal_code": "32850"
                 }
               ]
             }
@@ -1317,28 +1315,22 @@
     "schemas": {
       "ImportBusinessRequest": {
         "title": "ImportBusinessRequest",
-        "required": [
-          "name",
-          "address_line_1",
-          "tin",
-          "address_postal_code",
-          "address_city",
-          "address_state",
-          "annual_income",
-          "external_id"
-        ],
+        "required": ["external_id", "name"],
         "type": "object",
         "properties": {
+          "external_id": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
+          },
+          "tin": {
+            "type": "number"
           },
           "address_line_1": {
             "type": "string"
           },
-          "tin": {
-            "type": "string"
-          },
-          "address_postal_code": {
+          "address_line_2": {
             "type": "string"
           },
           "address_city": {
@@ -1347,24 +1339,247 @@
           "address_state": {
             "type": "string"
           },
-          "annual_income": {
-            "type": "integer",
-            "contentEncoding": "int32"
+          "address_country": {
+            "type": "string"
           },
-          "external_id": {
+          "address_postal_code": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "dba1_name": {
+            "type": "string"
+          },
+          "address1_line_1": {
+            "type": "string"
+          },
+          "address1_apartment": {
+            "type": "string"
+          },
+          "address1_city": {
+            "type": "string"
+          },
+          "address1_state": {
+            "type": "string"
+          },
+          "address1_country": {
+            "type": "string"
+          },
+          "address1_postal_code": {
+            "type": "string"
+          },
+          "address1_mobile": {
+            "type": "string"
+          },
+          "official_website": {
+            "type": "string"
+          },
+          "naics_code": {
+            "type": "number"
+          },
+          "naics_title": {
+            "type": "string"
+          },
+          "mcc_code": {
+            "type": "number"
+          },
+          "industry": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "string"
+          },
+          "is_monitoring_enabled": {
+            "type": "string"
+          },
+          "owner1_title": {
+            "type": "string"
+          },
+          "owner1_first_name": {
+            "type": "string"
+          },
+          "owner1_last_name": {
+            "type": "string"
+          },
+          "owner1_email": {
+            "type": "string"
+          },
+          "owner1_mobile": {
+            "type": "string"
+          },
+          "owner1_ssn": {
+            "type": "string"
+          },
+          "owner1_dob": {
+            "type": "string"
+          },
+          "owner1_address_line_1": {
+            "type": "string"
+          },
+          "owner1_address_line_2": {
+            "type": "string"
+          },
+          "owner1_address_city": {
+            "type": "string"
+          },
+          "owner1_address_state": {
+            "type": "string"
+          },
+          "owner1_address_postal": {
+            "type": "string"
+          },
+          "owner1_address_country": {
+            "type": "string"
+          },
+          "owner1_owner_type": {
+            "type": "string"
+          },
+          "owner1_ownership_percentage": {
+            "type": "string"
+          },
+          "send_invitation": {
+            "type": "string"
+          },
+          "applicant_first_name": {
+            "type": "string"
+          },
+          "applicant_last_name": {
+            "type": "string"
+          },
+          "applicant_email": {
+            "type": "string"
+          },
+          "year_created": {
+            "type": "string"
+          },
+          "annual_total_income": {
+            "type": "number"
+          },
+          "total_wages": {
+            "type": "number"
+          },
+          "annual_net_income": {
+            "type": "number"
+          },
+          "cost_of_goods_sold": {
+            "type": "number"
+          },
+          "total_liabilities": {
+            "type": "number"
+          },
+          "total_assets": {
+            "type": "number"
+          },
+          "total_equity": {
+            "type": "number"
+          },
+          "total_accounts_payable": {
+            "type": "number"
+          },
+          "total_accounts_recievable": {
+            "type": "number"
+          },
+          "total_cash_and_cash_equivalents": {
+            "type": "number"
+          },
+          "total_short_term_investments": {
+            "type": "number"
+          },
+          "total_current_assets": {
+            "type": "number"
+          },
+          "total_current_liabilities": {
+            "type": "number"
+          },
+          "non_current_liablities": {
+            "type": "number"
+          },
+          "annual_cost_of_goods_sold": {
+            "type": "number"
+          },
+          "annual_gross_profit": {
+            "type": "number"
+          },
+          "annual_taxes_paid": {
+            "type": "number"
+          },
+          "annual_interest_expenses": {
+            "type": "number"
+          },
+          "number_of_employees": {
+            "type": "number"
+          },
+          "business_type": {
+            "type": "string"
+          },
+          "sic_code": {
+            "type": "string"
+          },
+          "score_retrieval_date": {
+            "type": "string"
+          },
+          "business_liens": {
+            "type": "string"
+          },
+          "business_liens_file_date": {
+            "type": "string"
+          },
+          "business_liens_status": {
+            "type": "string"
+          },
+          "business_liens_status_date": {
+            "type": "string"
+          },
+          "business_bankruptcies": {
+            "type": "string"
+          },
+          "business_bankruptcies_file_date": {
+            "type": "string"
+          },
+          "business_bankruptcies_chapter": {
+            "type": "string"
+          },
+          "business_bankruptcies_voluntary": {
+            "type": "string"
+          },
+          "business_bankruptcies_status": {
+            "type": "string"
+          },
+          "business_bankruptcies_status_date": {
+            "type": "string"
+          },
+          "business_judgements": {
+            "type": "string"
+          },
+          "business_judgements_file_date": {
+            "type": "string"
+          },
+          "business_judgements_status": {
+            "type": "string"
+          },
+          "business_judgements_status_date": {
+            "type": "string"
+          },
+          "business_judgements_amount": {
+            "type": "string"
+          },
+          "social_review_count": {
+            "type": "string"
+          },
+          "social_review_score": {
             "type": "string"
           }
         },
         "examples": [
           {
+            "external_id": "77388994455034",
             "name": "Test Business",
-            "address_line_1": "480 s Ronald Reagan Blvd",
             "tin": "333444685",
-            "address_postal_code": "32850",
+            "address_line_1": "480 s Ronald Reagan Blvd",
             "address_city": "Longwood",
             "address_state": "FL",
-            "annual_income": 1022233,
-            "external_id": "77388994455034"
+            "address_postal_code": "32850"
           }
         ]
       },
