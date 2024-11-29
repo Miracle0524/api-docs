@@ -34,6 +34,8 @@ After installing Mintlify, you can proceed to the next step.
 
 ## Development
 
+Support link: [Mintlify Confluence Documentation](https://worth-ai.atlassian.net/wiki/spaces/joinworth/pages/170229767/Mintlify+API+Docs...)
+
 Execute the following command to run the mintlify project locally:
 
 > ⚠️ **Warning:** Ensure that you are in the root directory of your `mint.json` file.
