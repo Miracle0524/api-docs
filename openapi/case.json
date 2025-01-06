@@ -24,9 +24,7 @@
   "paths": {
     "/subscriptions/plans": {
       "get": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Get Subscription Plans",
         "operationId": "GetSubscriptionPlans",
         "parameters": [],
@@ -540,9 +538,7 @@
     },
     "/subscriptions/businesses/{businessID}": {
       "get": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Business Subscription Details",
         "operationId": "BusinessSubscriptionDetails",
         "parameters": [
@@ -554,9 +550,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -818,9 +812,7 @@
     },
     "/subscriptions/businesses/{businessID}/create": {
       "post": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Create Subscription/Subscribe",
         "operationId": "CreateSubscription/Subscribe",
         "parameters": [
@@ -832,9 +824,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -1355,9 +1345,7 @@
     },
     "/subscriptions/businesses/{businessID}/status": {
       "get": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Business Subscription Status",
         "operationId": "BusinessSubscriptionStatus",
         "parameters": [
@@ -1369,9 +1357,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "0edc06d0-e336-4b83-beab-708171e9e8d1"
-              ]
+              "examples": ["0edc06d0-e336-4b83-beab-708171e9e8d1"]
             }
           }
         ],
@@ -1866,9 +1852,7 @@
     },
     "/subscriptions/businesses/{businessID}/customer-portal-session": {
       "post": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Create Customer Portal Session",
         "operationId": "CreateCustomerPortalSession",
         "parameters": [
@@ -1880,9 +1864,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -2373,9 +2355,7 @@
     },
     "/subscriptions/businesses/{businessID}/history": {
       "get": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Business Subscription History",
         "operationId": "BusinessSubscriptionHistory",
         "parameters": [
@@ -2387,9 +2367,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "78101af8-f509-4c68-b67a-6d9cf0e5aab5"
-              ]
+              "examples": ["78101af8-f509-4c68-b67a-6d9cf0e5aab5"]
             }
           }
         ],
@@ -2649,9 +2627,7 @@
     },
     "/subscriptions/businesses/{businessID}/cancel": {
       "post": {
-        "tags": [
-          "Subscriptions"
-        ],
+        "tags": ["Subscriptions"],
         "summary": "Cancel Subscription",
         "description": "This API endpoint if for admin, to cancel the applicants subscription.",
         "operationId": "CancelSubscription",
@@ -2664,9 +2640,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "74c01edf-f2ca-4e43-bcd8-37b22d6cc7c7"
-              ]
+              "examples": ["74c01edf-f2ca-4e43-bcd8-37b22d6cc7c7"]
             }
           }
         ],
@@ -3710,9 +3684,7 @@
     },
     "/businesses": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Businesses",
         "operationId": "GetBusinesses",
         "parameters": [],
@@ -4028,9 +4000,7 @@
     },
     "/businesses/{businessID}": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Business By ID",
         "operationId": "GetBusinessByID",
         "parameters": [
@@ -4042,9 +4012,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -4578,9 +4546,7 @@
         ]
       },
       "patch": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Update Business By ID",
         "operationId": "UpdateBusinessByID",
         "parameters": [
@@ -4592,9 +4558,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "346ddd58-8850-4b4c-9781-501630eea4e6"
-              ]
+              "examples": ["346ddd58-8850-4b4c-9781-501630eea4e6"]
             }
           }
         ],
@@ -5125,9 +5089,7 @@
     },
     "/businesses/{businessID}/owners": {
       "post": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Add Owner Details",
         "operationId": "AddOwnerDetails",
         "parameters": [
@@ -5139,9 +5101,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "5429e0e0-a812-4252-a8cf-61ab91aa2af2"
-              ]
+              "examples": ["5429e0e0-a812-4252-a8cf-61ab91aa2af2"]
             }
           }
         ],
@@ -5457,9 +5417,7 @@
     },
     "/businesses/{businessID}/progression": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Applicant Progression",
         "operationId": "ApplicantProgression",
         "parameters": [
@@ -5471,9 +5429,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "0edc06d0-e336-4b83-beab-708171e9e8d1"
-              ]
+              "examples": ["0edc06d0-e336-4b83-beab-708171e9e8d1"]
             }
           }
         ],
@@ -6319,9 +6275,7 @@
     },
     "/businesses/{businessID}/customers": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Business Customers",
         "operationId": "GetBusinessCustomers",
         "parameters": [
@@ -6333,9 +6287,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "f17295d4-5237-4079-8b18-8786eddf49f3"
-              ]
+              "examples": ["f17295d4-5237-4079-8b18-8786eddf49f3"]
             }
           }
         ],
@@ -6651,9 +6603,7 @@
     },
     "/businesses/customers/{customerID}": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Customer Businesses",
         "operationId": "GetCustomerBusinesses",
         "parameters": [
@@ -6665,9 +6615,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "44aed0e8-89ec-4307-8b5d-310f8964e5b5"
-              ]
+              "examples": ["44aed0e8-89ec-4307-8b5d-310f8964e5b5"]
             }
           }
         ],
@@ -6973,9 +6921,7 @@
     },
     "/applicants/{applicantID}/businesses": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Applicant Businesses",
         "operationId": "GetApplicantBusinesses",
         "parameters": [
@@ -6987,9 +6933,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb"
-              ]
+              "examples": ["e8f15d25-ed33-4783-b6fe-0e7d4290c2eb"]
             }
           }
         ],
@@ -7251,9 +7195,7 @@
     },
     "/businesses/{businessID}/cases": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "Get Business Cases",
         "operationId": "GetBusinessCases",
         "parameters": [
@@ -7265,9 +7207,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "f17295d4-5237-4079-8b18-8786eddf49f3"
-              ]
+              "examples": ["f17295d4-5237-4079-8b18-8786eddf49f3"]
             }
           }
         ],
@@ -7561,9 +7501,7 @@
     },
     "/customers/{customerID}/businesses/invite": {
       "post": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "WIP: Send Invite",
         "operationId": "WIP:SendInvite",
         "parameters": [
@@ -7575,9 +7513,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "b1fad22e-5533-4496-89ba-a4fe2cb0cf88"
-              ]
+              "examples": ["b1fad22e-5533-4496-89ba-a4fe2cb0cf88"]
             }
           }
         ],
@@ -7656,9 +7592,7 @@
     },
     "/invitation/{invitationToken}/verify": {
       "post": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "WIP: Verify Invite",
         "operationId": "WIP:VerifyInvite",
         "parameters": [
@@ -7938,9 +7872,7 @@
     },
     "/invitation/action": {
       "post": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "WIP: Update invitation Status",
         "operationId": "WIP:UpdateinvitationStatus",
         "parameters": [],
@@ -8229,9 +8161,7 @@
     },
     "/api/v1/customers/{customerID}/businesses/{businessID}/applicants": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "WIP: Get Applicants of A Business",
         "operationId": "WIP:GetApplicantsofABusiness",
         "parameters": [
@@ -8243,9 +8173,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "b1fad22e-5533-4496-89ba-a4fe2cb0cf88"
-              ]
+              "examples": ["b1fad22e-5533-4496-89ba-a4fe2cb0cf88"]
             }
           },
           {
@@ -8256,9 +8184,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "4897aa69-0465-46b3-bd9e-d05e5114b708"
-              ]
+              "examples": ["4897aa69-0465-46b3-bd9e-d05e5114b708"]
             }
           }
         ],
@@ -8573,9 +8499,7 @@
     },
     "/owners": {
       "get": {
-        "tags": [
-          "Businesses"
-        ],
+        "tags": ["Businesses"],
         "summary": "WIP Get Owners",
         "operationId": "WIPGetOwners",
         "parameters": [],
@@ -8606,9 +8530,7 @@
     },
     "/cases": {
       "get": {
-        "tags": [
-          "Cases"
-        ],
+        "tags": ["Cases"],
         "summary": "Get Standalone Cases",
         "operationId": "GetStandaloneCases",
         "parameters": [],
@@ -8902,9 +8824,7 @@
     },
     "/customers/{customerID}/cases": {
       "get": {
-        "tags": [
-          "Cases"
-        ],
+        "tags": ["Cases"],
         "summary": "Get Customer Cases",
         "operationId": "GetCustomerCases",
         "parameters": [
@@ -8916,9 +8836,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "22f210e4-4455-4107-b132-97e8478546ea"
-              ]
+              "examples": ["22f210e4-4455-4107-b132-97e8478546ea"]
             }
           }
         ],
@@ -9212,9 +9130,7 @@
     },
     "/cases/{caseID}": {
       "get": {
-        "tags": [
-          "Cases"
-        ],
+        "tags": ["Cases"],
         "summary": "Get Standalone Case By ID",
         "operationId": "GetStandaloneCaseByID",
         "parameters": [
@@ -9226,9 +9142,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "2e14b719-0f55-4bcb-957d-b169f88f4f61"
-              ]
+              "examples": ["2e14b719-0f55-4bcb-957d-b169f88f4f61"]
             }
           }
         ],
@@ -9766,9 +9680,7 @@
     },
     "/customers/{customerID}/cases/{caseID}": {
       "get": {
-        "tags": [
-          "Cases"
-        ],
+        "tags": ["Cases"],
         "summary": "Get Customer Case By ID",
         "operationId": "GetCustomerCaseByID",
         "parameters": [
@@ -9780,9 +9692,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1"
-              ]
+              "examples": ["2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1"]
             }
           },
           {
@@ -9793,9 +9703,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": [
-                "eb7aa8d8-18e6-49b1-b7e7-6311cae51acd"
-              ]
+              "examples": ["eb7aa8d8-18e6-49b1-b7e7-6311cae51acd"]
             }
           }
         ],
@@ -10019,8 +9927,8 @@
                             "applicant_id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                             "customer_id": "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1",
                             "status": {
-                              "code": 3,
                               "id": "ONBOARDING",
+                              "code": 3,
                               "label": "ONBOARDING"
                             },
                             "created_at": "2024-02-12T11:08:26.868002",
@@ -10028,6 +9936,9 @@
                             "updated_at": "2024-02-12T11:08:26.868002",
                             "updated_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                             "business_id": "f17295d4-5237-4079-8b18-8786eddf49f3",
+                            "case_type": 1,
+                            "assignee": {},
+                            "assigner": null,
                             "business": {
                               "id": "f17295d4-5237-4079-8b18-8786eddf49f3",
                               "name": "One Stop Furniture And Mattress",
@@ -10047,62 +9958,135 @@
                               "official_website": null,
                               "public_website": null,
                               "social_account": null,
-                              "status": "VERIFIED"
+                              "status": "VERIFIED",
+                              "industry": {
+                                "id": 1,
+                                "name": "Agriculture, Forestry, Fishing and Hunting",
+                                "code": "agriculture_forestry_fishing_and_hunting",
+                                "sector_code": "11",
+                                "created_at": "2024-04-24T17:56:46.034418",
+                                "updated_at": "2024-04-24T17:56:46.034418"
+                              },
+                              "mcc_id": null,
+                              "naics_id": null,
+                              "naics_code": null,
+                              "naics_title": null,
+                              "mcc_code": null,
+                              "mcc_title": null
                             },
                             "applicant": {
-                              "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                               "first_name": "Sandbox",
                               "last_name": "Applicant",
-                              "email": "dummy.applicant@email.com",
-                              "mobile": null,
-                              "is_email_verified": true,
-                              "is_first_login": false,
-                              "created_at": "2024-02-12T11:08:02.832Z",
-                              "created_by": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
-                              "updated_at": "2024-02-12T11:08:26.848Z",
-                              "updated_by": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
-                              "status": "ACTIVE",
-                              "subrole": {
-                                "id": "9950995a-ad5c-43ba-a0ac-6f367cac72ef",
-                                "code": "applicant",
-                                "label": "Applicant",
-                                "role_id": 3
-                              }
+                              "created_at": "2024-02-12T11:08:02.832Z"
                             },
                             "owners": [
                               {
-                                "id": "aae5fe81-6460-43fd-b7f0-bf7dc63d5e95",
+                                "id": "e476e363-c2f4-4c4a-8bd9-a3ee2be12839",
                                 "title": {
-                                  "id": 1,
-                                  "title": "Partner"
+                                  "id": 2,
+                                  "title": "Limited Partner"
                                 },
-                                "first_name": "Sandbox",
-                                "last_name": "Applicant",
-                                "ssn": "844148259",
+                                "first_name": "Owner1",
+                                "last_name": "Knope__test",
+                                "ssn": "123123232",
                                 "email": "dummy.applicant@email.com",
-                                "mobile": "6073213231",
-                                "date_of_birth": "2024-02-08",
+                                "mobile": "+12345678909",
+                                "date_of_birth": "2024-11-07",
                                 "address_apartment": null,
-                                "address_line_1": "3614, Cassopolis Street,",
+                                "address_line_1": "123 Main St.",
                                 "address_line_2": null,
-                                "address_city": "Elkhart",
+                                "address_city": "Pawnee",
                                 "address_state": "Indiana",
-                                "address_postal_code": "46514",
-                                "address_country": "Unites States",
-                                "created_at": "2024-02-13T06:56:16.761321",
-                                "created_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
-                                "updated_at": "2024-02-13T06:56:16.761321",
-                                "updated_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
-                                "ownership_percentage": 25,
+                                "address_postal_code": "46001",
+                                "address_country": "USA",
+                                "created_at": "2024-11-27T06:06:40.236917",
+                                "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "updated_at": "2024-11-27T06:06:40.236917",
+                                "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "ownership_percentage": 0,
                                 "owner_type": "CONTROL"
+                              },
+                              {
+                                "id": "f1c1faaa-4fd9-4aa3-baca-5727cf49f137",
+                                "title": {
+                                  "id": 2,
+                                  "title": "Limited Partner"
+                                },
+                                "first_name": "Beneficial Owner 1",
+                                "last_name": "Knope__test",
+                                "ssn": "123123232",
+                                "email": "prasad.desai+521@winjit.com",
+                                "mobile": "+12345678909",
+                                "date_of_birth": "2024-11-01",
+                                "address_apartment": null,
+                                "address_line_1": "123 Main St.",
+                                "address_line_2": null,
+                                "address_city": "Pawnee",
+                                "address_state": "Indiana",
+                                "address_postal_code": "46001",
+                                "address_country": "USA",
+                                "created_at": "2024-11-27T06:06:40.236917",
+                                "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "updated_at": "2024-11-27T06:06:40.236917",
+                                "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "ownership_percentage": 25,
+                                "owner_type": "BENEFICIARY"
+                              },
+                              {
+                                "id": "f9571e9a-13e1-4bb3-b1a3-7869cebb08a0",
+                                "title": {
+                                  "id": 2,
+                                  "title": "Limited Partner"
+                                },
+                                "first_name": "Beneficial Owner 2",
+                                "last_name": "Knope__test",
+                                "ssn": "123123232",
+                                "email": "prasad.desai+521@winjit.com",
+                                "mobile": "+12345678909",
+                                "date_of_birth": "2024-11-01",
+                                "address_apartment": null,
+                                "address_line_1": "123 Main St.",
+                                "address_line_2": null,
+                                "address_city": "Pawnee",
+                                "address_state": "Indiana",
+                                "address_postal_code": "46001",
+                                "address_country": "USA",
+                                "created_at": "2024-11-27T06:06:40.236917",
+                                "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "updated_at": "2024-11-27T06:06:40.236917",
+                                "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                                "ownership_percentage": 25,
+                                "owner_type": "BENEFICIARY"
                               }
                             ],
                             "status_history": [
                               {
                                 "id": 3,
                                 "status": "ONBOARDING",
-                                "created_at": "2024-02-12T11:08:26.868Z",
-                                "created_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb"
+                                "created_at": "2024-11-27T05:59:21.586Z",
+                                "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b"
+                              }
+                            ],
+                            "business_names": [
+                              {
+                                "name": "dba 1",
+                                "is_primary": false
+                              },
+                              {
+                                "name": "test 1",
+                                "is_primary": true
+                              }
+                            ],
+                            "business_addresses": [
+                              {
+                                "line_1": "123 Main St.",
+                                "apartment": null,
+                                "city": "Pawnee",
+                                "state": "Indiana",
+                                "country": "USA",
+                                "postal_code": "46001",
+                                "mobile": "+12345678909",
+                                "is_primary": true
                               }
                             ]
                           }
@@ -10120,8 +10104,8 @@
                     "applicant_id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                     "customer_id": "2e6438cb-ec3f-4e94-b5c9-8c058d2efaf1",
                     "status": {
-                      "code": 3,
                       "id": "ONBOARDING",
+                      "code": 3,
                       "label": "ONBOARDING"
                     },
                     "created_at": "2024-02-12T11:08:26.868002",
@@ -10129,6 +10113,9 @@
                     "updated_at": "2024-02-12T11:08:26.868002",
                     "updated_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
                     "business_id": "f17295d4-5237-4079-8b18-8786eddf49f3",
+                    "case_type": 1,
+                    "assignee": {},
+                    "assigner": null,
                     "business": {
                       "id": "f17295d4-5237-4079-8b18-8786eddf49f3",
                       "name": "One Stop Furniture And Mattress",
@@ -10148,62 +10135,135 @@
                       "official_website": null,
                       "public_website": null,
                       "social_account": null,
-                      "status": "VERIFIED"
+                      "status": "VERIFIED",
+                      "industry": {
+                        "id": 1,
+                        "name": "Agriculture, Forestry, Fishing and Hunting",
+                        "code": "agriculture_forestry_fishing_and_hunting",
+                        "sector_code": "11",
+                        "created_at": "2024-04-24T17:56:46.034418",
+                        "updated_at": "2024-04-24T17:56:46.034418"
+                      },
+                      "mcc_id": null,
+                      "naics_id": null,
+                      "naics_code": null,
+                      "naics_title": null,
+                      "mcc_code": null,
+                      "mcc_title": null
                     },
                     "applicant": {
-                      "id": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
-                      "first_name": "Sandbox",
-                      "last_name": "Applicant",
-                      "email": "dummy.applicant@email.com",
-                      "mobile": null,
-                      "is_email_verified": true,
-                      "is_first_login": false,
-                      "created_at": "2024-02-12T11:08:02.832Z",
-                      "created_by": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
-                      "updated_at": "2024-02-12T11:08:26.848Z",
-                      "updated_by": "b03d6f6a-063b-4e71-8195-9f6f590a6257",
-                      "status": "ACTIVE",
-                      "subrole": {
-                        "id": "9950995a-ad5c-43ba-a0ac-6f367cac72ef",
-                        "code": "applicant",
-                        "label": "Applicant",
-                        "role_id": 3
-                      }
+                      "first_name": "Leslie",
+                      "last_name": "Knope__test",
+                      "created_at": "2024-11-15T06:05:32.077Z"
                     },
                     "owners": [
                       {
-                        "id": "aae5fe81-6460-43fd-b7f0-bf7dc63d5e95",
+                        "id": "e476e363-c2f4-4c4a-8bd9-a3ee2be12839",
                         "title": {
-                          "id": 1,
-                          "title": "Partner"
+                          "id": 2,
+                          "title": "Limited Partner"
                         },
-                        "first_name": "Sandbox",
-                        "last_name": "Applicant",
-                        "ssn": "844148259",
+                        "first_name": "Owner1",
+                        "last_name": "Knope__test",
+                        "ssn": "123123232",
                         "email": "dummy.applicant@email.com",
-                        "mobile": "6073213231",
-                        "date_of_birth": "2024-02-08",
+                        "mobile": "+12345678909",
+                        "date_of_birth": "2024-11-07",
                         "address_apartment": null,
-                        "address_line_1": "3614, Cassopolis Street,",
+                        "address_line_1": "123 Main St.",
                         "address_line_2": null,
-                        "address_city": "Elkhart",
+                        "address_city": "Pawnee",
                         "address_state": "Indiana",
-                        "address_postal_code": "46514",
-                        "address_country": "Unites States",
-                        "created_at": "2024-02-13T06:56:16.761321",
-                        "created_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
-                        "updated_at": "2024-02-13T06:56:16.761321",
-                        "updated_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb",
-                        "ownership_percentage": 25,
+                        "address_postal_code": "46001",
+                        "address_country": "USA",
+                        "created_at": "2024-11-27T06:06:40.236917",
+                        "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "updated_at": "2024-11-27T06:06:40.236917",
+                        "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "ownership_percentage": 0,
                         "owner_type": "CONTROL"
+                      },
+                      {
+                        "id": "f1c1faaa-4fd9-4aa3-baca-5727cf49f137",
+                        "title": {
+                          "id": 2,
+                          "title": "Limited Partner"
+                        },
+                        "first_name": "Beneficial Owner 1",
+                        "last_name": "Knope__test",
+                        "ssn": "123123232",
+                        "email": "prasad.desai+521@winjit.com",
+                        "mobile": "+12345678909",
+                        "date_of_birth": "2024-11-01",
+                        "address_apartment": null,
+                        "address_line_1": "123 Main St.",
+                        "address_line_2": null,
+                        "address_city": "Pawnee",
+                        "address_state": "Indiana",
+                        "address_postal_code": "46001",
+                        "address_country": "USA",
+                        "created_at": "2024-11-27T06:06:40.236917",
+                        "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "updated_at": "2024-11-27T06:06:40.236917",
+                        "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "ownership_percentage": 25,
+                        "owner_type": "BENEFICIARY"
+                      },
+                      {
+                        "id": "f9571e9a-13e1-4bb3-b1a3-7869cebb08a0",
+                        "title": {
+                          "id": 2,
+                          "title": "Limited Partner"
+                        },
+                        "first_name": "Beneficial Owner 2",
+                        "last_name": "Knope__test",
+                        "ssn": "123123232",
+                        "email": "prasad.desai+521@winjit.com",
+                        "mobile": "+12345678909",
+                        "date_of_birth": "2024-11-01",
+                        "address_apartment": null,
+                        "address_line_1": "123 Main St.",
+                        "address_line_2": null,
+                        "address_city": "Pawnee",
+                        "address_state": "Indiana",
+                        "address_postal_code": "46001",
+                        "address_country": "USA",
+                        "created_at": "2024-11-27T06:06:40.236917",
+                        "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "updated_at": "2024-11-27T06:06:40.236917",
+                        "updated_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b",
+                        "ownership_percentage": 25,
+                        "owner_type": "BENEFICIARY"
                       }
                     ],
                     "status_history": [
                       {
                         "id": 3,
                         "status": "ONBOARDING",
-                        "created_at": "2024-02-12T11:08:26.868Z",
-                        "created_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb"
+                        "created_at": "2024-11-27T05:59:21.586Z",
+                        "created_by": "79ea9a15-a1c2-4b01-8799-7640600a5e3b"
+                      }
+                    ],
+                    "business_names": [
+                      {
+                        "name": "dba 1",
+                        "is_primary": false
+                      },
+                      {
+                        "name": "test 1",
+                        "is_primary": true
+                      }
+                    ],
+                    "business_addresses": [
+                      {
+                        "line_1": "123 Main St.",
+                        "apartment": null,
+                        "city": "Pawnee",
+                        "state": "Indiana",
+                        "country": "USA",
+                        "postal_code": "46001",
+                        "mobile": "+12345678909",
+                        "is_primary": true
                       }
                     ]
                   }
@@ -10232,11 +10292,7 @@
     "schemas": {
       "Success": {
         "title": "Success",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -10390,9 +10446,7 @@
       },
       "Data": {
         "title": "Data",
-        "required": [
-          "records"
-        ],
+        "required": ["records"],
         "type": "object",
         "properties": {
           "records": {
@@ -10573,10 +10627,7 @@
             "type": "boolean"
           },
           "aggregate_usage": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "amount": {
             "type": "integer",
@@ -10609,31 +10660,19 @@
             "type": "object"
           },
           "nickname": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "product": {
             "$ref": "#/components/schemas/Product"
           },
           "tiers_mode": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "transform_usage": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "trial_period_days": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "usage_type": {
             "type": "string"
@@ -10760,22 +10799,13 @@
             "type": "string"
           },
           "package_dimensions": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "shippable": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "statement_descriptor": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "tax_code": {
             "type": "string"
@@ -10784,20 +10814,14 @@
             "type": "string"
           },
           "unit_label": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "updated": {
             "type": "integer",
             "contentEncoding": "int32"
           },
           "url": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -10827,11 +10851,7 @@
       },
       "SuccessActivePlans": {
         "title": "SuccessActivePlans",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -10985,11 +11005,7 @@
       },
       "Success1": {
         "title": "Success1",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11017,20 +11033,14 @@
       },
       "Data2": {
         "title": "Data2",
-        "required": [
-          "subscription",
-          "invoice"
-        ],
+        "required": ["subscription", "invoice"],
         "type": "object",
         "properties": {
           "subscription": {
             "$ref": "#/components/schemas/Subscription"
           },
           "invoice": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -11044,9 +11054,7 @@
       },
       "Subscription": {
         "title": "Subscription",
-        "required": [
-          "status"
-        ],
+        "required": ["status"],
         "type": "object",
         "properties": {
           "status": {
@@ -11061,10 +11069,7 @@
       },
       "CreateSubscriptionSubscribeRequest": {
         "title": "CreateSubscriptionSubscribeRequest",
-        "required": [
-          "plan_id",
-          "payment_method"
-        ],
+        "required": ["plan_id", "payment_method"],
         "type": "object",
         "properties": {
           "plan_id": {
@@ -11083,11 +11088,7 @@
       },
       "Success2": {
         "title": "Success2",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11112,9 +11113,7 @@
       },
       "Data3": {
         "title": "Data3",
-        "required": [
-          "checkout_url"
-        ],
+        "required": ["checkout_url"],
         "type": "object",
         "properties": {
           "checkout_url": {
@@ -11129,10 +11128,7 @@
       },
       "Data4": {
         "title": "Data4",
-        "required": [
-          "errorName",
-          "code"
-        ],
+        "required": ["errorName", "code"],
         "type": "object",
         "properties": {
           "errorName": {
@@ -11151,12 +11147,7 @@
       },
       "Error1": {
         "title": "Error1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11186,11 +11177,7 @@
       },
       "Success3": {
         "title": "Success3",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11217,11 +11204,7 @@
       },
       "Data6": {
         "title": "Data6",
-        "required": [
-          "status",
-          "message",
-          "subscription"
-        ],
+        "required": ["status", "message", "subscription"],
         "type": "object",
         "properties": {
           "status": {
@@ -11231,10 +11214,7 @@
             "type": "string"
           },
           "subscription": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -11247,9 +11227,7 @@
       },
       "Data7": {
         "title": "Data7",
-        "required": [
-          "errorName"
-        ],
+        "required": ["errorName"],
         "type": "object",
         "properties": {
           "errorName": {
@@ -11264,12 +11242,7 @@
       },
       "ErrorBusinessandApplicantarenotrelated1": {
         "title": "ErrorBusinessandApplicantarenotrelated1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11298,11 +11271,7 @@
       },
       "Success4": {
         "title": "Success4",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11327,9 +11296,7 @@
       },
       "Data9": {
         "title": "Data9",
-        "required": [
-          "redirect_url"
-        ],
+        "required": ["redirect_url"],
         "type": "object",
         "properties": {
           "redirect_url": {
@@ -11344,12 +11311,7 @@
       },
       "ErrorNotFound1": {
         "title": "ErrorNotFound1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11378,11 +11340,7 @@
       },
       "SuccessNoResults": {
         "title": "SuccessNoResults",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11409,11 +11367,7 @@
       },
       "Data12": {
         "title": "Data12",
-        "required": [
-          "records",
-          "total_pages",
-          "total_items"
-        ],
+        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -11442,11 +11396,7 @@
       },
       "Success5": {
         "title": "Success5",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -11688,16 +11638,10 @@
             "type": "string"
           },
           "application": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "application_fee_percent": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "automatic_tax": {
             "$ref": "#/components/schemas/AutomaticTax"
@@ -11707,16 +11651,10 @@
             "contentEncoding": "int32"
           },
           "billing_cycle_anchor_config": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "billing_thresholds": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "cancel_at": {
             "type": "integer",
@@ -11754,19 +11692,13 @@
             "type": "string"
           },
           "days_until_due": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "default_payment_method": {
             "type": "string"
           },
           "default_source": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "default_tax_rates": {
             "type": "array",
@@ -11779,16 +11711,10 @@
             "type": "string"
           },
           "discount": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "ended_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "invoice_settings": {
             "$ref": "#/components/schemas/InvoiceSettings"
@@ -11806,43 +11732,25 @@
             "$ref": "#/components/schemas/Metadata"
           },
           "next_pending_invoice_item_invoice": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "on_behalf_of": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "pause_collection": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "payment_settings": {
             "$ref": "#/components/schemas/PaymentSettings"
           },
           "pending_invoice_item_interval": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "pending_setup_intent": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "pending_update": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "plan": {
             "$ref": "#/components/schemas/Plan"
@@ -11852,10 +11760,7 @@
             "contentEncoding": "int32"
           },
           "schedule": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "start_date": {
             "type": "integer",
@@ -11865,31 +11770,19 @@
             "type": "string"
           },
           "test_clock": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "transfer_data": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "trial_end": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "trial_settings": {
             "$ref": "#/components/schemas/TrialSettings"
           },
           "trial_start": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -12059,10 +11952,7 @@
       },
       "AutomaticTax": {
         "title": "AutomaticTax",
-        "required": [
-          "enabled",
-          "liability"
-        ],
+        "required": ["enabled", "liability"],
         "type": "object",
         "properties": {
           "enabled": {
@@ -12083,9 +11973,7 @@
       },
       "Liability": {
         "title": "Liability",
-        "required": [
-          "type"
-        ],
+        "required": ["type"],
         "type": "object",
         "properties": {
           "type": {
@@ -12100,21 +11988,14 @@
       },
       "CancellationDetails": {
         "title": "CancellationDetails",
-        "required": [
-          "comment",
-          "feedback",
-          "reason"
-        ],
+        "required": ["comment", "feedback", "reason"],
         "type": "object",
         "properties": {
           "comment": {
             "type": "string"
           },
           "feedback": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "reason": {
             "type": "string"
@@ -12130,17 +12011,11 @@
       },
       "InvoiceSettings": {
         "title": "InvoiceSettings",
-        "required": [
-          "account_tax_ids",
-          "issuer"
-        ],
+        "required": ["account_tax_ids", "issuer"],
         "type": "object",
         "properties": {
           "account_tax_ids": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "issuer": {
             "$ref": "#/components/schemas/Issuer"
@@ -12157,9 +12032,7 @@
       },
       "Issuer": {
         "title": "Issuer",
-        "required": [
-          "type"
-        ],
+        "required": ["type"],
         "type": "object",
         "properties": {
           "type": {
@@ -12174,13 +12047,7 @@
       },
       "Items": {
         "title": "Items",
-        "required": [
-          "object",
-          "data",
-          "has_more",
-          "total_count",
-          "url"
-        ],
+        "required": ["object", "data", "has_more", "total_count", "url"],
         "type": "object",
         "properties": {
           "object": {
@@ -12296,10 +12163,7 @@
             "type": "string"
           },
           "billing_thresholds": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "created": {
             "type": "integer",
@@ -12425,10 +12289,7 @@
             "type": "boolean"
           },
           "aggregate_usage": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "amount": {
             "type": "integer",
@@ -12461,31 +12322,19 @@
             "type": "object"
           },
           "nickname": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "product": {
             "type": "string"
           },
           "tiers_mode": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "transform_usage": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "trial_period_days": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "usage_type": {
             "type": "string"
@@ -12560,28 +12409,19 @@
             "type": "string"
           },
           "custom_unit_amount": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "livemode": {
             "type": "boolean"
           },
           "lookup_key": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "metadata": {
             "type": "object"
           },
           "nickname": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "product": {
             "type": "string"
@@ -12593,16 +12433,10 @@
             "type": "string"
           },
           "tiers_mode": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "transform_quantity": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "type": {
             "type": "string"
@@ -12657,10 +12491,7 @@
         "type": "object",
         "properties": {
           "aggregate_usage": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "interval": {
             "type": "string"
@@ -12670,10 +12501,7 @@
             "contentEncoding": "int32"
           },
           "trial_period_days": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "usage_type": {
             "type": "string"
@@ -12736,16 +12564,10 @@
         "type": "object",
         "properties": {
           "payment_method_options": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "payment_method_types": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "save_default_payment_method": {
             "type": "string"
@@ -12761,9 +12583,7 @@
       },
       "TrialSettings": {
         "title": "TrialSettings",
-        "required": [
-          "end_behavior"
-        ],
+        "required": ["end_behavior"],
         "type": "object",
         "properties": {
           "end_behavior": {
@@ -12780,9 +12600,7 @@
       },
       "EndBehavior": {
         "title": "EndBehavior",
-        "required": [
-          "missing_payment_method"
-        ],
+        "required": ["missing_payment_method"],
         "type": "object",
         "properties": {
           "missing_payment_method": {
@@ -12797,12 +12615,7 @@
       },
       "ErrorBusinessNotFound1": {
         "title": "ErrorBusinessNotFound1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -12831,12 +12644,7 @@
       },
       "ErrorAlreadyCancelledSubscription1": {
         "title": "ErrorAlreadyCancelledSubscription1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -12865,11 +12673,7 @@
       },
       "Success6": {
         "title": "Success6",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -12924,11 +12728,7 @@
       },
       "Data19": {
         "title": "Data19",
-        "required": [
-          "records",
-          "total_pages",
-          "total_items"
-        ],
+        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -13017,52 +12817,28 @@
             "type": "string"
           },
           "tin": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_state": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_postal_code": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_country": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "created_at": {
             "type": "string"
@@ -13077,37 +12853,22 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "official_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "public_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "social_account": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "string"
           },
           "customer_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "subscription": {
             "$ref": "#/components/schemas/Subscription1"
@@ -13145,30 +12906,17 @@
       },
       "Subscription1": {
         "title": "Subscription1",
-        "required": [
-          "status",
-          "created_at",
-          "updated_at"
-        ],
+        "required": ["status", "created_at", "updated_at"],
         "type": "object",
         "properties": {
           "status": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "created_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "updated_at": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -13181,11 +12929,7 @@
       },
       "Success7": {
         "title": "Success7",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -13267,19 +13011,13 @@
             "type": "string"
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
             "type": "string"
@@ -13306,28 +13044,16 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "official_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "public_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "social_account": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "string"
@@ -13367,11 +13093,7 @@
       },
       "Subscription2": {
         "title": "Subscription2",
-        "required": [
-          "status",
-          "created_at",
-          "updated_at"
-        ],
+        "required": ["status", "created_at", "updated_at"],
         "type": "object",
         "properties": {
           "status": {
@@ -13461,10 +13183,7 @@
       },
       "Success8": {
         "title": "Success8",
-        "required": [
-          "status",
-          "message"
-        ],
+        "required": ["status", "message"],
         "type": "object",
         "properties": {
           "status": {
@@ -13483,9 +13202,7 @@
       },
       "AddOwnerDetailsRequest": {
         "title": "AddOwnerDetailsRequest",
-        "required": [
-          "owners"
-        ],
+        "required": ["owners"],
         "type": "object",
         "properties": {
           "owners": {
@@ -13610,10 +13327,7 @@
       },
       "Title": {
         "title": "Title",
-        "required": [
-          "id",
-          "title"
-        ],
+        "required": ["id", "title"],
         "type": "object",
         "properties": {
           "id": {
@@ -13633,11 +13347,7 @@
       },
       "Success10": {
         "title": "Success10",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -13748,10 +13458,7 @@
             "type": "string"
           },
           "customer_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "integer",
@@ -13896,19 +13603,13 @@
             "type": "string"
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
             "type": "string"
@@ -13935,28 +13636,16 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "official_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "public_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "social_account": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "string"
@@ -14037,19 +13726,13 @@
             "type": "string"
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
             "type": "string"
@@ -14110,12 +13793,7 @@
       },
       "ErrorTryingtogetinfoofsomeanotherBusiness1": {
         "title": "ErrorTryingtogetinfoofsomeanotherBusiness1",
-        "required": [
-          "status",
-          "message",
-          "errorCode",
-          "data"
-        ],
+        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -14144,11 +13822,7 @@
       },
       "Success11": {
         "title": "Success11",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -14203,11 +13877,7 @@
       },
       "Data30": {
         "title": "Data30",
-        "required": [
-          "records",
-          "total_pages",
-          "total_items"
-        ],
+        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -14295,10 +13965,7 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "is_email_verified": {
             "type": "boolean"
@@ -14363,12 +14030,7 @@
       },
       "Subrole": {
         "title": "Subrole",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "description"
-        ],
+        "required": ["id", "code", "label", "description"],
         "type": "object",
         "properties": {
           "id": {
@@ -14395,12 +14057,7 @@
       },
       "CustomerDetails": {
         "title": "CustomerDetails",
-        "required": [
-          "id",
-          "name",
-          "contact_number",
-          "is_active"
-        ],
+        "required": ["id", "name", "contact_number", "is_active"],
         "type": "object",
         "properties": {
           "id": {
@@ -14410,10 +14067,7 @@
             "type": "string"
           },
           "contact_number": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "is_active": {
             "type": "boolean"
@@ -14430,11 +14084,7 @@
       },
       "Success12": {
         "title": "Success12",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -14484,11 +14134,7 @@
       },
       "Data31": {
         "title": "Data31",
-        "required": [
-          "records",
-          "total_pages",
-          "total_items"
-        ],
+        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -14568,58 +14214,31 @@
             "type": "string"
           },
           "name": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "tin": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_state": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_postal_code": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_country": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "created_at": {
             "type": "string"
@@ -14634,28 +14253,16 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "official_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "public_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "social_account": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "string"
@@ -14691,11 +14298,7 @@
       },
       "Success13": {
         "title": "Success13",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -14727,10 +14330,7 @@
       },
       "Data32": {
         "title": "Data32",
-        "required": [
-          "business_id",
-          "name"
-        ],
+        "required": ["business_id", "name"],
         "type": "object",
         "properties": {
           "business_id": {
@@ -14749,11 +14349,7 @@
       },
       "Success14": {
         "title": "Success14",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -14797,11 +14393,7 @@
       },
       "Data33": {
         "title": "Data33",
-        "required": [
-          "records",
-          "total_pages",
-          "total_items"
-        ],
+        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -14901,10 +14493,7 @@
       },
       "Applicant": {
         "title": "Applicant",
-        "required": [
-          "first_name",
-          "last_name"
-        ],
+        "required": ["first_name", "last_name"],
         "type": "object",
         "properties": {
           "first_name": {
@@ -14923,11 +14512,7 @@
       },
       "Status": {
         "title": "Status",
-        "required": [
-          "id",
-          "code",
-          "label"
-        ],
+        "required": ["id", "code", "label"],
         "type": "object",
         "properties": {
           "id": {
@@ -14982,9 +14567,7 @@
               "business_id": "e6544000-74e5-4b71-8818-1de4b13976ec",
               "name": "Ferrari F1"
             },
-            "existing_applicant_ids": [
-              "ce065391-a364-4374-bd23-7413edcac6d9"
-            ],
+            "existing_applicant_ids": ["ce065391-a364-4374-bd23-7413edcac6d9"],
             "new_applicants": [
               {
                 "first_name": "Charles",
@@ -14997,10 +14580,7 @@
       },
       "ExistingBusiness": {
         "title": "ExistingBusiness",
-        "required": [
-          "business_id",
-          "name"
-        ],
+        "required": ["business_id", "name"],
         "type": "object",
         "properties": {
           "business_id": {
@@ -15019,11 +14599,7 @@
       },
       "NewApplicant": {
         "title": "NewApplicant",
-        "required": [
-          "first_name",
-          "last_name",
-          "email"
-        ],
+        "required": ["first_name", "last_name", "email"],
         "type": "object",
         "properties": {
           "first_name": {
@@ -15046,11 +14622,7 @@
       },
       "VerifyInvite": {
         "title": "VerifyInvite",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -15077,11 +14649,7 @@
       },
       "Data34": {
         "title": "Data34",
-        "required": [
-          "business_id",
-          "invitation_id",
-          "email"
-        ],
+        "required": ["business_id", "invitation_id", "email"],
         "type": "object",
         "properties": {
           "business_id": {
@@ -15104,10 +14672,7 @@
       },
       "WIPUpdateinvitationStatusRequest": {
         "title": "WIPUpdateinvitationStatusRequest",
-        "required": [
-          "invitation_token",
-          "action"
-        ],
+        "required": ["invitation_token", "action"],
         "type": "object",
         "properties": {
           "invitation_token": {
@@ -15126,10 +14691,7 @@
       },
       "WIPUpdateinvitationStatus": {
         "title": "WIPUpdateinvitationStatus",
-        "required": [
-          "status",
-          "message"
-        ],
+        "required": ["status", "message"],
         "type": "object",
         "properties": {
           "status": {
@@ -15148,11 +14710,7 @@
       },
       "WIPGetApplicantsofABusiness": {
         "title": "WIPGetApplicantsofABusiness",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -15237,10 +14795,7 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "is_email_verified": {
             "type": "boolean"
@@ -15303,10 +14858,7 @@
       },
       "Customer": {
         "title": "Customer",
-        "required": [
-          "id",
-          "name"
-        ],
+        "required": ["id", "name"],
         "type": "object",
         "properties": {
           "id": {
@@ -15325,11 +14877,7 @@
       },
       "Success17": {
         "title": "Success17",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -15519,10 +15067,7 @@
             "type": "string"
           },
           "customer_id": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "$ref": "#/components/schemas/Status3"
@@ -15712,11 +15257,7 @@
       },
       "Status3": {
         "title": "Status3",
-        "required": [
-          "code",
-          "id",
-          "label"
-        ],
+        "required": ["code", "id", "label"],
         "type": "object",
         "properties": {
           "code": {
@@ -15773,19 +15314,13 @@
             "type": "string"
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
             "type": "string"
@@ -15812,25 +15347,16 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "official_website": {
             "type": "string"
           },
           "public_website": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "social_account": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "status": {
             "type": "string"
@@ -15892,10 +15418,7 @@
             "type": "string"
           },
           "mobile": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "is_email_verified": {
             "type": "boolean"
@@ -15947,12 +15470,7 @@
       },
       "Subrole2": {
         "title": "Subrole2",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "role_id"
-        ],
+        "required": ["id", "code", "label", "role_id"],
         "type": "object",
         "properties": {
           "id": {
@@ -16030,19 +15548,13 @@
             "type": "string"
           },
           "address_apartment": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_line_1": {
             "type": "string"
           },
           "address_line_2": {
-            "type": [
-              "string",
-              "null"
-            ]
+            "type": ["string", "null"]
           },
           "address_city": {
             "type": "string"
@@ -16107,12 +15619,7 @@
       },
       "StatusHistory": {
         "title": "StatusHistory",
-        "required": [
-          "id",
-          "status",
-          "created_at",
-          "created_by"
-        ],
+        "required": ["id", "status", "created_at", "created_by"],
         "type": "object",
         "properties": {
           "id": {
@@ -16140,11 +15647,7 @@
       },
       "Success18": {
         "title": "Success18",
-        "required": [
-          "status",
-          "message",
-          "data"
-        ],
+        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
