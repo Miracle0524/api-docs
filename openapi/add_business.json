@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Bulk Imports",
-    "description": "This collection is for the bulk import of businesses.",
+    "title": "Add Businesss",
+    "description": "This collection is for the Add Business of businesses.",
     "contact": {},
     "version": "1.0"
   },
@@ -14,11 +14,11 @@
     }
   ],
   "paths": {
-    "/businesses/customers/{customerID}/bulk/process": {
+    "/businesses/customers/{customerID}": {
       "post": {
-        "tags": ["Bulk Import"],
-        "summary": "Import Business",
-        "operationId": "ImportBusiness",
+        "tags": ["Add Business"],
+        "summary": "Add Business",
+        "operationId": "AddBusiness",
         "parameters": [
           {
             "name": "customerID",
@@ -37,37 +37,36 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ImportBusinessRequest"
-                },
-                "description": "",
-                "examples": [
-                  [
-                    {
-                      "external_id": "77388994455034",
-                      "name": "Test Business",
-                      "tin": "333444685",
-                      "address_line_1": "480 s Ronald Reagan Blvd",
-                      "address_city": "Longwood",
-                      "address_state": "FL",
-                      "address_postal_code": "32850"
-                    }
-                  ]
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ImportBusinessRequest"
+                  },
+                  {
+                    "examples": [
+                      {
+                        "name": "Test Business",
+                        "address_line_1": "480 s Ronald Reagan Blvd",
+                        "tin": "333444685",
+                        "address_postal_code": "32850",
+                        "address_city": "Longwood",
+                        "address_state": "FL",
+                        "annual_income": 1022233,
+                        "external_id": "77388994455034"
+                      }
+                    ]
+                  }
                 ],
                 "contentMediaType": "application/json"
               },
-              "example": [
-                {
-                  "external_id": "77388994455034",
-                  "name": "Test Business",
-                  "tin": "333444685",
-                  "address_line_1": "480 s Ronald Reagan Blvd",
-                  "address_city": "Longwood",
-                  "address_state": "FL",
-                  "address_postal_code": "32850"
-                }
-              ]
+              "example": {
+                "external_id": "77388994455034",
+                "name": "Test Business",
+                "tin": "333444685",
+                "address_line_1": "480 s Ronald Reagan Blvd",
+                "address_city": "Longwood",
+                "address_state": "FL",
+                "address_postal_code": "32850"
+              }
             }
           },
           "required": true
@@ -1360,6 +1359,39 @@
           "mobile": {
             "type": "string"
           },
+          "official_website": {
+            "type": "string"
+          },
+          "naics_code": {
+            "type": "number"
+          },
+          "naics_title": {
+            "type": "string"
+          },
+          "mcc_code": {
+            "type": "number"
+          },
+          "industry": {
+            "type": "string"
+          },
+          "is_monitoring_enabled": {
+            "type": "boolean"
+          },
+          "applicant_id": {
+            "type": "string"
+          },
+          "send_invitation": {
+            "type": "boolean"
+          },
+          "applicant_first_name": {
+            "type": "string"
+          },
+          "applicant_last_name": {
+            "type": "string"
+          },
+          "applicant_email": {
+            "type": "string"
+          },
           "dba1_name": {
             "type": "string"
           },
@@ -1384,86 +1416,8 @@
           "address1_mobile": {
             "type": "string"
           },
-          "official_website": {
-            "type": "string"
-          },
-          "naics_code": {
-            "type": "number"
-          },
-          "naics_title": {
-            "type": "string"
-          },
-          "mcc_code": {
-            "type": "number"
-          },
-          "industry": {
-            "type": "string"
-          },
-          "metadata": {
-            "type": "string"
-          },
-          "is_monitoring_enabled": {
-            "type": "string"
-          },
-          "owner1_title": {
-            "type": "string"
-          },
-          "owner1_first_name": {
-            "type": "string"
-          },
-          "owner1_last_name": {
-            "type": "string"
-          },
-          "owner1_email": {
-            "type": "string"
-          },
-          "owner1_mobile": {
-            "type": "string"
-          },
-          "owner1_ssn": {
-            "type": "string"
-          },
-          "owner1_dob": {
-            "type": "string"
-          },
-          "owner1_address_line_1": {
-            "type": "string"
-          },
-          "owner1_address_line_2": {
-            "type": "string"
-          },
-          "owner1_address_city": {
-            "type": "string"
-          },
-          "owner1_address_state": {
-            "type": "string"
-          },
-          "owner1_address_postal": {
-            "type": "string"
-          },
-          "owner1_address_country": {
-            "type": "string"
-          },
-          "owner1_owner_type": {
-            "type": "string"
-          },
-          "owner1_ownership_percentage": {
-            "type": "string"
-          },
-          "send_invitation": {
-            "type": "string"
-          },
-          "applicant_first_name": {
-            "type": "string"
-          },
-          "applicant_last_name": {
-            "type": "string"
-          },
-          "applicant_email": {
-            "type": "string"
-          },
           "year_created": {
-            "type": "string"
+            "type": "number"
           },
           "annual_total_income": {
             "type": "number"
@@ -1526,13 +1480,13 @@
             "type": "string"
           },
           "sic_code": {
-            "type": "string"
+            "type": "number"
           },
           "score_retrieval_date": {
             "type": "string"
           },
           "business_liens": {
-            "type": "string"
+            "type": "number"
           },
           "business_liens_file_date": {
             "type": "string"
@@ -1544,7 +1498,7 @@
             "type": "string"
           },
           "business_bankruptcies": {
-            "type": "string"
+            "type": "number"
           },
           "business_bankruptcies_file_date": {
             "type": "string"
@@ -1562,7 +1516,7 @@
             "type": "string"
           },
           "business_judgements": {
-            "type": "string"
+            "type": "number"
           },
           "business_judgements_file_date": {
             "type": "string"
@@ -1574,13 +1528,58 @@
             "type": "string"
           },
           "business_judgements_amount": {
-            "type": "string"
+            "type": "number"
           },
           "social_review_count": {
-            "type": "string"
+            "type": "number"
           },
           "social_review_score": {
+            "type": "number"
+          },
+          "owner1_title": {
             "type": "string"
+          },
+          "owner1_first_name": {
+            "type": "string"
+          },
+          "owner1_last_name": {
+            "type": "string"
+          },
+          "owner1_email": {
+            "type": "string"
+          },
+          "owner1_mobile": {
+            "type": "string"
+          },
+          "owner1_ssn": {
+            "type": "string"
+          },
+          "owner1_dob": {
+            "type": "string"
+          },
+          "owner1_address_line_1": {
+            "type": "string"
+          },
+          "owner1_address_line_2": {
+            "type": "string"
+          },
+          "owner1_address_city": {
+            "type": "string"
+          },
+          "owner1_address_state": {
+            "type": "string"
+          },
+          "owner1_address_postal": {
+            "type": "string"
+          },
+          "owner1_address_country": {
+            "type": "string"
+          },
+          "owner1_owner_type": {
+            "type": "string"
+          },
+          "owner1_ownership_percentage": {
+            "type": "number"
           }
         },
         "examples": [
@@ -3847,7 +3846,7 @@
   "security": [],
   "tags": [
     {
-      "name": "Bulk Import"
+      "name": "Add Business"
     }
   ]
 }
