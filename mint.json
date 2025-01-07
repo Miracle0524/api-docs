@@ -90,7 +90,7 @@
         "api-reference/case/businesses/get-business-cases",
         "api-reference/case/cases/get-customer-case-by-id",
         "api-reference/case/businesses/get-business-by-id",
-        "api-reference/manual-score/score/get-score"
+        "api-reference/score/score/get-score"
       ]
     },
     {
