@@ -35,6 +35,10 @@
     {
       "name": "Webhooks (Beta)",
       "url": "webhooks"
+    },
+    {
+      "name": "Diagrams",
+      "url": "diagrams"
     }
   ],
   "primaryTab": {
@@ -125,6 +129,17 @@
         "webhooks/integration",
         "webhooks/onboarding",
         "webhooks/risk"
+      ]
+    },
+    {
+      "group": "Flow Diagram",
+      "pages": ["diagrams/flow-diagrams/flow-diagram"]
+    },
+    {
+      "group": "Sequence Diagram",
+      "pages": [
+        "diagrams/sequence-diagrams/approach-1",
+        "diagrams/sequence-diagrams/approach-2"
       ]
     }
   ],
