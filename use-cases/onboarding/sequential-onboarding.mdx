@@ -1,0 +1,57 @@
+
+*Note: This flow is currently in Beta stages and is not fully available to all customers yet.*
+
+The following page outlines a structured process for onboarding businesses using Worth AI's APIs. It describes a workflow that incorporates authentication, data submission, verification, and business scoring. 
+This approach provides better control over the process by enabling individual calls for each stage.  
+
+---
+
+## **Process Breakdown**
+
+### **1. Onboarding API Calls**
+This outlines the step-by-step API calls available to onboard a business:
+- **Authentication**:  
+  upon accepting initial invitaion or signing in, the customer receives the following tokens:
+  - **access token**: used for purposes like logout, update password etc.
+  - **id token**: used for secure api communication. (**recommended for all api calls.**)
+  - **refresh token**: to renew Access and ID token.
+
+  **note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
+
+- **Create New Business**:  
+  The customer submits a request to create a new business with the `POST /applicant/businesses` endpoint. Upon success, a unique **business_id** is generated.  
+  See [`/applicant/businesses`](https://docs.worthai.com/api-reference/businesses/#post-applicantbusinesses)
+
+- **Business Search**:  
+  Identifies and verifies the business in the system.
+
+
+---
+
+### **2. Retrieve Data**
+The following endpoints enable to fetch data for a specific business:
+
+- **Fetching Public Records**:  
+  Retrieves relevant public records associated with the business.  
+  **API Endpoint**: [`/cases/{caseID}/public-records`](https://docs.worthai.com/api-reference/integration/public-records/public-records)
+
+- **Business Verification**:  
+  Validates business details such as legal standing and ownership information.  
+  **API Endpoint**: [`/verification/businesses/{businessID}/business-entity`](https://docs.worthai.com/api-reference/integration/verification/get-verification-details)
+
+- **Fetching Website Metadata**:  
+  Gathers metadata from the business's official website if provided.
+
+- **Owners’ Identity Verification**:  
+  Verifies the identity of the business owners based on the provided data.
+
+- **Business Scoring**:  
+  Calculates the business score, evaluating creditworthiness and other key metrics.  
+  **API Endpoint**: [`/score/businesses/{businessID}`](https://docs.worthai.com/api-reference/scoring/)
+
+---
+
+This documentation serves as a guide to understanding and implementing the processes outlined in the sequence diagram using Worth AI’s APIs. For more details, refer to the [API Reference](https://docs.worthai.com/api-reference).
+
+
+![sequence_diagram_approach_2](../../images/sequence_diagram_approach_2.svg)

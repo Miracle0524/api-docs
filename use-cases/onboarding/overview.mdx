@@ -1,0 +1,129 @@
+
+This page outlines a structured process for onboarding businesses using Worth AI's APIs and tools. The flow supports three main approaches, allowing flexibility in how businesses are onboarded and scored.
+
+---
+
+## **Process Breakdown**
+
+### **1. Customer Interaction**
+- **Invinote right of P1
+Starred (\**\) entities will run if
+necessary data is passed in payload.
+end notetation Accepted**:
+  - The process begins with customers receiving an invitation to onboard. Upon acceptance, they proceed to log in.
+  - After [authenticating](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in), they are issued three tokens:
+    - **Access Token**: Used for purposes like logout, update password etc.
+    - **ID Token**: Always used for secure communication.
+    - **Refresh Token**: Used to renew Access and ID token.
+  - It is recommended to prioritize the use of the **ID Token** for all API calls.
+
+### **2. Onboarding Businesses**
+The onboarding process supports three distinct approaches:
+
+#### **Approach 1 - Instant Onboarding: Provide All Business Data at Once**
+- In [this approach](https://docs.worthai.com/use-cases/onboarding/instant-onboarding), the user provides all the required business data upfront. The system processes the following tasks automatically:
+  - **Business Search**
+  - **Business Verification**
+  - **Fetching Public Records**
+  - **Fetching Website Metadata**
+  - **Owner's Identity Verification**
+  - **Business Scoring**
+
+#### **Approach 2 - Sequential Onboarding: Integrate with APIs (Beta)**
+- [This approach](https://docs.worthai.com/use-cases/onboarding/sequential-onboarding) involves step-by-step integration with Worth AI's APIs for detailed control over the process. The APIs used in this approach include:
+
+  - **Business Details API**: `/businesses/{businessID}`
+    - Retrieves detailed information about the business.
+
+  - **Verification Details API**: `/verification/businesses/{businessID}/business-entity`
+    - Verifies the business’s identity and legal standing.
+
+  - **Public Records API**: `/cases/{caseID}/public-records`
+    - Fetches public records linked to the business.
+
+  - **Business Scoring API**: `/score/businesses/{businessID}`
+    - Calculates and retrieves the business’s creditworthiness or other scoring metrics.
+
+#### **Approach 3: Invite Businesses via Worth UI**
+- Businesses are invited to onboard themselves through the Worth AI User Interface (UI).
+- This approach provides a self-service option where businesses can complete the onboarding process independently.
+
+---
+
+## **Implementation Recommendations**
+
+1. **Streamlined Process**:
+   - Approach 1 is designed for simplicity and efficiency, handling all onboarding tasks with minimal user input.
+
+2. **Flexibility**:
+   - Approaches 2 and 3 cater to businesses with custom onboarding requirements or those preferring a self-service model.
+
+---
+
+This documentation serves as a guide to understanding and implementing the processes outlined in the flow diagram using Worth AI’s APIs. For more details, refer to the [API Reference](https://docs.worthai.com/api-reference).
+
+
+
+```mermaid
+flowchart TB
+
+%% Customer Section
+subgraph Customer_Auth[Customer Authentication]
+    A[Customer] -->|Accept Invitation| B[
+        Get Auth Tokens: 
+        access_token 
+        id_token 
+        refresh_token
+    ]
+    A -->|Invitation Already Accepted| C[Login]
+    C --> B
+    B:::tokenStyle
+    D[ *Use id_token for API calls ]:::apiTokenStyle
+end
+
+%% Connection from Customer Flow to Onboard Business
+Customer_Auth --Onboard New Business--> Onboarding
+
+%% Onboarding Section
+subgraph Onboarding [Business Onboarding]
+    O[API]
+    O --> P1[**Instant**: Give all business data at once and we will run:
+        - Business Search
+        - Business Verification
+        - Fetching Public Records
+        - Fetching Website Details
+        - Owners Identity Verification 
+        - Enque Business for Score Calculation
+    ]
+    O --> P2[**Sequential**: 
+    Hit Worth APIs one-by-one]
+    O --> P3[**Invite Based**: 
+    Send Invitation to business and let them onboard using Worth UI]
+
+    %% Approach Details
+    subgraph Sequential [Sequential Calls]
+        R1[Business Search]
+        R1 --> R2[Business Verification]
+        R2 --> R3[Owners Identity Verification ]
+        R3 --> R4[Enqueue Business for Scoring]
+        R4 --> R5[Fetching Public Records]
+        R5 --> R6[Fetching Website Details ]
+
+    end
+    P2 --> Sequential
+end
+
+%% Fetching data
+subgraph Fetch[Retrieve Data]
+    BUS["Business Details"] --> BUS1["/businessess/{businessID}"]
+    V["Verification Details (KYB)"] --> VER["/verification/businesses/{businessID}/business-entity"]
+    P["Public Records"] --> PUB["/cases/{caseID}/public-records"]
+    S["Business Score"] --> SCO["/score/business/{businessID}"]
+end
+
+Onboarding --Fetch Data--> Fetch
+%% Styles
+classDef tokenStyle fill:green,stroke:#333,stroke-width:2px;
+classDef apiTokenStyle fill:purple,stroke:#333,stroke-width:2px;
+
+```

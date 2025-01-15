@@ -1,0 +1,82 @@
+
+This sequence diagram illustrates a streamlined business onboarding process through Worth AI's APIs, focusing on submitting all data at once for handling by the system.
+
+---
+
+## **process breakdown**
+
+### **1. Onboarding API calls**
+
+- **Authentication**:  
+  upon accepting initial invitaion or signing in, the customer receives the following tokens:
+  - **access token**: used for purposes like logout, update password etc.
+  - **id token**: used for secure api communication. (**recommended for all api calls.**)
+  - **refresh token**: to renew Access and ID token.
+
+  **note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
+
+- **Submit business data**:  
+  the customer provides business information in the following structure:
+  ```json
+  {
+    "name": "string",
+    "tin": "string",
+    "external_id": "uuid",
+    "address_line_1": "string",
+    "address_postal_code": "string",
+    "address_city": "string",
+    "address_state": "string",
+    "address_country": "string",
+    "official_website": "string (optional)",
+    "owners": "array (optional)"
+  }
+  ```
+
+  this triggers the system to perform multiple onboarding tasks. see [Add Business documentation](http://localhost:3000/api-reference/add-business/add-business) for further information.
+
+---
+
+### **2. Worth AI System Actions**
+Upon receiving the business data, the system performs the following tasks:
+
+- **Business Search**:  
+  Identifies and verifies the business in the system.
+
+- **Business Verification**:  
+  Validates business details such as legal standing and ownership information.  
+
+- **Fetching Public Records**:  
+  Retrieves relevant public records associated with the business.  
+
+- **Fetching Website Metadata**:  
+  Gathers metadata from the business's official website if provided.
+
+- **Owners’ Identity Verification**:  
+  Verifies the identity of the business owners based on the provided data.
+
+- **Business Scoring**:  
+  Calculates the business score, evaluating creditworthiness and other key metrics.  
+
+---
+
+### **3. Retrieve Data**
+The following endpoints allow you to fetch data for a specific business:
+
+- **Fetching Public Records**:  
+  Retrieves relevant public records found that are associated with the business.  
+  **API Endpoint**: [`/cases/{caseID}/public-records`](https://docs.worthai.com/api-reference/integration/public-records/public-records)
+
+- **Business Verification**:  
+  Retrieves business details such as legal standing and ownership information when available.
+  **API Endpoint**: [`/verification/businesses/{businessID}/business-entity`](https://docs.worthai.com/api-reference/integration/verification/get-verification-details)
+
+- **Fetching Website Metadata**:  
+  Gathers metadata from the business's official website if provided.
+
+- **Business Scoring**:  
+  Retrieves the calculated business score.  
+  **API Endpoint**: [`/score/businesses/{businessID}`](https://docs.worthai.com/api-reference/scoring/)
+
+---
+
+![sequence_diagram_approach_1](../../images/sequence_diagram_approach_1.svg)

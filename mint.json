@@ -37,8 +37,8 @@
       "url": "webhooks"
     },
     {
-      "name": "Diagrams",
-      "url": "diagrams"
+      "name": "Use Cases",
+      "url": "use-cases"
     }
   ],
   "primaryTab": {
@@ -132,14 +132,11 @@
       ]
     },
     {
-      "group": "Flow Diagram",
-      "pages": ["diagrams/flow-diagrams/flow-diagram"]
-    },
-    {
-      "group": "Sequence Diagram",
+      "group": "Business Onboarding Flows",
       "pages": [
-        "diagrams/sequence-diagrams/approach-1",
-        "diagrams/sequence-diagrams/approach-2"
+        "use-cases/onboarding/overview",
+        "use-cases/onboarding/instant-onboarding",
+        "use-cases/onboarding/sequential-onboarding"
       ]
     }
   ],
