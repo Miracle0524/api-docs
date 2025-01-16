@@ -135,8 +135,7 @@
       "group": "Business Onboarding Flows",
       "pages": [
         "use-cases/onboarding/overview",
-        "use-cases/onboarding/instant-onboarding",
-        "use-cases/onboarding/sequential-onboarding"
+        "use-cases/onboarding/instant-onboarding"
       ]
     }
   ],

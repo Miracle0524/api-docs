@@ -8,7 +8,7 @@ This sequence diagram illustrates a streamlined business onboarding process thro
 ### **1. Onboarding API calls**
 
 - **Authentication**:  
-  upon accepting initial invitaion or signing in, the customer receives the following tokens:
+  Upon accepting initial invitaion or signing in, the customer receives the following tokens:
   - **access token**: used for purposes like logout, update password etc.
   - **id token**: used for secure api communication. (**recommended for all api calls.**)
   - **refresh token**: to renew Access and ID token.
@@ -16,7 +16,7 @@ This sequence diagram illustrates a streamlined business onboarding process thro
   **note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
 
 - **Submit business data**:  
-  the customer provides business information in the following structure:
+  The customer provides business information in the following structure:
   ```json
   {
     "name": "string",
@@ -32,7 +32,7 @@ This sequence diagram illustrates a streamlined business onboarding process thro
   }
   ```
 
-  this triggers the system to perform multiple onboarding tasks. see [Add Business documentation](http://localhost:3000/api-reference/add-business/add-business) for further information.
+  This triggers the system to perform multiple onboarding tasks. See [Add Business documentation](http://docs.worthai.com/api-reference/add-business/add-business) for further information.
 
 ---
 
@@ -61,6 +61,9 @@ Upon receiving the business data, the system performs the following tasks:
 
 ### **3. Retrieve Data**
 The following endpoints allow you to fetch data for a specific business:
+- **Fetch business data**:  
+  Retrieves detailed infromation about a specific busienss by its unique ID.  
+  **API Endpoint**: [`/businesses/businessID`](https://docs.worthai.com/api-reference/case/businesses/get-business-by-id)
 
 - **Fetching Public Records**:  
   Retrieves relevant public records found that are associated with the business.  
@@ -79,4 +82,11 @@ The following endpoints allow you to fetch data for a specific business:
 
 ---
 
+### **4. Update Business Data**
+Continue to provide business details as data becomes available for you
+- **Update business data**:  
+  Update business details via PATCH requests.  
+  **API Endpoint**: [`/add-business/add-business`](https://docs.worthai.com/api-reference/add-business/add-business)
+
+---
 ![sequence_diagram_approach_1](../../images/sequence_diagram_approach_1.svg)

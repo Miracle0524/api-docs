@@ -6,10 +6,6 @@ This page outlines a structured process for onboarding businesses using Worth AI
 ## **Process Breakdown**
 
 ### **1. Customer Interaction**
-- **Invinote right of P1
-Starred (\**\) entities will run if
-necessary data is passed in payload.
-end notetation Accepted**:
   - The process begins with customers receiving an invitation to onboard. Upon acceptance, they proceed to log in.
   - After [authenticating](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in), they are issued three tokens:
     - **Access Token**: Used for purposes like logout, update password etc.
@@ -29,22 +25,7 @@ The onboarding process supports three distinct approaches:
   - **Owner's Identity Verification**
   - **Business Scoring**
 
-#### **Approach 2 - Sequential Onboarding: Integrate with APIs (Beta)**
-- [This approach](https://docs.worthai.com/use-cases/onboarding/sequential-onboarding) involves step-by-step integration with Worth AI's APIs for detailed control over the process. The APIs used in this approach include:
-
-  - **Business Details API**: `/businesses/{businessID}`
-    - Retrieves detailed information about the business.
-
-  - **Verification Details API**: `/verification/businesses/{businessID}/business-entity`
-    - Verifies the business’s identity and legal standing.
-
-  - **Public Records API**: `/cases/{caseID}/public-records`
-    - Fetches public records linked to the business.
-
-  - **Business Scoring API**: `/score/businesses/{businessID}`
-    - Calculates and retrieves the business’s creditworthiness or other scoring metrics.
-
-#### **Approach 3: Invite Businesses via Worth UI**
+#### **Approach 2: Invite Businesses via Worth UI**
 - Businesses are invited to onboard themselves through the Worth AI User Interface (UI).
 - This approach provides a self-service option where businesses can complete the onboarding process independently.
 
@@ -56,7 +37,7 @@ The onboarding process supports three distinct approaches:
    - Approach 1 is designed for simplicity and efficiency, handling all onboarding tasks with minimal user input.
 
 2. **Flexibility**:
-   - Approaches 2 and 3 cater to businesses with custom onboarding requirements or those preferring a self-service model.
+   - Approach 2 caters to businesses with custom onboarding requirements or those preferring a self-service model.
 
 ---
 
@@ -95,22 +76,7 @@ subgraph Onboarding [Business Onboarding]
         - Owners Identity Verification 
         - Enque Business for Score Calculation
     ]
-    O --> P2[**Sequential**: 
-    Hit Worth APIs one-by-one]
-    O --> P3[**Invite Based**: 
-    Send Invitation to business and let them onboard using Worth UI]
-
-    %% Approach Details
-    subgraph Sequential [Sequential Calls]
-        R1[Business Search]
-        R1 --> R2[Business Verification]
-        R2 --> R3[Owners Identity Verification ]
-        R3 --> R4[Enqueue Business for Scoring]
-        R4 --> R5[Fetching Public Records]
-        R5 --> R6[Fetching Website Details ]
-
-    end
-    P2 --> Sequential
+    O --> P2[**Self-serve:** Businesses are invited to onboard themselves through the Worth AI User Interface]
 end
 
 %% Fetching data
