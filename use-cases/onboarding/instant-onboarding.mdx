@@ -89,4 +89,45 @@ Continue to provide business details as data becomes available for you
   **API Endpoint**: [`/add-business/add-business`](https://docs.worthai.com/api-reference/add-business/add-business)
 
 ---
-![sequence_diagram_approach_1](../../images/sequence_diagram_approach_1.svg)
+
+**Approach 1 --> Give all data once and let us do the stuff for you!!**
+
+<br />
+
+```mermaid
+
+sequenceDiagram
+    participant Customer
+    participant Worth APIs
+    
+    Customer->>Worth APIs: Accept the invitation sent by Worth Team
+    Worth APIs-->>Customer: Will receive tokens
+    Customer->>Worth APIs: If you have already accepted the invitation use Sign-In
+    Worth APIs-->>Customer: 
+    Note over Customer,Worth APIs: access_token <br/> id_token <br/> refresh_token
+    Note over Customer,Worth APIs: Use id_token for any API    
+
+    Customer->>Worth APIs: Add Business
+    Note over Customer,Worth APIs: name: string <br/> tin: string <br/> address_line_1: string <br/> address_postal_code: string <br/> address_city: string <br/> address_state: string <br/> address_country: string <br/> external_id: uuid //optional <br/> official_website: string //optional <br/> owners: arrary //optional
+    Worth APIs-->>Customer: Success/Failure
+    Note over Customer,Worth APIs: Will run: <br/> - Business Search <br/> - Business Verification <br/> - Fetching Public Records <br/> - Fetching Website Details** <br/> - Owners Identity Verification** <br/> - Enque Business for Score Calculation
+    Note over Customer,Worth APIs: NOTE: <br/>Starred (**) entities will run if respective <br/> necessary data is passed in payload
+
+    Customer->>Worth APIs: Business Details
+    Note over Customer,Worth APIs: /businesses/{businessID}
+    Worth APIs-->>Customer: Response
+
+    Customer->>Worth APIs: Business Verification
+    Note over Customer,Worth APIs: /verification/businesses/{businessID}/business-entity
+    Worth APIs-->>Customer: Response
+    
+    Customer->>Worth APIs: Public Records
+    Note over Customer,Worth APIs: /cases/{caseID}/public-records
+    Worth APIs-->>Customer: Response
+    
+    Customer->>Worth APIs: Business Score
+    Note over Customer,Worth APIs: /score/business/{businessID}
+    Worth APIs-->>Customer: Response
+    
+
+```
