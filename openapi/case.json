@@ -7501,9 +7501,9 @@
     },
     "/customers/{customerID}/businesses/invite": {
       "post": {
-        "tags": ["Businesses"],
-        "summary": "WIP: Send Invite",
-        "operationId": "WIP:SendInvite",
+        "tags": ["Invites"],
+        "summary": "Send Business Invite",
+        "operationId": "SendBusinessInvite",
         "parameters": [
           {
             "name": "customerID",
@@ -7513,7 +7513,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "examples": ["b1fad22e-5533-4496-89ba-a4fe2cb0cf88"]
+              "examples": ["22f210e4-4455-4107-b132-97e8478546ea"]
             }
           }
         ],
@@ -7524,23 +7524,21 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/WIPSendInviteRequest"
+                    "$ref": "#/components/schemas/SendBusinessInviteRequest"
                   },
                   {
                     "examples": [
                       {
-                        "existing_business": {
-                          "business_id": "e6544000-74e5-4b71-8818-1de4b13976ec",
-                          "name": "Ferrari F1"
+                        "business": {
+                          "name": "abc business",
+                          "mobile": "+16078379283"
                         },
-                        "existing_applicant_ids": [
-                          "ce065391-a364-4374-bd23-7413edcac6d9"
-                        ],
-                        "new_applicants": [
+                        "applicants": [
                           {
-                            "first_name": "Charles",
-                            "last_name": "Setyu",
-                            "email": "applicant@email.com"
+                            "first_name": "Abc",
+                            "last_name": "Xyz",
+                            "email": "applicant@email.com",
+                            "mobile": "+16078379283"
                           }
                         ]
                       }
@@ -7550,18 +7548,16 @@
                 "contentMediaType": "application/json"
               },
               "example": {
-                "existing_business": {
-                  "business_id": "e6544000-74e5-4b71-8818-1de4b13976ec",
-                  "name": "Ferrari F1"
+                "business": {
+                  "name": "abc business",
+                  "mobile": "+16078379283"
                 },
-                "existing_applicant_ids": [
-                  "ce065391-a364-4374-bd23-7413edcac6d9"
-                ],
-                "new_applicants": [
+                "applicants": [
                   {
-                    "first_name": "Charles",
-                    "last_name": "Setyu",
-                    "email": "applicant@email.com"
+                    "first_name": "Abc",
+                    "last_name": "Xyz",
+                    "email": "applicant@email.com",
+                    "mobile": "+16078379283"
                   }
                 ]
               }
@@ -7571,16 +7567,477 @@
         },
         "responses": {
           "200": {
-            "description": "",
-            "headers": {}
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Wed, 26 Feb 2025 11:38:47 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "72"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"48-YSxfgLlrFUtgNBkAs61B0IvLxYQ\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/SuccessforNewBusiness"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "Business invited successfully",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Business invited successfully",
+                  "data": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Wed, 26 Feb 2025 11:39:51 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "174"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"ae-A6iCqigge8z0SXpFdTyZkLyzBNs\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorTryingtoinviteanotherbusiness1"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "error",
+                          "message": "This business was not onboarded by the current customer.",
+                          "errorCode": "UNKNOWN_ERROR",
+                          "data": {
+                            "errorName": "BusinessApiError",
+                            "data": {
+                              "data": {}
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "error",
+                  "message": "This business was not onboarded by the current customer.",
+                  "errorCode": "UNKNOWN_ERROR",
+                  "data": {
+                    "errorName": "BusinessApiError",
+                    "data": {
+                      "data": {}
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "deprecated": false,
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
         "servers": [
           {
             "url": "https://api.joinworth.com/case/api/v1",
@@ -15918,6 +16375,199 @@
                 "created_by": "e8f15d25-ed33-4783-b6fe-0e7d4290c2eb"
               }
             ]
+          }
+        ]
+      },
+      "SendBusinessInviteRequest": {
+        "title": "SendBusinessInviteRequest",
+        "required": ["business", "applicants"],
+        "type": "object",
+        "properties": {
+          "business": {
+            "$ref": "#/components/schemas/SendBusinessInviteRequestBusiness"
+          },
+          "applicants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SendBusinessInviteRequestApplicant"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "business": {
+              "name": "abc business",
+              "mobile": "+16078379283"
+            },
+            "applicants": [
+              {
+                "first_name": "Abc",
+                "last_name": "Xyz",
+                "email": "appllicant@email.com",
+                "mobile": "+16078379283"
+              }
+            ]
+          }
+        ]
+      },
+      "SendBusinessInviteRequestBusiness": {
+        "title": "Business",
+        "required": ["name", "mobile"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "name": "abc business",
+            "mobile": "+16078379283"
+          }
+        ]
+      },
+      "SendBusinessInviteRequestApplicant": {
+        "title": "Applicant",
+        "required": ["first_name", "last_name", "email", "mobile"],
+        "type": "object",
+        "properties": {
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          }
+        },
+        "examples": [
+          {
+            "first_name": "Abc",
+            "last_name": "Xyz",
+            "email": "appllicant@email.com",
+            "mobile": "+16078379283"
+          }
+        ]
+      },
+      "SuccessforNewBusiness": {
+        "title": "SuccessforNewBusiness",
+        "required": ["status", "message", "data"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Business invited successfully",
+            "data": {}
+          }
+        ]
+      },
+      "SuccessforExistingBusiness": {
+        "title": "SuccessforExistingBusiness",
+        "required": ["status", "message", "data"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Business invited successfully",
+            "data": {}
+          }
+        ]
+      },
+      "Data40": {
+        "title": "Data40",
+        "required": ["errorName", "data"],
+        "type": "object",
+        "properties": {
+          "errorName": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data41"
+          }
+        },
+        "examples": [
+          {
+            "errorName": "BusinessApiError",
+            "data": {
+              "data": {}
+            }
+          }
+        ]
+      },
+      "Data41": {
+        "title": "Data41",
+        "required": ["data"],
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object"
+          }
+        },
+        "examples": [
+          {
+            "data": {}
+          }
+        ]
+      },
+      "ErrorTryingtoinviteanotherbusiness1": {
+        "title": "ErrorTryingtoinviteanotherbusiness1",
+        "required": ["status", "message", "errorCode", "data"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data40"
+          }
+        },
+        "examples": [
+          {
+            "status": "error",
+            "message": "This business was not onboarded by the current customer.",
+            "errorCode": "UNKNOWN_ERROR",
+            "data": {
+              "errorName": "BusinessApiError",
+              "data": {
+                "data": {}
+              }
+            }
           }
         ]
       }
