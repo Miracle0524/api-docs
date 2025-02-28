@@ -11,12 +11,12 @@ This approach provides better control over the process by enabling individual ca
 ### **1. Onboarding API Calls**
 This outlines the step-by-step API calls available to onboard a business:
 - **Authentication**:  
-  upon accepting initial invitaion or signing in, the customer receives the following tokens:
+  upon accepting initial invitation or signing in, the customer receives the following tokens:
   - **access token**: used for purposes like logout, update password etc.
   - **id token**: used for secure api communication. (**recommended for all api calls.**)
   - **refresh token**: to renew Access and ID token.
 
-  **note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
+  **Note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
 
 - **Create New Business**:  
   The customer submits a request to create a new business with the `POST /applicant/businesses` endpoint. Upon success, a unique **business_id** is generated.  
