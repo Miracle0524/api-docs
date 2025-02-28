@@ -83,7 +83,7 @@ end
 subgraph Fetch[Retrieve Data]
     BUS["Business Details"] --> BUS1["/businessess/{businessID}"]
     V["Verification Details (KYB)"] --> VER["/verification/businesses/{businessID}/business-entity"]
-    P["Public Records"] --> PUB["/cases/{caseID}/public-records"]
+    P["Public Records"] --> PUB["/business/{businessID}/public-records"]
     S["Business Score"] --> SCO["/score/business/{businessID}"]
 end
 

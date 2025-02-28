@@ -58,7 +58,7 @@ The following endpoints allow you to fetch data for a specific business:
 
 - **Fetching Public Records**:  
   Retrieves relevant public records found that are associated with the business.  
-  **API Endpoint**: [`/cases/{caseID}/public-records`](https://docs.worthai.com/api-reference/integration/public-records/public-records)
+  **API Endpoint**: [`/business/{businessID}/public-records`](https://docs.worthai.com/api-reference/integration/public-records/public-records)
 
 - **Business Verification**:  
   Retrieves business details such as legal standing and ownership information when available.
@@ -66,10 +66,11 @@ The following endpoints allow you to fetch data for a specific business:
 
 - **Fetching Website Metadata**:  
   Gathers metadata from the business's official website if provided.
+  **API Endpoint**: [`/verification/businesses/{businessID}/website-data`](https://docs.worthai.com/api-reference/integration/verification/get-business-website-data)
 
 - **Business Scoring**:  
   Retrieves the calculated business score.  
-  **API Endpoint**: [`/score/businesses/{businessID}`](https://docs.worthai.com/api-reference/scoring/)
+  **API Endpoint**: [`/score/businesses/{businessID}`](https://docs.worthai.com/api-reference/score/score/get-business-score)
 
 ---
 
@@ -108,7 +109,7 @@ sequenceDiagram
     Worth APIs-->>Customer: Response
     
     Customer->>Worth APIs: Public Records
-    Note over Customer,Worth APIs: /cases/{caseID}/public-records
+    Note over Customer,Worth APIs: /business/{businessID}/public-records
     Worth APIs-->>Customer: Response
     
     Customer->>Worth APIs: Business Score

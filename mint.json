@@ -105,9 +105,9 @@
       ]
     },
     {
-      "group": "Case Details",
+      "group": "Business Details",
       "pages": [
-        "api-reference/score/score/get-case-score",
+        "api-reference/score/score/get-business-score",
         "api-reference/integration/banking/banking-information",
         "api-reference/integration/accounting/get-reports",
         "api-reference/integration/taxation/tax-filing",
