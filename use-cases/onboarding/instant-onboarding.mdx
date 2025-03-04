@@ -3,7 +3,7 @@ This sequence diagram illustrates a streamlined business onboarding process thro
 
 ---
 
-## **process breakdown**
+## **Process breakdown**
 
 ### **1. Onboarding API calls**
 
@@ -32,7 +32,7 @@ This sequence diagram illustrates a streamlined business onboarding process thro
   }
   ```
 
-  This triggers the system to perform multiple onboarding tasks. See [Add Business documentation](http://docs.worthai.com/api-reference/add-business/add-business) for further information.
+  This triggers the system to perform multiple onboarding tasks. See [Add Business documentation](http://docs.worthai.com/api-reference/add-or-update-business/add-business) for further information.
 
 ---
 
@@ -87,7 +87,7 @@ The following endpoints allow you to fetch data for a specific business:
 Continue to provide business details as data becomes available for you
 - **Update business data**:  
   Update business details via PATCH requests.  
-  **API Endpoint**: [`/add-business/add-business`](https://docs.worthai.com/api-reference/add-business/add-business)
+  **API Endpoint**: [`/add-or-update-business/update-business`](https://docs.worthai.com/api-reference/add-or-update-business/update-business)
 
 ---
 
@@ -109,7 +109,7 @@ sequenceDiagram
     Note over Customer,Worth APIs: Use id_token for any API    
 
     Customer->>Worth APIs: Add Business
-    Note over Customer,Worth APIs: name: string <br/> tin: string <br/> address_line_1: string <br/> address_postal_code: string <br/> address_city: string <br/> address_state: string <br/> address_country: string <br/> external_id: uuid //optional <br/> official_website: string //optional <br/> owners: arrary //optional
+    Note over Customer,Worth APIs: name: string <br/> tin: string <br/> address_line_1: string <br/> address_postal_code: string <br/> address_city: string <br/> address_state: string <br/> address_country: string <br/> external_id: uuid <br/> official_website: string //optional <br/> owners: arrary //optional
     Worth APIs-->>Customer: Success/Failure
     Note over Customer,Worth APIs: Will run: <br/> - Business Search <br/> - Business Verification <br/> - Fetching Public Records <br/> - Fetching Website Details** <br/> - Owners Identity Verification** <br/> - Enque Business for Score Calculation
     Note over Customer,Worth APIs: NOTE: <br/>Starred (**) entities will run if respective <br/> necessary data is passed in payload

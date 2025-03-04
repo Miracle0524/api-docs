@@ -1,0 +1,3842 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Update Businesss",
+    "description": "This collection is for the Update Business of businesses.",
+    "contact": {},
+    "version": "1.0"
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://api.joinworth.com/case/api/v1",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/businesses/customers/{customerID}": {
+      "patch": {
+        "tags": ["Update Business"],
+        "summary": "Update Business",
+        "operationId": "UpdateBusiness",
+        "parameters": [
+          {
+            "name": "customerID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["f17295d4-5237-4079-8b18-8786eddf49f3"]
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ImportBusinessRequest"
+                  },
+                  {
+                    "examples": [
+                      {
+                        "address_line_1": "480 s Ronald Reagan Blvd",
+                        "address_postal_code": "32850",
+                        "address_city": "Longwood",
+                        "address_state": "FL",
+                        "annual_income": 1022233,
+                        "external_id": "77388994455034",
+                        "official_website": "https://abc.com"
+                      }
+                    ]
+                  }
+                ],
+                "contentMediaType": "application/json"
+              },
+              "example": {
+                "external_id": "77388994455034",
+                "address_line_1": "480 s Ronald Reagan Blvd",
+                "address_city": "Longwood",
+                "address_state": "FL",
+                "address_postal_code": "32850",
+                "official_website": "https://abc.com"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Tue, 26 Nov 2024 09:32:39 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "6426"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"191a-0Am+j4ht+QAJ79KNLWzQXPZxvAk\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Success"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "Bulk process succeeded",
+                          "data": {
+                            "runId": "13267172-07d0-4483-932b-4d851441eab2",
+                            "result": {
+                              "0": {
+                                "warnings": [],
+                                "userID": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                                "customerID": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                                "riskMonitoring": true,
+                                "data_businesses": {
+                                  "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                                  "name": "Test Business",
+                                  "tin": "XXXXX4685",
+                                  "address_apartment": null,
+                                  "address_line_1": "480 s Ronald Reagan Blvd",
+                                  "address_line_2": null,
+                                  "address_city": "Longwood",
+                                  "address_state": "FL",
+                                  "address_postal_code": "32850",
+                                  "address_country": null,
+                                  "created_at": "2024-11-26T09:32:35.719Z",
+                                  "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                                  "updated_at": "2024-11-26T09:32:39.814Z",
+                                  "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                                  "mobile": null,
+                                  "official_website": null,
+                                  "public_website": null,
+                                  "social_account": null,
+                                  "status": "VERIFIED",
+                                  "industry": null,
+                                  "mcc_id": null,
+                                  "naics_id": null,
+                                  "naics_code": null,
+                                  "naics_title": null,
+                                  "mcc_code": null,
+                                  "mcc_title": null,
+                                  "is_monitoring_enabled": null,
+                                  "subscription": {
+                                    "status": null,
+                                    "created_at": null,
+                                    "updated_at": null
+                                  },
+                                  "business_names": [
+                                    {
+                                      "name": "Test Business",
+                                      "is_primary": false
+                                    },
+                                    {
+                                      "name": "Test Business",
+                                      "is_primary": true
+                                    }
+                                  ],
+                                  "business_addresses": [
+                                    {
+                                      "line_1": "480 s Ronald Reagan Blvd",
+                                      "apartment": null,
+                                      "city": "Longwood",
+                                      "state": "FL",
+                                      "country": "USA",
+                                      "postal_code": "32850",
+                                      "mobile": null,
+                                      "is_primary": true
+                                    }
+                                  ]
+                                },
+                                "data_cases": {
+                                  "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+                                  "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                                  "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                                  "status": 3,
+                                  "created_at": "2024-11-26T09:32:38.620Z",
+                                  "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                                  "updated_at": "2024-11-26T09:32:38.620Z",
+                                  "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                                  "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                                  "case_type": 1,
+                                  "assignee": null,
+                                  "assigner": null
+                                },
+                                "integration_data": {
+                                  "dba1_name": null,
+                                  "dba2_name": null,
+                                  "dba3_name": null,
+                                  "dba4_name": null,
+                                  "dba5_name": null,
+                                  "address1_line_1": null,
+                                  "address2_line_1": null,
+                                  "address3_line_1": null,
+                                  "address4_line_1": null,
+                                  "address5_line_1": null,
+                                  "address1_apartment": null,
+                                  "address2_apartment": null,
+                                  "address3_apartment": null,
+                                  "address4_apartment": null,
+                                  "address5_apartment": null,
+                                  "address1_city": null,
+                                  "address2_city": null,
+                                  "address3_city": null,
+                                  "address4_city": null,
+                                  "address5_city": null,
+                                  "state": "FL",
+                                  "address1_country": null,
+                                  "address2_country": null,
+                                  "address3_country": null,
+                                  "address4_country": null,
+                                  "address5_country": null,
+                                  "address1_postal_code": null,
+                                  "address2_postal_code": null,
+                                  "address3_postal_code": null,
+                                  "address4_postal_code": null,
+                                  "address5_postal_code": null,
+                                  "address1_mobile": null,
+                                  "address2_mobile": null,
+                                  "address3_mobile": null,
+                                  "address4_mobile": null,
+                                  "address5_mobile": null,
+                                  "id": null,
+                                  "name": "Test Business",
+                                  "tin": "333444685",
+                                  "address_line_1": "480 s Ronald Reagan Blvd",
+                                  "address_line_2": null,
+                                  "address_city": "Longwood",
+                                  "address_country": null,
+                                  "address_postal_code": "32850",
+                                  "mobile": null,
+                                  "official_website": null,
+                                  "naics_code": null,
+                                  "naics_title": null,
+                                  "mcc_code": null,
+                                  "industry": null,
+                                  "quick_add": null,
+                                  "external_id": "77388994455034",
+                                  "metadata": null,
+                                  "owner1_title": null,
+                                  "owner2_title": null,
+                                  "owner3_title": null,
+                                  "owner4_title": null,
+                                  "owner5_title": null,
+                                  "owner1_first_name": null,
+                                  "owner2_first_name": null,
+                                  "owner3_first_name": null,
+                                  "owner4_first_name": null,
+                                  "owner5_first_name": null,
+                                  "owner1_last_name": null,
+                                  "owner2_last_name": null,
+                                  "owner3_last_name": null,
+                                  "owner4_last_name": null,
+                                  "owner5_last_name": null,
+                                  "owner1_email": null,
+                                  "owner2_email": null,
+                                  "owner3_email": null,
+                                  "owner4_email": null,
+                                  "owner5_email": null,
+                                  "owner1_mobile": null,
+                                  "owner2_mobile": null,
+                                  "owner3_mobile": null,
+                                  "owner4_mobile": null,
+                                  "owner5_mobile": null,
+                                  "owner1_ssn": null,
+                                  "owner2_ssn": null,
+                                  "owner3_ssn": null,
+                                  "owner4_ssn": null,
+                                  "owner5_ssn": null,
+                                  "owner1_dob": null,
+                                  "owner2_dob": null,
+                                  "owner3_dob": null,
+                                  "owner4_dob": null,
+                                  "owner5_dob": null,
+                                  "owner1_address_line_1": null,
+                                  "owner2_address_line_1": null,
+                                  "owner3_address_line_1": null,
+                                  "owner4_address_line_1": null,
+                                  "owner5_address_line_1": null,
+                                  "owner1_address_line_2": null,
+                                  "owner2_address_line_2": null,
+                                  "owner3_address_line_2": null,
+                                  "owner4_address_line_2": null,
+                                  "owner5_address_line_2": null,
+                                  "owner1_address_city": null,
+                                  "owner2_address_city": null,
+                                  "owner3_address_city": null,
+                                  "owner4_address_city": null,
+                                  "owner5_address_city": null,
+                                  "owner1_address_state": null,
+                                  "owner2_address_state": null,
+                                  "owner3_address_state": null,
+                                  "owner4_address_state": null,
+                                  "owner5_address_state": null,
+                                  "owner1_address_postal": null,
+                                  "owner2_address_postal": null,
+                                  "owner3_address_postal": null,
+                                  "owner4_address_postal": null,
+                                  "owner5_address_postal": null,
+                                  "owner1_address_country": null,
+                                  "owner2_address_country": null,
+                                  "owner3_address_country": null,
+                                  "owner4_address_country": null,
+                                  "owner5_address_country": null,
+                                  "owner1_owner_type": null,
+                                  "owner2_owner_type": null,
+                                  "owner3_owner_type": null,
+                                  "owner4_owner_type": null,
+                                  "owner5_owner_type": null,
+                                  "owner1_ownership_percentage": null,
+                                  "owner2_ownership_percentage": null,
+                                  "owner3_ownership_percentage": null,
+                                  "owner4_ownership_percentage": null,
+                                  "owner5_ownership_percentage": null,
+                                  "send_invitation": null,
+                                  "applicant_first_name": null,
+                                  "applicant_last_name": null,
+                                  "applicant_email": null,
+                                  "year": null,
+                                  "is_revenue": 1022233,
+                                  "is_operatingexpenses": null,
+                                  "is_netincome": null,
+                                  "is_cost_of_goods_sold": null,
+                                  "bs_totalliabilities": null,
+                                  "bs_totalassets": null,
+                                  "bs_totalequity": null,
+                                  "bs_accountspayable": null,
+                                  "bs_accountsreceivable": null,
+                                  "bs_cashandcashequivalents": null,
+                                  "bs_shortterminvestments": null,
+                                  "bs_totalcurrentassets": null,
+                                  "bs_totalcurrentliabilities": null,
+                                  "bs_totalnoncurrentliabilities": null,
+                                  "is_costofgoodsold": null,
+                                  "is_grossprofit": null,
+                                  "is_incometaxexpense": null,
+                                  "is_interestexpense": null,
+                                  "number_of_employees": null,
+                                  "business_type": null,
+                                  "sic_code": null,
+                                  "date_of_observation": null,
+                                  "lien_count": null,
+                                  "business_liens_file_date": null,
+                                  "business_liens_status": null,
+                                  "business_liens_status_date": null,
+                                  "bankruptcy_count": null,
+                                  "business_bankruptcies_file_date": null,
+                                  "business_bankruptcies_chapter": null,
+                                  "business_bankruptcies_voluntary": null,
+                                  "business_bankruptcies_status": null,
+                                  "business_bankruptcies_status_date": null,
+                                  "judgement_count": null,
+                                  "business_judgements_file_date": null,
+                                  "business_judgements_status": null,
+                                  "business_judgements_status_date": null,
+                                  "business_judgements_amount": null,
+                                  "review_cnt": null,
+                                  "review_score": null
+                                },
+                                "business_customer": {
+                                  "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                                  "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                                  "created_at": "2024-11-26T09:32:39.870Z",
+                                  "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                                  "is_monitoring_enabled": true,
+                                  "external_id": "77388994455034",
+                                  "metadata": null
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "Bulk process succeeded",
+                  "data": {
+                    "runId": "13267172-07d0-4483-932b-4d851441eab2",
+                    "result": {
+                      "0": {
+                        "warnings": [],
+                        "userID": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                        "customerID": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                        "riskMonitoring": true,
+                        "data_businesses": {
+                          "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                          "name": "Test Business",
+                          "tin": "XXXXX4685",
+                          "address_apartment": null,
+                          "address_line_1": "480 s Ronald Reagan Blvd",
+                          "address_line_2": null,
+                          "address_city": "Longwood",
+                          "address_state": "FL",
+                          "address_postal_code": "32850",
+                          "address_country": null,
+                          "created_at": "2024-11-26T09:32:35.719Z",
+                          "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                          "updated_at": "2024-11-26T09:32:39.814Z",
+                          "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                          "mobile": null,
+                          "official_website": null,
+                          "public_website": null,
+                          "social_account": null,
+                          "status": "VERIFIED",
+                          "industry": null,
+                          "mcc_id": null,
+                          "naics_id": null,
+                          "naics_code": null,
+                          "naics_title": null,
+                          "mcc_code": null,
+                          "mcc_title": null,
+                          "is_monitoring_enabled": null,
+                          "subscription": {
+                            "status": null,
+                            "created_at": null,
+                            "updated_at": null
+                          },
+                          "business_names": [
+                            {
+                              "name": "Test Business",
+                              "is_primary": false
+                            },
+                            {
+                              "name": "Test Business",
+                              "is_primary": true
+                            }
+                          ],
+                          "business_addresses": [
+                            {
+                              "line_1": "480 s Ronald Reagan Blvd",
+                              "apartment": null,
+                              "city": "Longwood",
+                              "state": "FL",
+                              "country": "USA",
+                              "postal_code": "32850",
+                              "mobile": null,
+                              "is_primary": true
+                            }
+                          ]
+                        },
+                        "data_cases": {
+                          "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+                          "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                          "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                          "status": 3,
+                          "created_at": "2024-11-26T09:32:38.620Z",
+                          "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                          "updated_at": "2024-11-26T09:32:38.620Z",
+                          "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                          "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                          "case_type": 1,
+                          "assignee": null,
+                          "assigner": null
+                        },
+                        "integration_data": {
+                          "dba1_name": null,
+                          "dba2_name": null,
+                          "dba3_name": null,
+                          "dba4_name": null,
+                          "dba5_name": null,
+                          "address1_line_1": null,
+                          "address2_line_1": null,
+                          "address3_line_1": null,
+                          "address4_line_1": null,
+                          "address5_line_1": null,
+                          "address1_apartment": null,
+                          "address2_apartment": null,
+                          "address3_apartment": null,
+                          "address4_apartment": null,
+                          "address5_apartment": null,
+                          "address1_city": null,
+                          "address2_city": null,
+                          "address3_city": null,
+                          "address4_city": null,
+                          "address5_city": null,
+                          "state": "FL",
+                          "address1_country": null,
+                          "address2_country": null,
+                          "address3_country": null,
+                          "address4_country": null,
+                          "address5_country": null,
+                          "address1_postal_code": null,
+                          "address2_postal_code": null,
+                          "address3_postal_code": null,
+                          "address4_postal_code": null,
+                          "address5_postal_code": null,
+                          "address1_mobile": null,
+                          "address2_mobile": null,
+                          "address3_mobile": null,
+                          "address4_mobile": null,
+                          "address5_mobile": null,
+                          "id": null,
+                          "name": "Test Business",
+                          "tin": "333444685",
+                          "address_line_1": "480 s Ronald Reagan Blvd",
+                          "address_line_2": null,
+                          "address_city": "Longwood",
+                          "address_country": null,
+                          "address_postal_code": "32850",
+                          "mobile": null,
+                          "official_website": null,
+                          "naics_code": null,
+                          "naics_title": null,
+                          "mcc_code": null,
+                          "industry": null,
+                          "quick_add": null,
+                          "external_id": "77388994455034",
+                          "metadata": null,
+                          "owner1_title": null,
+                          "owner2_title": null,
+                          "owner3_title": null,
+                          "owner4_title": null,
+                          "owner5_title": null,
+                          "owner1_first_name": null,
+                          "owner2_first_name": null,
+                          "owner3_first_name": null,
+                          "owner4_first_name": null,
+                          "owner5_first_name": null,
+                          "owner1_last_name": null,
+                          "owner2_last_name": null,
+                          "owner3_last_name": null,
+                          "owner4_last_name": null,
+                          "owner5_last_name": null,
+                          "owner1_email": null,
+                          "owner2_email": null,
+                          "owner3_email": null,
+                          "owner4_email": null,
+                          "owner5_email": null,
+                          "owner1_mobile": null,
+                          "owner2_mobile": null,
+                          "owner3_mobile": null,
+                          "owner4_mobile": null,
+                          "owner5_mobile": null,
+                          "owner1_ssn": null,
+                          "owner2_ssn": null,
+                          "owner3_ssn": null,
+                          "owner4_ssn": null,
+                          "owner5_ssn": null,
+                          "owner1_dob": null,
+                          "owner2_dob": null,
+                          "owner3_dob": null,
+                          "owner4_dob": null,
+                          "owner5_dob": null,
+                          "owner1_address_line_1": null,
+                          "owner2_address_line_1": null,
+                          "owner3_address_line_1": null,
+                          "owner4_address_line_1": null,
+                          "owner5_address_line_1": null,
+                          "owner1_address_line_2": null,
+                          "owner2_address_line_2": null,
+                          "owner3_address_line_2": null,
+                          "owner4_address_line_2": null,
+                          "owner5_address_line_2": null,
+                          "owner1_address_city": null,
+                          "owner2_address_city": null,
+                          "owner3_address_city": null,
+                          "owner4_address_city": null,
+                          "owner5_address_city": null,
+                          "owner1_address_state": null,
+                          "owner2_address_state": null,
+                          "owner3_address_state": null,
+                          "owner4_address_state": null,
+                          "owner5_address_state": null,
+                          "owner1_address_postal": null,
+                          "owner2_address_postal": null,
+                          "owner3_address_postal": null,
+                          "owner4_address_postal": null,
+                          "owner5_address_postal": null,
+                          "owner1_address_country": null,
+                          "owner2_address_country": null,
+                          "owner3_address_country": null,
+                          "owner4_address_country": null,
+                          "owner5_address_country": null,
+                          "owner1_owner_type": null,
+                          "owner2_owner_type": null,
+                          "owner3_owner_type": null,
+                          "owner4_owner_type": null,
+                          "owner5_owner_type": null,
+                          "owner1_ownership_percentage": null,
+                          "owner2_ownership_percentage": null,
+                          "owner3_ownership_percentage": null,
+                          "owner4_ownership_percentage": null,
+                          "owner5_ownership_percentage": null,
+                          "send_invitation": null,
+                          "applicant_first_name": null,
+                          "applicant_last_name": null,
+                          "applicant_email": null,
+                          "year": null,
+                          "is_revenue": 1022233,
+                          "is_operatingexpenses": null,
+                          "is_netincome": null,
+                          "is_cost_of_goods_sold": null,
+                          "bs_totalliabilities": null,
+                          "bs_totalassets": null,
+                          "bs_totalequity": null,
+                          "bs_accountspayable": null,
+                          "bs_accountsreceivable": null,
+                          "bs_cashandcashequivalents": null,
+                          "bs_shortterminvestments": null,
+                          "bs_totalcurrentassets": null,
+                          "bs_totalcurrentliabilities": null,
+                          "bs_totalnoncurrentliabilities": null,
+                          "is_costofgoodsold": null,
+                          "is_grossprofit": null,
+                          "is_incometaxexpense": null,
+                          "is_interestexpense": null,
+                          "number_of_employees": null,
+                          "business_type": null,
+                          "sic_code": null,
+                          "date_of_observation": null,
+                          "lien_count": null,
+                          "business_liens_file_date": null,
+                          "business_liens_status": null,
+                          "business_liens_status_date": null,
+                          "bankruptcy_count": null,
+                          "business_bankruptcies_file_date": null,
+                          "business_bankruptcies_chapter": null,
+                          "business_bankruptcies_voluntary": null,
+                          "business_bankruptcies_status": null,
+                          "business_bankruptcies_status_date": null,
+                          "judgement_count": null,
+                          "business_judgements_file_date": null,
+                          "business_judgements_status": null,
+                          "business_judgements_status_date": null,
+                          "business_judgements_amount": null,
+                          "review_cnt": null,
+                          "review_score": null
+                        },
+                        "business_customer": {
+                          "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                          "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                          "created_at": "2024-11-26T09:32:39.870Z",
+                          "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                          "is_monitoring_enabled": true,
+                          "external_id": "77388994455034",
+                          "metadata": null
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Tue, 26 Nov 2024 09:33:10 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "328"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"148-/2HSFsAO91RX4rlW5j4SYEvc07k\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorBadRequest1"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "fail",
+                          "message": "Bulk process had errors",
+                          "errorCode": null,
+                          "data": {
+                            "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
+                            "failed_rows": {
+                              "0": {
+                                "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
+                                "data": {}
+                              }
+                            },
+                            "result": {}
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "fail",
+                  "message": "Bulk process had errors",
+                  "errorCode": null,
+                  "data": {
+                    "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
+                    "failed_rows": {
+                      "0": {
+                        "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
+                        "data": {}
+                      }
+                    },
+                    "result": {}
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Tue, 26 Nov 2024 09:49:07 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "145"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"91-HsCbOafj9k+6lDkP+i911e5MFNs\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorUnauthenticated1"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "fail",
+                          "message": "Authorization header not present",
+                          "errorCode": "UNAUTHENTICATED",
+                          "data": {
+                            "errorName": "AuthenticationMiddlewareError"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "fail",
+                  "message": "Authorization header not present",
+                  "errorCode": "UNAUTHENTICATED",
+                  "data": {
+                    "errorName": "AuthenticationMiddlewareError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "ImportBusinessRequest": {
+        "title": "ImportBusinessRequest",
+        "required": ["external_id"],
+        "type": "object",
+        "properties": {
+          "external_id": {
+            "type": "string"
+          },
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": "string"
+          },
+          "address_city": {
+            "type": "string"
+          },
+          "address_state": {
+            "type": "string"
+          },
+          "address_country": {
+            "type": "string"
+          },
+          "address_postal_code": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "official_website": {
+            "type": "string"
+          },
+          "naics_code": {
+            "type": "number"
+          },
+          "naics_title": {
+            "type": "string"
+          },
+          "mcc_code": {
+            "type": "number"
+          },
+          "industry": {
+            "type": "string"
+          },
+          "is_monitoring_enabled": {
+            "type": "boolean"
+          },
+          "applicant_id": {
+            "type": "string"
+          },
+          "send_invitation": {
+            "type": "boolean"
+          },
+          "applicant_first_name": {
+            "type": "string"
+          },
+          "applicant_last_name": {
+            "type": "string"
+          },
+          "applicant_email": {
+            "type": "string"
+          },
+          "dba1_name": {
+            "type": "string"
+          },
+          "address1_line_1": {
+            "type": "string"
+          },
+          "address1_apartment": {
+            "type": "string"
+          },
+          "address1_city": {
+            "type": "string"
+          },
+          "address1_state": {
+            "type": "string"
+          },
+          "address1_country": {
+            "type": "string"
+          },
+          "address1_postal_code": {
+            "type": "string"
+          },
+          "address1_mobile": {
+            "type": "string"
+          },
+          "year_created": {
+            "type": "number"
+          },
+          "annual_total_income": {
+            "type": "number"
+          },
+          "total_wages": {
+            "type": "number"
+          },
+          "annual_net_income": {
+            "type": "number"
+          },
+          "cost_of_goods_sold": {
+            "type": "number"
+          },
+          "total_liabilities": {
+            "type": "number"
+          },
+          "total_assets": {
+            "type": "number"
+          },
+          "total_equity": {
+            "type": "number"
+          },
+          "total_accounts_payable": {
+            "type": "number"
+          },
+          "total_accounts_recievable": {
+            "type": "number"
+          },
+          "total_cash_and_cash_equivalents": {
+            "type": "number"
+          },
+          "total_short_term_investments": {
+            "type": "number"
+          },
+          "total_current_assets": {
+            "type": "number"
+          },
+          "total_current_liabilities": {
+            "type": "number"
+          },
+          "non_current_liablities": {
+            "type": "number"
+          },
+          "annual_cost_of_goods_sold": {
+            "type": "number"
+          },
+          "annual_gross_profit": {
+            "type": "number"
+          },
+          "annual_taxes_paid": {
+            "type": "number"
+          },
+          "annual_interest_expenses": {
+            "type": "number"
+          },
+          "number_of_employees": {
+            "type": "number"
+          },
+          "business_type": {
+            "type": "string"
+          },
+          "sic_code": {
+            "type": "number"
+          },
+          "score_retrieval_date": {
+            "type": "string"
+          },
+          "business_liens": {
+            "type": "number"
+          },
+          "business_liens_file_date": {
+            "type": "string"
+          },
+          "business_liens_status": {
+            "type": "string"
+          },
+          "business_liens_status_date": {
+            "type": "string"
+          },
+          "business_bankruptcies": {
+            "type": "number"
+          },
+          "business_bankruptcies_file_date": {
+            "type": "string"
+          },
+          "business_bankruptcies_chapter": {
+            "type": "string"
+          },
+          "business_bankruptcies_voluntary": {
+            "type": "string"
+          },
+          "business_bankruptcies_status": {
+            "type": "string"
+          },
+          "business_bankruptcies_status_date": {
+            "type": "string"
+          },
+          "business_judgements": {
+            "type": "number"
+          },
+          "business_judgements_file_date": {
+            "type": "string"
+          },
+          "business_judgements_status": {
+            "type": "string"
+          },
+          "business_judgements_status_date": {
+            "type": "string"
+          },
+          "business_judgements_amount": {
+            "type": "number"
+          },
+          "social_review_count": {
+            "type": "number"
+          },
+          "social_review_score": {
+            "type": "number"
+          },
+          "owner1_title": {
+            "type": "string"
+          },
+          "owner1_first_name": {
+            "type": "string"
+          },
+          "owner1_last_name": {
+            "type": "string"
+          },
+          "owner1_email": {
+            "type": "string"
+          },
+          "owner1_mobile": {
+            "type": "string"
+          },
+          "owner1_ssn": {
+            "type": "string"
+          },
+          "owner1_dob": {
+            "type": "string"
+          },
+          "owner1_address_line_1": {
+            "type": "string"
+          },
+          "owner1_address_line_2": {
+            "type": "string"
+          },
+          "owner1_address_city": {
+            "type": "string"
+          },
+          "owner1_address_state": {
+            "type": "string"
+          },
+          "owner1_address_postal": {
+            "type": "string"
+          },
+          "owner1_address_country": {
+            "type": "string"
+          },
+          "owner1_owner_type": {
+            "type": "string"
+          },
+          "owner1_ownership_percentage": {
+            "type": "number"
+          }
+        },
+        "examples": [
+          {
+            "external_id": "77388994455034",
+            "name": "Test Business",
+            "tin": "333444685",
+            "address_line_1": "480 s Ronald Reagan Blvd",
+            "address_city": "Longwood",
+            "address_state": "FL",
+            "address_postal_code": "32850"
+          }
+        ]
+      },
+      "Success": {
+        "title": "Success",
+        "required": ["status", "message", "data"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data"
+          }
+        },
+        "examples": [
+          {
+            "status": "success",
+            "message": "Bulk process succeeded",
+            "data": {
+              "runId": "13267172-07d0-4483-932b-4d851441eab2",
+              "result": {
+                "0": {
+                  "warnings": [],
+                  "userID": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                  "customerID": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                  "riskMonitoring": true,
+                  "data_businesses": {
+                    "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                    "name": "Test Business",
+                    "tin": "XXXXX4685",
+                    "address_apartment": null,
+                    "address_line_1": "480 s Ronald Reagan Blvd",
+                    "address_line_2": null,
+                    "address_city": "Longwood",
+                    "address_state": "FL",
+                    "address_postal_code": "32850",
+                    "address_country": null,
+                    "created_at": "2024-11-26T09:32:35.719Z",
+                    "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                    "updated_at": "2024-11-26T09:32:39.814Z",
+                    "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                    "mobile": null,
+                    "official_website": null,
+                    "public_website": null,
+                    "social_account": null,
+                    "status": "VERIFIED",
+                    "industry": null,
+                    "mcc_id": null,
+                    "naics_id": null,
+                    "naics_code": null,
+                    "naics_title": null,
+                    "mcc_code": null,
+                    "mcc_title": null,
+                    "is_monitoring_enabled": null,
+                    "subscription": {
+                      "status": null,
+                      "created_at": null,
+                      "updated_at": null
+                    },
+                    "business_names": [
+                      {
+                        "name": "Test Business",
+                        "is_primary": false
+                      },
+                      {
+                        "name": "Test Business",
+                        "is_primary": true
+                      }
+                    ],
+                    "business_addresses": [
+                      {
+                        "line_1": "480 s Ronald Reagan Blvd",
+                        "apartment": null,
+                        "city": "Longwood",
+                        "state": "FL",
+                        "country": "USA",
+                        "postal_code": "32850",
+                        "mobile": null,
+                        "is_primary": true
+                      }
+                    ]
+                  },
+                  "data_cases": {
+                    "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+                    "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                    "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                    "status": 3,
+                    "created_at": "2024-11-26T09:32:38.620Z",
+                    "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                    "updated_at": "2024-11-26T09:32:38.620Z",
+                    "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                    "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                    "case_type": 1,
+                    "assignee": null,
+                    "assigner": null
+                  },
+                  "integration_data": {
+                    "dba1_name": null,
+                    "dba2_name": null,
+                    "dba3_name": null,
+                    "dba4_name": null,
+                    "dba5_name": null,
+                    "address1_line_1": null,
+                    "address2_line_1": null,
+                    "address3_line_1": null,
+                    "address4_line_1": null,
+                    "address5_line_1": null,
+                    "address1_apartment": null,
+                    "address2_apartment": null,
+                    "address3_apartment": null,
+                    "address4_apartment": null,
+                    "address5_apartment": null,
+                    "address1_city": null,
+                    "address2_city": null,
+                    "address3_city": null,
+                    "address4_city": null,
+                    "address5_city": null,
+                    "state": "FL",
+                    "address1_country": null,
+                    "address2_country": null,
+                    "address3_country": null,
+                    "address4_country": null,
+                    "address5_country": null,
+                    "address1_postal_code": null,
+                    "address2_postal_code": null,
+                    "address3_postal_code": null,
+                    "address4_postal_code": null,
+                    "address5_postal_code": null,
+                    "address1_mobile": null,
+                    "address2_mobile": null,
+                    "address3_mobile": null,
+                    "address4_mobile": null,
+                    "address5_mobile": null,
+                    "id": null,
+                    "name": "Test Business",
+                    "tin": "333444685",
+                    "address_line_1": "480 s Ronald Reagan Blvd",
+                    "address_line_2": null,
+                    "address_city": "Longwood",
+                    "address_country": null,
+                    "address_postal_code": "32850",
+                    "mobile": null,
+                    "official_website": null,
+                    "naics_code": null,
+                    "naics_title": null,
+                    "mcc_code": null,
+                    "industry": null,
+                    "quick_add": null,
+                    "external_id": "77388994455034",
+                    "metadata": null,
+                    "owner1_title": null,
+                    "owner2_title": null,
+                    "owner3_title": null,
+                    "owner4_title": null,
+                    "owner5_title": null,
+                    "owner1_first_name": null,
+                    "owner2_first_name": null,
+                    "owner3_first_name": null,
+                    "owner4_first_name": null,
+                    "owner5_first_name": null,
+                    "owner1_last_name": null,
+                    "owner2_last_name": null,
+                    "owner3_last_name": null,
+                    "owner4_last_name": null,
+                    "owner5_last_name": null,
+                    "owner1_email": null,
+                    "owner2_email": null,
+                    "owner3_email": null,
+                    "owner4_email": null,
+                    "owner5_email": null,
+                    "owner1_mobile": null,
+                    "owner2_mobile": null,
+                    "owner3_mobile": null,
+                    "owner4_mobile": null,
+                    "owner5_mobile": null,
+                    "owner1_ssn": null,
+                    "owner2_ssn": null,
+                    "owner3_ssn": null,
+                    "owner4_ssn": null,
+                    "owner5_ssn": null,
+                    "owner1_dob": null,
+                    "owner2_dob": null,
+                    "owner3_dob": null,
+                    "owner4_dob": null,
+                    "owner5_dob": null,
+                    "owner1_address_line_1": null,
+                    "owner2_address_line_1": null,
+                    "owner3_address_line_1": null,
+                    "owner4_address_line_1": null,
+                    "owner5_address_line_1": null,
+                    "owner1_address_line_2": null,
+                    "owner2_address_line_2": null,
+                    "owner3_address_line_2": null,
+                    "owner4_address_line_2": null,
+                    "owner5_address_line_2": null,
+                    "owner1_address_city": null,
+                    "owner2_address_city": null,
+                    "owner3_address_city": null,
+                    "owner4_address_city": null,
+                    "owner5_address_city": null,
+                    "owner1_address_state": null,
+                    "owner2_address_state": null,
+                    "owner3_address_state": null,
+                    "owner4_address_state": null,
+                    "owner5_address_state": null,
+                    "owner1_address_postal": null,
+                    "owner2_address_postal": null,
+                    "owner3_address_postal": null,
+                    "owner4_address_postal": null,
+                    "owner5_address_postal": null,
+                    "owner1_address_country": null,
+                    "owner2_address_country": null,
+                    "owner3_address_country": null,
+                    "owner4_address_country": null,
+                    "owner5_address_country": null,
+                    "owner1_owner_type": null,
+                    "owner2_owner_type": null,
+                    "owner3_owner_type": null,
+                    "owner4_owner_type": null,
+                    "owner5_owner_type": null,
+                    "owner1_ownership_percentage": null,
+                    "owner2_ownership_percentage": null,
+                    "owner3_ownership_percentage": null,
+                    "owner4_ownership_percentage": null,
+                    "owner5_ownership_percentage": null,
+                    "send_invitation": null,
+                    "applicant_first_name": null,
+                    "applicant_last_name": null,
+                    "applicant_email": null,
+                    "year": null,
+                    "is_revenue": 1022233,
+                    "is_operatingexpenses": null,
+                    "is_netincome": null,
+                    "is_cost_of_goods_sold": null,
+                    "bs_totalliabilities": null,
+                    "bs_totalassets": null,
+                    "bs_totalequity": null,
+                    "bs_accountspayable": null,
+                    "bs_accountsreceivable": null,
+                    "bs_cashandcashequivalents": null,
+                    "bs_shortterminvestments": null,
+                    "bs_totalcurrentassets": null,
+                    "bs_totalcurrentliabilities": null,
+                    "bs_totalnoncurrentliabilities": null,
+                    "is_costofgoodsold": null,
+                    "is_grossprofit": null,
+                    "is_incometaxexpense": null,
+                    "is_interestexpense": null,
+                    "number_of_employees": null,
+                    "business_type": null,
+                    "sic_code": null,
+                    "date_of_observation": null,
+                    "lien_count": null,
+                    "business_liens_file_date": null,
+                    "business_liens_status": null,
+                    "business_liens_status_date": null,
+                    "bankruptcy_count": null,
+                    "business_bankruptcies_file_date": null,
+                    "business_bankruptcies_chapter": null,
+                    "business_bankruptcies_voluntary": null,
+                    "business_bankruptcies_status": null,
+                    "business_bankruptcies_status_date": null,
+                    "judgement_count": null,
+                    "business_judgements_file_date": null,
+                    "business_judgements_status": null,
+                    "business_judgements_status_date": null,
+                    "business_judgements_amount": null,
+                    "review_cnt": null,
+                    "review_score": null
+                  },
+                  "business_customer": {
+                    "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                    "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                    "created_at": "2024-11-26T09:32:39.870Z",
+                    "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                    "is_monitoring_enabled": true,
+                    "external_id": "77388994455034",
+                    "metadata": null
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Data": {
+        "title": "Data",
+        "required": ["runId", "result"],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "type": "string"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/generatedObject"
+            }
+          }
+        },
+        "examples": [
+          {
+            "runId": "13267172-07d0-4483-932b-4d851441eab2",
+            "result": {
+              "0": {
+                "warnings": [],
+                "userID": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                "customerID": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                "riskMonitoring": true,
+                "data_businesses": {
+                  "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                  "name": "Test Business",
+                  "tin": "XXXXX4685",
+                  "address_apartment": null,
+                  "address_line_1": "480 s Ronald Reagan Blvd",
+                  "address_line_2": null,
+                  "address_city": "Longwood",
+                  "address_state": "FL",
+                  "address_postal_code": "32850",
+                  "address_country": null,
+                  "created_at": "2024-11-26T09:32:35.719Z",
+                  "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                  "updated_at": "2024-11-26T09:32:39.814Z",
+                  "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                  "mobile": null,
+                  "official_website": null,
+                  "public_website": null,
+                  "social_account": null,
+                  "status": "VERIFIED",
+                  "industry": null,
+                  "mcc_id": null,
+                  "naics_id": null,
+                  "naics_code": null,
+                  "naics_title": null,
+                  "mcc_code": null,
+                  "mcc_title": null,
+                  "is_monitoring_enabled": null,
+                  "subscription": {
+                    "status": null,
+                    "created_at": null,
+                    "updated_at": null
+                  },
+                  "business_names": [
+                    {
+                      "name": "Test Business",
+                      "is_primary": false
+                    },
+                    {
+                      "name": "Test Business",
+                      "is_primary": true
+                    }
+                  ],
+                  "business_addresses": [
+                    {
+                      "line_1": "480 s Ronald Reagan Blvd",
+                      "apartment": null,
+                      "city": "Longwood",
+                      "state": "FL",
+                      "country": "USA",
+                      "postal_code": "32850",
+                      "mobile": null,
+                      "is_primary": true
+                    }
+                  ]
+                },
+                "data_cases": {
+                  "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+                  "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                  "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                  "status": 3,
+                  "created_at": "2024-11-26T09:32:38.620Z",
+                  "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                  "updated_at": "2024-11-26T09:32:38.620Z",
+                  "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+                  "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                  "case_type": 1,
+                  "assignee": null,
+                  "assigner": null
+                },
+                "integration_data": {
+                  "dba1_name": null,
+                  "dba2_name": null,
+                  "dba3_name": null,
+                  "dba4_name": null,
+                  "dba5_name": null,
+                  "address1_line_1": null,
+                  "address2_line_1": null,
+                  "address3_line_1": null,
+                  "address4_line_1": null,
+                  "address5_line_1": null,
+                  "address1_apartment": null,
+                  "address2_apartment": null,
+                  "address3_apartment": null,
+                  "address4_apartment": null,
+                  "address5_apartment": null,
+                  "address1_city": null,
+                  "address2_city": null,
+                  "address3_city": null,
+                  "address4_city": null,
+                  "address5_city": null,
+                  "state": "FL",
+                  "address1_country": null,
+                  "address2_country": null,
+                  "address3_country": null,
+                  "address4_country": null,
+                  "address5_country": null,
+                  "address1_postal_code": null,
+                  "address2_postal_code": null,
+                  "address3_postal_code": null,
+                  "address4_postal_code": null,
+                  "address5_postal_code": null,
+                  "address1_mobile": null,
+                  "address2_mobile": null,
+                  "address3_mobile": null,
+                  "address4_mobile": null,
+                  "address5_mobile": null,
+                  "id": null,
+                  "name": "Test Business",
+                  "tin": "333444685",
+                  "address_line_1": "480 s Ronald Reagan Blvd",
+                  "address_line_2": null,
+                  "address_city": "Longwood",
+                  "address_country": null,
+                  "address_postal_code": "32850",
+                  "mobile": null,
+                  "official_website": null,
+                  "naics_code": null,
+                  "naics_title": null,
+                  "mcc_code": null,
+                  "industry": null,
+                  "quick_add": null,
+                  "external_id": "77388994455034",
+                  "metadata": null,
+                  "owner1_title": null,
+                  "owner2_title": null,
+                  "owner3_title": null,
+                  "owner4_title": null,
+                  "owner5_title": null,
+                  "owner1_first_name": null,
+                  "owner2_first_name": null,
+                  "owner3_first_name": null,
+                  "owner4_first_name": null,
+                  "owner5_first_name": null,
+                  "owner1_last_name": null,
+                  "owner2_last_name": null,
+                  "owner3_last_name": null,
+                  "owner4_last_name": null,
+                  "owner5_last_name": null,
+                  "owner1_email": null,
+                  "owner2_email": null,
+                  "owner3_email": null,
+                  "owner4_email": null,
+                  "owner5_email": null,
+                  "owner1_mobile": null,
+                  "owner2_mobile": null,
+                  "owner3_mobile": null,
+                  "owner4_mobile": null,
+                  "owner5_mobile": null,
+                  "owner1_ssn": null,
+                  "owner2_ssn": null,
+                  "owner3_ssn": null,
+                  "owner4_ssn": null,
+                  "owner5_ssn": null,
+                  "owner1_dob": null,
+                  "owner2_dob": null,
+                  "owner3_dob": null,
+                  "owner4_dob": null,
+                  "owner5_dob": null,
+                  "owner1_address_line_1": null,
+                  "owner2_address_line_1": null,
+                  "owner3_address_line_1": null,
+                  "owner4_address_line_1": null,
+                  "owner5_address_line_1": null,
+                  "owner1_address_line_2": null,
+                  "owner2_address_line_2": null,
+                  "owner3_address_line_2": null,
+                  "owner4_address_line_2": null,
+                  "owner5_address_line_2": null,
+                  "owner1_address_city": null,
+                  "owner2_address_city": null,
+                  "owner3_address_city": null,
+                  "owner4_address_city": null,
+                  "owner5_address_city": null,
+                  "owner1_address_state": null,
+                  "owner2_address_state": null,
+                  "owner3_address_state": null,
+                  "owner4_address_state": null,
+                  "owner5_address_state": null,
+                  "owner1_address_postal": null,
+                  "owner2_address_postal": null,
+                  "owner3_address_postal": null,
+                  "owner4_address_postal": null,
+                  "owner5_address_postal": null,
+                  "owner1_address_country": null,
+                  "owner2_address_country": null,
+                  "owner3_address_country": null,
+                  "owner4_address_country": null,
+                  "owner5_address_country": null,
+                  "owner1_owner_type": null,
+                  "owner2_owner_type": null,
+                  "owner3_owner_type": null,
+                  "owner4_owner_type": null,
+                  "owner5_owner_type": null,
+                  "owner1_ownership_percentage": null,
+                  "owner2_ownership_percentage": null,
+                  "owner3_ownership_percentage": null,
+                  "owner4_ownership_percentage": null,
+                  "owner5_ownership_percentage": null,
+                  "send_invitation": null,
+                  "applicant_first_name": null,
+                  "applicant_last_name": null,
+                  "applicant_email": null,
+                  "year": null,
+                  "is_revenue": 1022233,
+                  "is_operatingexpenses": null,
+                  "is_netincome": null,
+                  "is_cost_of_goods_sold": null,
+                  "bs_totalliabilities": null,
+                  "bs_totalassets": null,
+                  "bs_totalequity": null,
+                  "bs_accountspayable": null,
+                  "bs_accountsreceivable": null,
+                  "bs_cashandcashequivalents": null,
+                  "bs_shortterminvestments": null,
+                  "bs_totalcurrentassets": null,
+                  "bs_totalcurrentliabilities": null,
+                  "bs_totalnoncurrentliabilities": null,
+                  "is_costofgoodsold": null,
+                  "is_grossprofit": null,
+                  "is_incometaxexpense": null,
+                  "is_interestexpense": null,
+                  "number_of_employees": null,
+                  "business_type": null,
+                  "sic_code": null,
+                  "date_of_observation": null,
+                  "lien_count": null,
+                  "business_liens_file_date": null,
+                  "business_liens_status": null,
+                  "business_liens_status_date": null,
+                  "bankruptcy_count": null,
+                  "business_bankruptcies_file_date": null,
+                  "business_bankruptcies_chapter": null,
+                  "business_bankruptcies_voluntary": null,
+                  "business_bankruptcies_status": null,
+                  "business_bankruptcies_status_date": null,
+                  "judgement_count": null,
+                  "business_judgements_file_date": null,
+                  "business_judgements_status": null,
+                  "business_judgements_status_date": null,
+                  "business_judgements_amount": null,
+                  "review_cnt": null,
+                  "review_score": null
+                },
+                "business_customer": {
+                  "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+                  "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+                  "created_at": "2024-11-26T09:32:39.870Z",
+                  "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+                  "is_monitoring_enabled": true,
+                  "external_id": "77388994455034",
+                  "metadata": null
+                }
+              }
+            }
+          }
+        ]
+      },
+      "generatedObject": {
+        "title": "generatedObject",
+        "required": [
+          "warnings",
+          "userID",
+          "customerID",
+          "riskMonitoring",
+          "data_businesses",
+          "data_cases",
+          "integration_data",
+          "business_customer"
+        ],
+        "type": "object",
+        "properties": {
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          },
+          "userID": {
+            "type": "string"
+          },
+          "customerID": {
+            "type": "string"
+          },
+          "riskMonitoring": {
+            "type": "boolean"
+          },
+          "data_businesses": {
+            "$ref": "#/components/schemas/DataBusinesses"
+          },
+          "data_cases": {
+            "$ref": "#/components/schemas/DataCases"
+          },
+          "integration_data": {
+            "$ref": "#/components/schemas/IntegrationData"
+          },
+          "business_customer": {
+            "$ref": "#/components/schemas/BusinessCustomer"
+          }
+        },
+        "examples": [
+          {
+            "warnings": [],
+            "userID": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+            "customerID": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+            "riskMonitoring": true,
+            "data_businesses": {
+              "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+              "name": "Test Business",
+              "tin": "XXXXX4685",
+              "address_apartment": null,
+              "address_line_1": "480 s Ronald Reagan Blvd",
+              "address_line_2": null,
+              "address_city": "Longwood",
+              "address_state": "FL",
+              "address_postal_code": "32850",
+              "address_country": null,
+              "created_at": "2024-11-26T09:32:35.719Z",
+              "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+              "updated_at": "2024-11-26T09:32:39.814Z",
+              "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+              "mobile": null,
+              "official_website": null,
+              "public_website": null,
+              "social_account": null,
+              "status": "VERIFIED",
+              "industry": null,
+              "mcc_id": null,
+              "naics_id": null,
+              "naics_code": null,
+              "naics_title": null,
+              "mcc_code": null,
+              "mcc_title": null,
+              "is_monitoring_enabled": null,
+              "subscription": {
+                "status": null,
+                "created_at": null,
+                "updated_at": null
+              },
+              "business_names": [
+                {
+                  "name": "Test Business",
+                  "is_primary": false
+                },
+                {
+                  "name": "Test Business",
+                  "is_primary": true
+                }
+              ],
+              "business_addresses": [
+                {
+                  "line_1": "480 s Ronald Reagan Blvd",
+                  "apartment": null,
+                  "city": "Longwood",
+                  "state": "FL",
+                  "country": "USA",
+                  "postal_code": "32850",
+                  "mobile": null,
+                  "is_primary": true
+                }
+              ]
+            },
+            "data_cases": {
+              "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+              "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+              "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+              "status": 3,
+              "created_at": "2024-11-26T09:32:38.620Z",
+              "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+              "updated_at": "2024-11-26T09:32:38.620Z",
+              "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+              "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+              "case_type": 1,
+              "assignee": null,
+              "assigner": null
+            },
+            "integration_data": {
+              "dba1_name": null,
+              "dba2_name": null,
+              "dba3_name": null,
+              "dba4_name": null,
+              "dba5_name": null,
+              "address1_line_1": null,
+              "address2_line_1": null,
+              "address3_line_1": null,
+              "address4_line_1": null,
+              "address5_line_1": null,
+              "address1_apartment": null,
+              "address2_apartment": null,
+              "address3_apartment": null,
+              "address4_apartment": null,
+              "address5_apartment": null,
+              "address1_city": null,
+              "address2_city": null,
+              "address3_city": null,
+              "address4_city": null,
+              "address5_city": null,
+              "state": "FL",
+              "address1_country": null,
+              "address2_country": null,
+              "address3_country": null,
+              "address4_country": null,
+              "address5_country": null,
+              "address1_postal_code": null,
+              "address2_postal_code": null,
+              "address3_postal_code": null,
+              "address4_postal_code": null,
+              "address5_postal_code": null,
+              "address1_mobile": null,
+              "address2_mobile": null,
+              "address3_mobile": null,
+              "address4_mobile": null,
+              "address5_mobile": null,
+              "id": null,
+              "name": "Test Business",
+              "tin": "333444685",
+              "address_line_1": "480 s Ronald Reagan Blvd",
+              "address_line_2": null,
+              "address_city": "Longwood",
+              "address_country": null,
+              "address_postal_code": "32850",
+              "mobile": null,
+              "official_website": null,
+              "naics_code": null,
+              "naics_title": null,
+              "mcc_code": null,
+              "industry": null,
+              "quick_add": null,
+              "external_id": "77388994455034",
+              "metadata": null,
+              "owner1_title": null,
+              "owner2_title": null,
+              "owner3_title": null,
+              "owner4_title": null,
+              "owner5_title": null,
+              "owner1_first_name": null,
+              "owner2_first_name": null,
+              "owner3_first_name": null,
+              "owner4_first_name": null,
+              "owner5_first_name": null,
+              "owner1_last_name": null,
+              "owner2_last_name": null,
+              "owner3_last_name": null,
+              "owner4_last_name": null,
+              "owner5_last_name": null,
+              "owner1_email": null,
+              "owner2_email": null,
+              "owner3_email": null,
+              "owner4_email": null,
+              "owner5_email": null,
+              "owner1_mobile": null,
+              "owner2_mobile": null,
+              "owner3_mobile": null,
+              "owner4_mobile": null,
+              "owner5_mobile": null,
+              "owner1_ssn": null,
+              "owner2_ssn": null,
+              "owner3_ssn": null,
+              "owner4_ssn": null,
+              "owner5_ssn": null,
+              "owner1_dob": null,
+              "owner2_dob": null,
+              "owner3_dob": null,
+              "owner4_dob": null,
+              "owner5_dob": null,
+              "owner1_address_line_1": null,
+              "owner2_address_line_1": null,
+              "owner3_address_line_1": null,
+              "owner4_address_line_1": null,
+              "owner5_address_line_1": null,
+              "owner1_address_line_2": null,
+              "owner2_address_line_2": null,
+              "owner3_address_line_2": null,
+              "owner4_address_line_2": null,
+              "owner5_address_line_2": null,
+              "owner1_address_city": null,
+              "owner2_address_city": null,
+              "owner3_address_city": null,
+              "owner4_address_city": null,
+              "owner5_address_city": null,
+              "owner1_address_state": null,
+              "owner2_address_state": null,
+              "owner3_address_state": null,
+              "owner4_address_state": null,
+              "owner5_address_state": null,
+              "owner1_address_postal": null,
+              "owner2_address_postal": null,
+              "owner3_address_postal": null,
+              "owner4_address_postal": null,
+              "owner5_address_postal": null,
+              "owner1_address_country": null,
+              "owner2_address_country": null,
+              "owner3_address_country": null,
+              "owner4_address_country": null,
+              "owner5_address_country": null,
+              "owner1_owner_type": null,
+              "owner2_owner_type": null,
+              "owner3_owner_type": null,
+              "owner4_owner_type": null,
+              "owner5_owner_type": null,
+              "owner1_ownership_percentage": null,
+              "owner2_ownership_percentage": null,
+              "owner3_ownership_percentage": null,
+              "owner4_ownership_percentage": null,
+              "owner5_ownership_percentage": null,
+              "send_invitation": null,
+              "applicant_first_name": null,
+              "applicant_last_name": null,
+              "applicant_email": null,
+              "year": null,
+              "is_revenue": 1022233,
+              "is_operatingexpenses": null,
+              "is_netincome": null,
+              "is_cost_of_goods_sold": null,
+              "bs_totalliabilities": null,
+              "bs_totalassets": null,
+              "bs_totalequity": null,
+              "bs_accountspayable": null,
+              "bs_accountsreceivable": null,
+              "bs_cashandcashequivalents": null,
+              "bs_shortterminvestments": null,
+              "bs_totalcurrentassets": null,
+              "bs_totalcurrentliabilities": null,
+              "bs_totalnoncurrentliabilities": null,
+              "is_costofgoodsold": null,
+              "is_grossprofit": null,
+              "is_incometaxexpense": null,
+              "is_interestexpense": null,
+              "number_of_employees": null,
+              "business_type": null,
+              "sic_code": null,
+              "date_of_observation": null,
+              "lien_count": null,
+              "business_liens_file_date": null,
+              "business_liens_status": null,
+              "business_liens_status_date": null,
+              "bankruptcy_count": null,
+              "business_bankruptcies_file_date": null,
+              "business_bankruptcies_chapter": null,
+              "business_bankruptcies_voluntary": null,
+              "business_bankruptcies_status": null,
+              "business_bankruptcies_status_date": null,
+              "judgement_count": null,
+              "business_judgements_file_date": null,
+              "business_judgements_status": null,
+              "business_judgements_status_date": null,
+              "business_judgements_amount": null,
+              "review_cnt": null,
+              "review_score": null
+            },
+            "business_customer": {
+              "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+              "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+              "created_at": "2024-11-26T09:32:39.870Z",
+              "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+              "is_monitoring_enabled": true,
+              "external_id": "77388994455034",
+              "metadata": null
+            }
+          }
+        ]
+      },
+      "DataBusinesses": {
+        "title": "DataBusinesses",
+        "required": [
+          "id",
+          "address_apartment",
+          "address_line_1",
+          "address_line_2",
+          "address_city",
+          "address_state",
+          "address_postal_code",
+          "address_country",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "updated_by",
+          "mobile",
+          "official_website",
+          "public_website",
+          "social_account",
+          "status",
+          "industry",
+          "mcc_id",
+          "naics_id",
+          "naics_code",
+          "naics_title",
+          "mcc_code",
+          "mcc_title",
+          "is_monitoring_enabled",
+          "subscription",
+          "business_names",
+          "business_addresses"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tin": {
+            "type": "string"
+          },
+          "address_apartment": {
+            "type": ["string", "null"]
+          },
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": ["string", "null"]
+          },
+          "address_city": {
+            "type": "string"
+          },
+          "address_state": {
+            "type": "string"
+          },
+          "address_postal_code": {
+            "type": "string"
+          },
+          "address_country": {
+            "type": ["string", "null"]
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": ["string", "null"]
+          },
+          "official_website": {
+            "type": ["string", "null"]
+          },
+          "public_website": {
+            "type": ["string", "null"]
+          },
+          "social_account": {
+            "type": ["string", "null"]
+          },
+          "status": {
+            "type": "string"
+          },
+          "industry": {
+            "type": ["string", "null"]
+          },
+          "mcc_id": {
+            "type": ["string", "null"]
+          },
+          "naics_id": {
+            "type": ["string", "null"]
+          },
+          "naics_code": {
+            "type": ["string", "null"]
+          },
+          "naics_title": {
+            "type": ["string", "null"]
+          },
+          "mcc_code": {
+            "type": ["string", "null"]
+          },
+          "mcc_title": {
+            "type": ["string", "null"]
+          },
+          "is_monitoring_enabled": {
+            "type": ["string", "null"]
+          },
+          "subscription": {
+            "$ref": "#/components/schemas/Subscription"
+          },
+          "business_names": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BusinessName"
+            },
+            "description": ""
+          },
+          "business_addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BusinessAddress"
+            },
+            "description": ""
+          }
+        },
+        "examples": [
+          {
+            "id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+            "name": "Test Business",
+            "tin": "XXXXX4685",
+            "address_apartment": null,
+            "address_line_1": "480 s Ronald Reagan Blvd",
+            "address_line_2": null,
+            "address_city": "Longwood",
+            "address_state": "FL",
+            "address_postal_code": "32850",
+            "address_country": null,
+            "created_at": "2024-11-26T09:32:35.719Z",
+            "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+            "updated_at": "2024-11-26T09:32:39.814Z",
+            "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+            "mobile": null,
+            "official_website": null,
+            "public_website": null,
+            "social_account": null,
+            "status": "VERIFIED",
+            "industry": null,
+            "mcc_id": null,
+            "naics_id": null,
+            "naics_code": null,
+            "naics_title": null,
+            "mcc_code": null,
+            "mcc_title": null,
+            "is_monitoring_enabled": null,
+            "subscription": {
+              "status": null,
+              "created_at": null,
+              "updated_at": null
+            },
+            "business_names": [
+              {
+                "name": "Test Business",
+                "is_primary": false
+              },
+              {
+                "name": "Test Business",
+                "is_primary": true
+              }
+            ],
+            "business_addresses": [
+              {
+                "line_1": "480 s Ronald Reagan Blvd",
+                "apartment": null,
+                "city": "Longwood",
+                "state": "FL",
+                "country": "USA",
+                "postal_code": "32850",
+                "mobile": null,
+                "is_primary": true
+              }
+            ]
+          }
+        ]
+      },
+      "Subscription": {
+        "title": "Subscription",
+        "required": ["status", "created_at", "updated_at"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": ["string", "null"]
+          },
+          "created_at": {
+            "type": ["string", "null"]
+          },
+          "updated_at": {
+            "type": ["string", "null"]
+          }
+        },
+        "examples": [
+          {
+            "status": null,
+            "created_at": null,
+            "updated_at": null
+          }
+        ]
+      },
+      "BusinessName": {
+        "title": "BusinessName",
+        "required": ["name", "is_primary"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "is_primary": {
+            "type": "boolean"
+          }
+        },
+        "examples": [
+          {
+            "name": "Test Business",
+            "is_primary": false
+          }
+        ]
+      },
+      "BusinessAddress": {
+        "title": "BusinessAddress",
+        "required": [
+          "line_1",
+          "apartment",
+          "city",
+          "state",
+          "country",
+          "postal_code",
+          "mobile",
+          "is_primary"
+        ],
+        "type": "object",
+        "properties": {
+          "line_1": {
+            "type": "string"
+          },
+          "apartment": {
+            "type": ["string", "null"]
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": ["string", "null"]
+          },
+          "is_primary": {
+            "type": "boolean"
+          }
+        },
+        "examples": [
+          {
+            "line_1": "480 s Ronald Reagan Blvd",
+            "apartment": null,
+            "city": "Longwood",
+            "state": "FL",
+            "country": "USA",
+            "postal_code": "32850",
+            "mobile": null,
+            "is_primary": true
+          }
+        ]
+      },
+      "DataCases": {
+        "title": "DataCases",
+        "required": [
+          "id",
+          "applicant_id",
+          "customer_id",
+          "status",
+          "created_at",
+          "created_by",
+          "updated_at",
+          "updated_by",
+          "business_id",
+          "case_type",
+          "assignee",
+          "assigner"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "applicant_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          },
+          "business_id": {
+            "type": "string"
+          },
+          "case_type": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "assignee": {
+            "type": ["string", "null"]
+          },
+          "assigner": {
+            "type": ["string", "null"]
+          }
+        },
+        "examples": [
+          {
+            "id": "9068687a-3842-469f-84dd-bcd9dcc37ea3",
+            "applicant_id": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+            "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+            "status": 3,
+            "created_at": "2024-11-26T09:32:38.620Z",
+            "created_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+            "updated_at": "2024-11-26T09:32:38.620Z",
+            "updated_by": "f83f60a0-55fc-4c30-a93b-8613f99a55e1",
+            "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+            "case_type": 1,
+            "assignee": null,
+            "assigner": null
+          }
+        ]
+      },
+      "IntegrationData": {
+        "title": "IntegrationData",
+        "required": [
+          "dba1_name",
+          "dba2_name",
+          "dba3_name",
+          "dba4_name",
+          "dba5_name",
+          "address1_line_1",
+          "address2_line_1",
+          "address3_line_1",
+          "address4_line_1",
+          "address5_line_1",
+          "address1_apartment",
+          "address2_apartment",
+          "address3_apartment",
+          "address4_apartment",
+          "address5_apartment",
+          "address1_city",
+          "address2_city",
+          "address3_city",
+          "address4_city",
+          "address5_city",
+          "state",
+          "address1_country",
+          "address2_country",
+          "address3_country",
+          "address4_country",
+          "address5_country",
+          "address1_postal_code",
+          "address2_postal_code",
+          "address3_postal_code",
+          "address4_postal_code",
+          "address5_postal_code",
+          "address1_mobile",
+          "address2_mobile",
+          "address3_mobile",
+          "address4_mobile",
+          "address5_mobile",
+          "id",
+          "name",
+          "tin",
+          "address_line_1",
+          "address_line_2",
+          "address_city",
+          "address_country",
+          "address_postal_code",
+          "mobile",
+          "official_website",
+          "naics_code",
+          "naics_title",
+          "mcc_code",
+          "industry",
+          "quick_add",
+          "external_id",
+          "metadata",
+          "owner1_title",
+          "owner2_title",
+          "owner3_title",
+          "owner4_title",
+          "owner5_title",
+          "owner1_first_name",
+          "owner2_first_name",
+          "owner3_first_name",
+          "owner4_first_name",
+          "owner5_first_name",
+          "owner1_last_name",
+          "owner2_last_name",
+          "owner3_last_name",
+          "owner4_last_name",
+          "owner5_last_name",
+          "owner1_email",
+          "owner2_email",
+          "owner3_email",
+          "owner4_email",
+          "owner5_email",
+          "owner1_mobile",
+          "owner2_mobile",
+          "owner3_mobile",
+          "owner4_mobile",
+          "owner5_mobile",
+          "owner1_ssn",
+          "owner2_ssn",
+          "owner3_ssn",
+          "owner4_ssn",
+          "owner5_ssn",
+          "owner1_dob",
+          "owner2_dob",
+          "owner3_dob",
+          "owner4_dob",
+          "owner5_dob",
+          "owner1_address_line_1",
+          "owner2_address_line_1",
+          "owner3_address_line_1",
+          "owner4_address_line_1",
+          "owner5_address_line_1",
+          "owner1_address_line_2",
+          "owner2_address_line_2",
+          "owner3_address_line_2",
+          "owner4_address_line_2",
+          "owner5_address_line_2",
+          "owner1_address_city",
+          "owner2_address_city",
+          "owner3_address_city",
+          "owner4_address_city",
+          "owner5_address_city",
+          "owner1_address_state",
+          "owner2_address_state",
+          "owner3_address_state",
+          "owner4_address_state",
+          "owner5_address_state",
+          "owner1_address_postal",
+          "owner2_address_postal",
+          "owner3_address_postal",
+          "owner4_address_postal",
+          "owner5_address_postal",
+          "owner1_address_country",
+          "owner2_address_country",
+          "owner3_address_country",
+          "owner4_address_country",
+          "owner5_address_country",
+          "owner1_owner_type",
+          "owner2_owner_type",
+          "owner3_owner_type",
+          "owner4_owner_type",
+          "owner5_owner_type",
+          "owner1_ownership_percentage",
+          "owner2_ownership_percentage",
+          "owner3_ownership_percentage",
+          "owner4_ownership_percentage",
+          "owner5_ownership_percentage",
+          "send_invitation",
+          "applicant_first_name",
+          "applicant_last_name",
+          "applicant_email",
+          "year",
+          "is_revenue",
+          "is_operatingexpenses",
+          "is_netincome",
+          "is_cost_of_goods_sold",
+          "bs_totalliabilities",
+          "bs_totalassets",
+          "bs_totalequity",
+          "bs_accountspayable",
+          "bs_accountsreceivable",
+          "bs_cashandcashequivalents",
+          "bs_shortterminvestments",
+          "bs_totalcurrentassets",
+          "bs_totalcurrentliabilities",
+          "bs_totalnoncurrentliabilities",
+          "is_costofgoodsold",
+          "is_grossprofit",
+          "is_incometaxexpense",
+          "is_interestexpense",
+          "number_of_employees",
+          "business_type",
+          "sic_code",
+          "date_of_observation",
+          "lien_count",
+          "business_liens_file_date",
+          "business_liens_status",
+          "business_liens_status_date",
+          "bankruptcy_count",
+          "business_bankruptcies_file_date",
+          "business_bankruptcies_chapter",
+          "business_bankruptcies_voluntary",
+          "business_bankruptcies_status",
+          "business_bankruptcies_status_date",
+          "judgement_count",
+          "business_judgements_file_date",
+          "business_judgements_status",
+          "business_judgements_status_date",
+          "business_judgements_amount",
+          "review_cnt",
+          "review_score"
+        ],
+        "type": "object",
+        "properties": {
+          "dba1_name": {
+            "type": ["string", "null"]
+          },
+          "dba2_name": {
+            "type": ["string", "null"]
+          },
+          "dba3_name": {
+            "type": ["string", "null"]
+          },
+          "dba4_name": {
+            "type": ["string", "null"]
+          },
+          "dba5_name": {
+            "type": ["string", "null"]
+          },
+          "address1_line_1": {
+            "type": ["string", "null"]
+          },
+          "address2_line_1": {
+            "type": ["string", "null"]
+          },
+          "address3_line_1": {
+            "type": ["string", "null"]
+          },
+          "address4_line_1": {
+            "type": ["string", "null"]
+          },
+          "address5_line_1": {
+            "type": ["string", "null"]
+          },
+          "address1_apartment": {
+            "type": ["string", "null"]
+          },
+          "address2_apartment": {
+            "type": ["string", "null"]
+          },
+          "address3_apartment": {
+            "type": ["string", "null"]
+          },
+          "address4_apartment": {
+            "type": ["string", "null"]
+          },
+          "address5_apartment": {
+            "type": ["string", "null"]
+          },
+          "address1_city": {
+            "type": ["string", "null"]
+          },
+          "address2_city": {
+            "type": ["string", "null"]
+          },
+          "address3_city": {
+            "type": ["string", "null"]
+          },
+          "address4_city": {
+            "type": ["string", "null"]
+          },
+          "address5_city": {
+            "type": ["string", "null"]
+          },
+          "state": {
+            "type": "string"
+          },
+          "address1_country": {
+            "type": ["string", "null"]
+          },
+          "address2_country": {
+            "type": ["string", "null"]
+          },
+          "address3_country": {
+            "type": ["string", "null"]
+          },
+          "address4_country": {
+            "type": ["string", "null"]
+          },
+          "address5_country": {
+            "type": ["string", "null"]
+          },
+          "address1_postal_code": {
+            "type": ["string", "null"]
+          },
+          "address2_postal_code": {
+            "type": ["string", "null"]
+          },
+          "address3_postal_code": {
+            "type": ["string", "null"]
+          },
+          "address4_postal_code": {
+            "type": ["string", "null"]
+          },
+          "address5_postal_code": {
+            "type": ["string", "null"]
+          },
+          "address1_mobile": {
+            "type": ["string", "null"]
+          },
+          "address2_mobile": {
+            "type": ["string", "null"]
+          },
+          "address3_mobile": {
+            "type": ["string", "null"]
+          },
+          "address4_mobile": {
+            "type": ["string", "null"]
+          },
+          "address5_mobile": {
+            "type": ["string", "null"]
+          },
+          "id": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "tin": {
+            "type": "string"
+          },
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": ["string", "null"]
+          },
+          "address_city": {
+            "type": "string"
+          },
+          "address_country": {
+            "type": ["string", "null"]
+          },
+          "address_postal_code": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": ["string", "null"]
+          },
+          "official_website": {
+            "type": ["string", "null"]
+          },
+          "naics_code": {
+            "type": ["string", "null"]
+          },
+          "naics_title": {
+            "type": ["string", "null"]
+          },
+          "mcc_code": {
+            "type": ["string", "null"]
+          },
+          "industry": {
+            "type": ["string", "null"]
+          },
+          "quick_add": {
+            "type": ["string", "null"]
+          },
+          "external_id": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": ["string", "null"]
+          },
+          "owner1_title": {
+            "type": ["string", "null"]
+          },
+          "owner2_title": {
+            "type": ["string", "null"]
+          },
+          "owner3_title": {
+            "type": ["string", "null"]
+          },
+          "owner4_title": {
+            "type": ["string", "null"]
+          },
+          "owner5_title": {
+            "type": ["string", "null"]
+          },
+          "owner1_first_name": {
+            "type": ["string", "null"]
+          },
+          "owner2_first_name": {
+            "type": ["string", "null"]
+          },
+          "owner3_first_name": {
+            "type": ["string", "null"]
+          },
+          "owner4_first_name": {
+            "type": ["string", "null"]
+          },
+          "owner5_first_name": {
+            "type": ["string", "null"]
+          },
+          "owner1_last_name": {
+            "type": ["string", "null"]
+          },
+          "owner2_last_name": {
+            "type": ["string", "null"]
+          },
+          "owner3_last_name": {
+            "type": ["string", "null"]
+          },
+          "owner4_last_name": {
+            "type": ["string", "null"]
+          },
+          "owner5_last_name": {
+            "type": ["string", "null"]
+          },
+          "owner1_email": {
+            "type": ["string", "null"]
+          },
+          "owner2_email": {
+            "type": ["string", "null"]
+          },
+          "owner3_email": {
+            "type": ["string", "null"]
+          },
+          "owner4_email": {
+            "type": ["string", "null"]
+          },
+          "owner5_email": {
+            "type": ["string", "null"]
+          },
+          "owner1_mobile": {
+            "type": ["string", "null"]
+          },
+          "owner2_mobile": {
+            "type": ["string", "null"]
+          },
+          "owner3_mobile": {
+            "type": ["string", "null"]
+          },
+          "owner4_mobile": {
+            "type": ["string", "null"]
+          },
+          "owner5_mobile": {
+            "type": ["string", "null"]
+          },
+          "owner1_ssn": {
+            "type": ["string", "null"]
+          },
+          "owner2_ssn": {
+            "type": ["string", "null"]
+          },
+          "owner3_ssn": {
+            "type": ["string", "null"]
+          },
+          "owner4_ssn": {
+            "type": ["string", "null"]
+          },
+          "owner5_ssn": {
+            "type": ["string", "null"]
+          },
+          "owner1_dob": {
+            "type": ["string", "null"]
+          },
+          "owner2_dob": {
+            "type": ["string", "null"]
+          },
+          "owner3_dob": {
+            "type": ["string", "null"]
+          },
+          "owner4_dob": {
+            "type": ["string", "null"]
+          },
+          "owner5_dob": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_line_1": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_line_1": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_line_1": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_line_1": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_line_1": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_line_2": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_line_2": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_line_2": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_line_2": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_line_2": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_city": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_city": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_city": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_city": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_city": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_state": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_state": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_state": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_state": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_state": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_postal": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_postal": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_postal": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_postal": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_postal": {
+            "type": ["string", "null"]
+          },
+          "owner1_address_country": {
+            "type": ["string", "null"]
+          },
+          "owner2_address_country": {
+            "type": ["string", "null"]
+          },
+          "owner3_address_country": {
+            "type": ["string", "null"]
+          },
+          "owner4_address_country": {
+            "type": ["string", "null"]
+          },
+          "owner5_address_country": {
+            "type": ["string", "null"]
+          },
+          "owner1_owner_type": {
+            "type": ["string", "null"]
+          },
+          "owner2_owner_type": {
+            "type": ["string", "null"]
+          },
+          "owner3_owner_type": {
+            "type": ["string", "null"]
+          },
+          "owner4_owner_type": {
+            "type": ["string", "null"]
+          },
+          "owner5_owner_type": {
+            "type": ["string", "null"]
+          },
+          "owner1_ownership_percentage": {
+            "type": ["string", "null"]
+          },
+          "owner2_ownership_percentage": {
+            "type": ["string", "null"]
+          },
+          "owner3_ownership_percentage": {
+            "type": ["string", "null"]
+          },
+          "owner4_ownership_percentage": {
+            "type": ["string", "null"]
+          },
+          "owner5_ownership_percentage": {
+            "type": ["string", "null"]
+          },
+          "send_invitation": {
+            "type": ["string", "null"]
+          },
+          "applicant_first_name": {
+            "type": ["string", "null"]
+          },
+          "applicant_last_name": {
+            "type": ["string", "null"]
+          },
+          "applicant_email": {
+            "type": ["string", "null"]
+          },
+          "year": {
+            "type": ["string", "null"]
+          },
+          "is_revenue": {
+            "type": "integer",
+            "contentEncoding": "int32"
+          },
+          "is_operatingexpenses": {
+            "type": ["string", "null"]
+          },
+          "is_netincome": {
+            "type": ["string", "null"]
+          },
+          "is_cost_of_goods_sold": {
+            "type": ["string", "null"]
+          },
+          "bs_totalliabilities": {
+            "type": ["string", "null"]
+          },
+          "bs_totalassets": {
+            "type": ["string", "null"]
+          },
+          "bs_totalequity": {
+            "type": ["string", "null"]
+          },
+          "bs_accountspayable": {
+            "type": ["string", "null"]
+          },
+          "bs_accountsreceivable": {
+            "type": ["string", "null"]
+          },
+          "bs_cashandcashequivalents": {
+            "type": ["string", "null"]
+          },
+          "bs_shortterminvestments": {
+            "type": ["string", "null"]
+          },
+          "bs_totalcurrentassets": {
+            "type": ["string", "null"]
+          },
+          "bs_totalcurrentliabilities": {
+            "type": ["string", "null"]
+          },
+          "bs_totalnoncurrentliabilities": {
+            "type": ["string", "null"]
+          },
+          "is_costofgoodsold": {
+            "type": ["string", "null"]
+          },
+          "is_grossprofit": {
+            "type": ["string", "null"]
+          },
+          "is_incometaxexpense": {
+            "type": ["string", "null"]
+          },
+          "is_interestexpense": {
+            "type": ["string", "null"]
+          },
+          "number_of_employees": {
+            "type": ["string", "null"]
+          },
+          "business_type": {
+            "type": ["string", "null"]
+          },
+          "sic_code": {
+            "type": ["string", "null"]
+          },
+          "date_of_observation": {
+            "type": ["string", "null"]
+          },
+          "lien_count": {
+            "type": ["string", "null"]
+          },
+          "business_liens_file_date": {
+            "type": ["string", "null"]
+          },
+          "business_liens_status": {
+            "type": ["string", "null"]
+          },
+          "business_liens_status_date": {
+            "type": ["string", "null"]
+          },
+          "bankruptcy_count": {
+            "type": ["string", "null"]
+          },
+          "business_bankruptcies_file_date": {
+            "type": ["string", "null"]
+          },
+          "business_bankruptcies_chapter": {
+            "type": ["string", "null"]
+          },
+          "business_bankruptcies_voluntary": {
+            "type": ["string", "null"]
+          },
+          "business_bankruptcies_status": {
+            "type": ["string", "null"]
+          },
+          "business_bankruptcies_status_date": {
+            "type": ["string", "null"]
+          },
+          "judgement_count": {
+            "type": ["string", "null"]
+          },
+          "business_judgements_file_date": {
+            "type": ["string", "null"]
+          },
+          "business_judgements_status": {
+            "type": ["string", "null"]
+          },
+          "business_judgements_status_date": {
+            "type": ["string", "null"]
+          },
+          "business_judgements_amount": {
+            "type": ["string", "null"]
+          },
+          "review_cnt": {
+            "type": ["string", "null"]
+          },
+          "review_score": {
+            "type": ["string", "null"]
+          }
+        },
+        "examples": [
+          {
+            "dba1_name": null,
+            "dba2_name": null,
+            "dba3_name": null,
+            "dba4_name": null,
+            "dba5_name": null,
+            "address1_line_1": null,
+            "address2_line_1": null,
+            "address3_line_1": null,
+            "address4_line_1": null,
+            "address5_line_1": null,
+            "address1_apartment": null,
+            "address2_apartment": null,
+            "address3_apartment": null,
+            "address4_apartment": null,
+            "address5_apartment": null,
+            "address1_city": null,
+            "address2_city": null,
+            "address3_city": null,
+            "address4_city": null,
+            "address5_city": null,
+            "state": "FL",
+            "address1_country": null,
+            "address2_country": null,
+            "address3_country": null,
+            "address4_country": null,
+            "address5_country": null,
+            "address1_postal_code": null,
+            "address2_postal_code": null,
+            "address3_postal_code": null,
+            "address4_postal_code": null,
+            "address5_postal_code": null,
+            "address1_mobile": null,
+            "address2_mobile": null,
+            "address3_mobile": null,
+            "address4_mobile": null,
+            "address5_mobile": null,
+            "id": null,
+            "name": "Test Business",
+            "tin": "333444685",
+            "address_line_1": "480 s Ronald Reagan Blvd",
+            "address_line_2": null,
+            "address_city": "Longwood",
+            "address_country": null,
+            "address_postal_code": "32850",
+            "mobile": null,
+            "official_website": null,
+            "naics_code": null,
+            "naics_title": null,
+            "mcc_code": null,
+            "industry": null,
+            "quick_add": null,
+            "external_id": "77388994455034",
+            "metadata": null,
+            "owner1_title": null,
+            "owner2_title": null,
+            "owner3_title": null,
+            "owner4_title": null,
+            "owner5_title": null,
+            "owner1_first_name": null,
+            "owner2_first_name": null,
+            "owner3_first_name": null,
+            "owner4_first_name": null,
+            "owner5_first_name": null,
+            "owner1_last_name": null,
+            "owner2_last_name": null,
+            "owner3_last_name": null,
+            "owner4_last_name": null,
+            "owner5_last_name": null,
+            "owner1_email": null,
+            "owner2_email": null,
+            "owner3_email": null,
+            "owner4_email": null,
+            "owner5_email": null,
+            "owner1_mobile": null,
+            "owner2_mobile": null,
+            "owner3_mobile": null,
+            "owner4_mobile": null,
+            "owner5_mobile": null,
+            "owner1_ssn": null,
+            "owner2_ssn": null,
+            "owner3_ssn": null,
+            "owner4_ssn": null,
+            "owner5_ssn": null,
+            "owner1_dob": null,
+            "owner2_dob": null,
+            "owner3_dob": null,
+            "owner4_dob": null,
+            "owner5_dob": null,
+            "owner1_address_line_1": null,
+            "owner2_address_line_1": null,
+            "owner3_address_line_1": null,
+            "owner4_address_line_1": null,
+            "owner5_address_line_1": null,
+            "owner1_address_line_2": null,
+            "owner2_address_line_2": null,
+            "owner3_address_line_2": null,
+            "owner4_address_line_2": null,
+            "owner5_address_line_2": null,
+            "owner1_address_city": null,
+            "owner2_address_city": null,
+            "owner3_address_city": null,
+            "owner4_address_city": null,
+            "owner5_address_city": null,
+            "owner1_address_state": null,
+            "owner2_address_state": null,
+            "owner3_address_state": null,
+            "owner4_address_state": null,
+            "owner5_address_state": null,
+            "owner1_address_postal": null,
+            "owner2_address_postal": null,
+            "owner3_address_postal": null,
+            "owner4_address_postal": null,
+            "owner5_address_postal": null,
+            "owner1_address_country": null,
+            "owner2_address_country": null,
+            "owner3_address_country": null,
+            "owner4_address_country": null,
+            "owner5_address_country": null,
+            "owner1_owner_type": null,
+            "owner2_owner_type": null,
+            "owner3_owner_type": null,
+            "owner4_owner_type": null,
+            "owner5_owner_type": null,
+            "owner1_ownership_percentage": null,
+            "owner2_ownership_percentage": null,
+            "owner3_ownership_percentage": null,
+            "owner4_ownership_percentage": null,
+            "owner5_ownership_percentage": null,
+            "send_invitation": null,
+            "applicant_first_name": null,
+            "applicant_last_name": null,
+            "applicant_email": null,
+            "year": null,
+            "is_revenue": 1022233,
+            "is_operatingexpenses": null,
+            "is_netincome": null,
+            "is_cost_of_goods_sold": null,
+            "bs_totalliabilities": null,
+            "bs_totalassets": null,
+            "bs_totalequity": null,
+            "bs_accountspayable": null,
+            "bs_accountsreceivable": null,
+            "bs_cashandcashequivalents": null,
+            "bs_shortterminvestments": null,
+            "bs_totalcurrentassets": null,
+            "bs_totalcurrentliabilities": null,
+            "bs_totalnoncurrentliabilities": null,
+            "is_costofgoodsold": null,
+            "is_grossprofit": null,
+            "is_incometaxexpense": null,
+            "is_interestexpense": null,
+            "number_of_employees": null,
+            "business_type": null,
+            "sic_code": null,
+            "date_of_observation": null,
+            "lien_count": null,
+            "business_liens_file_date": null,
+            "business_liens_status": null,
+            "business_liens_status_date": null,
+            "bankruptcy_count": null,
+            "business_bankruptcies_file_date": null,
+            "business_bankruptcies_chapter": null,
+            "business_bankruptcies_voluntary": null,
+            "business_bankruptcies_status": null,
+            "business_bankruptcies_status_date": null,
+            "judgement_count": null,
+            "business_judgements_file_date": null,
+            "business_judgements_status": null,
+            "business_judgements_status_date": null,
+            "business_judgements_amount": null,
+            "review_cnt": null,
+            "review_score": null
+          }
+        ]
+      },
+      "BusinessCustomer": {
+        "title": "BusinessCustomer",
+        "required": [
+          "business_id",
+          "customer_id",
+          "created_at",
+          "created_by",
+          "is_monitoring_enabled",
+          "external_id",
+          "metadata"
+        ],
+        "type": "object",
+        "properties": {
+          "business_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "is_monitoring_enabled": {
+            "type": "boolean"
+          },
+          "external_id": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": ["string", "null"]
+          }
+        },
+        "examples": [
+          {
+            "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
+            "customer_id": "a2cdd2f9-bcb8-48d8-924b-7bf70d3f8a45",
+            "created_at": "2024-11-26T09:32:39.870Z",
+            "created_by": "dc2bf5c0-8c39-41aa-b1f2-658991a0deb2",
+            "is_monitoring_enabled": true,
+            "external_id": "77388994455034",
+            "metadata": null
+          }
+        ]
+      },
+      "Data1": {
+        "title": "Data1",
+        "required": ["runId", "failed_rows", "result"],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "type": "string"
+          },
+          "failed_rows": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/generatedObject1"
+            }
+          },
+          "result": {
+            "type": "object"
+          }
+        },
+        "examples": [
+          {
+            "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
+            "failed_rows": {
+              "0": {
+                "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
+                "data": {}
+              }
+            },
+            "result": {}
+          }
+        ]
+      },
+      "generatedObject1": {
+        "title": "generatedObject1",
+        "required": ["message", "data"],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        },
+        "examples": [
+          {
+            "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
+            "data": {}
+          }
+        ]
+      },
+      "ErrorBadRequest1": {
+        "title": "ErrorBadRequest1",
+        "required": ["status", "message", "errorCode", "data"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": ["string", "null"]
+          },
+          "data": {
+            "$ref": "#/components/schemas/Data1"
+          }
+        },
+        "examples": [
+          {
+            "status": "fail",
+            "message": "Bulk process had errors",
+            "errorCode": null,
+            "data": {
+              "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
+              "failed_rows": {
+                "0": {
+                  "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
+                  "data": {}
+                }
+              },
+              "result": {}
+            }
+          }
+        ]
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Update Business"
+    }
+  ]
+}

@@ -88,7 +88,8 @@
     {
       "group": "Business",
       "pages": [
-        "api-reference/add-business/add-business",
+        "api-reference/add-or-update-business/add-business",
+        "api-reference/add-or-update-business/update-business",
         "api-reference/case/invites/send-business-invite",
         "api-reference/case/businesses/get-customer-businesses",
         "api-reference/case/businesses/get-business-cases",
