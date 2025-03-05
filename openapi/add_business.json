@@ -536,7 +536,19 @@
                                   "business_judgements_status_date": null,
                                   "business_judgements_amount": null,
                                   "review_cnt": null,
-                                  "review_score": null
+                                  "review_score": null,
+                                  "bank_account_number": null,
+                                  "bank_name": null,
+                                  "institution_name": null,
+                                  "bank_routing_number": null,
+                                  "bank_wire_routing_number": null,
+                                  "bank_official_name": null,
+                                  "bank_account_type": null,
+                                  "bank_account_subtype": null,
+                                  "bank_account_balance_current": null,
+                                  "bank_account_balance_available": null,
+                                  "bank_account_balance_limit": null,
+                                  "deposit_account": null
                                 },
                                 "business_customer": {
                                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -809,7 +821,19 @@
                           "business_judgements_status_date": null,
                           "business_judgements_amount": null,
                           "review_cnt": null,
-                          "review_score": null
+                          "review_score": null,
+                          "bank_account_number": null,
+                          "bank_name": null,
+                          "institution_name": null,
+                          "bank_routing_number": null,
+                          "bank_wire_routing_number": null,
+                          "bank_official_name": null,
+                          "bank_account_type": null,
+                          "bank_account_subtype": null,
+                          "bank_account_balance_current": null,
+                          "bank_account_balance_available": null,
+                          "bank_account_balance_limit": null,
+                          "deposit_account": null
                         },
                         "business_customer": {
                           "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -1580,6 +1604,42 @@
           },
           "owner1_ownership_percentage": {
             "type": "number"
+          },
+          "bank_account_number": {
+            "type": "string"
+          },
+          "bank_name": {
+            "type": "string"
+          },
+          "institution_name": {
+            "type": "string"
+          },
+          "bank_routing_number": {
+            "type": "number"
+          },
+          "bank_wire_routing_number": {
+            "type": "number"
+          },
+          "bank_official_name": {
+            "type": "string"
+          },
+          "bank_account_type": {
+            "type": "string"
+          },
+          "bank_account_subtype": {
+            "type": "string"
+          },
+          "bank_account_balance_current": {
+            "type": "number"
+          },
+          "bank_account_balance_available": {
+            "type": "number"
+          },
+          "bank_account_balance_limit": {
+            "type": "number"
+          },
+          "deposit_account": {
+            "type": "boolean"
           }
         },
         "examples": [
@@ -1863,7 +1923,19 @@
                     "business_judgements_status_date": null,
                     "business_judgements_amount": null,
                     "review_cnt": null,
-                    "review_score": null
+                    "review_score": null,
+                    "bank_account_number": null,
+                    "bank_name": null,
+                    "institution_name": null,
+                    "bank_routing_number": null,
+                    "bank_wire_routing_number": null,
+                    "bank_official_name": null,
+                    "bank_account_type": null,
+                    "bank_account_subtype": null,
+                    "bank_account_balance_current": null,
+                    "bank_account_balance_available": null,
+                    "bank_account_balance_limit": null,
+                    "deposit_account": null
                   },
                   "business_customer": {
                     "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2146,7 +2218,19 @@
                   "business_judgements_status_date": null,
                   "business_judgements_amount": null,
                   "review_cnt": null,
-                  "review_score": null
+                  "review_score": null,
+                  "bank_account_number": null,
+                  "bank_name": null,
+                  "institution_name": null,
+                  "bank_routing_number": null,
+                  "bank_wire_routing_number": null,
+                  "bank_official_name": null,
+                  "bank_account_type": null,
+                  "bank_account_subtype": null,
+                  "bank_account_balance_current": null,
+                  "bank_account_balance_available": null,
+                  "bank_account_balance_limit": null,
+                  "deposit_account": null
                 },
                 "business_customer": {
                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2453,7 +2537,19 @@
               "business_judgements_status_date": null,
               "business_judgements_amount": null,
               "review_cnt": null,
-              "review_score": null
+              "review_score": null,
+              "bank_account_number": null,
+              "bank_name": null,
+              "institution_name": null,
+              "bank_routing_number": null,
+              "bank_wire_routing_number": null,
+              "bank_official_name": null,
+              "bank_account_type": null,
+              "bank_account_subtype": null,
+              "bank_account_balance_current": null,
+              "bank_account_balance_available": null,
+              "bank_account_balance_limit": null,
+              "deposit_account": null
             },
             "business_customer": {
               "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -3003,7 +3099,19 @@
           "business_judgements_status_date",
           "business_judgements_amount",
           "review_cnt",
-          "review_score"
+          "review_score",
+          "bank_account_number",
+          "bank_name",
+          "institution_name",
+          "bank_routing_number",
+          "bank_wire_routing_number",
+          "bank_official_name",
+          "bank_account_type",
+          "bank_account_subtype",
+          "bank_account_balance_current",
+          "bank_account_balance_available",
+          "bank_account_balance_limit",
+          "deposit_account"
         ],
         "type": "object",
         "properties": {
@@ -3523,6 +3631,42 @@
           },
           "review_score": {
             "type": ["string", "null"]
+          },
+          "bank_account_number": {
+            "type": ["string", "null"]
+          },
+          "bank_name": {
+            "type": ["string", "null"]
+          },
+          "institution_name": {
+            "type": ["string", "null"]
+          },
+          "bank_routing_number": {
+            "type": ["number", "null"]
+          },
+          "bank_wire_routing_number": {
+            "type": ["number", "null"]
+          },
+          "bank_official_name": {
+            "type": ["string", "null"]
+          },
+          "bank_account_type": {
+            "type": ["string", "null"]
+          },
+          "bank_account_subtype": {
+            "type": ["string", "null"]
+          },
+          "bank_account_balance_current": {
+            "type": ["number", "null"]
+          },
+          "bank_account_balance_available": {
+            "type": ["number", "null"]
+          },
+          "bank_account_balance_limit": {
+            "type": ["number", "null"]
+          },
+          "deposit_account": {
+            "type": ["boolean", "null"]
           }
         },
         "examples": [
@@ -3698,7 +3842,19 @@
             "business_judgements_status_date": null,
             "business_judgements_amount": null,
             "review_cnt": null,
-            "review_score": null
+            "review_score": null,
+            "bank_account_number": null,
+            "bank_name": null,
+            "institution_name": null,
+            "bank_routing_number": null,
+            "bank_wire_routing_number": null,
+            "bank_official_name": null,
+            "bank_account_type": null,
+            "bank_account_subtype": null,
+            "bank_account_balance_current": null,
+            "bank_account_balance_available": null,
+            "bank_account_balance_limit": null,
+            "deposit_account": null
           }
         ]
       },
