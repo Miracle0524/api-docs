@@ -114,7 +114,8 @@
         "api-reference/integration/taxation/tax-filing",
         "api-reference/integration/public-records/public-records",
         "api-reference/integration/verification/get-verification-details",
-        "api-reference/integration/verification/get-business-website-data"
+        "api-reference/integration/verification/get-business-website-data",
+        "api-reference/files/case-files-download"
       ]
     },
     {
