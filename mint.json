@@ -115,7 +115,8 @@
         "api-reference/integration/public-records/public-records",
         "api-reference/integration/verification/get-verification-details",
         "api-reference/integration/verification/get-business-website-data",
-        "api-reference/files/case-files-download"
+        "api-reference/files/case-files-download",
+        "api-reference/integration/facts/kyb"
       ]
     },
     {

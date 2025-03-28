@@ -42793,31 +42793,588 @@
                       "examples": [
                         {
                           "status": "success",
-                          "message": {
-                            "message": "Business KYB details fetched successfully"
-                          },
+                          "message": "Business KYB details fetched successfully",
                           "data": {
-                            "legal_name": {
-                              "name": "legal_name",
-                              "value": "airco",
+                            "address_match": {
+                              "name": "address_match",
+                              "value": "failure",
+                              "dependencies": ["primary_address", "addresses"],
+                              "alternatives": [
+                                {
+                                  "value": "failure",
+                                  "confidence": 0.9
+                                }
+                              ]
+                            },
+                            "address_match_boolean": {
+                              "name": "address_match_boolean",
+                              "value": false,
+                              "dependencies": ["address_match"],
+                              "alternatives": [
+                                {
+                                  "value": false
+                                }
+                              ]
+                            },
+                            "address_registered_agent": {
+                              "name": "address_registered_agent",
+                              "value": null,
+                              "alternatives": []
+                            },
+                            "address_verification": {
+                              "name": "address_verification",
+                              "value": {
+                                "addresses": [
+                                  "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                  "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                  "954 E Union St, Seattle, WA 98122-4289",
+                                  "300 E Lombard St, Baltimore, MD 21202-3219",
+                                  "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                                ],
+                                "status": "success",
+                                "message": "Match identified to the submitted Office Address",
+                                "label": "Office Address",
+                                "sublabel": "Verified"
+                              },
                               "source.confidence": 0.95,
                               "source.platformId": 16,
-                              "alternatives": []
+                              "alternatives": [
+                                {
+                                  "value": {
+                                    "addresses": [
+                                      "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                      "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                      "954 E Union St, Seattle, WA 98122-4289",
+                                      "300 E Lombard St, Baltimore, MD 21202-3219",
+                                      "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                                    ],
+                                    "status": "success",
+                                    "message": "Match identified to the submitted Office Address",
+                                    "label": "Office Address",
+                                    "sublabel": "Verified"
+                                  },
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "address_verification_boolean": {
+                              "name": "address_verification_boolean",
+                              "value": true,
+                              "dependencies": ["address_verification"],
+                              "alternatives": [
+                                {
+                                  "value": true
+                                }
+                              ]
+                            },
+                            "addresses": {
+                              "name": "addresses",
+                              "value": [
+                                "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                "954 E Union St, Seattle, WA 98122-4289",
+                                "300 E Lombard St, Baltimore, MD 21202-3219",
+                                "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                              ],
+                              "alternatives": [
+                                {
+                                  "value": [
+                                    "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                    "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                    "954 E Union St, Seattle, WA 98122-4289",
+                                    "300 E Lombard St, Baltimore, MD 21202-3219",
+                                    "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                                  ],
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "addresses_deliverable": {
+                              "name": "addresses_deliverable",
+                              "value": [
+                                "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                "954 E Union St, Seattle, WA 98122-4289",
+                                "300 E Lombard St, Baltimore, MD 21202-3219",
+                                "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                              ],
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": [
+                                    "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                                    "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                                    "954 E Union St, Seattle, WA 98122-4289",
+                                    "300 E Lombard St, Baltimore, MD 21202-3219",
+                                    "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                                  ],
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "corporation": {
+                              "name": "corporation",
+                              "value": null,
+                              "source.platformId": 17,
+                              "alternatives": [
+                                {
+                                  "value": null,
+                                  "source": 17
+                                }
+                              ]
+                            },
+                            "formation_date": {
+                              "name": "formation_date",
+                              "value": "1988-09-08T00:00:00.000Z",
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": "1988-09-08T00:00:00.000Z",
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
                             },
                             "formation_state": {
                               "name": "formation_state",
-                              "value": "IN",
+                              "value": "WA",
                               "source.confidence": 0.95,
                               "source.platformId": 16,
-                              "alternatives": []
+                              "alternatives": [
+                                {
+                                  "value": "WA",
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "kyb_submitted": {
+                              "name": "kyb_submitted",
+                              "value": true,
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": true,
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "legal_name": {
+                              "name": "legal_name",
+                              "value": "WARM PRODUCTS INC",
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": "WARM PRODUCTS INC",
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
                             },
                             "minority_owned": {
                               "name": "minority_owned",
                               "value": null,
                               "alternatives": []
                             },
+                            "name_match": {
+                              "name": "name_match",
+                              "value": {
+                                "status": "success",
+                                "message": "Match identified to the submitted Business Name",
+                                "sublabel": "Verified"
+                              },
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": {
+                                    "status": "success",
+                                    "message": "Match identified to the submitted Business Name",
+                                    "sublabel": "Verified"
+                                  },
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "name_match_boolean": {
+                              "name": "name_match_boolean",
+                              "value": true,
+                              "dependencies": ["name_match"],
+                              "alternatives": [
+                                {
+                                  "value": true
+                                }
+                              ]
+                            },
+                            "names_submitted": {
+                              "name": "names_submitted",
+                              "value": [
+                                {
+                                  "name": "WARM PRODUCTS INC",
+                                  "submitted": true
+                                }
+                              ],
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": [
+                                    {
+                                      "name": "WARM PRODUCTS INC",
+                                      "submitted": true
+                                    }
+                                  ],
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "people": {
+                              "name": "people",
+                              "value": [
+                                {
+                                  "name": "Chumbley, J Michael Ryan",
+                                  "titles": [
+                                    "CHIEF EXECUTIVE OFFICER",
+                                    "GOVERNINGPERSON"
+                                  ],
+                                  "submitted": false,
+                                  "source": [
+                                    "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                    "642c8178-fe65-43e2-9f39-cab7453f08e8"
+                                  ]
+                                },
+                                {
+                                  "name": "Johnson, Erica",
+                                  "titles": ["SENIOR VICE PRESIDENT"],
+                                  "submitted": false,
+                                  "source": [
+                                    "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                    "89b0caea-2023-43e0-b3d8-614e5f2d1935"
+                                  ]
+                                },
+                                {
+                                  "name": "EVELYN CHUMBLEY",
+                                  "titles": ["GOVERNINGPERSON", "SECRETARY"],
+                                  "submitted": false,
+                                  "source": [
+                                    "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                    "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                  ]
+                                },
+                                {
+                                  "name": "JAMES CHUMBLEY",
+                                  "titles": ["GOVERNINGPERSON", "PRESIDENT"],
+                                  "submitted": false,
+                                  "source": [
+                                    "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                    "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                  ]
+                                },
+                                {
+                                  "name": "BRYAN WITTLER                                                                                       ",
+                                  "titles": ["REGISTERED AGENT"],
+                                  "submitted": false,
+                                  "source": [
+                                    "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                  ]
+                                }
+                              ],
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": [
+                                    {
+                                      "name": "Chumbley, J Michael Ryan",
+                                      "titles": [
+                                        "CHIEF EXECUTIVE OFFICER",
+                                        "GOVERNINGPERSON"
+                                      ],
+                                      "submitted": false,
+                                      "source": [
+                                        "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                        "642c8178-fe65-43e2-9f39-cab7453f08e8"
+                                      ]
+                                    },
+                                    {
+                                      "name": "Johnson, Erica",
+                                      "titles": ["SENIOR VICE PRESIDENT"],
+                                      "submitted": false,
+                                      "source": [
+                                        "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                        "89b0caea-2023-43e0-b3d8-614e5f2d1935"
+                                      ]
+                                    },
+                                    {
+                                      "name": "EVELYN CHUMBLEY",
+                                      "titles": [
+                                        "GOVERNINGPERSON",
+                                        "SECRETARY"
+                                      ],
+                                      "submitted": false,
+                                      "source": [
+                                        "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                        "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                      ]
+                                    },
+                                    {
+                                      "name": "JAMES CHUMBLEY",
+                                      "titles": [
+                                        "GOVERNINGPERSON",
+                                        "PRESIDENT"
+                                      ],
+                                      "submitted": false,
+                                      "source": [
+                                        "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                        "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                      ]
+                                    },
+                                    {
+                                      "name": "BRYAN WITTLER                                                                                       ",
+                                      "titles": ["REGISTERED AGENT"],
+                                      "submitted": false,
+                                      "source": [
+                                        "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                                      ]
+                                    }
+                                  ],
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "primary_address": {
+                              "name": "primary_address",
+                              "value": null,
+                              "alternatives": []
+                            },
+                            "sos_active": {
+                              "name": "sos_active",
+                              "value": true,
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": true,
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "sos_filings": {
+                              "name": "sos_filings",
+                              "value": [
+                                {
+                                  "id": "7061ef94-01d5-4465-b676-25b1566073a7",
+                                  "filing_date": "1988-09-08T00:00:00.000Z",
+                                  "entity_type": "CORPORATION",
+                                  "active": true,
+                                  "state": "WA",
+                                  "url": "https://ccfs.sos.wa.gov/#/AdvancedSearch",
+                                  "filing_name": "WARM PRODUCTS, INC."
+                                },
+                                {
+                                  "id": "5bbc6e26-d2ae-4659-acb8-a134c0825e4c",
+                                  "filing_date": "2004-03-29T00:00:00.000Z",
+                                  "entity_type": "CORPORATION",
+                                  "active": true,
+                                  "state": "NC",
+                                  "url": "https://www.sosnc.gov/online_services/search/by_title/_lobbying",
+                                  "filing_name": "Warm Products Inc."
+                                },
+                                {
+                                  "id": "788e194c-2f3d-4aa1-95a5-0fea4c039de5",
+                                  "filing_date": "1998-09-14T00:00:00.000Z",
+                                  "entity_type": "CORPORATION",
+                                  "active": false,
+                                  "state": "MD",
+                                  "url": "https://egov.maryland.gov/BusinessExpress/EntitySearch/BusinessInformation/F05088679",
+                                  "filing_name": "WARM PRODUCTS, INC."
+                                },
+                                {
+                                  "id": "2b3c0320-39d9-4e03-9367-34c9f20f2c44",
+                                  "filing_date": "2005-04-11T00:00:00.000Z",
+                                  "entity_type": "CORPORATION",
+                                  "active": false,
+                                  "state": "VT",
+                                  "url": "https://bizfilings.vermont.gov/business/businesssearch",
+                                  "filing_name": "WARM PRODUCTS INC."
+                                }
+                              ],
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": [
+                                    {
+                                      "id": "7061ef94-01d5-4465-b676-25b1566073a7",
+                                      "filing_date": "1988-09-08T00:00:00.000Z",
+                                      "entity_type": "CORPORATION",
+                                      "active": true,
+                                      "state": "WA",
+                                      "url": "https://ccfs.sos.wa.gov/#/AdvancedSearch",
+                                      "filing_name": "WARM PRODUCTS, INC."
+                                    },
+                                    {
+                                      "id": "5bbc6e26-d2ae-4659-acb8-a134c0825e4c",
+                                      "filing_date": "2004-03-29T00:00:00.000Z",
+                                      "entity_type": "CORPORATION",
+                                      "active": true,
+                                      "state": "NC",
+                                      "url": "https://www.sosnc.gov/online_services/search/by_title/_lobbying",
+                                      "filing_name": "Warm Products Inc."
+                                    },
+                                    {
+                                      "id": "788e194c-2f3d-4aa1-95a5-0fea4c039de5",
+                                      "filing_date": "1998-09-14T00:00:00.000Z",
+                                      "entity_type": "CORPORATION",
+                                      "active": false,
+                                      "state": "MD",
+                                      "url": "https://egov.maryland.gov/BusinessExpress/EntitySearch/BusinessInformation/F05088679",
+                                      "filing_name": "WARM PRODUCTS, INC."
+                                    },
+                                    {
+                                      "id": "2b3c0320-39d9-4e03-9367-34c9f20f2c44",
+                                      "filing_date": "2005-04-11T00:00:00.000Z",
+                                      "entity_type": "CORPORATION",
+                                      "active": false,
+                                      "state": "VT",
+                                      "url": "https://bizfilings.vermont.gov/business/businesssearch",
+                                      "filing_name": "WARM PRODUCTS INC."
+                                    }
+                                  ],
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "sos_match": {
+                              "name": "sos_match",
+                              "value": "success",
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": "success",
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "sos_match_boolean": {
+                              "name": "sos_match_boolean",
+                              "value": true,
+                              "dependencies": ["sos_match"],
+                              "alternatives": [
+                                {
+                                  "value": true
+                                }
+                              ]
+                            },
+                            "tin": {
+                              "name": "tin",
+                              "value": "911425217",
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": "911425217",
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "tin_match": {
+                              "name": "tin_match",
+                              "value": {
+                                "status": "success",
+                                "message": "The IRS has a record for the submitted TIN and Business Name combination",
+                                "sublabel": "Found"
+                              },
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": {
+                                    "status": "success",
+                                    "message": "The IRS has a record for the submitted TIN and Business Name combination",
+                                    "sublabel": "Found"
+                                  },
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "tin_match_boolean": {
+                              "name": "tin_match_boolean",
+                              "value": false,
+                              "dependencies": ["tin_match"],
+                              "alternatives": [
+                                {
+                                  "value": false
+                                }
+                              ]
+                            },
                             "veteran_owned": {
                               "name": "veteran_owned",
+                              "value": null,
+                              "alternatives": []
+                            },
+                            "watchlist": {
+                              "name": "watchlist",
+                              "value": {
+                                "metadata": [
+                                  {
+                                    "id": "89b0caea-2023-43e0-b3d8-614e5f2d1935",
+                                    "type": "watchlist_result",
+                                    "metadata": {
+                                      "abbr": "SDN",
+                                      "title": "Specially Designated Nationals",
+                                      "agency": "Office of Foreign Assets Control",
+                                      "agency_abbr": "OFAC",
+                                      "entity_name": "JOHNSON, Prince Yormie"
+                                    }
+                                  }
+                                ],
+                                "message": "1 Watchlists hit(s) have been identified"
+                              },
+                              "source.confidence": 0.95,
+                              "source.platformId": 16,
+                              "alternatives": [
+                                {
+                                  "value": {
+                                    "metadata": [
+                                      {
+                                        "id": "89b0caea-2023-43e0-b3d8-614e5f2d1935",
+                                        "type": "watchlist_result",
+                                        "metadata": {
+                                          "abbr": "SDN",
+                                          "title": "Specially Designated Nationals",
+                                          "agency": "Office of Foreign Assets Control",
+                                          "agency_abbr": "OFAC",
+                                          "entity_name": "JOHNSON, Prince Yormie"
+                                        }
+                                      }
+                                    ],
+                                    "message": "1 Watchlists hit(s) have been identified"
+                                  },
+                                  "source": 16,
+                                  "confidence": 0.95
+                                }
+                              ]
+                            },
+                            "watchlist_hits": {
+                              "name": "watchlist_hits",
                               "value": null,
                               "alternatives": []
                             },
@@ -42826,256 +43383,18 @@
                               "value": null,
                               "alternatives": []
                             },
-                            "formation_date": {
-                              "name": "formation_date",
-                              "value": "2020-02-24T00:00:00.000Z",
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
                             "year_established": {
                               "name": "year_established",
-                              "value": "2020",
+                              "value": "1988",
                               "source.confidence": 0.95,
                               "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "sos_filings": {
-                              "name": "sos_filings",
-                              "value": [
+                              "alternatives": [
                                 {
-                                  "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                                  "type": "registration",
-                                  "metadata": {
-                                    "state": "FL",
-                                    "status": "active",
-                                    "file_number": "L18000121621",
-                                    "jurisdiction": "DOMESTIC"
-                                  }
+                                  "value": "1988",
+                                  "source": 16,
+                                  "confidence": 0.95
                                 }
-                              ],
-                              "alternatives": []
-                            },
-                            "primary_address": {
-                              "name": "primary_address",
-                              "value": {
-                                "line_1": "123 Main St.",
-                                "apartment": null,
-                                "city": "Pawnee",
-                                "state": "Indiana",
-                                "country": "USA",
-                                "postal_code": "46001",
-                                "mobile": null,
-                                "is_primary": true
-                              },
-                              "source.confidence": 0.99,
-                              "source.name": "businessDetails",
-                              "alternatives": []
-                            },
-                            "addresses": {
-                              "name": "addresses",
-                              "value": [
-                                "123 Main St, Pawnee, IN 46001",
-                                "354 Circle Court,Bronx, NY 10468"
-                              ],
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "tin": {
-                              "name": "tin",
-                              "value": "123456789",
-                              "alternatives": []
-                            },
-                            "people": {
-                              "name": "people",
-                              "value": [
-                                {
-                                  "id": "6ffe1778-e2bb-404b-bc57-4906c62c34e6",
-                                  "business_entity_verification_id": "477139f0-279b-415d-8e4c-8c3afbf9091a",
-                                  "created_at": "2024-11-12T19:56:17.821Z",
-                                  "updated_at": null,
-                                  "name": "CRAMER CATHERINE",
-                                  "titles": ["MANAGER"],
-                                  "submitted": false,
-                                  "source": [
-                                    {
-                                      "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                                      "type": "registration",
-                                      "metadata": {
-                                        "state": "FL",
-                                        "status": "active",
-                                        "file_number": "L18000121621",
-                                        "jurisdiction": "DOMESTIC"
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "28dcd36d-29de-4d0d-9df7-1c9c22e9109b",
-                                  "business_entity_verification_id": "477139f0-279b-415d-8e4c-8c3afbf9091a",
-                                  "created_at": "2024-11-12T19:56:17.821Z",
-                                  "updated_at": null,
-                                  "name": "CRAMER CHARLES W",
-                                  "titles": ["REGISTERED AGENT"],
-                                  "submitted": false,
-                                  "source": [
-                                    {
-                                      "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                                      "type": "registration",
-                                      "metadata": {
-                                        "state": "FL",
-                                        "status": "active",
-                                        "file_number": "L18000121621",
-                                        "jurisdiction": "DOMESTIC"
-                                      }
-                                    }
-                                  ]
-                                }
-                              ],
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "watchlist": {
-                              "name": "watchlist",
-                              "value": null,
-                              "alternatives": []
-                            },
-                            "tin_match": {
-                              "name": "tin_match",
-                              "value": true,
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "name_match": {
-                              "name": "name_match",
-                              "value": true,
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "address_match": {
-                              "name": "address_match",
-                              "value": true,
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "sos_match": {
-                              "name": "sos_match",
-                              "value": true,
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
-                            },
-                            "watchlist_hits": {
-                              "name": "watchlist_hits",
-                              "value": null,
-                              "alternatives": []
-                            },
-                            "match": {
-                              "name": "match",
-                              "value": [
-                                {
-                                  "merchant": {
-                                    "name": "THE BAIT SHOP",
-                                    "doingBusinessAsName": "BAIT R US",
-                                    "merchantId": "ABED-1234",
-                                    "subMerchantId": "ABED-1234-1",
-                                    "address": {
-                                      "addressLineOne": "42 ELM AVENUE",
-                                      "addressLineTwo": "SUITE 201",
-                                      "isOtherCity": "N",
-                                      "city": "CHICAGO",
-                                      "countrySubdivision": "IL",
-                                      "province": "US",
-                                      "country": "USA",
-                                      "postalCode": "66579"
-                                    },
-                                    "phoneNumber": "3165557625",
-                                    "isEEA": "N",
-                                    "altPhoneNumber": "3165557625",
-                                    "merchantCategory": "0742",
-                                    "nationalTaxId": "NAT-123",
-                                    "countrySubdivisionTaxId": "49232-1030",
-                                    "dateOpened": "2021-07-14",
-                                    "dateClosed": "2021-07-14",
-                                    "reasonCodeDesc": "Merchant involved in laundering activity",
-                                    "addedByAcquirerId": "1996",
-                                    "reasonCode": "01",
-                                    "createdDate": "2021-07-14",
-                                    "comments": "Added for reasons of fraud",
-                                    "merchRefNum": "1996-220406041727-AK45CD85",
-                                    "urls": ["www.merchant.com"],
-                                    "principals": [
-                                      {
-                                        "firstName": "DAVID",
-                                        "middleInitial": "P",
-                                        "lastName": "SMITH",
-                                        "address": {
-                                          "addressLineOne": "42 ELM AVENUE",
-                                          "addressLineTwo": "SUITE 201",
-                                          "isOtherCity": "N",
-                                          "city": "CHICAGO",
-                                          "countrySubdivision": "IL",
-                                          "province": "US",
-                                          "postalCode": "66579",
-                                          "country": "USA"
-                                        },
-                                        "phoneNumber": "3165557625",
-                                        "altPhoneNumber": "3165557625",
-                                        "email": "Abc@xxx.com",
-                                        "driversLicense": {
-                                          "number": "M15698025",
-                                          "countrySubdivision": "IL",
-                                          "country": "USA"
-                                        },
-                                        "dateOfBirth": "2021-07-14",
-                                        "nationalId": "541022104"
-                                      }
-                                    ],
-                                    "urlGroups": [
-                                      {
-                                        "exactMatchUrls": {
-                                          "urls": ["WWW.SHOESHOP.COM"]
-                                        },
-                                        "closeMatchUrls": {
-                                          "urls": ["WWW.SHOESHOP.COM"]
-                                        },
-                                        "noMatchUrls": {
-                                          "urls": ["WWW.SHOESHOP.COM"]
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  "merchantMatch": {
-                                    "name": "M01",
-                                    "doingBusinessAsName": "M01",
-                                    "phoneNumber": "M01",
-                                    "address": "M01",
-                                    "altPhoneNumber": "M01",
-                                    "countrySubdivisionTaxId": "M01",
-                                    "nationalTaxId": "M01",
-                                    "principalMatches": [
-                                      {
-                                        "name": "M01",
-                                        "address": "M01",
-                                        "phoneNumber": "M01",
-                                        "altPhoneNumber": "M01",
-                                        "nationalId": "M01",
-                                        "driversLicense": "M01",
-                                        "email": "M01",
-                                        "dateOfBirth": "M01"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "source.confidence": 0.95,
-                              "source.platformId": 16,
-                              "alternatives": []
+                              ]
                             }
                           }
                         }
@@ -43086,31 +43405,578 @@
                 },
                 "example": {
                   "status": "success",
-                  "message": {
-                    "message": "Business KYB details fetched successfully"
-                  },
+                  "message": "Business KYB details fetched successfully",
                   "data": {
-                    "legal_name": {
-                      "name": "legal_name",
-                      "value": "airco",
+                    "address_match": {
+                      "name": "address_match",
+                      "value": "failure",
+                      "dependencies": ["primary_address", "addresses"],
+                      "alternatives": [
+                        {
+                          "value": "failure",
+                          "confidence": 0.9
+                        }
+                      ]
+                    },
+                    "address_match_boolean": {
+                      "name": "address_match_boolean",
+                      "value": false,
+                      "dependencies": ["address_match"],
+                      "alternatives": [
+                        {
+                          "value": false
+                        }
+                      ]
+                    },
+                    "address_registered_agent": {
+                      "name": "address_registered_agent",
+                      "value": null,
+                      "alternatives": []
+                    },
+                    "address_verification": {
+                      "name": "address_verification",
+                      "value": {
+                        "addresses": [
+                          "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                          "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                          "954 E Union St, Seattle, WA 98122-4289",
+                          "300 E Lombard St, Baltimore, MD 21202-3219",
+                          "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                        ],
+                        "status": "success",
+                        "message": "Match identified to the submitted Office Address",
+                        "label": "Office Address",
+                        "sublabel": "Verified"
+                      },
                       "source.confidence": 0.95,
                       "source.platformId": 16,
-                      "alternatives": []
+                      "alternatives": [
+                        {
+                          "value": {
+                            "addresses": [
+                              "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                              "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                              "954 E Union St, Seattle, WA 98122-4289",
+                              "300 E Lombard St, Baltimore, MD 21202-3219",
+                              "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                            ],
+                            "status": "success",
+                            "message": "Match identified to the submitted Office Address",
+                            "label": "Office Address",
+                            "sublabel": "Verified"
+                          },
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "address_verification_boolean": {
+                      "name": "address_verification_boolean",
+                      "value": true,
+                      "dependencies": ["address_verification"],
+                      "alternatives": [
+                        {
+                          "value": true
+                        }
+                      ]
+                    },
+                    "addresses": {
+                      "name": "addresses",
+                      "value": [
+                        "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                        "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                        "954 E Union St, Seattle, WA 98122-4289",
+                        "300 E Lombard St, Baltimore, MD 21202-3219",
+                        "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                      ],
+                      "alternatives": [
+                        {
+                          "value": [
+                            "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                            "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                            "954 E Union St, Seattle, WA 98122-4289",
+                            "300 E Lombard St, Baltimore, MD 21202-3219",
+                            "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                          ],
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "addresses_deliverable": {
+                      "name": "addresses_deliverable",
+                      "value": [
+                        "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                        "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                        "954 E Union St, Seattle, WA 98122-4289",
+                        "300 E Lombard St, Baltimore, MD 21202-3219",
+                        "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                      ],
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": [
+                            "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                            "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                            "954 E Union St, Seattle, WA 98122-4289",
+                            "300 E Lombard St, Baltimore, MD 21202-3219",
+                            "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                          ],
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "corporation": {
+                      "name": "corporation",
+                      "value": null,
+                      "source.platformId": 17,
+                      "alternatives": [
+                        {
+                          "value": null,
+                          "source": 17
+                        }
+                      ]
+                    },
+                    "formation_date": {
+                      "name": "formation_date",
+                      "value": "1988-09-08T00:00:00.000Z",
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": "1988-09-08T00:00:00.000Z",
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
                     },
                     "formation_state": {
                       "name": "formation_state",
-                      "value": "IN",
+                      "value": "WA",
                       "source.confidence": 0.95,
                       "source.platformId": 16,
-                      "alternatives": []
+                      "alternatives": [
+                        {
+                          "value": "WA",
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "kyb_submitted": {
+                      "name": "kyb_submitted",
+                      "value": true,
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": true,
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "legal_name": {
+                      "name": "legal_name",
+                      "value": "WARM PRODUCTS INC",
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": "WARM PRODUCTS INC",
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
                     },
                     "minority_owned": {
                       "name": "minority_owned",
                       "value": null,
                       "alternatives": []
                     },
+                    "name_match": {
+                      "name": "name_match",
+                      "value": {
+                        "status": "success",
+                        "message": "Match identified to the submitted Business Name",
+                        "sublabel": "Verified"
+                      },
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": {
+                            "status": "success",
+                            "message": "Match identified to the submitted Business Name",
+                            "sublabel": "Verified"
+                          },
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "name_match_boolean": {
+                      "name": "name_match_boolean",
+                      "value": true,
+                      "dependencies": ["name_match"],
+                      "alternatives": [
+                        {
+                          "value": true
+                        }
+                      ]
+                    },
+                    "names_submitted": {
+                      "name": "names_submitted",
+                      "value": [
+                        {
+                          "name": "WARM PRODUCTS INC",
+                          "submitted": true
+                        }
+                      ],
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": [
+                            {
+                              "name": "WARM PRODUCTS INC",
+                              "submitted": true
+                            }
+                          ],
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "people": {
+                      "name": "people",
+                      "value": [
+                        {
+                          "name": "Chumbley, J Michael Ryan",
+                          "titles": [
+                            "CHIEF EXECUTIVE OFFICER",
+                            "GOVERNINGPERSON"
+                          ],
+                          "submitted": false,
+                          "source": [
+                            "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                            "642c8178-fe65-43e2-9f39-cab7453f08e8"
+                          ]
+                        },
+                        {
+                          "name": "Johnson, Erica",
+                          "titles": ["SENIOR VICE PRESIDENT"],
+                          "submitted": false,
+                          "source": [
+                            "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                            "89b0caea-2023-43e0-b3d8-614e5f2d1935"
+                          ]
+                        },
+                        {
+                          "name": "EVELYN CHUMBLEY",
+                          "titles": ["GOVERNINGPERSON", "SECRETARY"],
+                          "submitted": false,
+                          "source": [
+                            "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                            "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                          ]
+                        },
+                        {
+                          "name": "JAMES CHUMBLEY",
+                          "titles": ["GOVERNINGPERSON", "PRESIDENT"],
+                          "submitted": false,
+                          "source": [
+                            "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                            "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                          ]
+                        },
+                        {
+                          "name": "BRYAN WITTLER                                                                                       ",
+                          "titles": ["REGISTERED AGENT"],
+                          "submitted": false,
+                          "source": ["d8bae094-c6a1-40b2-83a5-b5c035d3d038"]
+                        }
+                      ],
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": [
+                            {
+                              "name": "Chumbley, J Michael Ryan",
+                              "titles": [
+                                "CHIEF EXECUTIVE OFFICER",
+                                "GOVERNINGPERSON"
+                              ],
+                              "submitted": false,
+                              "source": [
+                                "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                "642c8178-fe65-43e2-9f39-cab7453f08e8"
+                              ]
+                            },
+                            {
+                              "name": "Johnson, Erica",
+                              "titles": ["SENIOR VICE PRESIDENT"],
+                              "submitted": false,
+                              "source": [
+                                "20199147-bf82-4775-a9db-3ce48ba07ed1",
+                                "89b0caea-2023-43e0-b3d8-614e5f2d1935"
+                              ]
+                            },
+                            {
+                              "name": "EVELYN CHUMBLEY",
+                              "titles": ["GOVERNINGPERSON", "SECRETARY"],
+                              "submitted": false,
+                              "source": [
+                                "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                              ]
+                            },
+                            {
+                              "name": "JAMES CHUMBLEY",
+                              "titles": ["GOVERNINGPERSON", "PRESIDENT"],
+                              "submitted": false,
+                              "source": [
+                                "642c8178-fe65-43e2-9f39-cab7453f08e8",
+                                "d8bae094-c6a1-40b2-83a5-b5c035d3d038"
+                              ]
+                            },
+                            {
+                              "name": "BRYAN WITTLER                                                                                       ",
+                              "titles": ["REGISTERED AGENT"],
+                              "submitted": false,
+                              "source": ["d8bae094-c6a1-40b2-83a5-b5c035d3d038"]
+                            }
+                          ],
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "primary_address": {
+                      "name": "primary_address",
+                      "value": null,
+                      "alternatives": []
+                    },
+                    "sos_active": {
+                      "name": "sos_active",
+                      "value": true,
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": true,
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "sos_filings": {
+                      "name": "sos_filings",
+                      "value": [
+                        {
+                          "id": "7061ef94-01d5-4465-b676-25b1566073a7",
+                          "filing_date": "1988-09-08T00:00:00.000Z",
+                          "entity_type": "CORPORATION",
+                          "active": true,
+                          "state": "WA",
+                          "url": "https://ccfs.sos.wa.gov/#/AdvancedSearch",
+                          "filing_name": "WARM PRODUCTS, INC."
+                        },
+                        {
+                          "id": "5bbc6e26-d2ae-4659-acb8-a134c0825e4c",
+                          "filing_date": "2004-03-29T00:00:00.000Z",
+                          "entity_type": "CORPORATION",
+                          "active": true,
+                          "state": "NC",
+                          "url": "https://www.sosnc.gov/online_services/search/by_title/_lobbying",
+                          "filing_name": "Warm Products Inc."
+                        },
+                        {
+                          "id": "788e194c-2f3d-4aa1-95a5-0fea4c039de5",
+                          "filing_date": "1998-09-14T00:00:00.000Z",
+                          "entity_type": "CORPORATION",
+                          "active": false,
+                          "state": "MD",
+                          "url": "https://egov.maryland.gov/BusinessExpress/EntitySearch/BusinessInformation/F05088679",
+                          "filing_name": "WARM PRODUCTS, INC."
+                        },
+                        {
+                          "id": "2b3c0320-39d9-4e03-9367-34c9f20f2c44",
+                          "filing_date": "2005-04-11T00:00:00.000Z",
+                          "entity_type": "CORPORATION",
+                          "active": false,
+                          "state": "VT",
+                          "url": "https://bizfilings.vermont.gov/business/businesssearch",
+                          "filing_name": "WARM PRODUCTS INC."
+                        }
+                      ],
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": [
+                            {
+                              "id": "7061ef94-01d5-4465-b676-25b1566073a7",
+                              "filing_date": "1988-09-08T00:00:00.000Z",
+                              "entity_type": "CORPORATION",
+                              "active": true,
+                              "state": "WA",
+                              "url": "https://ccfs.sos.wa.gov/#/AdvancedSearch",
+                              "filing_name": "WARM PRODUCTS, INC."
+                            },
+                            {
+                              "id": "5bbc6e26-d2ae-4659-acb8-a134c0825e4c",
+                              "filing_date": "2004-03-29T00:00:00.000Z",
+                              "entity_type": "CORPORATION",
+                              "active": true,
+                              "state": "NC",
+                              "url": "https://www.sosnc.gov/online_services/search/by_title/_lobbying",
+                              "filing_name": "Warm Products Inc."
+                            },
+                            {
+                              "id": "788e194c-2f3d-4aa1-95a5-0fea4c039de5",
+                              "filing_date": "1998-09-14T00:00:00.000Z",
+                              "entity_type": "CORPORATION",
+                              "active": false,
+                              "state": "MD",
+                              "url": "https://egov.maryland.gov/BusinessExpress/EntitySearch/BusinessInformation/F05088679",
+                              "filing_name": "WARM PRODUCTS, INC."
+                            },
+                            {
+                              "id": "2b3c0320-39d9-4e03-9367-34c9f20f2c44",
+                              "filing_date": "2005-04-11T00:00:00.000Z",
+                              "entity_type": "CORPORATION",
+                              "active": false,
+                              "state": "VT",
+                              "url": "https://bizfilings.vermont.gov/business/businesssearch",
+                              "filing_name": "WARM PRODUCTS INC."
+                            }
+                          ],
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "sos_match": {
+                      "name": "sos_match",
+                      "value": "success",
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": "success",
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "sos_match_boolean": {
+                      "name": "sos_match_boolean",
+                      "value": true,
+                      "dependencies": ["sos_match"],
+                      "alternatives": [
+                        {
+                          "value": true
+                        }
+                      ]
+                    },
+                    "tin": {
+                      "name": "tin",
+                      "value": "911425217",
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": "911425217",
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "tin_match": {
+                      "name": "tin_match",
+                      "value": {
+                        "status": "success",
+                        "message": "The IRS has a record for the submitted TIN and Business Name combination",
+                        "sublabel": "Found"
+                      },
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": {
+                            "status": "success",
+                            "message": "The IRS has a record for the submitted TIN and Business Name combination",
+                            "sublabel": "Found"
+                          },
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "tin_match_boolean": {
+                      "name": "tin_match_boolean",
+                      "value": false,
+                      "dependencies": ["tin_match"],
+                      "alternatives": [
+                        {
+                          "value": false
+                        }
+                      ]
+                    },
                     "veteran_owned": {
                       "name": "veteran_owned",
+                      "value": null,
+                      "alternatives": []
+                    },
+                    "watchlist": {
+                      "name": "watchlist",
+                      "value": {
+                        "metadata": [
+                          {
+                            "id": "89b0caea-2023-43e0-b3d8-614e5f2d1935",
+                            "type": "watchlist_result",
+                            "metadata": {
+                              "abbr": "SDN",
+                              "title": "Specially Designated Nationals",
+                              "agency": "Office of Foreign Assets Control",
+                              "agency_abbr": "OFAC",
+                              "entity_name": "JOHNSON, Prince Yormie"
+                            }
+                          }
+                        ],
+                        "message": "1 Watchlists hit(s) have been identified"
+                      },
+                      "source.confidence": 0.95,
+                      "source.platformId": 16,
+                      "alternatives": [
+                        {
+                          "value": {
+                            "metadata": [
+                              {
+                                "id": "89b0caea-2023-43e0-b3d8-614e5f2d1935",
+                                "type": "watchlist_result",
+                                "metadata": {
+                                  "abbr": "SDN",
+                                  "title": "Specially Designated Nationals",
+                                  "agency": "Office of Foreign Assets Control",
+                                  "agency_abbr": "OFAC",
+                                  "entity_name": "JOHNSON, Prince Yormie"
+                                }
+                              }
+                            ],
+                            "message": "1 Watchlists hit(s) have been identified"
+                          },
+                          "source": 16,
+                          "confidence": 0.95
+                        }
+                      ]
+                    },
+                    "watchlist_hits": {
+                      "name": "watchlist_hits",
                       "value": null,
                       "alternatives": []
                     },
@@ -43119,256 +43985,18 @@
                       "value": null,
                       "alternatives": []
                     },
-                    "formation_date": {
-                      "name": "formation_date",
-                      "value": "2020-02-24T00:00:00.000Z",
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
                     "year_established": {
                       "name": "year_established",
-                      "value": "2020",
+                      "value": "1988",
                       "source.confidence": 0.95,
                       "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "sos_filings": {
-                      "name": "sos_filings",
-                      "value": [
+                      "alternatives": [
                         {
-                          "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                          "type": "registration",
-                          "metadata": {
-                            "state": "FL",
-                            "status": "active",
-                            "file_number": "L18000121621",
-                            "jurisdiction": "DOMESTIC"
-                          }
+                          "value": "1988",
+                          "source": 16,
+                          "confidence": 0.95
                         }
-                      ],
-                      "alternatives": []
-                    },
-                    "primary_address": {
-                      "name": "primary_address",
-                      "value": {
-                        "line_1": "123 Main St.",
-                        "apartment": null,
-                        "city": "Pawnee",
-                        "state": "Indiana",
-                        "country": "USA",
-                        "postal_code": "46001",
-                        "mobile": null,
-                        "is_primary": true
-                      },
-                      "source.confidence": 0.99,
-                      "source.name": "businessDetails",
-                      "alternatives": []
-                    },
-                    "addresses": {
-                      "name": "addresses",
-                      "value": [
-                        "123 Main St, Pawnee, IN 46001",
-                        "354 Circle Court,Bronx, NY 10468"
-                      ],
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "tin": {
-                      "name": "tin",
-                      "value": "123456789",
-                      "alternatives": []
-                    },
-                    "people": {
-                      "name": "people",
-                      "value": [
-                        {
-                          "id": "6ffe1778-e2bb-404b-bc57-4906c62c34e6",
-                          "business_entity_verification_id": "477139f0-279b-415d-8e4c-8c3afbf9091a",
-                          "created_at": "2024-11-12T19:56:17.821Z",
-                          "updated_at": null,
-                          "name": "CRAMER CATHERINE",
-                          "titles": ["MANAGER"],
-                          "submitted": false,
-                          "source": [
-                            {
-                              "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                              "type": "registration",
-                              "metadata": {
-                                "state": "FL",
-                                "status": "active",
-                                "file_number": "L18000121621",
-                                "jurisdiction": "DOMESTIC"
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "id": "28dcd36d-29de-4d0d-9df7-1c9c22e9109b",
-                          "business_entity_verification_id": "477139f0-279b-415d-8e4c-8c3afbf9091a",
-                          "created_at": "2024-11-12T19:56:17.821Z",
-                          "updated_at": null,
-                          "name": "CRAMER CHARLES W",
-                          "titles": ["REGISTERED AGENT"],
-                          "submitted": false,
-                          "source": [
-                            {
-                              "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                              "type": "registration",
-                              "metadata": {
-                                "state": "FL",
-                                "status": "active",
-                                "file_number": "L18000121621",
-                                "jurisdiction": "DOMESTIC"
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "watchlist": {
-                      "name": "watchlist",
-                      "value": null,
-                      "alternatives": []
-                    },
-                    "tin_match": {
-                      "name": "tin_match",
-                      "value": true,
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "name_match": {
-                      "name": "name_match",
-                      "value": true,
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "address_match": {
-                      "name": "address_match",
-                      "value": true,
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "sos_match": {
-                      "name": "sos_match",
-                      "value": true,
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
-                    },
-                    "watchlist_hits": {
-                      "name": "watchlist_hits",
-                      "value": null,
-                      "alternatives": []
-                    },
-                    "match": {
-                      "name": "match",
-                      "value": [
-                        {
-                          "merchant": {
-                            "name": "THE BAIT SHOP",
-                            "doingBusinessAsName": "BAIT R US",
-                            "merchantId": "ABED-1234",
-                            "subMerchantId": "ABED-1234-1",
-                            "address": {
-                              "addressLineOne": "42 ELM AVENUE",
-                              "addressLineTwo": "SUITE 201",
-                              "isOtherCity": "N",
-                              "city": "CHICAGO",
-                              "countrySubdivision": "IL",
-                              "province": "US",
-                              "country": "USA",
-                              "postalCode": "66579"
-                            },
-                            "phoneNumber": "3165557625",
-                            "isEEA": "N",
-                            "altPhoneNumber": "3165557625",
-                            "merchantCategory": "0742",
-                            "nationalTaxId": "NAT-123",
-                            "countrySubdivisionTaxId": "49232-1030",
-                            "dateOpened": "2021-07-14",
-                            "dateClosed": "2021-07-14",
-                            "reasonCodeDesc": "Merchant involved in laundering activity",
-                            "addedByAcquirerId": "1996",
-                            "reasonCode": "01",
-                            "createdDate": "2021-07-14",
-                            "comments": "Added for reasons of fraud",
-                            "merchRefNum": "1996-220406041727-AK45CD85",
-                            "urls": ["www.merchant.com"],
-                            "principals": [
-                              {
-                                "firstName": "DAVID",
-                                "middleInitial": "P",
-                                "lastName": "SMITH",
-                                "address": {
-                                  "addressLineOne": "42 ELM AVENUE",
-                                  "addressLineTwo": "SUITE 201",
-                                  "isOtherCity": "N",
-                                  "city": "CHICAGO",
-                                  "countrySubdivision": "IL",
-                                  "province": "US",
-                                  "postalCode": "66579",
-                                  "country": "USA"
-                                },
-                                "phoneNumber": "3165557625",
-                                "altPhoneNumber": "3165557625",
-                                "email": "Abc@xxx.com",
-                                "driversLicense": {
-                                  "number": "M15698025",
-                                  "countrySubdivision": "IL",
-                                  "country": "USA"
-                                },
-                                "dateOfBirth": "2021-07-14",
-                                "nationalId": "541022104"
-                              }
-                            ],
-                            "urlGroups": [
-                              {
-                                "exactMatchUrls": {
-                                  "urls": ["WWW.SHOESHOP.COM"]
-                                },
-                                "closeMatchUrls": {
-                                  "urls": ["WWW.SHOESHOP.COM"]
-                                },
-                                "noMatchUrls": {
-                                  "urls": ["WWW.SHOESHOP.COM"]
-                                }
-                              }
-                            ]
-                          },
-                          "merchantMatch": {
-                            "name": "M01",
-                            "doingBusinessAsName": "M01",
-                            "phoneNumber": "M01",
-                            "address": "M01",
-                            "altPhoneNumber": "M01",
-                            "countrySubdivisionTaxId": "M01",
-                            "nationalTaxId": "M01",
-                            "principalMatches": [
-                              {
-                                "name": "M01",
-                                "address": "M01",
-                                "phoneNumber": "M01",
-                                "altPhoneNumber": "M01",
-                                "nationalId": "M01",
-                                "driversLicense": "M01",
-                                "email": "M01",
-                                "dateOfBirth": "M01"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "source.confidence": 0.95,
-                      "source.platformId": 16,
-                      "alternatives": []
+                      ]
                     }
                   }
                 }
@@ -43377,6 +44005,11 @@
           }
         },
         "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
         "servers": [
           {
             "url": "https://api.joinworth.com/integration/api/v1",
