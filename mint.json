@@ -94,8 +94,7 @@
         "api-reference/case/businesses/get-customer-businesses",
         "api-reference/case/businesses/get-business-cases",
         "api-reference/case/cases/get-customer-case-by-id",
-        "api-reference/case/businesses/get-business-by-id",
-        "api-reference/score/score/get-score"
+        "api-reference/case/businesses/get-business-by-id"
       ]
     },
     {
