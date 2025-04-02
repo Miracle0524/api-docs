@@ -45405,6 +45405,648 @@
         ]
       },
       "parameters": []
+    },
+    "/verification/businesses/{businessId}/owners": {
+      "get": {
+        "tags": [
+          "Verification"
+        ],
+        "summary": "KYC Ownership Verification",
+        "operationId": "KYCOwnershipVerification",
+        "parameters": [
+          {
+            "name": "businessId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Wed, 02 Apr 2025 09:11:02 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "1734"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"6c6-Qy6NdKC1uBkywmBcWXV16zqKrGQ\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Success20"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "success",
+                          "message": "KYC Ownership Verification fetched successfully",
+                          "data": [
+                            {
+                              "id": "4e56263d-f076-4c9f-947c-9dbf8f9c3556",
+                              "title": 3,
+                              "first_name": "Leslie",
+                              "last_name": "Knope",
+                              "ssn": "U2FsdGVkX19Xie5AknXJBH0Lc+UHRS69/0hOXf5qhC4=",
+                              "email": "abc@xyz.com",
+                              "mobile": "+12345678909",
+                              "date_of_birth": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw=",
+                              "address_apartment": null,
+                              "address_line_1": "123 Main St.",
+                              "address_line_2": null,
+                              "address_city": "Pawnee",
+                              "address_state": "IN",
+                              "address_postal_code": "46001",
+                              "address_country": "USA",
+                              "created_at": "2025-04-01T07:24:55.205Z",
+                              "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                              "updated_at": "2025-04-01T07:31:07.716Z",
+                              "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                              "last_four_of_ssn": "6789",
+                              "year_of_birth": "",
+                              "kyc_check": {
+                                "status": "failed"
+                              }
+                            },
+                            {
+                              "id": "54b8740a-7cc2-4d12-88b6-840b471ed311",
+                              "title": 3,
+                              "first_name": "Leslie",
+                              "last_name": "Knope",
+                              "ssn": "U2FsdGVkX1+1a0TQ+yChMo7e3P+nKys89pQxXdJVHbE=",
+                              "email": "abc@xyz.com",
+                              "mobile": "+12345678909",
+                              "date_of_birth": "U2FsdGVkX19smUZSI4p9Ci416JoL1D26gPukK1EMR1c=",
+                              "address_apartment": null,
+                              "address_line_1": "123 Main St.",
+                              "address_line_2": null,
+                              "address_city": "Pawnee",
+                              "address_state": "IN",
+                              "address_postal_code": "46001",
+                              "address_country": "USA",
+                              "created_at": "2025-04-01T05:16:58.128Z",
+                              "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                              "updated_at": "2025-04-01T07:34:15.601Z",
+                              "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                              "last_four_of_ssn": "6789",
+                              "year_of_birth": "",
+                              "kyc_check": {
+                                "name": {
+                                  "summary": "match"
+                                },
+                                "status": "success",
+                                "address": {
+                                  "type": "no_data",
+                                  "po_box": "no_data",
+                                  "summary": "match"
+                                },
+                                "id_number": {
+                                  "summary": "match"
+                                },
+                                "phone_number": {
+                                  "summary": "match",
+                                  "area_code": "match"
+                                },
+                                "date_of_birth": {
+                                  "summary": "match"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "success",
+                  "message": "KYC Ownership Verification fetched successfully",
+                  "data": [
+                    {
+                      "id": "4e56263d-f076-4c9f-947c-9dbf8f9c3556",
+                      "title": 3,
+                      "first_name": "Leslie",
+                      "last_name": "Knope",
+                      "ssn": "U2FsdGVkX19Xie5AknXJBH0Lc+UHRS69/0hOXf5qhC4=",
+                      "email": "abc@xyz.com",
+                      "mobile": "+12345678909",
+                      "date_of_birth": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw=",
+                      "address_apartment": null,
+                      "address_line_1": "123 Main St.",
+                      "address_line_2": null,
+                      "address_city": "Pawnee",
+                      "address_state": "IN",
+                      "address_postal_code": "46001",
+                      "address_country": "USA",
+                      "created_at": "2025-04-01T07:24:55.205Z",
+                      "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                      "updated_at": "2025-04-01T07:31:07.716Z",
+                      "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                      "last_four_of_ssn": "6789",
+                      "year_of_birth": "",
+                      "kyc_check": {
+                        "status": "failed"
+                      }
+                    },
+                    {
+                      "id": "54b8740a-7cc2-4d12-88b6-840b471ed311",
+                      "title": 3,
+                      "first_name": "Leslie",
+                      "last_name": "Knope",
+                      "ssn": "U2FsdGVkX1+1a0TQ+yChMo7e3P+nKys89pQxXdJVHbE=",
+                      "email": "abc@xyz.com",
+                      "mobile": "+12345678909",
+                      "date_of_birth": "U2FsdGVkX19smUZSI4p9Ci416JoL1D26gPukK1EMR1c=",
+                      "address_apartment": null,
+                      "address_line_1": "123 Main St.",
+                      "address_line_2": null,
+                      "address_city": "Pawnee",
+                      "address_state": "IN",
+                      "address_postal_code": "46001",
+                      "address_country": "USA",
+                      "created_at": "2025-04-01T05:16:58.128Z",
+                      "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                      "updated_at": "2025-04-01T07:34:15.601Z",
+                      "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
+                      "last_four_of_ssn": "6789",
+                      "year_of_birth": "",
+                      "kyc_check": {
+                        "name": {
+                          "summary": "match"
+                        },
+                        "status": "success",
+                        "address": {
+                          "type": "no_data",
+                          "po_box": "no_data",
+                          "summary": "match"
+                        },
+                        "id_number": {
+                          "summary": "match"
+                        },
+                        "phone_number": {
+                          "summary": "match",
+                          "area_code": "match"
+                        },
+                        "date_of_birth": {
+                          "summary": "match"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Wed, 02 Apr 2025 09:11:39 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "114"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"72-VdKYyL5QvhAH8Nt32uwqSDHaEpQ\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Failure1"
+                    },
+                    {
+                      "examples": [
+                        {
+                          "status": "fail",
+                          "message": "No owners found!",
+                          "errorCode": "NOT_FOUND",
+                          "data": {
+                            "errorName": "VerificationApiError"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                },
+                "example": {
+                  "status": "fail",
+                  "message": "No owners found!",
+                  "errorCode": "NOT_FOUND",
+                  "data": {
+                    "errorName": "VerificationApiError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.joinworth.com/integration/api/v1",
+            "variables": {}
+          }
+        ]
+      },
+      "parameters": []
     }
   },
   "components": {
