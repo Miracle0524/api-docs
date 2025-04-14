@@ -53,15 +53,15 @@
       "group": "Sign In",
       "pages": [
         "api-reference/auth/sign-in/customer-sign-in",
-        "api-reference/auth/refresh-token/customer-refresh-token",
-        "api-reference/auth/logout/customer-logout"
+        "api-reference/auth/sign-in/customer-refresh-token",
+        "api-reference/auth/sign-in/customer-logout"
       ]
     },
     {
       "group": "Forgot Password",
       "pages": [
-        "api-reference/auth/forgot-password/forgot-password-init",
-        "api-reference/auth/forgot-password/reset-password"
+        "api-reference/auth/sign-in/forgot-password-init",
+        "api-reference/auth/sign-in/reset-password"
       ]
     },
     {
@@ -71,18 +71,18 @@
     {
       "group": "Customers",
       "pages": [
-        "api-reference/auth/invites/accept-invitation",
+        "api-reference/auth/users/accept-invitation",
         "api-reference/auth/customers/get-customer-subroles"
       ]
     },
     {
       "group": "Customer Users",
       "pages": [
-        "api-reference/auth/customer-users/get-customer-users",
-        "api-reference/auth/customer-users/create-customer-user",
-        "api-reference/auth/customer-users/get-customer-user-by-id",
-        "api-reference/auth/customer-users/update-customer-user-by-id",
-        "api-reference/auth/customer-users/customer-user-resend-invitation"
+        "api-reference/auth/customers/get-customer-users",
+        "api-reference/auth/customers/create-customer-user",
+        "api-reference/auth/customers/get-customer-user-by-id",
+        "api-reference/auth/customers/update-customer-user-by-id",
+        "api-reference/auth/customers/customer-user-resend-invitation"
       ]
     },
     {
