@@ -5,7 +5,8 @@
     "openapi/auth.json",
     "openapi/case.json",
     "openapi/integration.json",
-    "openapi/score.json"
+    "openapi/score.json",
+    "openapi/worth_360_report.json"
   ],
   "logo": {
     "dark": "/logo/worth-horizontal-logo-dark.svg",
@@ -140,6 +141,22 @@
         "use-cases/onboarding/overview",
         "use-cases/onboarding/instant-onboarding",
         "use-cases/onboarding/invite-business"
+      ]
+    },
+    {
+      "group": "Worth 360 Report Generation Flow",
+      "pages": [
+        "use-cases/worth-360-report/overview",
+        "use-cases/worth-360-report/process-diagrams"
+      ]
+    },
+    {
+      "group": "Worth 360 Report",
+      "pages": [
+        "api-reference/worth-360-report/check-worth-360-report-generation-status",
+        "api-reference/worth-360-report/generate-worth-360-report-using-customer",
+        "api-reference/worth-360-report/get-worth-360-report-details",
+        "api-reference/worth-360-report/download-worth-360-report"
       ]
     }
   ],

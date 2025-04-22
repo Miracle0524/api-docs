@@ -1,0 +1,71 @@
+These diagrams illustrates the flow of generating a Worth 360 Report using Worth AI APIs, starting from initiating the report to retrieving the final output or failure reason.
+
+---
+
+
+**Sequence diagram for Worth 360 Report!!**
+
+<br />
+
+```mermaid
+
+sequenceDiagram
+    participant Customer
+    participant Worth APIs
+
+    Customer->>Worth APIs: Initiate 360 Report Generation  
+    Note over Customer,Worth APIs: POST /reports/customers/:customerID/businesses/:businessID  
+    Note over Customer,Worth APIs: Requires 'customerID' and 'businessID' as path parameters  
+    Worth APIs-->>Customer: Returns reportID  
+    Note over Customer,Worth APIs: Response: { "data": { "report_id": "reportID" } }  
+
+    Customer->>Worth APIs: Track Report Status & Download  
+    Note over Customer,Worth APIs: POST /reports/:reportID/download  
+
+    Worth APIs-->>Customer: Response with status: { "data": { "status": "status", "log": { // logs }, "pdf_url": "pdf_url" } }
+    alt status == "REQUESTED"
+        Note over Customer,Worth APIs: Status: REQUESTED <br/> → Report request is queued  
+    else status == "IN_PROGRESS"
+        Note over Customer,Worth APIs: Status: IN_PROGRESS <br/> → Report is being generated  
+    else status == "COMPLETED"
+        Note over Customer,Worth APIs: Status: COMPLETED <br/> → Report is ready <br/> "log" will contain 360 report JSON and "pdf_url" will contain url of 360 report PDF
+    else status == "FAILED"
+        Note over Customer,Worth APIs: Status: FAILED <br/> → Report generation failed <br/> "log" will contain error reason(s)  
+    end
+
+```
+
+<br />
+<br />
+<br />
+
+**Flochart for Worth 360 Report!!**
+
+<br />
+
+```mermaid
+
+flowchart TD
+    A[Start: Initiate Report Generation] --> B[POST /reports/customers/:customerID/businesses/:businessID]
+    B --> C[Receive reportID in response]
+    C --> D[POST /reports/:reportID/download]
+    D --> E{What is the report status?}
+    
+    E --> F[REQUESTED]
+    F --> G[Report request is queued]
+    
+    E --> H[IN_PROGRESS]
+    H --> I[Report generation in progress]
+    
+    E --> J[COMPLETED]
+    J --> K[In the response, log contains JSON data for 360 report and pdf_url will contain url of 360 report PDF]
+    
+    E --> L[FAILED]
+    L --> M[In the response, log contains reasons for failure]
+    
+    G --> Z[End]
+    I --> Z
+    K --> Z
+    M --> Z
+
+```
