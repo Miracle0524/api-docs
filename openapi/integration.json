@@ -44333,12 +44333,13 @@
       "get": {
         "tags": ["Facts"],
         "summary": "KYB",
+        "description":"Retrieves comprehensive 'Know Your Business' verification details for a given business identifier, including legal, formation, ownership, address, and match data from multiple sources.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service.",
         "operationId": "KYB",
         "parameters": [
           {
             "name": "businessId",
             "in": "path",
-            "description": "",
+            "description": "A universal identifier string unique to a particular business.",
             "required": true,
             "style": "simple",
             "schema": {
@@ -110481,13 +110482,17 @@
         "type": "object",
         "properties": {
           "status": {
-            "type": "string"
+            "type": "string",
+            "description": "Indicates whether the request succeeded or failed.",
+            "enum": ["success", "fail"]
           },
           "message": {
-            "$ref": "#/components/schemas/Message3"
+            "type": "string",
+            "description": "Descriptive message about the result of the operation.",
+            "example": "Business KYB details fetched successfully"
           },
           "data": {
-            "$ref": "#/components/schemas/Data105"
+            "$ref": "#/components/schemas/KYBData"
           }
         },
         "examples": [
@@ -110781,26 +110786,17 @@
           }
         ]
       },
-      "Message3": {
-        "title": "Message3",
-        "required": ["message"],
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          }
-        },
-        "examples": [
-          {
-            "message": "Business KYB details fetched successfully"
-          }
-        ]
-      },
-      "Data105": {
-        "title": "Data105",
+      "KYBData": {
+        "title": "KYBData",
         "required": [
+          "address_match",
+          "address_match_boolean",
+          "address_registered_agent",
+          "address_verification",
+          "address_verification_boolean",
           "legal_name",
           "formation_state",
+          "kyb_submitted",
           "minority_owned",
           "veteran_owned",
           "woman_owned",
@@ -110814,69 +110810,103 @@
           "watchlist",
           "tin_match",
           "name_match",
-          "address_match",
+          "name_match_boolean",
+          "addresses_deliverable",
           "sos_match",
           "watchlist_hits",
           "match"
         ],
         "type": "object",
         "properties": {
-          "legal_name": {
-            "$ref": "#/components/schemas/LegalName"
+          "address_match": {
+            "$ref": "#/components/schemas/AddressMatch"
           },
-          "formation_state": {
-            "$ref": "#/components/schemas/FormationState"
+          "address_match_boolean": {
+            "$ref": "#/components/schemas/AddressMatchBoolean"
           },
-          "minority_owned": {
-            "$ref": "#/components/schemas/MinorityOwned"
+          "address_registered_agent": {
+            "$ref": "#/components/schemas/AddressRegisteredAgent"
           },
-          "veteran_owned": {
-            "$ref": "#/components/schemas/VeteranOwned"
+          "address_verification": {
+            "$ref": "#/components/schemas/AddressVerification"
           },
-          "woman_owned": {
-            "$ref": "#/components/schemas/WomanOwned"
-          },
-          "formation_date": {
-            "$ref": "#/components/schemas/FormationDate"
-          },
-          "year_established": {
-            "$ref": "#/components/schemas/YearEstablished"
-          },
-          "sos_filings": {
-            "$ref": "#/components/schemas/SosFilings"
-          },
-          "primary_address": {
-            "$ref": "#/components/schemas/PrimaryAddress"
+          "address_verification_boolean": {
+            "$ref": "#/components/schemas/AddressVerificationBoolean"
           },
           "addresses": {
             "$ref": "#/components/schemas/Addresses"
           },
-          "tin": {
-            "$ref": "#/components/schemas/Tin"
+          "addresses_deliverable": {
+            "$ref": "#/components/schemas/AddressesDeliverable"
           },
-          "people": {
-            "$ref": "#/components/schemas/People"
+          "corporation": {
+            "$ref": "#/components/schemas/Corporation"
           },
-          "watchlist": {
-            "$ref": "#/components/schemas/Watchlist"
+          "formation_date": {
+            "$ref": "#/components/schemas/FormationDate"
           },
-          "tin_match": {
-            "$ref": "#/components/schemas/TinMatch"
+          "formation_state": {
+            "$ref": "#/components/schemas/FormationState"
+          },
+          "kyb_submitted": {
+            "$ref": "#/components/schemas/KybSubmitted"
+          },
+          "legal_name": {
+            "$ref": "#/components/schemas/LegalName"
+          },
+          "minority_owned": {
+            "$ref": "#/components/schemas/MinorityOwned"
           },
           "name_match": {
             "$ref": "#/components/schemas/NameMatch"
           },
-          "address_match": {
-            "$ref": "#/components/schemas/AddressMatch"
+          "name_match_boolean": {
+            "$ref": "#/components/schemas/NameMatchBoolean"
+          },
+          "names_submitted": {
+            "$ref": "#/components/schemas/NamesSubmitted"
+          },
+          "people": {
+            "$ref": "#/components/schemas/People"
+          },
+          "primary_address": {
+            "$ref": "#/components/schemas/PrimaryAddress"
+          },
+          "sos_active": {
+            "$ref": "#/components/schemas/SosActive"
+          },
+          "sos_filings": {
+            "$ref": "#/components/schemas/SosFilings"
           },
           "sos_match": {
             "$ref": "#/components/schemas/SosMatch"
           },
+          "sos_match_boolean": {
+            "$ref": "#/components/schemas/SosMatchBoolean"
+          },
+          "tin": {
+            "$ref": "#/components/schemas/Tin"
+          },
+          "tin_match": {
+            "$ref": "#/components/schemas/TinMatch"
+          },
+          "tin_match_boolean": {
+            "$ref": "#/components/schemas/TinMatchBoolean"
+          },
+          "veteran_owned": {
+            "$ref": "#/components/schemas/VeteranOwned"
+          },
+          "watchlist": {
+            "$ref": "#/components/schemas/Watchlist"
+          },
           "watchlist_hits": {
             "$ref": "#/components/schemas/WatchlistHits"
           },
-          "match": {
-            "$ref": "#/components/schemas/Match"
+          "woman_owned": {
+            "$ref": "#/components/schemas/WomanOwned"
+          },
+          "year_established": {
+            "$ref": "#/components/schemas/YearEstablished"
           }
         },
         "examples": [
@@ -111166,6 +111196,7 @@
       },
       "LegalName": {
         "title": "LegalName",
+        "description": "The legal name of the business as confirmed by the data sources.",
         "required": [
           "name",
           "value",
@@ -111176,38 +111207,66 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The identifier for the legal name field.",
+            "enum": ["legal_name"]
           },
           "value": {
-            "type": "string"
+            "type": "string",
+            "description": "The actual legal name of the business."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
           },
           "alternatives": {
             "type": "array",
+            "description": "Alternative legal name values with associated source and confidence scores.",
             "items": {
-              "type": "string"
-            },
-            "description": ""
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "description": "An alternative legal business name."
+                },
+                "source": {
+                  "type": "integer",
+                  "contentEncoding": "int32",
+                  "description": "A property used for Worth's internal data tracking."
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "A property used for Worth's internal data tracking."
+                }
+              },
+              "required": ["value"]
+            }
           }
         },
         "examples": [
           {
             "name": "legal_name",
-            "value": "airco",
+            "value": "WARM PRODUCTS INC",
             "source.confidence": 0.95,
             "source.platformId": 16,
-            "alternatives": []
+            "alternatives": [
+              {
+                "value": "WARM PRODUCTS INC",
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
           }
         ]
       },
       "FormationState": {
         "title": "FormationState",
+        "description": "The U.S. state where the business entity was formed or incorporated.",
         "required": [
           "name",
           "value",
@@ -111218,53 +111277,88 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the formation state.",
+            "enum": ["formation_state"]
           },
           "value": {
-            "type": "string"
+            "type": "string",
+            "description": "The state abbreviation or full state name where the business was formed."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
           },
           "alternatives": {
             "type": "array",
+            "description": "Alternative formation state values with associated source and confidence scores.",
             "items": {
-              "type": "string"
-            },
-            "description": ""
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "description": "An alternative two-letter state abbreviation."
+                },
+                "source": {
+                  "type": "integer",
+                  "contentEncoding": "int32",
+                  "description": "A property used for Worth's internal data tracking."
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "A property used for Worth's internal data tracking."
+                }
+              },
+              "required": ["value"]
+            }
           }
         },
         "examples": [
           {
             "name": "formation_state",
-            "value": "IN",
+            "value": "WA",
             "source.confidence": 0.95,
             "source.platformId": 16,
-            "alternatives": []
+            "alternatives": [
+              {
+                "value": "WA",
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
           }
         ]
       },
       "MinorityOwned": {
         "title": "MinorityOwned",
-        "required": ["name", "value", "alternatives"],
+        "description": "Indicates whether the business is minority-owned. The value may be provided as a string or be null if not available.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for minority ownership.",
+            "enum": ["minority_owned"]
           },
           "value": {
-            "type": ["string", "null"]
+            "type": "string",
+            "description": "The minority-owned indicator (for example, 'Y' or 'N'), or null if unavailable."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Any alternative representations for minority ownership."
           }
         },
         "examples": [
@@ -111277,21 +111371,29 @@
       },
       "VeteranOwned": {
         "title": "VeteranOwned",
-        "required": ["name", "value", "alternatives"],
+        "description": "Indicates whether the business is veteran-owned; returns a string value or null if the information is unavailable.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for veteran ownership status.",
+            "enum": ["veteran_owned"]
           },
           "value": {
-            "type": ["string", "null"]
+            "type": "string",
+            "description": "The veteran-owned indicator (for example, 'Y' or 'N'), or null if not provided."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative veteran ownership values, if available."
           }
         },
         "examples": [
@@ -111304,21 +111406,31 @@
       },
       "WomanOwned": {
         "title": "WomanOwned",
-        "required": ["name", "value", "alternatives"],
+        "description": "Indicates whether the business is woman-owned; returns a string value or null if unavailable.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for woman ownership."
           },
           "value": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The woman-owned indicator (for example, 'Y' or 'N'), or null if no information is provided."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative representations for the woman ownership indicator."
           }
         },
         "examples": [
@@ -111331,6 +111443,7 @@
       },
       "FormationDate": {
         "title": "FormationDate",
+        "description": "The ISO 8601 formatted date when the business was formed or incorporated.",
         "required": [
           "name",
           "value",
@@ -111341,38 +111454,67 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the formation date.",
+            "enum": ["formation_date"]
           },
           "value": {
-            "type": "string"
+            "type": "string",
+            "description": "The formation date as an ISO 8601 string.",
+            "example": "2020-02-24T00:00:00.000Z"
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
           },
           "alternatives": {
             "type": "array",
+            "description": "Alternative formation dates with associated source and confidence scores.",
             "items": {
-              "type": "string"
-            },
-            "description": ""
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "An alternative ISO 8601 formatted formation date."
+                },
+                "source": {
+                  "type": "integer",
+                  "description": "Identifier of the data source providing the alternative date."
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "Confidence score of the alternative formation date."
+                }
+              },
+              "required": ["value", "source", "confidence"]
+            }
           }
         },
         "examples": [
           {
             "name": "formation_date",
-            "value": "2020-02-24T00:00:00.000Z",
+            "value": "1988-09-08T00:00:00.000Z",
             "source.confidence": 0.95,
             "source.platformId": 16,
-            "alternatives": []
+            "alternatives": [
+              {
+                "value": "1988-09-08T00:00:00.000Z",
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
           }
         ]
       },
       "YearEstablished": {
         "title": "YearEstablished",
+        "description": "The year the business was established, derived from its formation date.",
         "required": [
           "name",
           "value",
@@ -111383,24 +111525,28 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the establishment year."
           },
           "value": {
-            "type": "string"
+            "type": "string",
+            "description": "The year when the business was established."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "The confidence score for the establishment year data."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "The platform identifier for the establishment year source."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative establishment year values, if any."
           }
         },
         "examples": [
@@ -111415,25 +111561,31 @@
       },
       "SosFilings": {
         "title": "SosFilings",
-        "required": ["name", "value", "alternatives"],
+        "description": "A list of filings from the Secretary of State, detailing the business’s registration status and related metadata.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for SOS filings."
           },
           "value": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Value"
             },
-            "description": ""
+            "description": "An array of filing records from the Secretary of State."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative representations for SOS filings."
           }
         },
         "examples": [
@@ -111457,17 +111609,25 @@
       },
       "Value": {
         "title": "Value",
-        "required": ["id", "type", "metadata"],
+        "description": "A generic filing record containing an ID, a filing type, and metadata.",
+        "required": [
+          "id",
+          "type",
+          "metadata"
+        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "description": "A unique identifier for the filing record."
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "description": "The type of filing, e.g., 'registration'."
           },
           "metadata": {
-            "$ref": "#/components/schemas/Metadata1"
+            "$ref": "#/components/schemas/Metadata1",
+            "description": "Additional metadata details associated with the filing."
           }
         },
         "examples": [
@@ -111485,6 +111645,7 @@
       },
       "PrimaryAddress": {
         "title": "PrimaryAddress",
+        "description": "The primary business address, used for official communications.",
         "required": [
           "name",
           "value",
@@ -111495,23 +111656,27 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the primary address."
           },
           "value": {
-            "$ref": "#/components/schemas/Value1"
+            "$ref": "#/components/schemas/Value1",
+            "description": "Detailed information about the primary address."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A confidence score for the primary address data."
           },
           "source.name": {
-            "type": "string"
+            "type": "string",
+            "description": "The data source name that provided the primary address."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative addresses if available."
           }
         },
         "examples": [
@@ -111535,6 +111700,7 @@
       },
       "Value1": {
         "title": "Value1",
+        "description": "An address object including street, apartment, city, state, country, postal code, mobile, and a primary flag.",
         "required": [
           "line_1",
           "apartment",
@@ -111548,28 +111714,42 @@
         "type": "object",
         "properties": {
           "line_1": {
-            "type": "string"
+            "type": "string",
+            "description": "The street address."
           },
           "apartment": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The apartment or suite number, if any."
           },
           "city": {
-            "type": "string"
+            "type": "string",
+            "description": "The city for the address."
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "description": "The state or region of the address."
           },
           "country": {
-            "type": "string"
+            "type": "string",
+            "description": "The country of the address."
           },
           "postal_code": {
-            "type": "string"
+            "type": "string",
+            "description": "The postal or ZIP code."
           },
           "mobile": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "A contact number associated with the address, if provided."
           },
           "is_primary": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "True if this address is the primary address."
           }
         },
         "examples": [
@@ -111585,72 +111765,30 @@
           }
         ]
       },
-      "Addresses": {
-        "title": "Addresses",
+      "Tin": {
+        "title": "Tin",
+        "description": "The Tax Identification Number (TIN) for the business.",
         "required": [
           "name",
           "value",
-          "source.confidence",
-          "source.platformId",
           "alternatives"
         ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for TIN."
           },
           "value": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
-          },
-          "source.confidence": {
-            "type": "number"
-          },
-          "source.platformId": {
-            "type": "integer",
-            "contentEncoding": "int32"
+            "type": "string",
+            "description": "The business's TIN."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
-          }
-        },
-        "examples": [
-          {
-            "name": "addresses",
-            "value": [
-              "123 Main St, Pawnee, IN 46001",
-              "354 Circle Court,Bronx, NY 10468"
-            ],
-            "source.confidence": 0.95,
-            "source.platformId": 16,
-            "alternatives": []
-          }
-        ]
-      },
-      "Tin": {
-        "title": "Tin",
-        "required": ["name", "value", "alternatives"],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
-          },
-          "alternatives": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+            "description": "Alternative TIN values, if available."
           }
         },
         "examples": [
@@ -111663,6 +111801,7 @@
       },
       "People": {
         "title": "People",
+        "description": "A list of individuals associated with the business including their roles and source registration details.",
         "required": [
           "name",
           "value",
@@ -111673,28 +111812,32 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for people.",
+            "enum": ["people"]
           },
           "value": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Value2"
+              "$ref": "#/components/schemas/peopleValue"
             },
-            "description": ""
+            "description": "An array of person objects."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
           },
           "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Alternative representations of people data, if any."
           }
         },
         "examples": [
@@ -111750,8 +111893,9 @@
           }
         ]
       },
-      "Value2": {
-        "title": "Value2",
+      "PeopleValue": {
+        "title": "PeopleValue",
+        "description": "A person object containing detailed registration and personal information.",
         "required": [
           "id",
           "business_entity_verification_id",
@@ -111765,79 +111909,112 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "description": "A unique identifier for the person.",
+            "example": "6ffe1778-e2bb-404b-bc57-4906c62c34e6"
           },
           "business_entity_verification_id": {
-            "type": "string"
+            "type": "string",
+            "description": "The verification ID linking the person to the business record.",
+            "example": "477139f0-279b-415d-8e4c-8c3afbf9091a"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "description": "The ISO date when the person record was created.",
+            "example": "2024-11-12T19:56:17.821Z"
           },
           "updated_at": {
-            "type": ["string", "null"]
+            "type": "string",
+            "description": "The ISO date when the person record was last updated, or null if never updated.",
+            "example": "2024-11-12T19:56:17.821Z"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The full name of the person in the format of <last name, first name>",
+            "example": "CRAMER CATHERINE"
           },
           "titles": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+            "items": { "type": "string" },
+            "description": "A list of titles or roles held by the person.",
+            "example": ["MANAGER"]
           },
           "submitted": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Indicates whether the person's data was submitted for verification."
           },
           "source": {
             "type": "array",
+            "description": "Source information for the person data.",
             "items": {
-              "$ref": "#/components/schemas/Source"
-            },
-            "description": ""
-          }
-        },
-        "examples": [
-          {
-            "id": "6ffe1778-e2bb-404b-bc57-4906c62c34e6",
-            "business_entity_verification_id": "477139f0-279b-415d-8e4c-8c3afbf9091a",
-            "created_at": "2024-11-12T19:56:17.821Z",
-            "updated_at": null,
-            "name": "CRAMER CATHERINE",
-            "titles": ["MANAGER"],
-            "submitted": false,
-            "source": [
-              {
-                "id": "16741006-0c0b-4e96-bc15-c09e2bf5d040",
-                "type": "registration",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "The unique source ID.",
+                  "example": "16741006-0c0b-4e96-bc15-c09e2bf5d040"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "The type of source.",
+                  "example": "registration"
+                },
                 "metadata": {
-                  "state": "FL",
-                  "status": "active",
-                  "file_number": "L18000121621",
-                  "jurisdiction": "DOMESTIC"
+                  "type": "object",
+                  "properties": {
+                    "state": {
+                      "type": "string",
+                      "description": "The U.S. state associated with the registration.",
+                      "example": "FL"
+                    },
+                    "status": {
+                      "type": "string",
+                      "description": "The status of the registration.",
+                      "example": "active"
+                    },
+                    "file_number": {
+                      "type": "string",
+                      "description": "The file number associated with the registration.",
+                      "example": "L18000121621"
+                    },
+                    "jurisdiction": {
+                      "type": "string",
+                      "description": "The jurisdiction of the business.",
+                      "example": "DOMESTIC"
+                    }
+                  }
                 }
               }
-            ]
+            }
           }
-        ]
+        }
       },
       "Watchlist": {
         "title": "Watchlist",
-        "required": ["name", "value", "alternatives"],
+        "description": "Results from watchlist screening for the business, including metadata about any hits and a summary message.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for watchlist screening results."
           },
           "value": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null",
+              "object"
+            ],
+            "description": "The watchlist result; can be an object with metadata or null if there are no hits."
           },
           "alternatives": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+            "items": { "type": "string" },
+            "description": "Alternative watchlist result formats, if provided."
           }
         },
         "examples": [
@@ -111849,49 +112026,75 @@
         ]
       },
       "TinMatch": {
-        "title": "TinMatch",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
+        "description": "Result of TIN (Taxpayer Identification Number) verification with the IRS.",
         "properties": {
-          "name": {
-            "type": "string"
-          },
+          "name": { "type": "string" },
           "value": {
-            "type": "boolean"
+            "type": "object",
+            "description": "Detailed match result returned by the IRS verification system.",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": ["success", "failure"],
+                "description": "Indicates if a TIN match was found."
+              },
+              "message": {
+                "type": "string",
+                "description": "Descriptive result of the match attempt."
+              },
+              "sublabel": {
+                "type": "string",
+                "description": "Short summary label of the match status."
+              }
+            }
           },
-          "source.confidence": {
-            "type": "number"
-          },
-          "source.platformId": {
-            "type": "integer",
-            "contentEncoding": "int32"
+          "source.confidence": { "type": "number" },
+          "source.platformId": { "type": "integer", "format": "int32" },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string" },
+                    "message": { "type": "string" },
+                    "sublabel": { "type": "string" }
+                  }
+                },
+                "source": { "type": "integer" },
+                "confidence": { "type": "number" }
+              }
+            }
+          }
+        }
+      },
+      "TinMatchBoolean": {
+        "type": "object",
+        "description": "Boolean result representing the outcome of the TIN match verification.",
+        "properties": {
+          "name": { "type": "string" },
+          "value": { "type": "boolean" },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" }
           },
           "alternatives": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": ""
+              "type": "object",
+              "properties": {
+                "value": { "type": "boolean" }
+              }
+            }
           }
-        },
-        "examples": [
-          {
-            "name": "tin_match",
-            "value": true,
-            "source.confidence": 0.95,
-            "source.platformId": 16,
-            "alternatives": []
-          }
-        ]
+        }
       },
       "NameMatch": {
         "title": "NameMatch",
+        "description": "Provides the result of matching the submitted business name against official records, including status, message, and additional label information.",
         "required": [
           "name",
           "value",
@@ -111902,24 +112105,27 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the name match result.",
+            "enum": ["name_match"]
           },
           "value": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "True if the submitted name matches, false otherwise."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
           },
           "alternatives": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+            "items": { "type": "string" },
+            "description": "Alternative representations of the name match result."
           }
         },
         "examples": [
@@ -111932,50 +112138,427 @@
           }
         ]
       },
-      "AddressMatch": {
-        "title": "AddressMatch",
+      "NameMatchBoolean": {
+        "title": "NameMatchBoolean",
+        "description": "Indicates whether the business name submitted matches known records, represented as a boolean derived from the NameMatch object.",
         "required": [
           "name",
           "value",
-          "source.confidence",
-          "source.platformId",
+          "dependencies",
           "alternatives"
         ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for the boolean name match result.",
+            "enum": ["name_match_boolean"]
           },
           "value": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "True if the name matched according to the NameMatch object, false otherwise."
           },
-          "source.confidence": {
-            "type": "number"
-          },
-          "source.platformId": {
-            "type": "integer",
-            "contentEncoding": "int32"
-          },
-          "alternatives": {
+          "dependencies": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "Fields that were used to derive this boolean result."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "boolean",
+                  "description": "An alternative boolean result from a different source or logic."
+                }
+              },
+              "required": ["value"]
+            },
+            "description": "Alternative boolean outcomes based on different data or interpretations."
+          }
+        },
+        "examples": [
+          {
+            "name": "name_match_boolean",
+            "value": true,
+            "dependencies": ["name_match"],
+            "alternatives": [
+              {
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "AddressMatch": {
+        "title": "AddressMatch",
+        "description": "Indicates whether the submitted primary address matches any known addresses. This property returns an enum value: 'success' if a match is found, or 'failure' if not.",
+        "required": [
+          "name",
+          "value",
+          "dependencies",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name of the parent object: address_match.",
+            "enum": ["address_match"]
+          },
+          "value": {
+            "type": "string",
+            "description": "The address match result",
+            "enum": ["success", "failure"]
+          },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Fields that the address match result depends on (e.g., primary_address and addresses).",
+            "example": ["primary_address, addresses"]
+          },
+          "alternatives": {
+            "type": "array",
+            "description": "Alternative address match results with associated confidence scores.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "description": "The address alternative match result",
+                  "enum": ["success", "failure"]
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "The confidence score of the address match result."
+                }
+              }
+            }
           }
         },
         "examples": [
           {
             "name": "address_match",
+            "value": "success",
+            "dependencies": [
+                "primary_address",
+                "addresses"
+            ],
+            "alternatives": [
+                {
+                    "value": "success",
+                    "confidence": 0.9
+                }
+            ]
+          }
+        ]
+      },
+      "AddressMatchBoolean": {
+        "title": "AddressMatchBoolean",
+        "description": "A boolean representation of the address match result; true if address_match is 'success', false otherwise.",
+        "required": [
+          "name",
+          "value",
+          "dependencies",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for the boolean address match value.",
+            "enum": ["address_match_boolean"]
+          },
+          "value": {
+            "type": "boolean",
+            "description": "Boolean true if address_match is successful, false if not."
+          },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Dependencies for determining the boolean address match.",
+            "example": [
+              "address_match"
+            ]
+          },
+          "alternatives": {
+            "type": "array",
+            "description": "Alternative boolean values for address match.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "boolean",
+                  "description": "Boolean true if alternative address_match is successful, false if not."
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "name": "address_match_boolean",
             "value": true,
-            "source.confidence": 0.95,
-            "source.platformId": 16,
+            "dependencies": [
+                "address_match"
+            ],
+            "alternatives": [
+                {
+                    "value": true
+                }
+            ]
+          }
+        ]
+      },
+      "AddressRegisteredAgent": {
+        "title": "AddressRegisteredAgent",
+        "description": "Provides details about the registered agent's address if available, or null if not provided.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for the registered agent address.",
+            "enum": ["address_registered_agent"]
+          },
+          "value": {
+            "type": "object",
+            "description": "An object containing the registered agent address details, or null if not applicable."
+          },
+          "alternatives": {
+            "type": "array",
+            "description": "Alternative representations for the registered agent address.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "boolean",
+                  "description": "Boolean true if alternative address_registered_agent is successful, false if not."
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "name": "address_registered_agent",
+            "value": null,
             "alternatives": []
           }
         ]
       },
-      "SosMatch": {
-        "title": "SosMatch",
+      "AddressVerification": {
+        "title": "AddressVerification",
+        "description": "Details the result of the address verification process. Returns an object including an array of verified addresses, a status (as an enum of 'success' or 'failure'), a message, and additional labels.",
+        "required": [
+          "name",
+          "value",
+          "source.confidence",
+          "source.platformId",
+          "source.name",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for address verification.",
+            "enum": ["address_verification"]
+          },
+          "value": {
+            "type": "object",
+            "description": "An object containing the details of address verification.",
+            "properties": {
+              "addresses": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "An array of addresses that were verified."
+              },
+              "status": {
+                "type": "string",
+                "description": "The verification status.",
+                "enum": ["success", "failure"]
+              },
+              "message": {
+                "type": "string",
+                "description": "A message that explains the verification result.",
+                "example": "Match identified to the submitted Office Address"
+              },
+              "label": {
+                "type": "string",
+                "description": "A label categorizing the verification result.",
+                "example": "Office Address"
+              },
+              "sublabel": {
+                "type": "string",
+                "description": "Additional detail on the verification result.",
+                "example": "Verified"
+              }
+            }
+          },
+          "source.confidence": {
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "source.name": {
+            "type": "string",
+            "description": "The name of the source, used for Worth's internal data tracking."
+          },
+          "alternatives": {
+            "type": "array",
+            "description": "Alternative address verification results with associated confidence scores.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "addresses": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "An array of matched addresses."
+                    },
+                    "status": {
+                      "type": "string",
+                      "description": "The verification status.",
+                      "enum": ["success", "failure"]
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Explanation or detail about the match result.",
+                      "example": "Match identified to the submitted Office Address"
+                    },
+                    "label": {
+                      "type": "string",
+                      "description": "A label categorizing the verification result.",
+                      "example": "Office Address"
+                    },
+                    "sublabel": {
+                      "type": "string",
+                      "description": "Additional detail on the verification result.",
+                      "example": "Verified"
+                    }
+                  },
+                  "required": ["addresses", "status", "message", "label", "sublabel"]
+                },
+                "source": {
+                  "type": "integer",
+                  "description": "The platform ID for the address verification data.",
+                  "example": 16
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "The decimal confidence score (between 0.0 indicating no confidence and 1.0 indicating 100% confidence) for the address verification.",
+                  "example": 0.95
+                }
+              },
+              "required": ["value", "source", "confidence"]
+            }
+          }
+        },
+        "examples": [
+          {
+            "name": "address_verification",
+            "value": {
+              "addresses": [
+                "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                "954 E Union St, Seattle, WA 98122-4289",
+                "300 E Lombard St, Baltimore, MD 21202-3219",
+                "92 Hardwood Way, Brattleboro, VT 05301-2951"
+              ],
+              "status": "success",
+              "message": "Match identified to the submitted Office Address",
+              "label": "Office Address",
+              "sublabel": "Verified"
+            },
+            "source.confidence": 0.95,
+            "source.platformId": 16,
+            "alternatives": [
+              {
+                "value": {
+                  "addresses": [
+                    "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                    "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                    "954 E Union St, Seattle, WA 98122-4289",
+                    "300 E Lombard St, Baltimore, MD 21202-3219",
+                    "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                  ],
+                  "status": "success",
+                  "message": "Match identified to the submitted Office Address",
+                  "label": "Office Address",
+                  "sublabel": "Verified"
+                },
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ]
+      },
+      "AddressVerificationBoolean": {
+        "title": "AddressVerificationBoolean",
+        "description": "A boolean flag representing whether address verification was successful. Returns true if the address verification status is 'success', otherwise false.",
+        "required": [
+          "name",
+          "value",
+          "dependencies",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for the boolean representation of address verification.",
+            "enum": ["address_verification_boolean"]
+          },
+          "value": {
+            "type": "boolean",
+            "description": "True if address verification is successful (i.e. status 'success'), false otherwise."
+          },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "The fields that address verification depends upon."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "boolean" },
+            "description": "Boolean value for whether address verification succeeded for alternatives, if any."
+          }
+        },
+        "examples": [
+          {
+            "name": "address_verification_boolean",
+            "value": true,
+            "dependencies": [
+              "address_verification"
+            ],
+            "alternatives": [
+              {
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "Addresses": {
+        "title": "Addresses",
+        "description": "A list of additional addresses associated with the business.",
         "required": [
           "name",
           "value",
@@ -111986,53 +112569,420 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for addresses.",
+            "enum": ["addresses"]
           },
           "value": {
-            "type": "boolean"
-          },
-          "source.confidence": {
-            "type": "number"
-          },
-          "source.platformId": {
-            "type": "integer",
-            "contentEncoding": "int32"
-          },
-          "alternatives": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": ""
+            "description": "An array of address strings containing street address, city, state, and zip code.",
+            "example": [
+              "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+              "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+              "954 E Union St, Seattle, WA 98122-4289",
+              "300 E Lombard St, Baltimore, MD 21202-3219",
+              "92 Hardwood Way, Brattleboro, VT 05301-2951"
+            ]
+          },
+          "source.confidence": {
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "alternatives": {
+            "type": "array",
+            "description": "An array of alternative sets of deliverable addresses with associated source and confidence values.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "An array of alternative deliverable addresses with street address, city, state, and zip code."
+                },
+                "source": {
+                  "type": "integer",
+                  "description": "Source identifier for the alternative address set."
+                },
+                "confidence": {
+                  "type": "number",
+                  "description": "The decimal confidence score (between 0.0 indicating no confidence and 1.0 indicating 100% confidence) for the address values.",
+                  "example": 0.95
+                }
+              },
+              "required": ["value", "source", "confidence"]
+            }
           }
         },
         "examples": [
           {
-            "name": "sos_match",
-            "value": true,
-            "source.confidence": 0.95,
-            "source.platformId": 16,
-            "alternatives": []
+            "name": "addresses",
+            "value": [
+              "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+              "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+              "954 E Union St, Seattle, WA 98122-4289",
+              "300 E Lombard St, Baltimore, MD 21202-3219",
+              "92 Hardwood Way, Brattleboro, VT 05301-2951"
+            ],
+            "alternatives": [
+              {
+                "value": [
+                  "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                  "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                  "954 E Union St, Seattle, WA 98122-4289",
+                  "300 E Lombard St, Baltimore, MD 21202-3219",
+                  "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                ],
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
           }
         ]
       },
-      "WatchlistHits": {
-        "title": "WatchlistHits",
-        "required": ["name", "value", "alternatives"],
+      "AddressesDeliverable": {
+        "title": "AddressesDeliverable",
+        "description": "A collection of addresses that are verified as deliverable.",
+        "required": [
+          "name",
+          "value",
+          "source.confidence",
+          "source.platformId",
+          "alternatives"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for deliverable addresses.",
+            "enum": ["address_deliverable"]
           },
           "value": {
-            "type": ["string", "null"]
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "An array of deliverable address strings."
+          },
+          "source.confidence": {
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "object" },
+            "description": "Alternative deliverable address sets with their confidence scores."
+          }
+        },
+        "examples": [
+          {
+            "name": "addresses_deliverable",
+            "value": [
+              "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+              "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+              "954 E Union St, Seattle, WA 98122-4289",
+              "300 E Lombard St, Baltimore, MD 21202-3219",
+              "92 Hardwood Way, Brattleboro, VT 05301-2951"
+            ],
+            "source.confidence": 0.95,
+            "source.platformId": 16,
+            "alternatives": [
+              {
+                "value": [
+                  "5529 186th Pl SW, Lynnwood, WA 98037-4325",
+                  "581 Old Sunset Hill Rd, Hendersonville, NC 28792-8362",
+                  "954 E Union St, Seattle, WA 98122-4289",
+                  "300 E Lombard St, Baltimore, MD 21202-3219",
+                  "92 Hardwood Way, Brattleboro, VT 05301-2951"
+                ],
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ]
+      },
+      "Corporation": {
+        "title": "Corporation",
+        "description": "Indicates whether the business is structured as a public or private corporation. Possible enum values are 'Public' or 'Private'; a null value indicates that the information is not available.",
+        "required": [
+          "name",
+          "value",
+          "source.platformId",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for corporation information."
+          },
+          "value": {
+            "type": ["string", "null"],
+            "description": "The corporation type ('Public' or 'Private'), or null if not provided."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "The platform identifier for the corporation data source."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "object" },
+            "description": "Alternative representations of the corporation data."
+          }
+        },
+        "examples": [
+          {
+            "name": "corporation",
+            "value": null,
+            "source.platformId": 17,
+            "alternatives": [
+              {
+                "value": null,
+                "source": 17
+              }
+            ]
+          }
+        ]
+      },
+      "KybSubmitted": {
+        "title": "KybSubmitted",
+        "description": "Indicates whether the KYB process has been initiated for the business. True means KYB data is available.",
+        "required": [
+          "name",
+          "value",
+          "source.confidence",
+          "source.platformId",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for the KYB submission indicator.",
+            "enum": ["kyb_submitted"]
+          },
+          "value": {
+            "type": "boolean",
+            "description": "True if KYB has been succesfully submitted, false otherwise."
+          },
+          "source.confidence": {
+            "type": "number",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "A property used for Worth's internal data tracking."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "object" },
+            "description": "Alternative representations for the KYB submission flag."
+          }
+        },
+        "examples": [
+          {
+            "name": "kyb_submitted",
+            "value": true,
+            "source.confidence": 0.95,
+            "source.platformId": 16,
+            "alternatives": [
+              {
+                "value": true,
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ]
+      },
+      "NamesSubmitted": {
+        "title": "NamesSubmitted",
+        "description": "A list of business names that were submitted during the KYB process along with a flag indicating whether each name was submitted.",
+        "required": [
+          "name",
+          "value",
+          "source.confidence",
+          "source.platformId",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for submitted names."
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "submitted"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The submitted business name."
+                },
+                "submitted": {
+                  "type": "boolean",
+                  "description": "True if the business name was submitted."
+                }
+              }
+            },
+            "description": "An array of objects containing submitted business names and their submission status."
+          },
+          "source.confidence": {
+            "type": "number",
+            "description": "The confidence score for the submitted names data."
+          },
+          "source.platformId": {
+            "type": "integer",
+            "contentEncoding": "int32",
+            "description": "The platform identifier for the submitted names source."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "object" },
+            "description": "Alternative representations for the submitted names."
+          }
+        },
+        "examples": [
+          {
+            "name": "names_submitted",
+            "value": [
+              {
+                "name": "WARM PRODUCTS INC",
+                "submitted": true
+              }
+            ],
+            "source.confidence": 0.95,
+            "source.platformId": 16,
+            "alternatives": [
+              {
+                "value": [
+                  {
+                    "name": "WARM PRODUCTS INC",
+                    "submitted": true
+                  }
+                ],
+                "source": 16,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ]
+      },
+      "SosActive": {
+        "type": "object",
+        "description": "Indicates whether the business is currently active according to Secretary of State (SOS) filings.",
+        "properties": {
+          "name": { "type": "string" },
+          "value": {
+            "type": "boolean",
+            "description": "True if the business is marked active by the SOS; otherwise false."
+          },
+          "source.confidence": { "type": "number" },
+          "source.platformId": { "type": "integer", "format": "int32" },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "boolean" },
+                "source": { "type": "integer" },
+                "confidence": { "type": "number" }
+              }
+            }
+          }
+        }
+      },
+      "SosMatch": {
+        "type": "object",
+        "description": "Indicates if the submitted entity matches the business found in SOS records.",
+        "properties": {
+          "name": { "type": "string" },
+          "value": {
+            "type": "string",
+            "enum": ["success", "failure"],
+            "description": "The match result. 'success' means match found in SOS records; 'failure' means no match."
+          },
+          "source.confidence": { "type": "number" },
+          "source.platformId": { "type": "integer", "format": "int32" },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "source": { "type": "integer" },
+                "confidence": { "type": "number" }
+              }
+            }
+          }
+        }
+      },
+      "SosMatchBoolean": {
+        "type": "object",
+        "description": "Boolean result indicating if a match was found in SOS records.",
+        "properties": {
+          "name": { "type": "string" },
+          "value": { "type": "boolean" },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" }
           },
           "alternatives": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": ""
+              "type": "object",
+              "properties": {
+                "value": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      },
+      "WatchlistHits": {
+        "title": "WatchlistHits",
+        "description": "The total number of watchlist hits for the business. Null indicates no hits were recorded.",
+        "required": [
+          "name",
+          "value",
+          "alternatives"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The field name for watchlist hits."
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The count of watchlist hits as a string, or null if none."
+          },
+          "alternatives": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Alternative values for the watchlist hits count."
           }
         },
         "examples": [
@@ -112045,6 +112995,7 @@
       },
       "Match": {
         "title": "Match",
+        "description": "A list of merchant match objects representing potential matches to high-risk or fraudulent merchant records.",
         "required": [
           "name",
           "value",
@@ -112055,28 +113006,27 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "The field name for match results."
           },
           "value": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Value3"
-            },
-            "description": ""
+            "items": { "$ref": "#/components/schemas/Value3" },
+            "description": "An array of detailed merchant match objects."
           },
           "source.confidence": {
-            "type": "number"
+            "type": "number",
+            "description": "The confidence score for the match result data."
           },
           "source.platformId": {
             "type": "integer",
-            "contentEncoding": "int32"
+            "contentEncoding": "int32",
+            "description": "The data source platform identifier for the match result."
           },
           "alternatives": {
             "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+            "items": { "type": "string" },
+            "description": "Alternative representations of match results, if any."
           }
         },
         "examples": [
@@ -112113,7 +113063,9 @@
                   "createdDate": "2021-07-14",
                   "comments": "Added for reasons of fraud",
                   "merchRefNum": "1996-220406041727-AK45CD85",
-                  "urls": ["www.merchant.com"],
+                  "urls": [
+                    "www.merchant.com"
+                  ],
                   "principals": [
                     {
                       "firstName": "DAVID",
@@ -112143,15 +113095,9 @@
                   ],
                   "urlGroups": [
                     {
-                      "exactMatchUrls": {
-                        "urls": ["WWW.SHOESHOP.COM"]
-                      },
-                      "closeMatchUrls": {
-                        "urls": ["WWW.SHOESHOP.COM"]
-                      },
-                      "noMatchUrls": {
-                        "urls": ["WWW.SHOESHOP.COM"]
-                      }
+                      "exactMatchUrls": { "urls": ["WWW.SHOESHOP.COM"] },
+                      "closeMatchUrls": { "urls": ["WWW.SHOESHOP.COM"] },
+                      "noMatchUrls": { "urls": ["WWW.SHOESHOP.COM"] }
                     }
                   ]
                 },

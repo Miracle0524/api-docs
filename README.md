@@ -72,4 +72,4 @@ npx @mintlify/scraping@latest openapi-file openapi/file.json -o api-reference/fo
 
 
 ## Summary
-Now you're all set towork with Mintlify locally. Happy coding!
+Now you're all set to work with Mintlify locally. Happy coding!
