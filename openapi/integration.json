@@ -47179,13 +47179,15 @@
       "get": {
         "tags": ["Verification"],
         "summary": "KYC Ownership Verification",
+        "description": "Know Your Customer: returns a list of individuals with ownership or control, including their submitted personal details and verification results.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service.",
         "operationId": "KYCOwnershipVerification",
         "parameters": [
           {
             "name": "businessId",
             "in": "path",
-            "description": "",
+            "description": "The unique universal identifier string for the business.",
             "required": true,
+            "example": "74cf5442-6f51-4666-bed8-0bee0ca793cc",
             "style": "simple",
             "schema": {
               "type": "string"
@@ -47400,7 +47402,256 @@
                 "schema": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Success20"
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "description": "Indicates whether the request succeeded or failed.",
+                          "enum": ["success", "fail"],
+                          "example": "success"
+                        },
+                        "message": {
+                          "type": "string",
+                          "description": "Descriptive message about the result of the operation.",
+                          "example": "KYC Ownership Verification fetched successfully"
+                        },
+                        "data": {
+                          "type": "array",
+                          "description": "List of ownership verification records.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "description": "Unique universal identifier for the ownership verification record",
+                                "example": "4e56263d-f076-4c9f-947c-9dbf8f9c3556"
+                              },
+                              "title": {
+                                "type": "string",
+                                "description": "The title or role of the individual.",
+                                "enum": [
+                                  "Partner",
+                                  "Limited Partner",
+                                  "Director",
+                                  "Chief Accounting Officer",
+                                  "Chief Executive Officer",
+                                  "Chief Operations Officer",
+                                  "President",
+                                  "Vice President",
+                                  "Treasurer",
+                                  "Assistant Treasurer",
+                                  "1% Shareholder",
+                                  "Shareholder",
+                                  "Controller",
+                                  "Managing Member",
+                                  "Owner",
+                                  "Sole Proprietor",
+                                  "Executor",
+                                  "Beneficiary",
+                                  "Trustee",
+                                  "Administrator"
+                                ]
+                              },
+                              "first_name": {
+                                "type": "string",
+                                "description": "First name of the customer",
+                                "example": "John"
+                              },
+                              "last_name": {
+                                "type": "string",
+                                "description": "Last name of the customer",
+                                "example": "Doe"
+                              },
+                              "email": {
+                                "type": "string",
+                                "format": "email",
+                                "description": "Email address of the customer",
+                                "example": "test@samplemail.com"
+                              },
+                              "mobile": {
+                                "type": "string",
+                                "description": "Mobile phone number of the customer, with country and area codes.",
+                                "example": "+12345678909"
+                              },
+                              "date_of_birth": {
+                                "type": "string",
+                                "description": "Encrypted date of birth",
+                                "example": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw="
+                              },
+                              "address_apartment": {
+                                "type": ["string", "null"],
+                                "description": "Apartment or unit number",
+                                "example": "Apt 101"
+                              },
+                              "address_line_1": {
+                                "type": "string",
+                                "description": "First line of the address e.g. street address.",
+                                "example": "123 Main St"
+                              },
+                              "address_line_2": {
+                                "type": ["string", "null"],
+                                "description": "Second line of the address (optional) e.g. Building Number",
+                                "example": "Building 5"
+                              },
+                              "address_city": {
+                                "type": "string",
+                                "description": "City of the address",
+                                "example": "Orlando"
+                              },
+                              "address_state": {
+                                "type": "string",
+                                "description": "State or province of the address",
+                                "example": "FL"
+                              },
+                              "address_postal_code": {
+                                "type": "string",
+                                "description": "Postal or ZIP code",
+                                "example": "32801"
+                              },
+                              "address_country": {
+                                "type": "string",
+                                "description": "Country of the address",
+                                "example": "USA"
+                              },
+                              "created_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Timestamp when the record was created",
+                                "example": "2025-04-01T07:24:55.205Z"
+                              },
+                              "created_by": {
+                                "type": "string",
+                                "description": "Unique universal identifier of the user who created the record",
+                                "example": "7882addb-9b7e-436b-8392-38c713dc47aa"
+                              },
+                              "updated_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Timestamp when the record was last updated",
+                                "example": "2025-04-01T07:31:07.716Z"
+                              },
+                              "updated_by": {
+                                "type": "string",
+                                "description": "Identifier of the user who last updated the record",
+                                "example": "7882addb-9b7e-436b-8392-38c713dc47aa"
+                              },
+                              "last_four_of_ssn": {
+                                "type": "string",
+                                "description": "Last four digits of the SSN",
+                                "example": "6789"
+                              },
+                              "year_of_birth": {
+                                "type": "string",
+                                "description": "Year of birth, if available",
+                                "example": "1975"
+                              },
+                              "kyc_check": {
+                                "type": "object",
+                                "description": "Results of the KYC verification check for this customer",
+                                "example": {
+                                  "kyc_check": {
+                                    "name": {
+                                      "summary": "match"
+                                    },
+                                    "status": "success",
+                                    "address": {
+                                      "type": "no_data",
+                                      "po_box": "no_data",
+                                      "summary": "match"
+                                    },
+                                    "id_number": {
+                                      "summary": "match"
+                                    },
+                                    "phone_number": {
+                                      "summary": "match",
+                                      "area_code": "match"
+                                    },
+                                    "date_of_birth": {
+                                      "summary": "match"
+                                    }
+                                  }
+                                },
+                                "properties": {
+                                  "status": {
+                                    "type": "string",
+                                    "description": "Overall KYC check result status",
+                                    "enum": ["success", "failed"]
+                                  },
+                                  "name": {
+                                    "type": "object",
+                                    "description": "An object containing the `summary` property",
+                                    "properties": {
+                                      "summary": {
+                                        "type": "string",
+                                        "description": "Whether the name matches official records",
+                                        "enum": ["match", "no_match"]
+                                      }
+                                    }
+                                  },
+                                  "address": {
+                                    "type": "object",
+                                    "description": "An object containing the `type`, `po_box`, and `summary` properties",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "description": "Result of address type check, `no_data` if not found",
+                                        "example": "commercial"
+                                      },
+                                      "po_box": {
+                                        "type": "string",
+                                        "description": "Result of PO Box check, `no` if not found",
+                                        "example": "432"
+                                      },
+                                      "summary": {
+                                        "type": "string",
+                                        "description": "Whether a match was found for address verification",
+                                        "enum": ["match", "no_match"]
+                                      }
+                                    }
+                                  },
+                                  "id_number": {
+                                    "type": "object",
+                                    "description": "An object containing the `summary` property",
+                                    "properties": {
+                                      "summary": {
+                                        "type": "string",
+                                        "description": "Match status of the ID number",
+                                        "enum": ["match", "no_match"]
+                                      }
+                                    }
+                                  },
+                                  "phone_number": {
+                                    "type": "object",
+                                    "description": "An object containing the `summary` and `area_code` properties",
+                                    "properties": {
+                                      "summary": {
+                                        "type": "string",
+                                        "description": "Phone number match status",
+                                        "enum": ["match", "no_match"]
+                                      },
+                                      "area_code": {
+                                        "type": "string",
+                                        "description": "Area code match status",
+                                        "enum": ["match", "no_match"]
+                                      }
+                                    }
+                                  },
+                                  "date_of_birth": {
+                                    "type": "object",
+                                    "properties": {
+                                      "summary": {
+                                        "type": "string",
+                                        "description": "Date of birth match status",
+                                        "enum": ["match", "no_match"]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     },
                     {
                       "examples": [
@@ -47409,74 +47660,53 @@
                           "message": "KYC Ownership Verification fetched successfully",
                           "data": [
                             {
-                              "id": "4e56263d-f076-4c9f-947c-9dbf8f9c3556",
-                              "title": 3,
-                              "first_name": "Leslie",
-                              "last_name": "Knope",
-                              "ssn": "U2FsdGVkX19Xie5AknXJBH0Lc+UHRS69/0hOXf5qhC4=",
-                              "email": "abc@xyz.com",
-                              "mobile": "+12345678909",
-                              "date_of_birth": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw=",
-                              "address_apartment": null,
-                              "address_line_1": "123 Main St.",
-                              "address_line_2": null,
-                              "address_city": "Pawnee",
-                              "address_state": "IN",
-                              "address_postal_code": "46001",
-                              "address_country": "USA",
-                              "created_at": "2025-04-01T07:24:55.205Z",
-                              "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                              "updated_at": "2025-04-01T07:31:07.716Z",
-                              "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                              "last_four_of_ssn": "6789",
-                              "year_of_birth": "",
-                              "kyc_check": {
-                                "status": "failed"
-                              }
-                            },
-                            {
-                              "id": "54b8740a-7cc2-4d12-88b6-840b471ed311",
-                              "title": 3,
-                              "first_name": "Leslie",
-                              "last_name": "Knope",
-                              "ssn": "U2FsdGVkX1+1a0TQ+yChMo7e3P+nKys89pQxXdJVHbE=",
-                              "email": "abc@xyz.com",
-                              "mobile": "+12345678909",
-                              "date_of_birth": "U2FsdGVkX19smUZSI4p9Ci416JoL1D26gPukK1EMR1c=",
-                              "address_apartment": null,
-                              "address_line_1": "123 Main St.",
-                              "address_line_2": null,
-                              "address_city": "Pawnee",
-                              "address_state": "IN",
-                              "address_postal_code": "46001",
-                              "address_country": "USA",
-                              "created_at": "2025-04-01T05:16:58.128Z",
-                              "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                              "updated_at": "2025-04-01T07:34:15.601Z",
-                              "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                              "last_four_of_ssn": "6789",
-                              "year_of_birth": "",
-                              "kyc_check": {
-                                "name": {
-                                  "summary": "match"
-                                },
-                                "status": "success",
-                                "address": {
-                                  "type": "no_data",
-                                  "po_box": "no_data",
-                                  "summary": "match"
-                                },
-                                "id_number": {
-                                  "summary": "match"
-                                },
-                                "phone_number": {
-                                  "summary": "match",
-                                  "area_code": "match"
-                                },
-                                "date_of_birth": {
-                                  "summary": "match"
+                              "status": "success",
+                              "message": "KYC Ownership Verification fetched successfully",
+                              "data": [
+                                {
+                                  "id": "47797fcf-09ff-46d7-b500-39141135c52f",
+                                  "title": "Director",
+                                  "first_name": "Leslie",
+                                  "last_name": "Knope",
+                                  "email": "admin@joinworth.com",
+                                  "mobile": "+12345678909",
+                                  "date_of_birth": "U2FsdGVkX18x3EVusJYTUPLOifzxMOo8TsAJS8YoHtg=",
+                                  "address_apartment": null,
+                                  "address_line_1": "123 Main St.",
+                                  "address_line_2": null,
+                                  "address_city": "Pawnee",
+                                  "address_state": "Indiana",
+                                  "address_postal_code": "46001",
+                                  "address_country": "USA",
+                                  "created_at": "2024-05-16T11:34:14.545Z",
+                                  "created_by": "19ac7412-6c06-4742-8c52-38787c4e889a",
+                                  "updated_at": "2024-05-16T11:34:14.545Z",
+                                  "updated_by": "19ac7412-6c06-4742-8c52-38787c4e889a",
+                                  "last_four_of_ssn": "6789",
+                                  "year_of_birth": "",
+                                  "kyc_check": {
+                                    "name": {
+                                      "summary": "match"
+                                    },
+                                    "status": "success",
+                                    "address": {
+                                      "type": "no_data",
+                                      "po_box": "no_data",
+                                      "summary": "match"
+                                    },
+                                    "id_number": {
+                                      "summary": "match"
+                                    },
+                                    "phone_number": {
+                                      "summary": "match",
+                                      "area_code": "match"
+                                    },
+                                    "date_of_birth": {
+                                      "summary": "match"
+                                    }
+                                  }
                                 }
-                              }
+                              ]
                             }
                           ]
                         }
@@ -47489,76 +47719,49 @@
                   "status": "success",
                   "message": "KYC Ownership Verification fetched successfully",
                   "data": [
-                    {
-                      "id": "4e56263d-f076-4c9f-947c-9dbf8f9c3556",
-                      "title": 3,
-                      "first_name": "Leslie",
-                      "last_name": "Knope",
-                      "ssn": "U2FsdGVkX19Xie5AknXJBH0Lc+UHRS69/0hOXf5qhC4=",
-                      "email": "abc@xyz.com",
-                      "mobile": "+12345678909",
-                      "date_of_birth": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw=",
-                      "address_apartment": null,
-                      "address_line_1": "123 Main St.",
-                      "address_line_2": null,
-                      "address_city": "Pawnee",
-                      "address_state": "IN",
-                      "address_postal_code": "46001",
-                      "address_country": "USA",
-                      "created_at": "2025-04-01T07:24:55.205Z",
-                      "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                      "updated_at": "2025-04-01T07:31:07.716Z",
-                      "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                      "last_four_of_ssn": "6789",
-                      "year_of_birth": "",
-                      "kyc_check": {
-                        "status": "failed"
+                      {
+                          "id": "47797fcf-09ff-46d7-b500-39141135c52f",
+                          "title": "Director",
+                          "first_name": "Leslie",
+                          "last_name": "Knope",
+                          "email": "admin@joinworth.com",
+                          "mobile": "+12345678909",
+                          "date_of_birth": "U2FsdGVkX18x3EVusJYTUPLOifzxMOo8TsAJS8YoHtg=",
+                          "address_apartment": null,
+                          "address_line_1": "123 Main St.",
+                          "address_line_2": null,
+                          "address_city": "Pawnee",
+                          "address_state": "Indiana",
+                          "address_postal_code": "46001",
+                          "address_country": "USA",
+                          "created_at": "2024-05-16T11:34:14.545Z",
+                          "created_by": "19ac7412-6c06-4742-8c52-38787c4e889a",
+                          "updated_at": "2024-05-16T11:34:14.545Z",
+                          "updated_by": "19ac7412-6c06-4742-8c52-38787c4e889a",
+                          "last_four_of_ssn": "6789",
+                          "year_of_birth": "",
+                          "kyc_check": {
+                              "name": {
+                                  "summary": "match"
+                              },
+                              "status": "success",
+                              "address": {
+                                  "type": "no_data",
+                                  "po_box": "no_data",
+                                  "summary": "match"
+                              },
+                              "id_number": {
+                                  "summary": "match"
+                              },
+                              "phone_number": {
+                                  "summary": "match",
+                                  "area_code": "match"
+                              },
+                              "date_of_birth": {
+                                  "summary": "match"
+                              }
+                          }
                       }
-                    },
-                    {
-                      "id": "54b8740a-7cc2-4d12-88b6-840b471ed311",
-                      "title": 3,
-                      "first_name": "Leslie",
-                      "last_name": "Knope",
-                      "ssn": "U2FsdGVkX1+1a0TQ+yChMo7e3P+nKys89pQxXdJVHbE=",
-                      "email": "abc@xyz.com",
-                      "mobile": "+12345678909",
-                      "date_of_birth": "U2FsdGVkX19smUZSI4p9Ci416JoL1D26gPukK1EMR1c=",
-                      "address_apartment": null,
-                      "address_line_1": "123 Main St.",
-                      "address_line_2": null,
-                      "address_city": "Pawnee",
-                      "address_state": "IN",
-                      "address_postal_code": "46001",
-                      "address_country": "USA",
-                      "created_at": "2025-04-01T05:16:58.128Z",
-                      "created_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                      "updated_at": "2025-04-01T07:34:15.601Z",
-                      "updated_by": "7882addb-9b7e-436b-8392-38c713dc47aa",
-                      "last_four_of_ssn": "6789",
-                      "year_of_birth": "",
-                      "kyc_check": {
-                        "name": {
-                          "summary": "match"
-                        },
-                        "status": "success",
-                        "address": {
-                          "type": "no_data",
-                          "po_box": "no_data",
-                          "summary": "match"
-                        },
-                        "id_number": {
-                          "summary": "match"
-                        },
-                        "phone_number": {
-                          "summary": "match",
-                          "area_code": "match"
-                        },
-                        "date_of_birth": {
-                          "summary": "match"
-                        }
-                      }
-                    }
                   ]
                 }
               }
