@@ -18,6 +18,7 @@
       "post": {
         "tags": ["Bulk Import"],
         "summary": "Import Business",
+        "description": "Imports multiple businesses in a single request for streamlined bulk onboarding.",
         "operationId": "ImportBusiness",
         "parameters": [
           {

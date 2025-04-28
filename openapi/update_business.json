@@ -18,6 +18,7 @@
       "patch": {
         "tags": ["Update Business"],
         "summary": "Update Business",
+        "description": "Update an existing business record based on the provided details.",
         "operationId": "UpdateBusiness",
         "parameters": [
           {

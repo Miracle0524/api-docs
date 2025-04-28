@@ -1428,6 +1428,7 @@
       "get": {
         "tags": ["Banking"],
         "summary": "Banking Information",
+        "description": "Retrieve banking information for a particular business.",
         "operationId": "BusinessBankingInformation",
         "parameters": [
           {
@@ -8075,6 +8076,7 @@
       "get": {
         "tags": ["Accounting"],
         "summary": "Get Reports",
+        "description": "Retrieve reports (balance sheet, income statement, or cash flow) associated with a particular business_id.",
         "operationId": "GetReports",
         "parameters": [
           {
@@ -19208,6 +19210,7 @@
       "get": {
         "tags": ["Public Records"],
         "summary": "Public Records",
+        "description": "Retrieve public records associated with a particular businessID",
         "operationId": "PublicRecords",
         "parameters": [
           {
@@ -20705,6 +20708,7 @@
       "get": {
         "tags": ["Taxation"],
         "summary": "Tax Filing",
+        "description": "Retrieve annualized tax data associated with a particular businessID",
         "operationId": "TaxFiling",
         "parameters": [
           {
@@ -22752,6 +22756,7 @@
       "get": {
         "tags": ["Verification"],
         "summary": "Get Website Data",
+        "description": "Fetch enriched business website data, including domain details, SSL status, and associated metadata.",
         "operationId": "GetWebsiteData",
         "parameters": [
           {
@@ -26250,6 +26255,7 @@
       "get": {
         "tags": ["Middesk"],
         "summary": "Get Verification Details",
+        "description": "Retrieves detailed verification results for a business, including submitted values, matched sources, and confidence levels.",
         "operationId": "GetVerificationDetails1",
         "parameters": [
           {

@@ -3654,6 +3654,7 @@
       "post": {
         "tags": ["Invites"],
         "summary": "Send Business Invite",
+        "description": "Invite applicants to be added to an existing Business.",
         "operationId": "SendBusinessInvite",
         "parameters": [
           {
@@ -7287,6 +7288,7 @@
       "get": {
         "tags": ["Businesses"],
         "summary": "Get Business By ID",
+        "description": "Retrieve details for a particular business associated with the businessID provided",
         "operationId": "GetBusinessByID",
         "parameters": [
           {
@@ -9962,6 +9964,7 @@
       "get": {
         "tags": ["Businesses"],
         "summary": "Get Customer Businesses",
+        "description": "Get all businesses associated with a particular customerID.",
         "operationId": "GetCustomerBusinesses",
         "parameters": [
           {
@@ -27533,6 +27536,7 @@
       "get": {
         "tags": ["Cases"],
         "summary": "Get Customer Cases",
+        "description": "Retrieve all cases associated with a particular customerID.",
         "operationId": "GetCustomerCases",
         "parameters": [
           {
@@ -27834,6 +27838,7 @@
       "get": {
         "tags": ["Cases"],
         "summary": "Get Business Cases",
+        "description": "Retrieve details about cases associated with a particular customerID and businessID.",
         "operationId": "GetCustomer'sBusinessCases",
         "parameters": [
           {
@@ -29254,6 +29259,7 @@
       "get": {
         "tags": ["Cases"],
         "summary": "Get Customer Case By ID",
+        "description": "Retrieve details about a particular case associated with the given customerID and caseID.",
         "operationId": "GetCustomerCaseByID",
         "parameters": [
           {

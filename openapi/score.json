@@ -18,6 +18,7 @@
       "get": {
         "tags": ["Misc"],
         "summary": "Get Business Score",
+        "description": "Retrieve the Worth score and detailed score breakdown for the specified business entity.",
         "operationId": "GetBusinessScore",
         "parameters": [
           {
