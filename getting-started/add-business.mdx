@@ -1,0 +1,195 @@
+---
+title: Add Business
+description: 'The following steps are intended to help you add a business to the customer portal. 
+This step is needed in order to generate a business ID. This business ID will be used to make other API calls such as KYB and KYC as it serves as the unique identifier of each business that is onboarded.'
+---
+
+## 1. *Customer Sign In*
+
+- Using your login credentials you will sign into the customer portal via the [API Customer Sign In](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) endpoint  
+- Upon signing in you will get an _`id_token`_ and _`customer_id`_  
+  - These two identifiers are needed to make the **Add Business** call  
+
+## 2. *Add Business*
+_For more information on the Add Business route, please see the [API Reference for Add Business](https://docs.worthai.com/api-reference/add-or-update-business/add-business)_.
+- The following four data fields are the _**MINIMUM**_ requirements needed to Add a Business:
+
+  1. **Authorization**: <span style={{ color: 'red', fontWeight: 'bold' }}>REQUIRED</span>  
+     - Insert the `id_token` captured from the Customer Sign In call for authentication  
+
+  2. **Customer ID**: <span style={{ color: 'red', fontWeight: 'bold' }}>REQUIRED</span>  
+     - Insert the `customer_id` captured from the Customer Sign In call for authentication  
+
+  3. **External ID**: <span style={{ color: 'red', fontWeight: 'bold' }}>REQUIRED</span>  
+     - This is any unique identifier that you want to use for this business  
+
+  4. **Name**: <span style={{ color: 'red', fontWeight: 'bold' }}>REQUIRED</span>  
+     - This is the name of the company that you are adding  
+
+**Important Note**: while there are only four required fields for the Add Business route, the more information that is captured in the Add Business data fields, the more robust and enriched the KYB/KYC response data will be. 
+
+**Required/Recommended Fields: KYB**
+<br/>The following fields are **_recommended_** when making the Add Business call for **KYB**, as it will return a more robust data set:
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Required / Recommended</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td>✅ Required</td>
+      <td>Legal business name</td>
+    </tr>
+    <tr>
+      <td><code>external_id</code></td>
+      <td>✅ Required</td>
+      <td>Internal identifier for tracking</td>
+    </tr>
+    <tr>
+      <td><code>tin</code> (Tax ID)</td>
+      <td>🔶 Recommended</td>
+      <td>Strongest match for business identity</td>
+    </tr>
+    <tr>
+      <td><code>address_line_1</code></td>
+      <td>🔶 Recommended</td>
+      <td>Business street address</td>
+    </tr>
+    <tr>
+      <td><code>address_city</code></td>
+      <td>🔶 Recommended</td>
+      <td>City of the business</td>
+    </tr>
+    <tr>
+      <td><code>address_state</code></td>
+      <td>🔶 Recommended</td>
+      <td>State where business operates</td>
+    </tr>
+    <tr>
+      <td><code>address_postal_code</code></td>
+      <td>🔶 Recommended</td>
+      <td>ZIP/Postal code</td>
+    </tr>
+    <tr>
+      <td><code>naics_code</code> <em>or</em> <code>mcc_code</code></td>
+      <td>🔶 Recommended</td>
+      <td>Industry classification business code</td>
+    </tr>
+    <tr>
+      <td><code>year_created</code></td>
+      <td>🔶 Recommended</td>
+      <td>The year the company was created</td>
+    </tr>
+    <tr>
+      <td><code>annual_total_income</code></td>
+      <td>🔶 Recommended</td>
+      <td>Business revenue</td>
+    </tr>
+    <tr>
+      <td><code>official_website</code></td>
+      <td>🔶 Recommended</td>
+      <td>Company website</td>
+    </tr>
+  </tbody>
+</table>
+
+**Required/Recommended Fields: KYC**
+<br/>The following fields are **_recommended_** when making the Add Business call for **KYC**, as it will return a more robust data set:
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Required / Recommended</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>owner1_first_name</code></td>
+      <td>🔶 Recommended</td>
+      <td>Individual’s legal first name</td>
+    </tr>
+    <tr>
+      <td><code>owner1_last_name</code></td>
+      <td>🔶 Recommended</td>
+      <td>Individual’s legal last name</td>
+    </tr>
+    <tr>
+      <td><code>owner1_mobile</code></td>
+      <td>🔶 Recommended</td>
+      <td>Personal contact number</td>
+    </tr>
+    <tr>
+      <td><code>owner1_email</code></td>
+      <td>🔶 Recommended</td>
+      <td>Primary email address</td>
+    </tr>
+    <tr>
+      <td><code>owner1_dob</code></td>
+      <td>🔶 Recommended</td>
+      <td>Used for identity matching (encrypted)</td>
+    </tr>
+    <tr>
+      <td><code>owner1_ssn</code></td>
+      <td>🔶 Recommended</td>
+      <td>Encrypted — critical for verification</td>
+    </tr>
+    <tr>
+      <td><code>owner1_address_line_1</code></td>
+      <td>🔶 Recommended</td>
+      <td>Home street address</td>
+    </tr>
+    <tr>
+      <td><code>owner1_address_line_2</code></td>
+      <td>🔶 Recommended</td>
+      <td>Apartment / Suite / Unit</td>
+    </tr>
+    <tr>
+      <td><code>owner1_address_city</code></td>
+      <td>🔶 Recommended</td>
+      <td>Residential city</td>
+    </tr>
+    <tr>
+      <td><code>owner1_address_state</code></td>
+      <td>🔶 Recommended</td>
+      <td>Residential state</td>
+    </tr>
+    <tr>
+      <td><code>owner1_address_postal</code></td>
+      <td>🔶 Recommended</td>
+      <td>ZIP code of the residential address</td>
+    </tr>
+    <tr>
+      <td><code>owner1_title</code></td>
+      <td>✅ Required</td>
+      <td>
+        Insert one of the following strings: Partner, Limited Partner, Director, Chief Accounting Officer,
+        Chief Executive Officer, Chief Operations Officer, President, Vice President, Treasurer,
+        Assistant Treasurer, 1% Shareholder, Shareholder, Controller, Managing Member, Owner,
+        Sole Proprietor, Executor, Beneficiary, Trustee, Administrator
+      </td>
+    </tr>
+    <tr>
+      <td><code>owner1_owner_type</code></td>
+      <td>✅ Required</td>
+      <td>Insert one of the following strings: “Control” or “Beneficial owner”</td>
+    </tr>
+  </tbody>
+</table>
+
+## Viewing Add Business call in your Customer Portal
+
+If you are using the Customer Portal you can validate the businesses that have been onboarded by following these two steps:
+
+**Step 1:**
+  Once the business is added, you can log into your customer account and review the business onboarded.
+
+**Step 2:**
+  Once logged in, on the left nav bar, click on **Businesses** and you will see the business you onboarded.
+- Click on “View Details”  
+- Click on the unique “Ticket Number”  
+  - You will now see company verification details, **KYB** and other verifications and validations automatically populate into the portal from the Add Business Call  

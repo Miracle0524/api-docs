@@ -1,0 +1,12 @@
+---
+title: Step 4 - KYC
+---
+
+### GET KYC – Individual Identity Verification Fields
+
+Similar to KYB, KYC results are tied to a specific business record. To review ownership information, make the following GET KYC call once the recommended KYB information has been captured in the Add Business pre-requisite route:
+
+```http
+GET /verification/businesses/{businessId}/owners
+```
+> **Note:** This call must include all required business-level details (see KYB table) **before** KYC fields can be evaluated.

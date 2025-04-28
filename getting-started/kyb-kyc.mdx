@@ -1,0 +1,29 @@
+---
+title: KYB/KYC
+---
+
+## **API Steps for calling KYB/KYC**
+
+Once the Business has been added, you can make calls to the **KYB** and **KYC** endpoints to retrieve verification and validation about this business and its customers.
+ 
+Using the _**business ID**_, you will be able to make the **GET KYB** call and **GET KYC** calls.
+
+## KYB
+
+Retrieves comprehensive *Know Your Business* verification details for a given business identifier, including legal, formation, ownership, address, and match data from multiple sources.
+
+Prior to utilizing this service, you must first obtain a business ID by creating a business via the [Add business](/api-reference/add-or-update-business/add-business) service.
+
+**Once the business has been added**, you can make the **GET KYB** call to get verification and validation about this business.
+
+For more detailed information on using the KYB endpoint, please see the [KYB](https://docs.worthai.com/api-reference/integration/facts/kyb) API Reference Guide.
+
+## KYC
+
+Know your Customer returns a list of individuals with ownership or control, including their submitted personal details and verification results.
+
+Prior to utilizing this service, you must first obtain a business ID by creating a business via the [Add business](/api-reference/add-or-update-business/add-business) service.
+
+**Once the business has been added**, you can make the **GET KYC** call to get verification and authorization about ownership.
+
+For more detailed information on using the KYC endpoint, please see the [KYC](https://docs.worthai.com/api-reference/integration/verification/kyc-ownership-verification) API Reference Guide.

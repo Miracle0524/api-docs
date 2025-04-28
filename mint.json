@@ -43,12 +43,21 @@
     }
   ],
   "primaryTab": {
-    "name": "Documentation"
+    "name": "Welcome/Getting Started"
   },
   "navigation": [
     {
       "group": "Welcome",
       "pages": ["introduction"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "getting-started/overview",
+        "getting-started/add-business",
+        "getting-started/kyb-kyc",
+        "getting-started/banking"
+      ]
     },
     {
       "group": "Sign In",
@@ -121,6 +130,15 @@
       ]
     },
     {
+      "group": "Worth 360 Report",
+      "pages": [
+        "api-reference/worth-360-report/check-worth-360-report-generation-status",
+        "api-reference/worth-360-report/generate-worth-360-report-using-customer",
+        "api-reference/worth-360-report/get-worth-360-report-details",
+        "api-reference/worth-360-report/download-worth-360-report"
+      ]
+    },
+    {
       "group": "Webhooks (Beta)",
       "pages": ["webhooks/webhooks"]
     },
@@ -151,12 +169,14 @@
       ]
     },
     {
-      "group": "Worth 360 Report",
+      "group": "Pre-filling Data",
       "pages": [
-        "api-reference/worth-360-report/check-worth-360-report-generation-status",
-        "api-reference/worth-360-report/generate-worth-360-report-using-customer",
-        "api-reference/worth-360-report/get-worth-360-report-details",
-        "api-reference/worth-360-report/download-worth-360-report"
+        "use-cases/pre-filling-data/overview",
+        "use-cases/pre-filling-data/step-1-customer-sign-in",
+        "use-cases/pre-filling-data/step-2-add-business",
+        "use-cases/pre-filling-data/step-3-kyb",
+        "use-cases/pre-filling-data/step-4-kyc",
+        "use-cases/pre-filling-data/step-final-notes"
       ]
     }
   ],

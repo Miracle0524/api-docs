@@ -44333,7 +44333,7 @@
       "get": {
         "tags": ["Facts"],
         "summary": "KYB",
-        "description":"Retrieves comprehensive 'Know Your Business' verification details for a given business identifier, including legal, formation, ownership, address, and match data from multiple sources.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service.",
+        "description":"Retrieves comprehensive 'Know Your Business' verification details for a given business identifier, including legal, formation, ownership, address, and match data from multiple sources.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service. For more details on using these endpoints, please reference the [Getting Started](https://docs.worthai.com/getting-started/overview) guide.",
         "operationId": "KYB",
         "parameters": [
           {
@@ -47179,7 +47179,7 @@
       "get": {
         "tags": ["Verification"],
         "summary": "KYC Ownership Verification",
-        "description": "Know Your Customer: returns a list of individuals with ownership or control, including their submitted personal details and verification results.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service.",
+        "description": "Know Your Customer: returns a list of individuals with ownership or control, including their submitted personal details and verification results.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service. For more details on using these endpoints, please reference the [Getting Started](https://docs.worthai.com/getting-started/overview) guide.",
         "operationId": "KYCOwnershipVerification",
         "parameters": [
           {

@@ -18,6 +18,7 @@
       "post": {
         "tags": ["Add Business"],
         "summary": "Add Business",
+        "description": "Create a single business record based on the provided details.\n\nFor more details on using this endpoint, please reference the [Getting Started](https://docs.worthai.com/getting-started/overview) guide.",
         "operationId": "AddBusiness",
         "parameters": [
           {
