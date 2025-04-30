@@ -88332,7 +88332,6 @@
       },
       "Metadata1": {
         "title": "Metadata1",
-        "required": ["state", "status", "file_number", "jurisdiction"],
         "type": "object",
         "properties": {
           "state": {
@@ -110687,7 +110686,6 @@
       },
       "KYB": {
         "title": "KYB",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110997,34 +110995,6 @@
       },
       "KYBData": {
         "title": "KYBData",
-        "required": [
-          "address_match",
-          "address_match_boolean",
-          "address_registered_agent",
-          "address_verification",
-          "address_verification_boolean",
-          "legal_name",
-          "formation_state",
-          "kyb_submitted",
-          "minority_owned",
-          "veteran_owned",
-          "woman_owned",
-          "formation_date",
-          "year_established",
-          "sos_filings",
-          "primary_address",
-          "addresses",
-          "tin",
-          "people",
-          "watchlist",
-          "tin_match",
-          "name_match",
-          "name_match_boolean",
-          "addresses_deliverable",
-          "sos_match",
-          "watchlist_hits",
-          "match"
-        ],
         "type": "object",
         "properties": {
           "address_match": {
@@ -111406,13 +111376,6 @@
       "LegalName": {
         "title": "LegalName",
         "description": "The legal name of the business as confirmed by the data sources.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111452,8 +111415,7 @@
                   "type": "number",
                   "description": "A property used for Worth's internal data tracking."
                 }
-              },
-              "required": ["value"]
+              }
             }
           }
         },
@@ -111476,13 +111438,6 @@
       "FormationState": {
         "title": "FormationState",
         "description": "The U.S. state where the business entity was formed or incorporated.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111522,8 +111477,7 @@
                   "type": "number",
                   "description": "A property used for Worth's internal data tracking."
                 }
-              },
-              "required": ["value"]
+              }
             }
           }
         },
@@ -111546,11 +111500,6 @@
       "MinorityOwned": {
         "title": "MinorityOwned",
         "description": "Indicates whether the business is minority-owned. The value may be provided as a string or be null if not available.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111581,11 +111530,6 @@
       "VeteranOwned": {
         "title": "VeteranOwned",
         "description": "Indicates whether the business is veteran-owned; returns a string value or null if the information is unavailable.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111616,11 +111560,6 @@
       "WomanOwned": {
         "title": "WomanOwned",
         "description": "Indicates whether the business is woman-owned; returns a string value or null if unavailable.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111653,13 +111592,6 @@
       "FormationDate": {
         "title": "FormationDate",
         "description": "The ISO 8601 formatted date when the business was formed or incorporated.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111700,8 +111632,7 @@
                   "type": "number",
                   "description": "Confidence score of the alternative formation date."
                 }
-              },
-              "required": ["value", "source", "confidence"]
+              }
             }
           }
         },
@@ -111724,13 +111655,6 @@
       "YearEstablished": {
         "title": "YearEstablished",
         "description": "The year the business was established, derived from its formation date.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111771,11 +111695,6 @@
       "SosFilings": {
         "title": "SosFilings",
         "description": "A list of filings from the Secretary of State, detailing the business’s registration status and related metadata.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111819,11 +111738,6 @@
       "Value": {
         "title": "Value",
         "description": "A generic filing record containing an ID, a filing type, and metadata.",
-        "required": [
-          "id",
-          "type",
-          "metadata"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -111855,13 +111769,6 @@
       "PrimaryAddress": {
         "title": "PrimaryAddress",
         "description": "The primary business address, used for official communications.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.name",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -111910,16 +111817,6 @@
       "Value1": {
         "title": "Value1",
         "description": "An address object including street, apartment, city, state, country, postal code, mobile, and a primary flag.",
-        "required": [
-          "line_1",
-          "apartment",
-          "city",
-          "state",
-          "country",
-          "postal_code",
-          "mobile",
-          "is_primary"
-        ],
         "type": "object",
         "properties": {
           "line_1": {
@@ -111977,11 +111874,6 @@
       "Tin": {
         "title": "Tin",
         "description": "The Tax Identification Number (TIN) for the business.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112011,13 +111903,6 @@
       "People": {
         "title": "People",
         "description": "A list of individuals associated with the business including their roles and source registration details.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112105,16 +111990,6 @@
       "PeopleValue": {
         "title": "PeopleValue",
         "description": "A person object containing detailed registration and personal information.",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "name",
-          "titles",
-          "submitted",
-          "source"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -112201,11 +112076,6 @@
       "Watchlist": {
         "title": "Watchlist",
         "description": "Results from watchlist screening for the business, including metadata about any hits and a summary message.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112304,13 +112174,6 @@
       "NameMatch": {
         "title": "NameMatch",
         "description": "Provides the result of matching the submitted business name against official records, including status, message, and additional label information.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112350,12 +112213,6 @@
       "NameMatchBoolean": {
         "title": "NameMatchBoolean",
         "description": "Indicates whether the business name submitted matches known records, represented as a boolean derived from the NameMatch object.",
-        "required": [
-          "name",
-          "value",
-          "dependencies",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112383,8 +112240,7 @@
                   "type": "boolean",
                   "description": "An alternative boolean result from a different source or logic."
                 }
-              },
-              "required": ["value"]
+              }
             },
             "description": "Alternative boolean outcomes based on different data or interpretations."
           }
@@ -112405,12 +112261,6 @@
       "AddressMatch": {
         "title": "AddressMatch",
         "description": "Indicates whether the submitted primary address matches any known addresses. This property returns an enum value: 'success' if a match is found, or 'failure' if not.",
-        "required": [
-          "name",
-          "value",
-          "dependencies",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112468,12 +112318,6 @@
       "AddressMatchBoolean": {
         "title": "AddressMatchBoolean",
         "description": "A boolean representation of the address match result; true if address_match is 'success', false otherwise.",
-        "required": [
-          "name",
-          "value",
-          "dependencies",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112525,11 +112369,6 @@
       "AddressRegisteredAgent": {
         "title": "AddressRegisteredAgent",
         "description": "Provides details about the registered agent's address if available, or null if not provided.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112566,14 +112405,6 @@
       "AddressVerification": {
         "title": "AddressVerification",
         "description": "Details the result of the address verification process. Returns an object including an array of verified addresses, a status (as an enum of 'success' or 'failure'), a message, and additional labels.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "source.name",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112661,8 +112492,7 @@
                       "description": "Additional detail on the verification result.",
                       "example": "Verified"
                     }
-                  },
-                  "required": ["addresses", "status", "message", "label", "sublabel"]
+                  }
                 },
                 "source": {
                   "type": "integer",
@@ -112674,8 +112504,7 @@
                   "description": "The decimal confidence score (between 0.0 indicating no confidence and 1.0 indicating 100% confidence) for the address verification.",
                   "example": 0.95
                 }
-              },
-              "required": ["value", "source", "confidence"]
+              }
             }
           }
         },
@@ -112722,12 +112551,6 @@
       "AddressVerificationBoolean": {
         "title": "AddressVerificationBoolean",
         "description": "A boolean flag representing whether address verification was successful. Returns true if the address verification status is 'success', otherwise false.",
-        "required": [
-          "name",
-          "value",
-          "dependencies",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112768,13 +112591,6 @@
       "Addresses": {
         "title": "Addresses",
         "description": "A list of additional addresses associated with the business.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112807,7 +112623,7 @@
           },
           "alternatives": {
             "type": "array",
-            "description": "An array of alternative sets of deliverable addresses with associated source and confidence values.",
+            "description": "An array of alternative sets of addresses with associated source and confidence values.",
             "items": {
               "type": "object",
               "properties": {
@@ -112816,7 +112632,7 @@
                   "items": {
                     "type": "string"
                   },
-                  "description": "An array of alternative deliverable addresses with street address, city, state, and zip code."
+                  "description": "An array of alternative addresses with street address, city, state, and zip code."
                 },
                 "source": {
                   "type": "integer",
@@ -112827,8 +112643,7 @@
                   "description": "The decimal confidence score (between 0.0 indicating no confidence and 1.0 indicating 100% confidence) for the address values.",
                   "example": 0.95
                 }
-              },
-              "required": ["value", "source", "confidence"]
+              }
             }
           }
         },
@@ -112861,13 +112676,6 @@
       "AddressesDeliverable": {
         "title": "AddressesDeliverable",
         "description": "A collection of addresses that are verified as deliverable.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112926,12 +112734,6 @@
       "Corporation": {
         "title": "Corporation",
         "description": "Indicates whether the business is structured as a public or private corporation. Possible enum values are 'Public' or 'Private'; a null value indicates that the information is not available.",
-        "required": [
-          "name",
-          "value",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -112970,13 +112772,6 @@
       "KybSubmitted": {
         "title": "KybSubmitted",
         "description": "Indicates whether the KYB process has been initiated for the business. True means KYB data is available.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -113022,13 +112817,6 @@
       "NamesSubmitted": {
         "title": "NamesSubmitted",
         "description": "A list of business names that were submitted during the KYB process along with a flag indicating whether each name was submitted.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -113039,10 +112827,6 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "name",
-                "submitted"
-              ],
               "properties": {
                 "name": {
                   "type": "string",
@@ -113170,11 +112954,6 @@
       "WatchlistHits": {
         "title": "WatchlistHits",
         "description": "The total number of watchlist hits for the business. Null indicates no hits were recorded.",
-        "required": [
-          "name",
-          "value",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -113205,13 +112984,6 @@
       "Match": {
         "title": "Match",
         "description": "A list of merchant match objects representing potential matches to high-risk or fraudulent merchant records.",
-        "required": [
-          "name",
-          "value",
-          "source.confidence",
-          "source.platformId",
-          "alternatives"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -113341,7 +113113,6 @@
       },
       "Value3": {
         "title": "Value3",
-        "required": ["merchant", "merchantMatch"],
         "type": "object",
         "properties": {
           "merchant": {
@@ -113450,30 +113221,6 @@
       },
       "Merchant": {
         "title": "Merchant",
-        "required": [
-          "name",
-          "doingBusinessAsName",
-          "merchantId",
-          "subMerchantId",
-          "address",
-          "phoneNumber",
-          "isEEA",
-          "altPhoneNumber",
-          "merchantCategory",
-          "nationalTaxId",
-          "countrySubdivisionTaxId",
-          "dateOpened",
-          "dateClosed",
-          "reasonCodeDesc",
-          "addedByAcquirerId",
-          "reasonCode",
-          "createdDate",
-          "comments",
-          "merchRefNum",
-          "urls",
-          "principals",
-          "urlGroups"
-        ],
         "type": "object",
         "properties": {
           "name": {
@@ -113631,16 +113378,6 @@
       },
       "Address1": {
         "title": "Address1",
-        "required": [
-          "addressLineOne",
-          "addressLineTwo",
-          "isOtherCity",
-          "city",
-          "countrySubdivision",
-          "province",
-          "country",
-          "postalCode"
-        ],
         "type": "object",
         "properties": {
           "addressLineOne": {
@@ -113683,18 +113420,6 @@
       },
       "Principal": {
         "title": "Principal",
-        "required": [
-          "firstName",
-          "middleInitial",
-          "lastName",
-          "address",
-          "phoneNumber",
-          "altPhoneNumber",
-          "email",
-          "driversLicense",
-          "dateOfBirth",
-          "nationalId"
-        ],
         "type": "object",
         "properties": {
           "firstName": {
@@ -113758,7 +113483,6 @@
       },
       "DriversLicense": {
         "title": "DriversLicense",
-        "required": ["number", "countrySubdivision", "country"],
         "type": "object",
         "properties": {
           "number": {
