@@ -88304,7 +88304,6 @@
       },
       "Source": {
         "title": "Source",
-        "required": ["id", "type", "metadata"],
         "type": "object",
         "properties": {
           "id": {
@@ -88592,7 +88591,6 @@
       },
       "Success20": {
         "title": "Success20",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -88608,14 +88606,6 @@
       },
       "Data54": {
         "title": "Data54",
-        "required": [
-          "businessEntityVerification",
-          "reviewTasks",
-          "registrations",
-          "addressSources",
-          "people",
-          "names"
-        ],
         "type": "object",
         "properties": {
           "businessEntityVerification": {
@@ -88660,61 +88650,77 @@
       },
       "BusinessEntityVerification": {
         "title": "BusinessEntityVerification",
-        "required": [
-          "id",
-          "created_at",
-          "updated_at",
-          "business_integration_task_id",
-          "external_id",
-          "business_id",
-          "name",
-          "status",
-          "tin",
-          "formation_state",
-          "formation_date",
-          "year",
-          "number_of_employees"
-        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the business entity verification record."
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "description": "The date when the verification record was created."
           },
           "updated_at": {
-            "type": ["string", "null"]
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "description": "The date when the verification record was last updated, or null if never updated."
           },
           "business_integration_task_id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid",
+            "description": "The integration task identifier associated with this verification process."
           },
           "external_id": {
-            "type": "string"
+            "type": "string",
+            "description": "Client-provided external identifier for tracking the business."
           },
           "business_id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the business in the system."
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "nullable": true,
+            "description": "The legal name of the business, if available."
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "in_review",
+              "rejected",
+              "approved"
+            ],
+            "description": "Current verification status:\n  • in_review: The business is under review.\n  • approved: Business details have been verified successfully.\n  • rejected: Business details failed verification."
           },
           "tin": {
-            "type": "string"
+            "type": "string",
+            "nullable": true,
+            "description": "Tax Identification Number (TIN) for the business, if provided."
           },
           "formation_state": {
-            "type": "string"
+            "type": "string",
+            "nullable": true,
+            "description": "State where the business was legally formed, if known."
           },
           "formation_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "description": "The date when the business was legally formed, if known."
           },
           "year": {
-            "type": ["string", "null"]
+            "type": "integer",
+            "nullable": true,
+            "description": "The year the business was created, if known."
           },
           "number_of_employees": {
-            "type": ["string", "null"]
+            "type": "integer",
+            "nullable": true,
+            "description": "Number of employees at the time of verification, if known."
           }
         },
         "examples": [
@@ -88737,44 +88743,47 @@
       },
       "ReviewTask": {
         "title": "ReviewTask",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "category",
-          "key",
-          "status",
-          "message",
-          "label",
-          "sublabel",
-          "metadata"
-        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for this verification task."
           },
           "business_entity_verification_id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid",
+            "description": "Identifier of the parent business entity verification record."
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "description": "Date when this verification task was created."
           },
           "updated_at": {
-            "type": ["string", "null"]
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "description": "Date when this verification task was last updated, or null if not updated."
           },
           "category": {
-            "type": "string"
+            "type": "string",
+            "enum": ["sos", "address", "tin", "watchlist", "name"],
+            "description": "Type of verification performed:\n  • sos: source-of-service check\n  • address: address validation\n  • tin: Tax ID number verification\n  • watchlist: watchlist/sanctions screening\n  • name: business name matching"
           },
           "key": {
-            "type": "string"
+            "type": "string",
+            "description": "Unique key or code identifying the specific sub-task or data field."
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "enum": ["pending", "success", "failure"],
+            "description": "Current task status:\n  • pending: Task is in progress\n  • success: Task completed successfully\n  • failure: Task completed with an error"
           },
           "message": {
-            "type": "string"
+            "type": "string",
+            "nullable": true,
+            "description": "Optional human-readable message or error detail returned by the task."
           },
           "label": {
             "type": "string"
@@ -88865,7 +88874,6 @@
       },
       "Metadata3": {
         "title": "Metadata3",
-        "required": ["submitted"],
         "type": "object",
         "properties": {
           "name": {
@@ -88902,37 +88910,24 @@
       },
       "Registration": {
         "title": "Registration",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "external_id",
-          "name",
-          "status",
-          "sub_status",
-          "status_details",
-          "jurisdiction",
-          "entity_type",
-          "file_number",
-          "full_addresses",
-          "registration_date",
-          "registration_state",
-          "source"
-        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid"
           },
           "business_entity_verification_id": {
-            "type": "string"
+            "type": "string",
+            "format": "uuid"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "updated_at": {
-            "type": ["string", "null"]
+            "type": "string",
+            "format": "date",
+            "nullable": true
           },
           "external_id": {
             "type": "string"
@@ -88941,13 +88936,20 @@
             "type": "string"
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ],
+            "description": "Current registration status:\n  • active: the business is currently registered and in good standing.\n  • inactive: the business registration is inactive or expired."
           },
           "sub_status": {
-            "type": ["string", "null"]
+            "type": "string",
+            "nullable": true
           },
           "status_details": {
-            "type": ["string", "null"]
+            "type": "string",
+            "nullable": true
           },
           "jurisdiction": {
             "type": "string"
@@ -88962,11 +88964,11 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "description": ""
+            }
           },
           "registration_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "registration_state": {
             "type": "string"
@@ -89001,26 +89003,6 @@
       },
       "AddressSource": {
         "title": "AddressSource",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "external_id",
-          "external_registration_id",
-          "full_address",
-          "address_line_1",
-          "address_line_2",
-          "city",
-          "state",
-          "postal_code",
-          "lat",
-          "long",
-          "submitted",
-          "deliverable",
-          "cmra",
-          "address_property_type"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -89119,16 +89101,6 @@
       },
       "Name1": {
         "title": "Name1",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "name",
-          "type",
-          "submitted",
-          "source"
-        ],
         "type": "object",
         "properties": {
           "id": {
