@@ -1068,14 +1068,33 @@
                           "message": "Bulk process had errors",
                           "errorCode": null,
                           "data": {
-                            "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
-                            "failed_rows": {
-                              "0": {
-                                "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
-                                "data": {}
-                              }
-                            },
-                            "result": {}
+                              "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
+                              "failed_rows": {
+                                  "0": {
+                                      "message": "Validation failed. Error details:",
+                                      "data": [
+                                          {
+                                              "column": "tin",
+                                              "providedKey": "tin",
+                                              "value": "333444685999",
+                                              "reason": "Validation failed"
+                                          },
+                                          {
+                                              "column": "mobile",
+                                              "providedKey": "mobile",
+                                              "value": "10",
+                                              "reason": "Validation failed"
+                                          },
+                                          {
+                                              "column": "external_id",
+                                              "providedKey": "external_id",
+                                              "value": "77388994455034",
+                                              "reason": "The business external ID already exists for this customer"
+                                          }
+                                      ]
+                                  }
+                              },
+                              "result": {}
                           }
                         }
                       ]
@@ -1088,14 +1107,33 @@
                   "message": "Bulk process had errors",
                   "errorCode": null,
                   "data": {
-                    "runId": "78d8036f-06b9-4ca6-8b18-702841bfb61b",
-                    "failed_rows": {
-                      "0": {
-                        "message": "Error with 1 fields. First error: 'The business external ID already exists for this customer' --- Please execute /validate first for more details",
-                        "data": {}
-                      }
-                    },
-                    "result": {}
+                      "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
+                      "failed_rows": {
+                          "0": {
+                              "message": "Validation failed. Error details:",
+                              "data": [
+                                  {
+                                      "column": "tin",
+                                      "providedKey": "tin",
+                                      "value": "333444685999",
+                                      "reason": "Validation failed"
+                                  },
+                                  {
+                                      "column": "mobile",
+                                      "providedKey": "mobile",
+                                      "value": "10",
+                                      "reason": "Validation failed"
+                                  },
+                                  {
+                                      "column": "external_id",
+                                      "providedKey": "external_id",
+                                      "value": "77388994455034",
+                                      "reason": "The business external ID already exists for this customer"
+                                  }
+                              ]
+                          }
+                      },
+                      "result": {}
                   }
                 }
               }
