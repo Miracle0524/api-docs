@@ -38569,7 +38569,6 @@
     "schemas": {
       "Success": {
         "title": "Success",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39128,7 +39127,6 @@
       },
       "SuccessActivePlans": {
         "title": "SuccessActivePlans",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39282,7 +39280,6 @@
       },
       "GetSubscriptionPlanswithfeatures": {
         "title": "GetSubscriptionPlanswithfeatures",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39730,7 +39727,6 @@
       },
       "Success1": {
         "title": "Success1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39813,7 +39809,6 @@
       },
       "Success2": {
         "title": "Success2",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39872,7 +39867,6 @@
       },
       "Error1": {
         "title": "Error1",
-        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39902,7 +39896,6 @@
       },
       "Success3": {
         "title": "Success3",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39929,7 +39922,6 @@
       },
       "Data7": {
         "title": "Data7",
-        "required": ["status", "message", "subscription"],
         "type": "object",
         "properties": {
           "status": {
@@ -39967,7 +39959,6 @@
       },
       "ErrorBusinessandApplicantarenotrelated1": {
         "title": "ErrorBusinessandApplicantarenotrelated1",
-        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -39996,7 +39987,6 @@
       },
       "Success4": {
         "title": "Success4",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -40036,7 +40026,6 @@
       },
       "ErrorNotFound1": {
         "title": "ErrorNotFound1",
-        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -40065,7 +40054,6 @@
       },
       "SuccessNoResults": {
         "title": "SuccessNoResults",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -40092,7 +40080,6 @@
       },
       "Data13": {
         "title": "Data13",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -40121,7 +40108,6 @@
       },
       "Success5": {
         "title": "Success5",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -40677,7 +40663,6 @@
       },
       "AutomaticTax": {
         "title": "AutomaticTax",
-        "required": ["enabled", "liability"],
         "type": "object",
         "properties": {
           "enabled": {
@@ -40698,7 +40683,6 @@
       },
       "Liability": {
         "title": "Liability",
-        "required": ["type"],
         "type": "object",
         "properties": {
           "type": {
@@ -40713,7 +40697,6 @@
       },
       "CancellationDetails": {
         "title": "CancellationDetails",
-        "required": ["comment", "feedback", "reason"],
         "type": "object",
         "properties": {
           "comment": {
@@ -40736,7 +40719,6 @@
       },
       "InvoiceSettings": {
         "title": "InvoiceSettings",
-        "required": ["account_tax_ids", "issuer"],
         "type": "object",
         "properties": {
           "account_tax_ids": {
@@ -40757,7 +40739,6 @@
       },
       "Issuer": {
         "title": "Issuer",
-        "required": ["type"],
         "type": "object",
         "properties": {
           "type": {
@@ -40772,7 +40753,6 @@
       },
       "Items": {
         "title": "Items",
-        "required": ["object", "data", "has_more", "total_count", "url"],
         "type": "object",
         "properties": {
           "object": {
@@ -40867,18 +40847,6 @@
       },
       "Data15": {
         "title": "Data15",
-        "required": [
-          "id",
-          "object",
-          "billing_thresholds",
-          "created",
-          "metadata",
-          "plan",
-          "price",
-          "quantity",
-          "subscription",
-          "tax_rates"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -40981,27 +40949,6 @@
       },
       "Plan": {
         "title": "Plan",
-        "required": [
-          "id",
-          "object",
-          "active",
-          "aggregate_usage",
-          "amount",
-          "amount_decimal",
-          "billing_scheme",
-          "created",
-          "currency",
-          "interval",
-          "interval_count",
-          "livemode",
-          "metadata",
-          "nickname",
-          "product",
-          "tiers_mode",
-          "transform_usage",
-          "trial_period_days",
-          "usage_type"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -41091,27 +41038,6 @@
       },
       "Price": {
         "title": "Price",
-        "required": [
-          "id",
-          "object",
-          "active",
-          "billing_scheme",
-          "created",
-          "currency",
-          "custom_unit_amount",
-          "livemode",
-          "lookup_key",
-          "metadata",
-          "nickname",
-          "product",
-          "recurring",
-          "tax_behavior",
-          "tiers_mode",
-          "transform_quantity",
-          "type",
-          "unit_amount",
-          "unit_amount_decimal"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -41206,13 +41132,6 @@
       },
       "Recurring2": {
         "title": "Recurring2",
-        "required": [
-          "aggregate_usage",
-          "interval",
-          "interval_count",
-          "trial_period_days",
-          "usage_type"
-        ],
         "type": "object",
         "properties": {
           "aggregate_usage": {
@@ -41244,13 +41163,6 @@
       },
       "Metadata": {
         "title": "Metadata",
-        "required": [
-          "applicant",
-          "applicant_id",
-          "email",
-          "subscription_id",
-          "subscription_plan_id"
-        ],
         "type": "object",
         "properties": {
           "applicant": {
@@ -41281,11 +41193,6 @@
       },
       "PaymentSettings": {
         "title": "PaymentSettings",
-        "required": [
-          "payment_method_options",
-          "payment_method_types",
-          "save_default_payment_method"
-        ],
         "type": "object",
         "properties": {
           "payment_method_options": {
@@ -41308,7 +41215,6 @@
       },
       "TrialSettings": {
         "title": "TrialSettings",
-        "required": ["end_behavior"],
         "type": "object",
         "properties": {
           "end_behavior": {
@@ -41325,7 +41231,6 @@
       },
       "EndBehavior": {
         "title": "EndBehavior",
-        "required": ["missing_payment_method"],
         "type": "object",
         "properties": {
           "missing_payment_method": {
@@ -41340,7 +41245,6 @@
       },
       "ErrorBusinessNotFound1": {
         "title": "ErrorBusinessNotFound1",
-        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41369,7 +41273,6 @@
       },
       "ErrorAlreadyCancelledSubscription1": {
         "title": "ErrorAlreadyCancelledSubscription1",
-        "required": ["status", "message", "errorCode", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41477,7 +41380,6 @@
       },
       "SuccessforNewBusiness": {
         "title": "SuccessforNewBusiness",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41500,7 +41402,6 @@
       },
       "SuccessforExistingBusiness": {
         "title": "SuccessforExistingBusiness",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41624,7 +41525,6 @@
       },
       "VerifyInvite": {
         "title": "VerifyInvite",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41712,7 +41612,6 @@
       },
       "GetInvitationbyID": {
         "title": "GetInvitationbyID",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -41759,31 +41658,6 @@
       },
       "Data29": {
         "title": "Data29",
-        "required": [
-          "id",
-          "business_id",
-          "customer_id",
-          "status",
-          "action_taken_by",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "case_id",
-          "name",
-          "tin",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -41886,7 +41760,6 @@
       },
       "Success6": {
         "title": "Success6",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -42101,7 +41974,6 @@
       },
       "Data30": {
         "title": "Data30",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -42318,19 +42190,6 @@
       },
       "Record3": {
         "title": "Record3",
-        "required": [
-          "id",
-          "business_id",
-          "customer_id",
-          "status",
-          "action_taken_by",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "case_id",
-          "invited"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -42389,7 +42248,6 @@
       },
       "Invited": {
         "title": "Invited",
-        "required": ["id", "first_name", "last_name"],
         "type": "object",
         "properties": {
           "id": {
@@ -42412,7 +42270,6 @@
       },
       "GetBusinessInvites": {
         "title": "GetBusinessInvites",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -42627,7 +42484,6 @@
       },
       "BusinessInvitationDetails": {
         "title": "BusinessInvitationDetails",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -42842,7 +42698,6 @@
       },
       "BusinessInvitationDetails1": {
         "title": "BusinessInvitationDetails1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -42971,7 +42826,6 @@
       },
       "BusinessInvitationDetails2": {
         "title": "BusinessInvitationDetails2",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -43103,7 +42957,6 @@
       },
       "BusinessInvitationDetails3": {
         "title": "BusinessInvitationDetails3",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -43396,7 +43249,6 @@
       },
       "LightningVerification": {
         "title": "LightningVerification",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -43484,7 +43336,6 @@
       },
       "Inviteco-applicant": {
         "title": "Inviteco-applicant",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -43556,7 +43407,6 @@
       },
       "Success7": {
         "title": "Success7",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -43611,7 +43461,6 @@
       },
       "Data38": {
         "title": "Data38",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -43668,29 +43517,6 @@
       },
       "Record5": {
         "title": "Record5",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status",
-          "customer_id",
-          "subscription"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -43789,7 +43615,6 @@
       },
       "Subscription1": {
         "title": "Subscription1",
-        "required": ["status", "created_at", "updated_at"],
         "type": "object",
         "properties": {
           "status": {
@@ -43812,7 +43637,6 @@
       },
       "GetBusinesses": {
         "title": "GetBusinesses",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -44300,7 +44124,6 @@
       },
       "Data39": {
         "title": "Data39",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -44790,29 +44613,6 @@
       },
       "Record6": {
         "title": "Record6",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "status",
-          "subscription",
-          "invoice"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -44907,7 +44707,6 @@
       },
       "Success8": {
         "title": "Success8",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -44955,28 +44754,6 @@
       },
       "Data40": {
         "title": "Data40",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status",
-          "subscription"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -45071,7 +44848,6 @@
       },
       "Subscription2": {
         "title": "Subscription2",
-        "required": ["status", "created_at", "updated_at"],
         "type": "object",
         "properties": {
           "status": {
@@ -45094,7 +44870,6 @@
       },
       "Businesswithindustrydetails": {
         "title": "Businesswithindustrydetails",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -45152,31 +44927,6 @@
       },
       "Data43": {
         "title": "Data43",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status",
-          "naics_code",
-          "naics_title",
-          "industry",
-          "subscription"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -45333,7 +45083,6 @@
       },
       "GetBusinessByID": {
         "title": "GetBusinessByID",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -45413,33 +45162,6 @@
       },
       "Data44": {
         "title": "Data44",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status",
-          "naics_code",
-          "naics_title",
-          "industry",
-          "is_monitoring_enabled",
-          "subscription",
-          "owners"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -45585,29 +45307,6 @@
       },
       "Owner": {
         "title": "Owner",
-        "required": [
-          "id",
-          "title",
-          "first_name",
-          "last_name",
-          "ssn",
-          "email",
-          "mobile",
-          "date_of_birth",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "ownership_percentage",
-          "owner_type"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -45706,7 +45405,6 @@
       },
       "Title": {
         "title": "Title",
-        "required": ["id", "title"],
         "type": "object",
         "properties": {
           "id": {
@@ -45726,17 +45424,6 @@
       },
       "UpdateBusinessByIDRequest": {
         "title": "UpdateBusinessByIDRequest",
-        "required": [
-          "address_line_1",
-          "address_apartment",
-          "address_postal_code",
-          "address_city",
-          "address_state",
-          "address_country",
-          "official_website",
-          "public_website",
-          "social_account"
-        ],
         "type": "object",
         "properties": {
           "address_line_1": {
@@ -45948,7 +45635,6 @@
       },
       "Success11": {
         "title": "Success11",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -46033,23 +45719,6 @@
       },
       "Data47": {
         "title": "Data47",
-        "required": [
-          "id",
-          "applicant_id",
-          "customer_id",
-          "status",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "business_id",
-          "business",
-          "owners",
-          "business_details_exists",
-          "business_address_exists",
-          "additional_details_exists",
-          "owner_details_exists"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -46171,27 +45840,6 @@
       },
       "Business2": {
         "title": "Business2",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -46278,28 +45926,6 @@
       },
       "Owner2": {
         "title": "Owner2",
-        "required": [
-          "id",
-          "title",
-          "first_name",
-          "last_name",
-          "ssn",
-          "email",
-          "mobile",
-          "date_of_birth",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "ownership_percentage"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -46423,7 +46049,6 @@
       },
       "ApplicantProgressionwithindustryinbusinessdetails": {
         "title": "ApplicantProgressionwithindustryinbusinessdetails",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -46906,7 +46531,6 @@
       },
       "Success12": {
         "title": "Success12",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -46961,7 +46585,6 @@
       },
       "Data53": {
         "title": "Data53",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -47017,23 +46640,6 @@
       },
       "Record7": {
         "title": "Record7",
-        "required": [
-          "id",
-          "first_name",
-          "last_name",
-          "email",
-          "mobile",
-          "is_email_verified",
-          "is_first_login",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "ext_auth_ref_id",
-          "status",
-          "subrole",
-          "customer_details"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -47168,7 +46774,6 @@
       },
       "Success13": {
         "title": "Success13",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47218,7 +46823,6 @@
       },
       "Data54": {
         "title": "Data54",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -47270,28 +46874,6 @@
       },
       "Record8": {
         "title": "Record8",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status",
-          "customer_id"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -47382,7 +46964,6 @@
       },
       "Success14": {
         "title": "Success14",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47433,7 +47014,6 @@
       },
       "Success15": {
         "title": "Success15",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47477,7 +47057,6 @@
       },
       "Data56": {
         "title": "Data56",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -47523,15 +47102,6 @@
       },
       "Record9": {
         "title": "Record9",
-        "required": [
-          "id",
-          "applicant_id",
-          "created_at",
-          "business_name",
-          "status_label",
-          "applicant",
-          "status"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -47577,7 +47147,6 @@
       },
       "Applicant3": {
         "title": "Applicant3",
-        "required": ["first_name", "last_name"],
         "type": "object",
         "properties": {
           "first_name": {
@@ -47596,7 +47165,6 @@
       },
       "Status": {
         "title": "Status",
-        "required": ["id", "code", "label"],
         "type": "object",
         "properties": {
           "id": {
@@ -47635,7 +47203,6 @@
       },
       "Response": {
         "title": "Response",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47826,7 +47393,6 @@
       },
       "LinkedTIN": {
         "title": "LinkedTIN",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47866,7 +47432,6 @@
       },
       "TINMatchcollison": {
         "title": "TINMatchcollison",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47932,7 +47497,6 @@
       },
       "WIPGetApplicantsofABusiness": {
         "title": "WIPGetApplicantsofABusiness",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -47985,23 +47549,6 @@
       },
       "Data67": {
         "title": "Data67",
-        "required": [
-          "id",
-          "first_name",
-          "last_name",
-          "email",
-          "mobile",
-          "is_email_verified",
-          "is_first_login",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "ext_auth_ref_id",
-          "status",
-          "subrole",
-          "customer"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -48099,7 +47646,6 @@
       },
       "InternalGetBusinessApplicantsRelationship": {
         "title": "InternalGetBusinessApplicantsRelationship",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -52488,7 +52034,6 @@
       },
       "Nosubscription": {
         "title": "Nosubscription",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -52976,7 +52521,6 @@
       },
       "GetBusinessesInternal": {
         "title": "GetBusinessesInternal",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -53051,7 +52595,6 @@
       },
       "Data70": {
         "title": "Data70",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -53128,29 +52671,6 @@
       },
       "Record12": {
         "title": "Record12",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "status",
-          "subscription",
-          "invoice"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -53439,7 +52959,6 @@
       },
       "BusinessAllNames": {
         "title": "BusinessAllNames",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -53494,7 +53013,6 @@
       },
       "BusinessAllAddresses": {
         "title": "BusinessAllAddresses",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -53643,7 +53161,6 @@
       },
       "Success20": {
         "title": "Success20",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -53851,7 +53368,6 @@
       },
       "Data80": {
         "title": "Data80",
-        "required": ["records", "total_pages", "total_items"],
         "type": "object",
         "properties": {
           "records": {
@@ -54061,27 +53577,6 @@
       },
       "Record15": {
         "title": "Record15",
-        "required": [
-          "id",
-          "customer_id",
-          "applicant_id",
-          "created_at",
-          "case_type",
-          "business_id",
-          "business_name",
-          "status_label",
-          "assignee",
-          "naics_code",
-          "naics_title",
-          "mcc_code",
-          "mcc_title",
-          "applicant",
-          "status",
-          "report_status",
-          "report_id",
-          "report_created_at",
-          "metadata"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -54233,7 +53728,6 @@
       },
       "SuccessNoData": {
         "title": "SuccessNoData",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -54289,7 +53783,6 @@
       },
       "Success21": {
         "title": "Success21",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -54455,21 +53948,6 @@
       },
       "Data84": {
         "title": "Data84",
-        "required": [
-          "id",
-          "applicant_id",
-          "customer_id",
-          "status",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "business_id",
-          "business",
-          "applicant",
-          "owners",
-          "status_history"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -54669,7 +54147,6 @@
       },
       "Status5": {
         "title": "Status5",
-        "required": ["code", "id", "label"],
         "type": "object",
         "properties": {
           "code": {
@@ -54693,27 +54170,6 @@
       },
       "Business3": {
         "title": "Business3",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "status"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -54800,21 +54256,6 @@
       },
       "Applicant8": {
         "title": "Applicant8",
-        "required": [
-          "id",
-          "first_name",
-          "last_name",
-          "email",
-          "mobile",
-          "is_email_verified",
-          "is_first_login",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "status",
-          "subrole"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -54882,7 +54323,6 @@
       },
       "Subrole5": {
         "title": "Subrole5",
-        "required": ["id", "code", "label", "role_id"],
         "type": "object",
         "properties": {
           "id": {
@@ -54910,7 +54350,6 @@
       },
       "StatusHistory": {
         "title": "StatusHistory",
-        "required": ["id", "status", "created_at", "created_by"],
         "type": "object",
         "properties": {
           "id": {
@@ -54938,7 +54377,6 @@
       },
       "Success22": {
         "title": "Success22",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -55052,21 +54490,6 @@
       },
       "Data85": {
         "title": "Data85",
-        "required": [
-          "id",
-          "applicant_id",
-          "customer_id",
-          "status",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "business_id",
-          "business",
-          "applicant",
-          "owners",
-          "status_history"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -55214,7 +54637,6 @@
       },
       "Getcasestatuses": {
         "title": "Getcasestatuses",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -55297,7 +54719,6 @@
       },
       "Data86": {
         "title": "Data86",
-        "required": ["id", "code", "label"],
         "type": "object",
         "properties": {
           "id": {
@@ -55356,7 +54777,6 @@
       },
       "Getonboardingstages": {
         "title": "Getonboardingstages",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -55774,7 +55194,6 @@
       },
       "BusinessRiskAlerts": {
         "title": "BusinessRiskAlerts",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -55955,7 +55374,6 @@
       },
       "Data90": {
         "title": "Data90",
-        "required": ["records", "totalItems", "totalPages"],
         "type": "object",
         "properties": {
           "records": {
@@ -56138,18 +55556,6 @@
       },
       "Record16": {
         "title": "Record16",
-        "required": [
-          "id",
-          "risk_alert_config_id",
-          "measurement_config",
-          "customer_id",
-          "cause_id",
-          "created_at",
-          "risk_level",
-          "risk_sub_type_code",
-          "risk_type_code",
-          "title"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -56234,7 +55640,6 @@
       },
       "Team-performance-stats": {
         "title": "Team-performance-stats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56335,7 +55740,6 @@
       },
       "CaseDecisionStats": {
         "title": "CaseDecisionStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56540,7 +55944,6 @@
       },
       "Inprogressstats": {
         "title": "Inprogressstats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56705,7 +56108,6 @@
       },
       "NullState": {
         "title": "NullState",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56728,7 +56130,6 @@
       },
       "BusinessesScoreStats": {
         "title": "BusinessesScoreStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56849,7 +56250,6 @@
       },
       "NullState1": {
         "title": "NullState1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -56884,7 +56284,6 @@
       },
       "CustomerPortfolio": {
         "title": "CustomerPortfolio",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57008,7 +56407,6 @@
       },
       "NullState2": {
         "title": "NullState2",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57035,7 +56433,6 @@
       },
       "AveragescoresStats": {
         "title": "AveragescoresStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57224,7 +56621,6 @@
       },
       "industry-exposure": {
         "title": "industry-exposure",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57362,7 +56758,6 @@
       },
       "TotalApplicationsStats": {
         "title": "TotalApplicationsStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57476,7 +56871,6 @@
       },
       "30DaysReceivedVsApproved": {
         "title": "30DaysReceivedVsApproved",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57546,7 +56940,6 @@
       },
       "1DayReceivedVsApproved": {
         "title": "1DayReceivedVsApproved",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57699,7 +57092,6 @@
       },
       "WeekReceivedVsApproved": {
         "title": "WeekReceivedVsApproved",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57719,7 +57111,6 @@
       },
       "YearReceivedVsApproved": {
         "title": "YearReceivedVsApproved",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57739,7 +57130,6 @@
       },
       "LastYearReceivedVsApproved": {
         "title": "LastYearReceivedVsApproved",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57802,7 +57192,6 @@
       },
       "TimetoapprovalYear": {
         "title": "TimetoapprovalYear",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -57965,7 +57354,6 @@
       },
       "TimetoapprovalWEEK": {
         "title": "TimetoapprovalWEEK",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -58035,7 +57423,6 @@
       },
       "Pipeline-stats": {
         "title": "Pipeline-stats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -58397,7 +57784,6 @@
       },
       "get-customer-onboarding-stages": {
         "title": "get-customer-onboarding-stages",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -58996,7 +58382,6 @@
       },
       "test": {
         "title": "test",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -59227,27 +58612,6 @@
       },
       "BusinessDetails1": {
         "title": "BusinessDetails1",
-        "required": [
-          "id",
-          "name",
-          "tin",
-          "mobile",
-          "official_website",
-          "public_website",
-          "social_account",
-          "address_apartment",
-          "address_line_1",
-          "address_line_2",
-          "address_city",
-          "address_state",
-          "address_postal_code",
-          "address_country",
-          "created_at",
-          "created_by",
-          "updated_at",
-          "updated_by",
-          "status"
-        ],
         "type": "object",
         "properties": {
           "id": {

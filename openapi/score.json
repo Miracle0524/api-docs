@@ -2922,7 +2922,6 @@
     "schemas": {
       "Success": {
         "title": "Success",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -3261,24 +3260,6 @@
       },
       "Data": {
         "title": "Data",
-        "required": [
-          "id",
-          "month",
-          "year",
-          "created_at",
-          "business_id",
-          "customer_id",
-          "status",
-          "score_weightage_config",
-          "weighted_score_100",
-          "weighted_score_850",
-          "risk_level",
-          "score_decision",
-          "base_score",
-          "version",
-          "score_distribution",
-          "is_score_calculated"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -3656,17 +3637,6 @@
       },
       "ScoreDistribution": {
         "title": "ScoreDistribution",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "is_deleted",
-          "total_weightage",
-          "factors",
-          "score",
-          "score_100",
-          "score_850"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -3771,23 +3741,6 @@
       },
       "Factor": {
         "title": "Factor",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "category_id",
-          "is_deleted",
-          "parent_factor_id",
-          "weightage",
-          "factor_id",
-          "value",
-          "score_100",
-          "weighted_score_100",
-          "score_850",
-          "weighted_score_850",
-          "status",
-          "log"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -3865,7 +3818,6 @@
       },
       "SuccessScorenotcalculated": {
         "title": "SuccessScorenotcalculated",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -3911,7 +3863,6 @@
       },
       "GetScoreTrendChart": {
         "title": "GetScoreTrendChart",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -4007,7 +3958,6 @@
       },
       "Success1": {
         "title": "Success1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -4079,17 +4029,6 @@
       },
       "ScoreDistribution1": {
         "title": "ScoreDistribution1",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "is_deleted",
-          "total_weightage",
-          "factors",
-          "score",
-          "score_100",
-          "score_850"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -4163,23 +4102,6 @@
       },
       "Factor1": {
         "title": "Factor1",
-        "required": [
-          "id",
-          "code",
-          "label",
-          "category_id",
-          "is_deleted",
-          "parent_factor_id",
-          "weightage",
-          "factor_id",
-          "value",
-          "score_100",
-          "weighted_score_100",
-          "score_850",
-          "weighted_score_850",
-          "status",
-          "log"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -4274,7 +4196,6 @@
       },
       "AIScoreSuccess": {
         "title": "AIScoreSuccess",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -4560,7 +4481,6 @@
       },
       "Success2": {
         "title": "Success2",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -4615,7 +4535,6 @@
       },
       "Success3": {
         "title": "Success3",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -4719,7 +4638,6 @@
       },
       "Success4": {
         "title": "Success4",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {

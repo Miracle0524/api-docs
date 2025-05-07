@@ -48029,7 +48029,6 @@
     "schemas": {
       "Success": {
         "title": "Success",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -48183,7 +48182,6 @@
       },
       "Success5": {
         "title": "Success5",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -49145,33 +49143,6 @@
       },
       "Data3": {
         "title": "Data3",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "bank_account",
-          "bank_name",
-          "official_name",
-          "institution_name",
-          "verification_status",
-          "balance_limit",
-          "currency",
-          "type",
-          "subtype",
-          "mask",
-          "created_at",
-          "routing_number",
-          "wire_routing_number",
-          "deposit_account",
-          "is_selected",
-          "average_balance",
-          "transactions",
-          "balances",
-          "match",
-          "depositAccountInfo",
-          "verification_result",
-          "routing",
-          "wire_routing"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -49472,7 +49443,6 @@
       },
       "Success6": {
         "title": "Success6",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -49576,35 +49546,6 @@
       },
       "Data4": {
         "title": "Data4",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "bank_account",
-          "bank_name",
-          "official_name",
-          "institution_name",
-          "verification_status",
-          "balance_current",
-          "balance_available",
-          "balance_limit",
-          "currency",
-          "type",
-          "subtype",
-          "mask",
-          "created_at",
-          "routing_number",
-          "wire_routing_number",
-          "deposit_account",
-          "is_selected",
-          "average_balance",
-          "transactions",
-          "balances",
-          "match",
-          "depositAccountInfo",
-          "verification_result",
-          "routing",
-          "wire_routing"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -49911,21 +49852,6 @@
       },
       "Transaction": {
         "title": "Transaction",
-        "required": [
-          "id",
-          "bank_account_id",
-          "business_integration_task_id",
-          "transaction_id",
-          "date",
-          "amount",
-          "description",
-          "payment_metadata",
-          "currency",
-          "category",
-          "payment_type",
-          "is_pending",
-          "created_at"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -50098,7 +50024,6 @@
       },
       "BusinessTradeLines": {
         "title": "BusinessTradeLines",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -50222,7 +50147,6 @@
       },
       "NullState": {
         "title": "NullState",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -50262,7 +50186,6 @@
       },
       "GetDepositAccountPlaidAuth": {
         "title": "GetDepositAccountPlaidAuth",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -50604,7 +50527,6 @@
       },
       "SetDepositAccountPlaidAuth": {
         "title": "SetDepositAccountPlaidAuth",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -50649,7 +50571,6 @@
       },
       "GetBalancesheet": {
         "title": "GetBalancesheet",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -53871,7 +53792,6 @@
       },
       "GetIncomeStatement": {
         "title": "GetIncomeStatement",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -54548,7 +54468,6 @@
       },
       "Success7": {
         "title": "Success7",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -54642,7 +54561,6 @@
       },
       "Success8": {
         "title": "Success8",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -54669,7 +54587,6 @@
       },
       "Data12": {
         "title": "Data12",
-        "required": ["count", "page", "accounting_balancesheet"],
         "type": "object",
         "properties": {
           "count": {
@@ -54698,7 +54615,6 @@
       },
       "SuccessBalanceSheet": {
         "title": "SuccessBalanceSheet",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -59307,7 +59223,6 @@
       },
       "Data13": {
         "title": "Data13",
-        "required": ["count", "page", "accounting_balancesheet", "total"],
         "type": "object",
         "properties": {
           "count": {
@@ -63921,26 +63836,6 @@
       },
       "AccountingBalancesheet": {
         "title": "AccountingBalancesheet",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "business_id",
-          "platform_id",
-          "external_id",
-          "start_date",
-          "end_date",
-          "currency",
-          "total_assets",
-          "total_equity",
-          "total_liabilities",
-          "assets",
-          "equity",
-          "liabilities",
-          "meta",
-          "created_at",
-          "updated_at",
-          "task_status"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -64233,7 +64128,6 @@
       },
       "Assets1": {
         "title": "Assets1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -64358,7 +64252,6 @@
       },
       "Item": {
         "title": "Item",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -64402,7 +64295,6 @@
       },
       "Item1": {
         "title": "Item1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -64433,7 +64325,6 @@
       },
       "Equity1": {
         "title": "Equity1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -64501,7 +64392,6 @@
       },
       "Liabilities1": {
         "title": "Liabilities1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -64593,7 +64483,6 @@
       },
       "Meta": {
         "title": "Meta",
-        "required": ["note"],
         "type": "object",
         "properties": {
           "note": {
@@ -64608,7 +64497,6 @@
       },
       "SuccessIncomeStatement": {
         "title": "SuccessIncomeStatement",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -73677,7 +73565,6 @@
       },
       "Data14": {
         "title": "Data14",
-        "required": ["count", "page", "accounting_incomestatement", "total"],
         "type": "object",
         "properties": {
           "count": {
@@ -82751,29 +82638,6 @@
       },
       "AccountingIncomestatement": {
         "title": "AccountingIncomestatement",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "external_id",
-          "business_id",
-          "platform_id",
-          "start_date",
-          "end_date",
-          "currency",
-          "accounting_standard",
-          "net_income",
-          "total_revenue",
-          "total_depreciation",
-          "total_expenses",
-          "total_cost_of_goods_sold",
-          "revenue",
-          "expenses",
-          "cost_of_sales",
-          "meta",
-          "created_at",
-          "updated_at",
-          "task_status"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -83299,7 +83163,6 @@
       },
       "Revenue1": {
         "title": "Revenue1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -83367,7 +83230,6 @@
       },
       "Expenses1": {
         "title": "Expenses1",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -83773,7 +83635,6 @@
       },
       "CostOfSales": {
         "title": "CostOfSales",
-        "required": ["name", "items", "value", "account_id"],
         "type": "object",
         "properties": {
           "name": {
@@ -83804,7 +83665,6 @@
       },
       "Success9": {
         "title": "Success9",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -83844,7 +83704,6 @@
       },
       "Success10": {
         "title": "Success10",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -83947,7 +83806,6 @@
       },
       "Googlereviews": {
         "title": "Googlereviews",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -84013,16 +83871,6 @@
       },
       "Record": {
         "title": "Record",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "review_id",
-          "star_rating",
-          "text",
-          "review_datetime",
-          "created_at",
-          "updated_at"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -84067,7 +83915,6 @@
       },
       "GooglereviewsCopy": {
         "title": "GooglereviewsCopy",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -84103,7 +83950,6 @@
       },
       "MonthlyBusinessRatings": {
         "title": "MonthlyBusinessRatings",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -84283,7 +84129,6 @@
       },
       "Success11": {
         "title": "Success11",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -84381,7 +84226,6 @@
       },
       "Data20": {
         "title": "Data20",
-        "required": ["public_records"],
         "type": "object",
         "properties": {
           "public_records": {
@@ -84469,34 +84313,6 @@
       },
       "PublicRecords": {
         "title": "PublicRecords",
-        "required": [
-          "id",
-          "business_integration_task_id",
-          "number_of_business_liens",
-          "most_recent_business_lien_filing_date",
-          "most_recent_business_lien_status",
-          "number_of_bankruptcies",
-          "most_recent_bankruptcy_filing_date",
-          "number_of_judgement_fillings",
-          "most_recent_judgement_filling_date",
-          "corporate_filing_business_name",
-          "corporate_filing_filling_date",
-          "corporate_filing_incorporation_state",
-          "corporate_filing_corporation_type",
-          "corporate_filing_resgistration_type",
-          "corporate_filing_secretary_of_state_status",
-          "corporate_filing_secretary_of_state_status_date",
-          "average_rating",
-          "created_at",
-          "updated_at",
-          "monthly_rating",
-          "monthly_rating_date",
-          "official_website",
-          "reviews",
-          "review_statistics",
-          "compalint_statistics",
-          "additional_records"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -84661,7 +84477,6 @@
       },
       "Review": {
         "title": "Review",
-        "required": ["source", "count", "percentage"],
         "type": "object",
         "properties": {
           "source": {
@@ -84685,27 +84500,6 @@
       },
       "ReviewStatistics": {
         "title": "ReviewStatistics",
-        "required": [
-          "count_of_total_reviewers_all_time",
-          "count_of_duplicate_reviewers_all_time",
-          "min_rating_all_time",
-          "median_rating_all_time",
-          "max_rating_all_time",
-          "standard_deviation_of_rating_all_time",
-          "variance_of_rating_all_time",
-          "count_of_0_or_1_star_ratings_all_time",
-          "count_of_2_star_ratings_all_time",
-          "count_of_3_star_ratings_all_time",
-          "count_of_4_star_ratings_all_time",
-          "count_of_5_star_ratings_all_time",
-          "percentage_of_0_or_1_star_ratings_all_time",
-          "percentage_of_2_star_ratings_all_time",
-          "percentage_of_3_star_ratings_all_time",
-          "percentage_of_4_star_ratings_all_time",
-          "percentage_of_5_star_ratings_all_time",
-          "count_of_reviews_containing_alert_words_all_time",
-          "percentage_of_reviews_containing_alert_words_all_time"
-        ],
         "type": "object",
         "properties": {
           "count_of_total_reviewers_all_time": {
@@ -84811,22 +84605,6 @@
       },
       "CompalintStatistics": {
         "title": "CompalintStatistics",
-        "required": [
-          "count_of_complaints_all_time",
-          "count_of_consumer_financial_protection_bureau_complaints_all_time",
-          "percentage_of_complaints_containing_alert_words_all_time",
-          "count_of_federal_trade_commission_complaints_all_time",
-          "count_of_answered_resolved_status_all_time",
-          "percentage_of_answered_resolved_status_all_time",
-          "count_of_resolved_resolved_status_all_time",
-          "percentage_of_resolved_resolved_status_all_time",
-          "count_of_unanswered_resolved_status_all_time",
-          "percentage_of_unanswered_resolved_status_all_time",
-          "count_of_unresolved_resolved_status_all_time",
-          "percentage_of_unresolved_resolved_status_all_time",
-          "count_of_other_resolved_status_all_time",
-          "percentage_of_other_resolved_status_all_time"
-        ],
         "type": "object",
         "properties": {
           "count_of_complaints_all_time": {
@@ -84907,12 +84685,6 @@
       },
       "AdditionalRecords": {
         "title": "AdditionalRecords",
-        "required": [
-          "minority_owned_enterprise",
-          "woman_owned_enterprise",
-          "veteran_owned_enterprise",
-          "number_of_employees"
-        ],
         "type": "object",
         "properties": {
           "minority_owned_enterprise": {
@@ -85100,7 +84872,6 @@
       },
       "Success13": {
         "title": "Success13",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -85145,7 +84916,6 @@
       },
       "SuccessTaxStatusconnectionalreadyexists": {
         "title": "SuccessTaxStatusconnectionalreadyexists",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -85185,7 +84955,6 @@
       },
       "TaxFilingConsentLinkInit": {
         "title": "TaxFilingConsentLinkInit",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -85253,7 +85022,6 @@
       },
       "TaxFilingByScore": {
         "title": "TaxFilingByScore",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -85554,12 +85322,6 @@
       },
       "Data31": {
         "title": "Data31",
-        "required": [
-          "annual_data",
-          "is_consent_provided",
-          "irs_status",
-          "version"
-        ],
         "type": "object",
         "properties": {
           "annual_data": {
@@ -85864,17 +85626,6 @@
       },
       "AnnualDatum": {
         "title": "AnnualDatum",
-        "required": [
-          "period",
-          "business_type",
-          "total_sales",
-          "total_compensation",
-          "total_wages",
-          "irs_balance",
-          "lien_balnce",
-          "cost_of_goods_sold",
-          "quarterlyData"
-        ],
         "type": "object",
         "properties": {
           "period": {
@@ -85989,20 +85740,6 @@
       },
       "QuarterlyDatum": {
         "title": "QuarterlyDatum",
-        "required": [
-          "periodYear",
-          "periodMonth",
-          "form",
-          "form_type",
-          "interest",
-          "interest_date",
-          "penalty",
-          "penalty_date",
-          "filed_date",
-          "balance",
-          "tax_period_ending_date",
-          "amount_filed"
-        ],
         "type": "object",
         "properties": {
           "periodYear": {
@@ -86063,7 +85800,6 @@
       },
       "TaxFiling": {
         "title": "TaxFiling",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86364,7 +86100,6 @@
       },
       "SuccessYearlyData": {
         "title": "SuccessYearlyData",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86447,7 +86182,6 @@
       },
       "SuccessQuartelyData": {
         "title": "SuccessQuartelyData",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86546,7 +86280,6 @@
       },
       "NotFound": {
         "title": "NotFound",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86617,7 +86350,6 @@
       },
       "Success15": {
         "title": "Success15",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86683,7 +86415,6 @@
       },
       "AlreadyConnected": {
         "title": "AlreadyConnected",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86723,7 +86454,6 @@
       },
       "GetWebsiteData": {
         "title": "GetWebsiteData",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -86797,27 +86527,6 @@
       },
       "Data41": {
         "title": "Data41",
-        "required": [
-          "id",
-          "url",
-          "error",
-          "pages",
-          "title",
-          "domain",
-          "object",
-          "parked",
-          "people",
-          "status",
-          "addresses",
-          "created_at",
-          "updated_at",
-          "business_id",
-          "description",
-          "phone_numbers",
-          "email_addresses",
-          "http_status_code",
-          "business_name_match"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -86948,7 +86657,6 @@
       },
       "Page": {
         "title": "Page",
-        "required": ["url", "category", "screenshot_url"],
         "type": "object",
         "properties": {
           "url": {
@@ -86971,13 +86679,6 @@
       },
       "Domain": {
         "title": "Domain",
-        "required": [
-          "domain",
-          "domain_id",
-          "registrar",
-          "creation_date",
-          "expiration_date"
-        ],
         "type": "object",
         "properties": {
           "domain": {
@@ -87012,7 +86713,6 @@
       },
       "Registrar": {
         "title": "Registrar",
-        "required": ["url", "name", "organization"],
         "type": "object",
         "properties": {
           "url": {
@@ -87035,7 +86735,6 @@
       },
       "IDVGetOwnerStatus": {
         "title": "IDVGetOwnerStatus",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -87191,7 +86890,6 @@
       },
       "IDVSuccess": {
         "title": "IDVSuccess",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -87382,7 +87080,6 @@
       },
       "FailureResponse": {
         "title": "FailureResponse",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -87827,7 +87524,6 @@
       },
       "Success19": {
         "title": "Success19",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -88094,7 +87790,6 @@
       },
       "GetBusinessOfficers": {
         "title": "GetBusinessOfficers",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -88228,17 +87923,6 @@
       },
       "GetBusinessOfficers1": {
         "title": "GetBusinessOfficers1",
-        "required": [
-          "id",
-          "business_entity_verification_id",
-          "created_at",
-          "updated_at",
-          "name",
-          "titles",
-          "submitted",
-          "source",
-          "metadata"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -88357,7 +88041,6 @@
       },
       "VerificationPeople": {
         "title": "VerificationPeople",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89230,7 +88913,6 @@
       },
       "Nointegrationsfound": {
         "title": "Nointegrationsfound",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89257,7 +88939,6 @@
       },
       "Getallintegraionstatusdetails": {
         "title": "Getallintegraionstatusdetails",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89358,7 +89039,6 @@
       },
       "Success22": {
         "title": "Success22",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89450,7 +89130,6 @@
       },
       "Page1": {
         "title": "Page1",
-        "required": ["category", "url", "text", "screenshot_url"],
         "type": "object",
         "properties": {
           "category": {
@@ -89477,7 +89156,6 @@
       },
       "Nodata": {
         "title": "Nodata",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89564,7 +89242,6 @@
       },
       "success23": {
         "title": "success23",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89665,7 +89342,6 @@
       },
       "GetBankingTransactions": {
         "title": "GetBankingTransactions",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89854,7 +89530,6 @@
       },
       "GetAccountBalances": {
         "title": "GetAccountBalances",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89905,7 +89580,6 @@
       },
       "GetAccountBalances1": {
         "title": "GetAccountBalances1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -89983,7 +89657,6 @@
       },
       "GetTransactionAccountsSuccess": {
         "title": "GetTransactionAccountsSuccess",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -90050,7 +89723,6 @@
       },
       "GetBankingTransactionAccountFilter": {
         "title": "GetBankingTransactionAccountFilter",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -90245,7 +89917,6 @@
       },
       "success24": {
         "title": "success24",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -90330,7 +90001,6 @@
       },
       "unsupporteddocument": {
         "title": "unsupporteddocument",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -90353,7 +90023,6 @@
       },
       "TransactionStats": {
         "title": "TransactionStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -90900,7 +90569,6 @@
       },
       "BalancesStats": {
         "title": "BalancesStats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91046,7 +90714,6 @@
       },
       "BalanceSheetstats": {
         "title": "BalanceSheetstats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91240,7 +90907,6 @@
       },
       "IncomeStatementstats": {
         "title": "IncomeStatementstats",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91458,7 +91124,6 @@
       },
       "getuserVantagescore": {
         "title": "getuserVantagescore",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91563,7 +91228,6 @@
       },
       "GetPDFReportusingbusiness_id": {
         "title": "GetPDFReportusingbusiness_id",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91634,7 +91298,6 @@
       },
       "ReportdoesnotexistinS3bucket": {
         "title": "ReportdoesnotexistinS3bucket",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91674,7 +91337,6 @@
       },
       "Successfulresponse": {
         "title": "Successfulresponse",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -91814,7 +91476,6 @@
       },
       "Successfulresponse1": {
         "title": "Successfulresponse1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92082,7 +91743,6 @@
       },
       "SuccessfulResponse5": {
         "title": "SuccessfulResponse5",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92105,7 +91765,6 @@
       },
       "RiskAlertsReasonsStat": {
         "title": "RiskAlertsReasonsStat",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92211,7 +91870,6 @@
       },
       "NullState1": {
         "title": "NullState1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92260,7 +91918,6 @@
       },
       "ListQueues": {
         "title": "ListQueues",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92514,7 +92171,6 @@
       },
       "GetRequestDetail": {
         "title": "GetRequestDetail",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -92807,7 +92463,6 @@
       },
       "GetJobDetail": {
         "title": "GetJobDetail",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -93295,7 +92950,6 @@
       },
       "SuccessLatest": {
         "title": "SuccessLatest",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -96545,7 +96199,6 @@
       },
       "CustomerConfigwithadmindefault": {
         "title": "CustomerConfigwithadmindefault",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -98546,7 +98199,6 @@
       },
       "onlyadminconfigpresent": {
         "title": "onlyadminconfigpresent",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -98843,7 +98495,6 @@
       },
       "GetRiskAlerts": {
         "title": "GetRiskAlerts",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -99102,7 +98753,6 @@
       },
       "businessmatch": {
         "title": "businessmatch",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -107297,7 +106947,6 @@
       },
       "localresults": {
         "title": "localresults",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -107798,7 +107447,6 @@
       },
       "successfulresponse6": {
         "title": "successfulresponse6",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -107934,7 +107582,6 @@
       },
       "successfulresponse7": {
         "title": "successfulresponse7",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -109134,7 +108781,6 @@
       },
       "activecomplete": {
         "title": "activecomplete",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -109189,7 +108835,6 @@
       },
       "completetax-return": {
         "title": "completetax-return",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -109650,7 +109295,6 @@
       },
       "completeprocess-statement": {
         "title": "completeprocess-statement",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110106,7 +109750,6 @@
       },
       "jobstatus": {
         "title": "jobstatus",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110290,7 +109933,6 @@
       },
       "invaliddocumenttype": {
         "title": "invaliddocumenttype",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110333,7 +109975,6 @@
       },
       "validdocumenttype": {
         "title": "validdocumenttype",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110536,7 +110177,6 @@
       },
       "sucessfulsubmission": {
         "title": "sucessfulsubmission",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -110576,7 +110216,6 @@
       },
       "successfulsubmission": {
         "title": "successfulsubmission",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -113682,7 +113321,6 @@
       },
       "Success25": {
         "title": "Success25",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -113786,19 +113424,6 @@
       },
       "Data106": {
         "title": "Data106",
-        "required": [
-          "id",
-          "business_id",
-          "business_integration_task_id",
-          "total_risk_count",
-          "high_risk_count",
-          "medium_risk_count",
-          "low_risk_count",
-          "average_risk_score",
-          "created_at",
-          "updated_at",
-          "articles"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -114021,7 +113646,6 @@
       },
       "AbcKitchenSuccess": {
         "title": "AbcKitchenSuccess",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -114108,7 +113732,6 @@
       },
       "GetAdverseMediafromCase": {
         "title": "GetAdverseMediafromCase",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -114348,7 +113971,6 @@
       },
       "GetAdverseMedia": {
         "title": "GetAdverseMedia",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -114588,7 +114210,6 @@
       },
       "GetAllintegrations": {
         "title": "GetAllintegrations",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
@@ -114883,7 +114504,6 @@
       },
       "GetAllintegrations1": {
         "title": "GetAllintegrations1",
-        "required": ["status", "message", "data"],
         "type": "object",
         "properties": {
           "status": {
