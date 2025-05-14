@@ -47481,8 +47481,8 @@
                               },
                               "date_of_birth": {
                                 "type": "string",
-                                "description": "Encrypted date of birth",
-                                "example": "U2FsdGVkX18vpnZL7LLx2QH40ZBZ5sjdnUwGQlnu6Cw="
+                                "description": "Date of birth in YYYY-MM-DD format.",
+                                "example": "1989-07-22"
                               },
                               "address_apartment": {
                                 "type": ["string", "null"],
@@ -47676,7 +47676,7 @@
                                   "last_name": "Knope",
                                   "email": "admin@joinworth.com",
                                   "mobile": "+12345678909",
-                                  "date_of_birth": "U2FsdGVkX18x3EVusJYTUPLOifzxMOo8TsAJS8YoHtg=",
+                                  "date_of_birth": "1989-07-22",
                                   "address_apartment": null,
                                   "address_line_1": "123 Main St.",
                                   "address_line_2": null,
@@ -47732,7 +47732,7 @@
                           "last_name": "Knope",
                           "email": "admin@joinworth.com",
                           "mobile": "+12345678909",
-                          "date_of_birth": "U2FsdGVkX18x3EVusJYTUPLOifzxMOo8TsAJS8YoHtg=",
+                          "date_of_birth": "1989-07-22",
                           "address_apartment": null,
                           "address_line_1": "123 Main St.",
                           "address_line_2": null,
