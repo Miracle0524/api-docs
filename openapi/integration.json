@@ -45772,6 +45772,10 @@
                           "confidence": 0.95
                         }
                       ]
+                    },
+                    "process_completion_data": {
+                      "all_kyb_processes_complete": true,
+                      "last_updated": "2025-05-14T20:30:58Z"
                     }
                   }
                 }
@@ -110697,6 +110701,9 @@
           },
           "year_established": {
             "$ref": "#/components/schemas/YearEstablished"
+          },
+          "process_completion_data": {
+            "$ref": "#/components/schemas/ProcessCompletionData"
           }
         },
         "examples": [
@@ -111300,6 +111307,29 @@
             "source.confidence": 0.95,
             "source.platformId": 16,
             "alternatives": []
+          }
+        ]
+      },
+      "ProcessCompletionData": {
+        "title": "ProcessCompletionData",
+        "description": "Information on whether the KYB endpoint is still waiting for business entity verification processes to complete.",
+        "type": "object",
+        "properties": {
+          "all_kyb_processes_complete": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "`true`if all kyb verification processes have finished running, `false` otherwise."
+          },
+          "last_updated": {
+            "type": "string",
+            "nullable": true,
+            "description": "A timestamp of the last time the all_kyb_processes_complete status was updated."
+          }
+        },
+        "examples": [
+          {
+            "all_kyb_processes_complete": true,
+            "last_updated": "2025-05-14T20:30:58Z"
           }
         ]
       },
