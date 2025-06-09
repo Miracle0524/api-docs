@@ -3932,7 +3932,12 @@
                         {
                           "status": "success",
                           "message": "Business invited successfully",
-                          "data": {}
+                          "data": {
+                            "business_id": "e6fbc974-a9d3-4d1b-bd99-90a618758d6d",
+                            "applicant_email": "applicant@samplemail.com",
+                            "invitation_id": "76fd24c2-c75a-4ab0-8ee7-a1d287d8951b",
+                            "customer_id": "22f210e4-4455-4107-b132-97e8478546ea"
+                          }
                         }
                       ]
                     }
@@ -3942,7 +3947,12 @@
                 "example": {
                   "status": "success",
                   "message": "Business invited successfully",
-                  "data": {}
+                  "data": {
+                    "business_id": "e6fbc974-a9d3-4d1b-bd99-90a618758d6d",
+                    "applicant_email": "applicant@samplemail.com",
+                    "invitation_id": "76fd24c2-c75a-4ab0-8ee7-a1d287d8951b",
+                    "customer_id": "22f210e4-4455-4107-b132-97e8478546ea"
+                  }
                 }
               }
             }
@@ -41389,14 +41399,46 @@
             "type": "string"
           },
           "data": {
-            "type": "object"
+            "type": "object",
+            "properties": {
+              "business_id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Unique identifier for the invited business"
+              },
+              "applicant_email": {
+                "type": "string",
+                "format": "email",
+                "description": "Email address of the invited applicant"
+              },
+              "invitation_id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Unique identifier for this invitation"
+              },
+              "invitation_url": {
+                "type": "string",
+                "format": "uuid",
+                "description": "URL leading to the sign-up form for the invited applicant"
+              },
+              "customer_id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Unique identifier of the customer who sent the invite"
+              }
+            }
           }
         },
         "examples": [
           {
             "status": "success",
             "message": "Business invited successfully",
-            "data": {}
+            "data": {
+              "business_id": "e6fbc974-a9d3-4d1b-bd99-90a618758d6d",
+              "applicant_email": "applicant@samplemail.com",
+              "invitation_id": "76fd24c2-c75a-4ab0-8ee7-a1d287d8951b",
+              "customer_id": "22f210e4-4455-4107-b132-97e8478546ea"
+            }
           }
         ]
       },
