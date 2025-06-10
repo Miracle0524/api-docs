@@ -549,7 +549,8 @@
                                   "bank_account_balance_current": null,
                                   "bank_account_balance_available": null,
                                   "bank_account_balance_limit": null,
-                                  "deposit_account": null
+                                  "deposit_account": null,
+                                  "npi_provider_number": null
                                 },
                                 "business_customer": {
                                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -834,7 +835,8 @@
                           "bank_account_balance_current": null,
                           "bank_account_balance_available": null,
                           "bank_account_balance_limit": null,
-                          "deposit_account": null
+                          "deposit_account": null,
+                          "npi_provider_number": null
                         },
                         "business_customer": {
                           "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -1068,33 +1070,33 @@
                           "message": "Bulk process had errors",
                           "errorCode": null,
                           "data": {
-                              "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
-                              "failed_rows": {
-                                  "0": {
-                                      "message": "Validation failed. Error details:",
-                                      "data": [
-                                          {
-                                              "column": "tin",
-                                              "providedKey": "tin",
-                                              "value": "333444685999",
-                                              "reason": "Validation failed"
-                                          },
-                                          {
-                                              "column": "mobile",
-                                              "providedKey": "mobile",
-                                              "value": "10",
-                                              "reason": "Validation failed"
-                                          },
-                                          {
-                                              "column": "external_id",
-                                              "providedKey": "external_id",
-                                              "value": "77388994455034",
-                                              "reason": "The business external ID already exists for this customer"
-                                          }
-                                      ]
+                            "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
+                            "failed_rows": {
+                              "0": {
+                                "message": "Validation failed. Error details:",
+                                "data": [
+                                  {
+                                    "column": "tin",
+                                    "providedKey": "tin",
+                                    "value": "333444685999",
+                                    "reason": "Validation failed"
+                                  },
+                                  {
+                                    "column": "mobile",
+                                    "providedKey": "mobile",
+                                    "value": "10",
+                                    "reason": "Validation failed"
+                                  },
+                                  {
+                                    "column": "external_id",
+                                    "providedKey": "external_id",
+                                    "value": "77388994455034",
+                                    "reason": "The business external ID already exists for this customer"
                                   }
-                              },
-                              "result": {}
+                                ]
+                              }
+                            },
+                            "result": {}
                           }
                         }
                       ]
@@ -1107,33 +1109,33 @@
                   "message": "Bulk process had errors",
                   "errorCode": null,
                   "data": {
-                      "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
-                      "failed_rows": {
-                          "0": {
-                              "message": "Validation failed. Error details:",
-                              "data": [
-                                  {
-                                      "column": "tin",
-                                      "providedKey": "tin",
-                                      "value": "333444685999",
-                                      "reason": "Validation failed"
-                                  },
-                                  {
-                                      "column": "mobile",
-                                      "providedKey": "mobile",
-                                      "value": "10",
-                                      "reason": "Validation failed"
-                                  },
-                                  {
-                                      "column": "external_id",
-                                      "providedKey": "external_id",
-                                      "value": "77388994455034",
-                                      "reason": "The business external ID already exists for this customer"
-                                  }
-                              ]
+                    "runId": "6dd12436-6220-411c-919f-19ce683bcc68",
+                    "failed_rows": {
+                      "0": {
+                        "message": "Validation failed. Error details:",
+                        "data": [
+                          {
+                            "column": "tin",
+                            "providedKey": "tin",
+                            "value": "333444685999",
+                            "reason": "Validation failed"
+                          },
+                          {
+                            "column": "mobile",
+                            "providedKey": "mobile",
+                            "value": "10",
+                            "reason": "Validation failed"
+                          },
+                          {
+                            "column": "external_id",
+                            "providedKey": "external_id",
+                            "value": "77388994455034",
+                            "reason": "The business external ID already exists for this customer"
                           }
-                      },
-                      "result": {}
+                        ]
+                      }
+                    },
+                    "result": {}
                   }
                 }
               }
@@ -1679,6 +1681,9 @@
           },
           "deposit_account": {
             "type": "boolean"
+          },
+          "npi": {
+            "type": "string"
           }
         },
         "examples": [
@@ -1973,7 +1978,8 @@
                     "bank_account_balance_current": null,
                     "bank_account_balance_available": null,
                     "bank_account_balance_limit": null,
-                    "deposit_account": null
+                    "deposit_account": null,
+                    "npi_provider_number": null
                   },
                   "business_customer": {
                     "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2267,7 +2273,8 @@
                   "bank_account_balance_current": null,
                   "bank_account_balance_available": null,
                   "bank_account_balance_limit": null,
-                  "deposit_account": null
+                  "deposit_account": null,
+                  "npi_provider_number": null
                 },
                 "business_customer": {
                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2576,7 +2583,8 @@
               "bank_account_balance_current": null,
               "bank_account_balance_available": null,
               "bank_account_balance_limit": null,
-              "deposit_account": null
+              "deposit_account": null,
+              "npi_provider_number": null
             },
             "business_customer": {
               "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -3450,6 +3458,9 @@
           },
           "deposit_account": {
             "type": ["boolean", "null"]
+          },
+          "npi": {
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -3637,7 +3648,8 @@
             "bank_account_balance_current": null,
             "bank_account_balance_available": null,
             "bank_account_balance_limit": null,
-            "deposit_account": null
+            "deposit_account": null,
+            "npi_provider_number": null
           }
         ]
       },

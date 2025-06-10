@@ -547,7 +547,8 @@
                                   "bank_account_balance_current": null,
                                   "bank_account_balance_available": null,
                                   "bank_account_balance_limit": null,
-                                  "deposit_account": null
+                                  "deposit_account": null,
+                                  "npi_provider_number": null
                                 },
                                 "business_customer": {
                                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -832,7 +833,8 @@
                           "bank_account_balance_current": null,
                           "bank_account_balance_available": null,
                           "bank_account_balance_limit": null,
-                          "deposit_account": null
+                          "deposit_account": null,
+                          "npi_provider_number": null
                         },
                         "business_customer": {
                           "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -1633,6 +1635,9 @@
           },
           "deposit_account": {
             "type": "boolean"
+          },
+          "npi": {
+            "type": "string"
           }
         },
         "examples": [
@@ -1927,7 +1932,8 @@
                     "bank_account_balance_current": null,
                     "bank_account_balance_available": null,
                     "bank_account_balance_limit": null,
-                    "deposit_account": null
+                    "deposit_account": null,
+                    "npi_provider_number": null
                   },
                   "business_customer": {
                     "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2221,7 +2227,8 @@
                   "bank_account_balance_current": null,
                   "bank_account_balance_available": null,
                   "bank_account_balance_limit": null,
-                  "deposit_account": null
+                  "deposit_account": null,
+                  "npi_provider_number": null
                 },
                 "business_customer": {
                   "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -2530,7 +2537,8 @@
               "bank_account_balance_current": null,
               "bank_account_balance_available": null,
               "bank_account_balance_limit": null,
-              "deposit_account": null
+              "deposit_account": null,
+              "npi_provider_number": null
             },
             "business_customer": {
               "business_id": "1f19291e-2d2c-4f05-bf61-c7888383ae3f",
@@ -3404,6 +3412,9 @@
           },
           "deposit_account": {
             "type": ["boolean", "null"]
+          },
+          "npi": {
+            "type": ["string", "null"]
           }
         },
         "examples": [
@@ -3591,7 +3602,8 @@
             "bank_account_balance_current": null,
             "bank_account_balance_available": null,
             "bank_account_balance_limit": null,
-            "deposit_account": null
+            "deposit_account": null,
+            "npi_provider_number": null
           }
         ]
       },
