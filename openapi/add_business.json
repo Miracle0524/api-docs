@@ -1401,7 +1401,7 @@
             "type": "string"
           },
           "tin": {
-            "type": "number"
+            "type": "string"
           },
           "address_line_1": {
             "type": "string"
