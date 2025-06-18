@@ -6,7 +6,6 @@ Call the [Add Business](https://docs.worthai.com/api-reference/add-or-update-bus
 
 To ensure strong matches and maximize data returned by downstream **KYB** and **KYC** endpoints, include all required fields and as many recommended fields as are available during onboarding. The more context you provide, the more accurately we can verify and return business information—minimizing manual entry for the end user.
 
-
 ### Required/Recommended fields for KYB:
 
 <table>
@@ -19,65 +18,87 @@ To ensure strong matches and maximize data returned by downstream **KYB** and **
   </thead>
   <tbody>
     <tr>
-      <td><code>name</code></td>
+      <td>
+        <code>name</code>
+      </td>
       <td>✅ Required</td>
       <td>Legal business name</td>
     </tr>
     <tr>
-      <td><code>external_id</code></td>
+      <td>
+        <code>external_id</code>
+      </td>
       <td>✅ Required</td>
       <td>Internal identifier for tracking</td>
     </tr>
     <tr>
-      <td><code>tin</code> (Tax ID)</td>
+      <td>
+        <code>tin</code> (Tax ID)
+      </td>
       <td>🔶 Recommended</td>
       <td>Strongest match for business identity</td>
     </tr>
     <tr>
-      <td><code>address_line_1</code></td>
+      <td>
+        <code>address_line_1</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Business street address</td>
     </tr>
     <tr>
-      <td><code>address_city</code></td>
+      <td>
+        <code>address_city</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>City of the business</td>
     </tr>
     <tr>
-      <td><code>address_state</code></td>
+      <td>
+        <code>address_state</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>State where business operates</td>
     </tr>
     <tr>
-      <td><code>address_postal_code</code></td>
+      <td>
+        <code>address_postal_code</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>ZIP/Postal code</td>
     </tr>
     <tr>
-      <td><code>naics_code</code> <em>or</em> <code>mcc_code</code></td>
+      <td>
+        <code>naics_code</code> <em>or</em> <code>mcc_code</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Industry classification business code</td>
     </tr>
     <tr>
-      <td><code>year_created</code></td>
+      <td>
+        <code>year_created</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>The year the company was created</td>
     </tr>
     <tr>
-      <td><code>annual_total_income</code></td>
+      <td>
+        <code>annual_total_income</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Business revenue</td>
     </tr>
     <tr>
-      <td><code>official_website</code></td>
+      <td>
+        <code>official_website</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Company website</td>
     </tr>
   </tbody>
 </table>
 
-
 ### Required/Recommended fields for KYC
+
 <table>
   <thead>
     <tr>
@@ -88,74 +109,101 @@ To ensure strong matches and maximize data returned by downstream **KYB** and **
   </thead>
   <tbody>
     <tr>
-      <td><code>owner1_first_name</code></td>
+      <td>
+        <code>owner1_first_name</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Individual’s legal first name</td>
     </tr>
     <tr>
-      <td><code>owner1_last_name</code></td>
+      <td>
+        <code>owner1_last_name</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Individual’s legal last name</td>
     </tr>
     <tr>
-      <td><code>owner1_mobile</code></td>
+      <td>
+        <code>owner1_mobile</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Personal contact number</td>
     </tr>
     <tr>
-      <td><code>owner1_email</code></td>
+      <td>
+        <code>owner1_email</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Primary email address</td>
     </tr>
     <tr>
-      <td><code>owner1_dob</code></td>
+      <td>
+        <code>owner1_dob</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Used for identity matching (encrypted)</td>
     </tr>
     <tr>
-      <td><code>owner1_ssn</code></td>
+      <td>
+        <code>owner1_ssn</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Encrypted — critical for verification</td>
     </tr>
     <tr>
-      <td><code>owner1_address_line_1</code></td>
+      <td>
+        <code>owner1_address_line_1</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Home street address</td>
     </tr>
     <tr>
-      <td><code>owner1_address_line_2</code></td>
+      <td>
+        <code>owner1_address_line_2</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Apartment / Suite / Unit</td>
     </tr>
     <tr>
-      <td><code>owner1_address_city</code></td>
+      <td>
+        <code>owner1_address_city</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Residential city</td>
     </tr>
     <tr>
-      <td><code>owner1_address_state</code></td>
+      <td>
+        <code>owner1_address_state</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>Residential state</td>
     </tr>
     <tr>
-      <td><code>owner1_address_postal</code></td>
+      <td>
+        <code>owner1_address_postal</code>
+      </td>
       <td>🔶 Recommended</td>
       <td>ZIP code of the residential address</td>
     </tr>
     <tr>
-      <td><code>owner1_title</code></td>
+      <td>
+        <code>owner1_title</code>
+      </td>
       <td>✅ Required</td>
       <td>
-        Insert one of the following strings: Partner, Limited Partner, Director, Chief Accounting Officer,
-        Chief Executive Officer, Chief Operations Officer, President, Vice President, Treasurer,
-        Assistant Treasurer, 1% Shareholder, Shareholder, Controller, Managing Member, Owner,
-        Sole Proprietor, Executor, Beneficiary, Trustee, Administrator
+        Insert one of the following strings: Partner, Limited Partner, Director,
+        Chief Accounting Officer, Chief Executive Officer, Chief Operations
+        Officer, President, Vice President, Treasurer, Assistant Treasurer, 1%
+        Shareholder, Shareholder, Controller, Managing Member, Owner, Sole
+        Proprietor, Executor, Beneficiary, Trustee, Administrator
       </td>
     </tr>
     <tr>
-      <td><code>owner1_owner_type</code></td>
+      <td>
+        <code>owner1_owner_type</code>
+      </td>
       <td>✅ Required</td>
-      <td>Insert one of the following strings: “Control” or “Beneficial owner”</td>
+      <td>Insert one of the following strings: `CONTROL` or `BENEFICIARY`</td>
     </tr>
   </tbody>
 </table>
