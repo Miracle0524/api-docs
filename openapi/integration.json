@@ -20952,7 +20952,7 @@
                                 "total_compensation": 0,
                                 "total_wages": 23519,
                                 "irs_balance": 0,
-                                "lien_balnce": 0,
+                                "lien_balance": 0,
                                 "cost_of_goods_sold": 0,
                                 "quarterlyData": [
                                   {
@@ -21020,7 +21020,7 @@
                                 "total_compensation": 0,
                                 "total_wages": 33854,
                                 "irs_balance": 0,
-                                "lien_balnce": 0,
+                                "lien_balance": 0,
                                 "cost_of_goods_sold": 0,
                                 "quarterlyData": [
                                   {
@@ -21088,7 +21088,7 @@
                                 "total_compensation": 0,
                                 "total_wages": 35655,
                                 "irs_balance": 0,
-                                "lien_balnce": 0,
+                                "lien_balance": 0,
                                 "cost_of_goods_sold": 0,
                                 "quarterlyData": [
                                   {
@@ -21156,7 +21156,7 @@
                                 "total_compensation": 0,
                                 "total_wages": 0,
                                 "irs_balance": 0,
-                                "lien_balnce": 0,
+                                "lien_balance": 0,
                                 "cost_of_goods_sold": 0,
                                 "quarterlyData": [
                                   {
@@ -21240,7 +21240,7 @@
                         "total_compensation": 0,
                         "total_wages": 23519,
                         "irs_balance": 0,
-                        "lien_balnce": 0,
+                        "lien_balance": 0,
                         "cost_of_goods_sold": 0,
                         "quarterlyData": [
                           {
@@ -21308,7 +21308,7 @@
                         "total_compensation": 0,
                         "total_wages": 33854,
                         "irs_balance": 0,
-                        "lien_balnce": 0,
+                        "lien_balance": 0,
                         "cost_of_goods_sold": 0,
                         "quarterlyData": [
                           {
@@ -21376,7 +21376,7 @@
                         "total_compensation": 0,
                         "total_wages": 35655,
                         "irs_balance": 0,
-                        "lien_balnce": 0,
+                        "lien_balance": 0,
                         "cost_of_goods_sold": 0,
                         "quarterlyData": [
                           {
@@ -21444,7 +21444,7 @@
                         "total_compensation": 0,
                         "total_wages": 0,
                         "irs_balance": 0,
-                        "lien_balnce": 0,
+                        "lien_balance": 0,
                         "cost_of_goods_sold": 0,
                         "quarterlyData": [
                           {
@@ -85051,7 +85051,7 @@
                   "total_compensation": 0,
                   "total_wages": 23519,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85119,7 +85119,7 @@
                   "total_compensation": 0,
                   "total_wages": 33854,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85187,7 +85187,7 @@
                   "total_compensation": 0,
                   "total_wages": 35655,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85255,7 +85255,7 @@
                   "total_compensation": 0,
                   "total_wages": 0,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85356,7 +85356,7 @@
                 "total_compensation": 0,
                 "total_wages": 23519,
                 "irs_balance": 0,
-                "lien_balnce": 0,
+                "lien_balance": 0,
                 "cost_of_goods_sold": 0,
                 "quarterlyData": [
                   {
@@ -85424,7 +85424,7 @@
                 "total_compensation": 0,
                 "total_wages": 33854,
                 "irs_balance": 0,
-                "lien_balnce": 0,
+                "lien_balance": 0,
                 "cost_of_goods_sold": 0,
                 "quarterlyData": [
                   {
@@ -85492,7 +85492,7 @@
                 "total_compensation": 0,
                 "total_wages": 35655,
                 "irs_balance": 0,
-                "lien_balnce": 0,
+                "lien_balance": 0,
                 "cost_of_goods_sold": 0,
                 "quarterlyData": [
                   {
@@ -85560,7 +85560,7 @@
                 "total_compensation": 0,
                 "total_wages": 0,
                 "irs_balance": 0,
-                "lien_balnce": 0,
+                "lien_balance": 0,
                 "cost_of_goods_sold": 0,
                 "quarterlyData": [
                   {
@@ -85655,7 +85655,7 @@
             "type": "integer",
             "contentEncoding": "int32"
           },
-          "lien_balnce": {
+          "lien_balance": {
             "type": "integer",
             "contentEncoding": "int32"
           },
@@ -85679,7 +85679,7 @@
             "total_compensation": 0,
             "total_wages": 23519,
             "irs_balance": 0,
-            "lien_balnce": 0,
+            "lien_balance": 0,
             "cost_of_goods_sold": 0,
             "quarterlyData": [
               {
@@ -85829,7 +85829,7 @@
                   "total_compensation": 0,
                   "total_wages": 23519,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85897,7 +85897,7 @@
                   "total_compensation": 0,
                   "total_wages": 33854,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -85965,7 +85965,7 @@
                   "total_compensation": 0,
                   "total_wages": 35655,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {
@@ -86033,7 +86033,7 @@
                   "total_compensation": 0,
                   "total_wages": 0,
                   "irs_balance": 0,
-                  "lien_balnce": 0,
+                  "lien_balance": 0,
                   "cost_of_goods_sold": 0,
                   "quarterlyData": [
                     {

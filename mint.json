@@ -75,10 +75,6 @@
       ]
     },
     {
-      "group": "Bulk Imports",
-      "pages": ["api-reference/bulk/bulk-import/import-business"]
-    },
-    {
       "group": "Customers",
       "pages": [
         "api-reference/auth/users/accept-invitation",
