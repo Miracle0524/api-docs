@@ -1396,7 +1396,7 @@
         "properties": {
           "external_id": {
             "type": "string",
-            "description": "A unique identifier for this record in the system.",
+            "description": "A unique identifier for this record off of Worth's platform, sometimes from other, external systems",
             "example": "9485ac2e-02ec-7421-9ba2-bc6814526586"
           },
           "name": {
@@ -1406,7 +1406,7 @@
           },
           "tin": {
             "type": "string",
-            "description": "Taxpayer Identification Number issued by the government.",
+            "description": "Taxpayer Identification Number issued by the government. Nine numeric digits with or without dash(es).",
             "example": "123456789"
           },
           "address_line_1": {
@@ -1441,12 +1441,12 @@
           },
           "mobile": {
             "type": "string",
-            "description": "Company’s primary contact number.",
+            "description": "Company's primary contact number.",
             "example": "5551234567"
           },
           "official_website": {
             "type": "string",
-            "description": "URL of the company’s official website.",
+            "description": "URL of the company's official website.",
             "example": "https://www.acme-corp.com"
           },
           "naics_code": {
@@ -1467,7 +1467,7 @@
           "industry": {
             "type": "string",
             "description": "General industry classification.",
-            "example": "Software Development"
+            "example": "Finance and Insurance"
           },
           "is_monitoring_enabled": {
             "type": "boolean",
@@ -1653,91 +1653,6 @@
             "type": "string",
             "description": "Date on which credit or risk score was fetched.",
             "example": "2025-06-16"
-          },
-          "business_liens": {
-            "type": "number",
-            "description": "Count of active liens against the business.",
-            "example": 1
-          },
-          "business_liens_file_date": {
-            "type": "string",
-            "description": "Date the lien was filed.",
-            "example": "2025-01-15"
-          },
-          "business_liens_status": {
-            "type": "string",
-            "description": "Current status of the lien.",
-            "example": "ACTIVE"
-          },
-          "business_liens_status_date": {
-            "type": "string",
-            "description": "Date the lien status was last updated.",
-            "example": "2025-01-20"
-          },
-          "business_bankruptcies": {
-            "type": "number",
-            "description": "Count of bankruptcy filings.",
-            "example": 0
-          },
-          "business_bankruptcies_file_date": {
-            "type": "string",
-            "description": "Date the bankruptcy was filed.",
-            "example": "2024-12-01"
-          },
-          "business_bankruptcies_chapter": {
-            "type": "string",
-            "description": "Bankruptcy chapter under which filing was made.",
-            "example": "7"
-          },
-          "business_bankruptcies_voluntary": {
-            "type": "string",
-            "description": "Whether the bankruptcy was voluntary.",
-            "example": "yes"
-          },
-          "business_bankruptcies_status": {
-            "type": "string",
-            "description": "Current status of the bankruptcy case.",
-            "example": "DISCHARGED"
-          },
-          "business_bankruptcies_status_date": {
-            "type": "string",
-            "description": "Date the bankruptcy status was updated.",
-            "example": "2025-02-15"
-          },
-          "business_judgements": {
-            "type": "number",
-            "description": "Count of legal judgments against the business.",
-            "example": 2
-          },
-          "business_judgements_file_date": {
-            "type": "string",
-            "description": "Date the judgment was entered.",
-            "example": "2023-05-10"
-          },
-          "business_judgements_status": {
-            "type": "string",
-            "description": "Current status of the judgment.",
-            "example": "SATISFIED"
-          },
-          "business_judgements_status_date": {
-            "type": "string",
-            "description": "Date the judgment status was updated.",
-            "example": "2023-06-01"
-          },
-          "business_judgements_amount": {
-            "type": "number",
-            "description": "Monetary value of the judgment.",
-            "example": 10000
-          },
-          "social_review_count": {
-            "type": "number",
-            "description": "Number of external social media reviews.",
-            "example": 120
-          },
-          "social_review_score": {
-            "type": "number",
-            "description": "Average review rating (e.g., out of 5).",
-            "example": 4.5
           },
           "owner1_title": {
             "type": "string",
