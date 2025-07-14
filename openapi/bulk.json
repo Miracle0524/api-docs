@@ -1406,7 +1406,8 @@
             "type": "string"
           },
           "address_line_2": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "address_city": {
             "type": "string"
