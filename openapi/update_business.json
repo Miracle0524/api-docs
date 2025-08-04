@@ -1556,7 +1556,47 @@
             "type": "number"
           },
           "owner1_title": {
-            "type": "string"
+            "type": "string",
+            "description": "Official title of the first owner.",
+            "enum": [
+              "Partner",
+              "Limited Partner",
+              "Director",
+              "Chief Accounting Officer",
+              "Chief Executive Officer",
+              "Chief Operations Officer",
+              "President",
+              "Vice President",
+              "Treasurer",
+              "Assistant Treasurer",
+              "1% Shareholder",
+              "Shareholder",
+              "Controller",
+              "Managing Member",
+              "Owner",
+              "Sole Proprietor",
+              "Executor",
+              "Beneficiary",
+              "Trustee",
+              "Administrator",
+              "Assistant Secretary",
+              "Authorized Person",
+              "Chairman of the Board",
+              "Chief Compliance Officer",
+              "Chief Financial Officer",
+              "Chief Legal Officer",
+              "Chief Technology Officer",
+              "Co-Founder",
+              "Founder",
+              "General Partner",
+              "Managing Partner",
+              "Manager",
+              "Member",
+              "Principal",
+              "Registered Agent",
+              "Secretary",
+              "Chairperson"
+            ]
           },
           "owner1_first_name": {
             "type": "string"
