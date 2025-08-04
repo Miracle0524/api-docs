@@ -46,7 +46,7 @@
                     "examples": [
                       {
                         "name": "Test Business",
-                        "address_line_1": "480 s Ronald Reagan Blvd",
+                        "address_line_1": "480 S Ronald Reagan Blvd",
                         "tin": "333444685",
                         "address_postal_code": "32850",
                         "address_city": "Longwood",
@@ -63,7 +63,7 @@
                 "external_id": "77388994455034",
                 "name": "Test Business",
                 "tin": "333444685",
-                "address_line_1": "480 s Ronald Reagan Blvd",
+                "address_line_1": "480 S Ronald Reagan Blvd",
                 "address_city": "Longwood",
                 "address_state": "FL",
                 "address_postal_code": "32850"
@@ -404,7 +404,7 @@
                                   "address5_mobile": null,
                                   "id": null,
                                   "name": "Test Business",
-                                  "tin": "333444685",
+                                  "tin": "XXXXX4685",
                                   "address_line_1": "480 s Ronald Reagan Blvd",
                                   "address_line_2": null,
                                   "address_city": "Longwood",
@@ -690,7 +690,7 @@
                           "address5_mobile": null,
                           "id": null,
                           "name": "Test Business",
-                          "tin": "333444685",
+                          "tin": "XXXXX4685",
                           "address_line_1": "480 s Ronald Reagan Blvd",
                           "address_line_2": null,
                           "address_city": "Longwood",
@@ -1657,6 +1657,7 @@
           "owner1_title": {
             "type": "string",
             "description": "Official title of the first owner.",
+            "example": "Partner"
             "enum": [
               "Partner",
               "Limited Partner",
@@ -1832,6 +1833,11 @@
             "type": "string",
             "description": "National Provider Identifier (for healthcare entities).",
             "example": "1234567890"
+          },
+          "skip_credit_check": {
+            "type": "boolean",
+            "description": "OPTIONAL functionality when personal credit checks are enabled. A flag to indicate whether personal credit checks on the business owner should be skipped. Default is false.",
+            "example": false
           }
         },
         "examples": [
@@ -1839,7 +1845,7 @@
             "external_id": "77388994455034",
             "name": "Test Business",
             "tin": "333444685",
-            "address_line_1": "480 s Ronald Reagan Blvd",
+            "address_line_1": "480 S Ronald Reagan Blvd",
             "address_city": "Longwood",
             "address_state": "FL",
             "address_postal_code": "32850"

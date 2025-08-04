@@ -84401,83 +84401,7 @@
           "additional_records": {
             "$ref": "#/components/schemas/AdditionalRecords"
           }
-        },
-        "examples": [
-          {
-            "id": "5aeef5b5-ff1b-4d22-9f53-152d8308028a",
-            "business_integration_task_id": "b37f9dcb-31f8-49da-8c7e-3559bc397d8f",
-            "number_of_business_liens": "0",
-            "most_recent_business_lien_filing_date": null,
-            "most_recent_business_lien_status": null,
-            "number_of_bankruptcies": "0",
-            "most_recent_bankruptcy_filing_date": null,
-            "number_of_judgement_fillings": "0",
-            "most_recent_judgement_filling_date": null,
-            "corporate_filing_business_name": null,
-            "corporate_filing_filling_date": null,
-            "corporate_filing_incorporation_state": null,
-            "corporate_filing_corporation_type": null,
-            "corporate_filing_resgistration_type": null,
-            "corporate_filing_secretary_of_state_status": null,
-            "corporate_filing_secretary_of_state_status_date": null,
-            "average_rating": "4.60",
-            "created_at": "2025-01-10T09:53:47.916Z",
-            "updated_at": "2025-01-10T09:53:47.916Z",
-            "monthly_rating": "4.60",
-            "monthly_rating_date": "2024-12-01T00:00:00.000Z",
-            "official_website": null,
-            "reviews": [
-              {
-                "source": "Google",
-                "count": 584,
-                "percentage": "0"
-              }
-            ],
-            "review_statistics": {
-              "count_of_total_reviewers_all_time": 0,
-              "count_of_duplicate_reviewers_all_time": 0,
-              "min_rating_all_time": 0,
-              "median_rating_all_time": 0,
-              "max_rating_all_time": 0,
-              "standard_deviation_of_rating_all_time": 0,
-              "variance_of_rating_all_time": 0,
-              "count_of_0_or_1_star_ratings_all_time": 0,
-              "count_of_2_star_ratings_all_time": 0,
-              "count_of_3_star_ratings_all_time": 0,
-              "count_of_4_star_ratings_all_time": 0,
-              "count_of_5_star_ratings_all_time": 0,
-              "percentage_of_0_or_1_star_ratings_all_time": 0,
-              "percentage_of_2_star_ratings_all_time": 0,
-              "percentage_of_3_star_ratings_all_time": 0,
-              "percentage_of_4_star_ratings_all_time": 0,
-              "percentage_of_5_star_ratings_all_time": 0,
-              "count_of_reviews_containing_alert_words_all_time": 0,
-              "percentage_of_reviews_containing_alert_words_all_time": 0
-            },
-            "compalint_statistics": {
-              "count_of_complaints_all_time": 0,
-              "count_of_consumer_financial_protection_bureau_complaints_all_time": 0,
-              "percentage_of_complaints_containing_alert_words_all_time": 0,
-              "count_of_federal_trade_commission_complaints_all_time": 0,
-              "count_of_answered_resolved_status_all_time": 0,
-              "percentage_of_answered_resolved_status_all_time": 0,
-              "count_of_resolved_resolved_status_all_time": 0,
-              "percentage_of_resolved_resolved_status_all_time": 0,
-              "count_of_unanswered_resolved_status_all_time": 0,
-              "percentage_of_unanswered_resolved_status_all_time": 0,
-              "count_of_unresolved_resolved_status_all_time": 0,
-              "percentage_of_unresolved_resolved_status_all_time": 0,
-              "count_of_other_resolved_status_all_time": 0,
-              "percentage_of_other_resolved_status_all_time": 0
-            },
-            "additional_records": {
-              "minority_owned_enterprise": "N/A",
-              "woman_owned_enterprise": "N/A",
-              "veteran_owned_enterprise": "N/A",
-              "number_of_employees": "N/A"
-            }
-          }
-        ]
+        }
       },
       "Review": {
         "title": "Review",
@@ -84582,30 +84506,7 @@
             "type": "integer",
             "contentEncoding": "int32"
           }
-        },
-        "examples": [
-          {
-            "count_of_total_reviewers_all_time": 0,
-            "count_of_duplicate_reviewers_all_time": 0,
-            "min_rating_all_time": 0,
-            "median_rating_all_time": 0,
-            "max_rating_all_time": 0,
-            "standard_deviation_of_rating_all_time": 0,
-            "variance_of_rating_all_time": 0,
-            "count_of_0_or_1_star_ratings_all_time": 0,
-            "count_of_2_star_ratings_all_time": 0,
-            "count_of_3_star_ratings_all_time": 0,
-            "count_of_4_star_ratings_all_time": 0,
-            "count_of_5_star_ratings_all_time": 0,
-            "percentage_of_0_or_1_star_ratings_all_time": 0,
-            "percentage_of_2_star_ratings_all_time": 0,
-            "percentage_of_3_star_ratings_all_time": 0,
-            "percentage_of_4_star_ratings_all_time": 0,
-            "percentage_of_5_star_ratings_all_time": 0,
-            "count_of_reviews_containing_alert_words_all_time": 0,
-            "percentage_of_reviews_containing_alert_words_all_time": 0
-          }
-        ]
+        }
       },
       "CompalintStatistics": {
         "title": "CompalintStatistics",
@@ -84667,25 +84568,7 @@
             "type": "integer",
             "contentEncoding": "int32"
           }
-        },
-        "examples": [
-          {
-            "count_of_complaints_all_time": 0,
-            "count_of_consumer_financial_protection_bureau_complaints_all_time": 0,
-            "percentage_of_complaints_containing_alert_words_all_time": 0,
-            "count_of_federal_trade_commission_complaints_all_time": 0,
-            "count_of_answered_resolved_status_all_time": 0,
-            "percentage_of_answered_resolved_status_all_time": 0,
-            "count_of_resolved_resolved_status_all_time": 0,
-            "percentage_of_resolved_resolved_status_all_time": 0,
-            "count_of_unanswered_resolved_status_all_time": 0,
-            "percentage_of_unanswered_resolved_status_all_time": 0,
-            "count_of_unresolved_resolved_status_all_time": 0,
-            "percentage_of_unresolved_resolved_status_all_time": 0,
-            "count_of_other_resolved_status_all_time": 0,
-            "percentage_of_other_resolved_status_all_time": 0
-          }
-        ]
+        }
       },
       "AdditionalRecords": {
         "title": "AdditionalRecords",
@@ -84703,15 +84586,7 @@
           "number_of_employees": {
             "type": "string"
           }
-        },
-        "examples": [
-          {
-            "minority_owned_enterprise": "N/A",
-            "woman_owned_enterprise": "N/A",
-            "veteran_owned_enterprise": "N/A",
-            "number_of_employees": "N/A"
-          }
-        ]
+        }
       },
       "Error1": {
         "title": "Error1",
