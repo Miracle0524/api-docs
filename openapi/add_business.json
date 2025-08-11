@@ -1657,7 +1657,7 @@
           "owner1_title": {
             "type": "string",
             "description": "Official title of the first owner.",
-            "example": "Partner"
+            "example": "Partner",
             "enum": [
               "Partner",
               "Limited Partner",

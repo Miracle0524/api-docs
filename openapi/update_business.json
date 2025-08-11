@@ -1355,205 +1355,344 @@
         "type": "object",
         "properties": {
           "external_id": {
-            "type": "string"
+            "type": "string",
+            "description": "A unique identifier for this record off of Worth's platform, sometimes from other, external systems",
+            "example": "9485ac2e-02ec-7421-9ba2-bc6814526586"
+          },
+          "name": {
+            "type": "string",
+            "description": "The official business name.",
+            "example": "Acme Corporation"
+          },
+          "tin": {
+            "type": "string",
+            "description": "Taxpayer Identification Number issued by the government. Nine numeric digits with or without dash(es).",
+            "example": "123456789"
           },
           "address_line_1": {
-            "type": "string"
+            "type": "string",
+            "description": "Primary street address of the business.",
+            "example": "123 Main St"
           },
           "address_line_2": {
-            "type": "string"
+            "type": "string",
+            "description": "Secondary address information (suite, apt, etc.).",
+            "example": "Suite 400"
           },
           "address_city": {
-            "type": "string"
+            "type": "string",
+            "description": "City of the business address.",
+            "example": "Metropolis"
           },
           "address_state": {
-            "type": "string"
+            "type": "string",
+            "description": "State or region of the business address.",
+            "example": "NY"
           },
           "address_country": {
-            "type": "string"
+            "type": "string",
+            "description": "Country of the business address.",
+            "example": "USA"
           },
           "address_postal_code": {
-            "type": "string"
+            "type": "string",
+            "description": "Postal or ZIP code for the business address.",
+            "example": "10101"
           },
           "mobile": {
-            "type": "string"
+            "type": "string",
+            "description": "Company's primary contact number.",
+            "example": "5551234567"
           },
           "official_website": {
-            "type": "string"
+            "type": "string",
+            "description": "URL of the company's official website.",
+            "example": "https://www.acme-corp.com"
           },
           "naics_code": {
-            "type": "number"
+            "type": "number",
+            "description": "North American Industry Classification System code. To find a particular code, please use https://www.naics.com/search/",
+            "example": 541330
           },
           "naics_title": {
-            "type": "string"
+            "type": "string",
+            "description": "Title corresponding to the NAICS code.",
+            "example": "Engineering Services"
           },
           "mcc_code": {
-            "type": "number"
+            "type": "number",
+            "description": "Merchant Category Code used for classifying business activities.",
+            "example": 1234
           },
           "industry": {
-            "type": "string"
+            "type": "string",
+            "description": "General industry classification.",
+            "example": "Finance and Insurance"
           },
           "is_monitoring_enabled": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether ongoing monitoring is enabled for this business.",
+            "example": true
           },
           "applicant_id": {
-            "type": "string"
+            "type": "string",
+            "description": "Identifier for the loan or service applicant.",
+            "example": "2245be8a-31ac-9441-1ae3-cb8654198656"
           },
           "send_invitation": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether to send an invitation email to the applicant.",
+            "example": false
           },
           "applicant_first_name": {
-            "type": "string"
+            "type": "string",
+            "description": "First name of the applicant.",
+            "example": "John"
           },
           "applicant_last_name": {
-            "type": "string"
+            "type": "string",
+            "description": "Last name of the applicant.",
+            "example": "Doe"
           },
           "applicant_email": {
-            "type": "string"
+            "type": "string",
+            "description": "Email address of the applicant.",
+            "example": "john.doe@example.com"
           },
           "dba1_name": {
-            "type": "string"
+            "type": "string",
+            "description": "“Doing Business As” name, if different from legal name.",
+            "example": "Acme Trading"
           },
           "address1_line_1": {
-            "type": "string"
+            "type": "string",
+            "description": "Primary street address for the DBA location.",
+            "example": "456 Elm St"
           },
           "address1_apartment": {
-            "type": "string"
+            "type": "string",
+            "description": "Apartment or suite number for the DBA address.",
+            "example": "Apt 12B"
           },
           "address1_city": {
-            "type": "string"
+            "type": "string",
+            "description": "City for the DBA address.",
+            "example": "Gotham"
           },
           "address1_state": {
-            "type": "string"
+            "type": "string",
+            "description": "State for the DBA address (Two-letter abbreviation).",
+            "example": "CA"
           },
           "address1_country": {
-            "type": "string"
+            "type": "string",
+            "description": "Country for the DBA address.",
+            "example": "USA"
           },
           "address1_postal_code": {
-            "type": "string"
+            "type": "string",
+            "description": "Postal code for the DBA address.",
+            "example": "90210"
           },
           "address1_mobile": {
-            "type": "string"
+            "type": "string",
+            "description": "Contact number for the DBA location.",
+            "example": "5559876543"
           },
           "year_created": {
-            "type": "number"
+            "type": "number",
+            "description": "Year the business was established.",
+            "example": 2015
           },
           "annual_total_income": {
-            "type": "number"
+            "type": "number",
+            "description": "Total revenue in the last fiscal year.",
+            "example": 500000
           },
           "total_wages": {
-            "type": "number"
+            "type": "number",
+            "description": "Total wages paid to employees last year.",
+            "example": 200000
           },
           "annual_net_income": {
-            "type": "number"
+            "type": "number",
+            "description": "Net profit after expenses last year.",
+            "example": 300000
           },
           "cost_of_goods_sold": {
-            "type": "number"
+            "type": "number",
+            "description": "Direct costs attributable to goods sold.",
+            "example": 150000
           },
           "total_liabilities": {
-            "type": "number"
+            "type": "number",
+            "description": "Sum of all current and non-current liabilities.",
+            "example": 100000
           },
           "total_assets": {
-            "type": "number"
+            "type": "number",
+            "description": "Sum of all current and non-current assets.",
+            "example": 600000
           },
           "total_equity": {
-            "type": "number"
+            "type": "number",
+            "description": "Sum of all current equity.",
+            "example": 500000
           },
           "total_accounts_payable": {
-            "type": "number"
+            "type": "number",
+            "description": "Amount owed to suppliers and vendors.",
+            "example": 25000
           },
           "total_accounts_recievable": {
-            "type": "number"
+            "type": "number",
+            "description": "Outstanding amounts owed by customers.",
+            "example": 30000
           },
           "total_cash_and_cash_equivalents": {
-            "type": "number"
+            "type": "number",
+            "description": "Liquid assets on hand.",
+            "example": 50000
           },
           "total_short_term_investments": {
-            "type": "number"
+            "type": "number",
+            "description": "Investments easily convertible to cash within a year.",
+            "example": 10000
           },
           "total_current_assets": {
-            "type": "number"
+            "type": "number",
+            "description": "Assets expected to be used or sold within one year.",
+            "example": 120000
           },
           "total_current_liabilities": {
-            "type": "number"
+            "type": "number",
+            "description": "Obligations due within one year.",
+            "example": 40000
           },
           "non_current_liablities": {
-            "type": "number"
+            "type": "number",
+            "description": "Long-term obligations not due within one year.",
+            "example": 60000
           },
           "annual_cost_of_goods_sold": {
-            "type": "number"
+            "type": "number",
+            "description": "COGS aggregated over the fiscal year.",
+            "example": 150000
           },
           "annual_gross_profit": {
-            "type": "number"
+            "type": "number",
+            "description": "Revenue minus cost of goods sold.",
+            "example": 350000
           },
           "annual_taxes_paid": {
-            "type": "number"
+            "type": "number",
+            "description": "Total taxes paid in the fiscal year.",
+            "example": 50000
           },
           "annual_interest_expenses": {
-            "type": "number"
+            "type": "number",
+            "description": "Interest paid on debts during the year.",
+            "example": 10000
           },
           "number_of_employees": {
-            "type": "number"
+            "type": "number",
+            "description": "Total full-time equivalent employees.",
+            "example": 25
           },
           "business_type": {
-            "type": "string"
+            "type": "string",
+            "description": "Legal structure of the business.",
+            "example": "LLC"
           },
           "sic_code": {
-            "type": "number"
-          },
-          "score_retrieval_date": {
-            "type": "string"
+            "type": "number",
+            "description": "Standard Industrial Classification code. Codes may be found here: https://www.osha.gov/data/sic-search",
+            "example": 5812
           },
           "business_liens": {
-            "type": "number"
+            "type": "number",
+            "description": "Total number of liens recorded against the business.",
+            "example": 3
           },
           "business_liens_file_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date the most recent business lien was filed (ISO 8601 format).",
+            "example": "2025-01-15"
           },
           "business_liens_status": {
-            "type": "string"
+            "type": "string",
+            "description": "Current status of the business lien."
           },
           "business_liens_status_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date when the business lien status was last updated (ISO 8601 format).",
+            "example": "2025-02-01"
           },
           "business_bankruptcies": {
-            "type": "number"
+            "type": "number",
+            "description": "Total number of bankruptcy filings for the business.",
+            "example": 1
           },
           "business_bankruptcies_file_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date the most recent bankruptcy case was filed (ISO 8601 format).",
+            "example": "2024-09-10"
           },
           "business_bankruptcies_chapter": {
-            "type": "string"
+            "type": "string",
+            "description": "Chapter of the bankruptcy code under which the case was filed."
           },
           "business_bankruptcies_voluntary": {
-            "type": "string"
+            "type": "string",
+            "description": "Whether the bankruptcy was filed voluntarily by the business or involuntarily by creditors."
           },
           "business_bankruptcies_status": {
-            "type": "string"
+            "type": "string",
+            "description": "Current status of the bankruptcy proceeding."
           },
           "business_bankruptcies_status_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date when the bankruptcy status was last updated (ISO 8601 format).",
+            "example": "2025-03-20"
           },
           "business_judgements": {
-            "type": "number"
+            "type": "number",
+            "description": "Total number of court judgments recorded against the business.",
+            "example": 2
           },
           "business_judgements_file_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date the most recent court judgment was entered (ISO 8601 format).",
+            "example": "2025-03-05"
           },
           "business_judgements_status": {
-            "type": "string"
+            "type": "string",
+            "description": "Current status of the court judgment."
           },
           "business_judgements_status_date": {
-            "type": "string"
+            "type": "string",
+            "description": "Date when the judgment status was last updated (ISO 8601 format).",
+            "example": "2025-06-01"
           },
           "business_judgements_amount": {
-            "type": "number"
+            "type": "number",
+            "description": "Monetary amount awarded in the court judgment (in dollars).",
+            "example": 50000
           },
           "social_review_count": {
-            "type": "number"
+            "type": "number",
+            "description": "Total number of customer reviews aggregated from public sources.",
+            "example": 128
           },
           "social_review_score": {
-            "type": "number"
+            "type": "number",
+            "description": "Average review rating on a 1–5 scale from aggregated social reviews.",
+            "example": 4.2
+          },          
+          "score_retrieval_date": {
+            "type": "string",
+            "description": "Date on which credit or risk score was fetched.",
+            "example": "2025-06-16"
           },
           "owner1_title": {
             "type": "string",
@@ -1599,85 +1738,140 @@
             ]
           },
           "owner1_first_name": {
-            "type": "string"
+            "type": "string",
+            "description": "First name of the first owner.",
+            "example": "Jane"
           },
           "owner1_last_name": {
-            "type": "string"
+            "type": "string",
+            "description": "Last name of the first owner.",
+            "example": "Smith"
           },
           "owner1_email": {
-            "type": "string"
+            "type": "string",
+            "description": "Email of the first owner.",
+            "example": "jane.smith@example.com"
           },
           "owner1_mobile": {
-            "type": "string"
+            "type": "string",
+            "description": "Mobile phone of the first owner.",
+            "example": "+1-555-765-4321"
           },
           "owner1_ssn": {
-            "type": "string"
+            "type": "string",
+            "description": "Social Security Number of the first owner.",
+            "example": "123-45-6789"
           },
           "owner1_dob": {
-            "type": "string"
+            "type": "string",
+            "description": "Date of birth of the first owner.",
+            "example": "1980-01-01"
           },
           "owner1_address_line_1": {
-            "type": "string"
+            "type": "string",
+            "description": "Primary street address of the first owner.",
+            "example": "789 Oak Ave"
           },
           "owner1_address_line_2": {
-            "type": "string"
+            "type": "string",
+            "description": "Secondary address information for the first owner.",
+            "example": "Floor 2"
           },
           "owner1_address_city": {
-            "type": "string"
+            "type": "string",
+            "description": "City for the first owner’s address.",
+            "example": "Star City"
           },
           "owner1_address_state": {
-            "type": "string"
+            "type": "string",
+            "description": "State for the first owner’s address.",
+            "example": "IL"
           },
           "owner1_address_postal": {
-            "type": "string"
+            "type": "string",
+            "description": "Postal code for the first owner’s address.",
+            "example": "60601"
           },
           "owner1_address_country": {
-            "type": "string"
+            "type": "string",
+            "description": "Country for the first owner’s address.",
+            "example": "USA"
           },
           "owner1_owner_type": {
-            "type": "string"
+            "type": "string",
+            "enum": ["BENEFICIARY", "CONTROL"],
+            "description": "Role of the first owner (beneficiary or controlling party). Only one owner may be of type CONTROL",
+            "example": "BENEFICIARY"
           },
           "owner1_ownership_percentage": {
-            "type": "number"
+            "type": "number",
+            "description": "Percentage ownership held by the first owner.",
+            "example": 100
           },
           "bank_account_number": {
-            "type": "string"
+            "type": "string",
+            "description": "Identifier for the company’s bank account.",
+            "example": "000123456789"
           },
           "bank_name": {
-            "type": "string"
+            "type": "string",
+            "description": "Name of the bank where the account is held.",
+            "example": "First National Bank"
           },
           "institution_name": {
-            "type": "string"
+            "type": "string",
+            "description": "Official institution name for banking relationships.",
+            "example": "Acme Financial Institution"
           },
           "bank_routing_number": {
-            "type": "number"
+            "type": "string",
+            "description": "ABA routing number for the bank.",
+            "example": "111000025"
           },
           "bank_wire_routing_number": {
-            "type": "number"
+            "type": "string",
+            "description": "Wire transfer routing number.",
+            "example": "111000026"
           },
           "bank_official_name": {
-            "type": "string"
+            "type": "string",
+            "description": "Legal name of the bank entity.",
+            "example": "First National Bank, NA"
           },
           "bank_account_type": {
-            "type": "string"
+            "type": "string",
+            "description": "Type of bank account.",
+            "example": "checking"
           },
           "bank_account_subtype": {
-            "type": "string"
+            "type": "string",
+            "description": "Subtype of the bank account.",
+            "example": "business"
           },
           "bank_account_balance_current": {
-            "type": "number"
+            "type": "number",
+            "description": "Current recorded balance of the account.",
+            "example": 250000
           },
           "bank_account_balance_available": {
-            "type": "number"
+            "type": "number",
+            "description": "Available balance for withdrawal.",
+            "example": 240000
           },
           "bank_account_balance_limit": {
-            "type": "number"
+            "type": "number",
+            "description": "Overdraft or credit limit on the account.",
+            "example": 5000
           },
           "deposit_account": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether this account is used for deposits.",
+            "example": true
           },
           "npi": {
-            "type": "string"
+            "type": "string",
+            "description": "National Provider Identifier (for healthcare entities).",
+            "example": "1234567890"
           }
         },
         "examples": [
