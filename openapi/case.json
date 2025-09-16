@@ -3682,17 +3682,18 @@
                     "examples": [
                       {
                         "business": {
-                          "name": "invite test 1 using postman",
-                          "mobile": "+16078379283"
+                          "name": "Jim Tester's Electronics",
+                          "mobile": "6078379283"
                         },
                         "applicants": [
                           {
-                            "first_name": "Abc",
-                            "last_name": "Xyz",
-                            "email": "prasad.desai+b4@winjit.com",
-                            "mobile": "+16078379283"
+                            "first_name": "Jim",
+                            "last_name": "Tester",
+                            "email": "jim.tester@email.com",
+                            "mobile": "6078379283"
                           }
-                        ]
+                        ],
+                        "is_lightning_verification": false
                       }
                     ]
                   }
@@ -3701,17 +3702,18 @@
               },
               "example": {
                 "business": {
-                  "name": "invite test 1 using postman",
-                  "mobile": "+16078379283"
+                  "name": "Jim Tester's Electronics",
+                  "mobile": "6078379283"
                 },
                 "applicants": [
                   {
-                    "first_name": "Abc",
-                    "last_name": "Xyz",
-                    "email": "prasad.desai+b4@winjit.com",
-                    "mobile": "+16078379283"
+                    "first_name": "Jim",
+                    "last_name": "Tester",
+                    "email": "jim.tester@email.com",
+                    "mobile": "6078379283"
                   }
-                ]
+                ],
+                "is_lightning_verification": false
               }
             }
           },
@@ -41650,7 +41652,7 @@
       },
       "SendBusinessInviteRequest": {
         "title": "SendBusinessInviteRequest",
-        "required": ["business", "applicants"],
+        "required": ["business.name", "applicants.first_name", "applicants.last_name", "applicants.email"],
         "type": "object",
         "properties": {
           "business": {
@@ -41662,28 +41664,46 @@
               "$ref": "#/components/schemas/Applicant"
             },
             "description": ""
+          },
+          "is_lightning_verification": {
+            "type": "boolean",
+            "description": "- When using this feature, Lightning Verification will send the applicant an email to invite the business. This flow captures and verifies company details, ONLY.\n- Please reach out to your customer success team in order to enable this feature.",
+            "example": {
+                "business": {
+                  "name": "Jim Tester's Electronics"
+                },
+                "applicants": [
+                  {
+                    "first_name": "Jim",
+                    "last_name": "Tester",
+                    "email": "jim.tester@email.com"
+                  }
+                ],
+                "is_lightning_verification": true
+             }
           }
         },
         "examples": [
           {
             "business": {
-              "name": "invite test 1 using postman",
-              "mobile": "+16078379283"
+              "name": "Jim Tester's Electronics",
+              "mobile": "6078379283"
             },
             "applicants": [
               {
-                "first_name": "Abc",
-                "last_name": "Xyz",
-                "email": "prasad.desai+b4@winjit.com",
-                "mobile": "+16078379283"
+                "first_name": "Jim",
+                "last_name": "Tester",
+                "email": "jim.tester@email.com",
+                "mobile": "6078379283"
               }
-            ]
+            ],
+            "is_lightning_verification": true
           }
         ]
       },
       "Business": {
         "title": "Business",
-        "required": ["name", "mobile"],
+        "required": ["name"],
         "type": "object",
         "properties": {
           "name": {
@@ -41692,17 +41712,11 @@
           "mobile": {
             "type": "string"
           }
-        },
-        "examples": [
-          {
-            "name": "invite test 1 using postman",
-            "mobile": "+16078379283"
-          }
-        ]
+        }
       },
       "Applicant": {
         "title": "Applicant",
-        "required": ["first_name", "last_name", "email", "mobile"],
+        "required": ["first_name", "last_name", "email"],
         "type": "object",
         "properties": {
           "first_name": {
@@ -41717,15 +41731,7 @@
           "mobile": {
             "type": "string"
           }
-        },
-        "examples": [
-          {
-            "first_name": "Abc",
-            "last_name": "Xyz",
-            "email": "prasad.desai+b4@winjit.com",
-            "mobile": "+16078379283"
-          }
-        ]
+        }
       },
       "SuccessforNewBusiness": {
         "title": "SuccessforNewBusiness",
@@ -41890,15 +41896,15 @@
         "examples": [
           {
             "business": {
-              "name": "invite test 1 using postman",
-              "mobile": "+16078379283"
+              "name": "Jim Tester's Electronics",
+              "mobile": "6078379283"
             },
             "applicants": [
               {
-                "first_name": "Abc",
-                "last_name": "Xyz",
-                "email": "prasad.desai+b4@winjit.com",
-                "mobile": "+16078379283"
+                "first_name": "Jim",
+                "last_name": "Tester",
+                "email": "jim.tester@email.com",
+                "mobile": "6078379283"
               }
             ]
           }
