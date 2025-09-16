@@ -9,11 +9,10 @@ This sequence diagram demonstrates the efficient business onboarding process fac
 
 - **Authentication**:  
   Upon accepting initial invitation or signing in, the customer receives the following tokens:
-  - **access token**: used for purposes like logout, update password etc.
-  - **id token**: used for secure api communication. (**recommended for all api calls.**)
-  - **refresh token**: to renew Access and ID token.
+  - `id_token`: used for secure api communication. (**required for all api calls.**)
+  - `refresh_token`: is used to renew `id_token`.
 
-  **Note**: always use the **id token** for secure api communication.  see [this page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
+  **Note**: `id_token` is always required for secure api communication. See [Customer Sign In page](https://docs.worthai.com/api-reference/auth/sign-in/customer-sign-in) for more info.
 
 - **Invite Business**:  
   The customer provides business information in the following structure:
@@ -21,20 +20,40 @@ This sequence diagram demonstrates the efficient business onboarding process fac
     {
         "business": {
             "name": "Business Name",
-            "mobile": "+11234567890"
+            "mobile": "1234567890"
         },
         "applicants": [
             {
-                "first_name": "Abc",
-                "last_name": "Xyz",
-                "email": "abc@xyz.com",
-                "mobile": "+19876543210"
+                "first_name": "Applicant First Name",
+                "last_name": "Applicant Last Name",
+                "email": "applicant@email.com",
+                "mobile": "1234567890"
             }
         ]
     }
   ```
+  - **Lightning Verification**:  
+    **Lightning Verify** instantly checks and confirms company details. It gathers information like a company's name, address, and Taxpayer Identification Number (TIN) into a single, customizable form that applicants fill out. Upon submission, verification results are available in the Worth Case Management Platform.  
+    **Getting started**: Contact your Worth Custom Success team to enable Lightning Verify.
+      ```json
+        {
+            "business": {
+                "name": "Business Name",
+                "mobile": "1234567890"
+            },
+            "applicants": [
+                {
+                    "first_name": "Applicant First Name",
+                    "last_name": "Applicant Last Name",
+                    "email": "applicant@email.com",
+                    "mobile": "1234567890"
+                }
+            ],
+            "is_lightning_verify": true
+        }
+      ```
 
-  This triggers email to applicant to complete the onboarding process. See [Invite Business documentation](http://docs.worthai.com/api-reference/auth/invites/invite-business) for further information.
+This triggers email to applicant to complete the onboarding process. See [Send Business Invite documentation](https://docs.worthai.com/api-reference/case/invites/send-business-invite) for further information.
 
 ---
 
