@@ -7304,18 +7304,6 @@
         "operationId": "GetBusinessByID",
         "parameters": [
           {
-            "name": "fetch_owner_details",
-            "in": "query",
-            "description": "",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "boolean",
-              "examples": [true]
-            }
-          },
-          {
             "name": "businessID",
             "in": "path",
             "description": "",
@@ -7324,6 +7312,18 @@
             "schema": {
               "type": "string",
               "examples": ["fd9021b0-8056-4ffc-9191-23ab4b9ca906"]
+            }
+          },
+          {
+            "name": "fetch_owner_details",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "examples": [true]
             }
           }
         ],
@@ -7555,29 +7555,57 @@
                           "message": "Business fetched successfully",
                           "data": {
                             "id": "346ddd58-8850-4b4c-9781-501630eea4e6",
-                            "name": "dsfds",
+                            "name": "Company Incorporated",
                             "tin": "123123123",
+                            "mobile": "+11231231234",
+                            "official_website": null,
+                            "public_website": null,
+                            "social_account": null,
                             "address_apartment": null,
-                            "address_line_1": "123, William Street, Manhattan",
+                            "address_line_1": "123, Testing Street",
                             "address_line_2": null,
                             "address_city": "New York",
                             "address_state": "New York",
                             "address_postal_code": "10038",
-                            "address_country": "United States",
+                            "address_country": "US",
                             "created_at": "2024-01-24T10:23:44.602Z",
-                            "created_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
+                            "created_by": "725b5eaa-022a-4207-a9ef-bbc08acca549",
                             "updated_at": "2024-02-06T13:04:08.508Z",
-                            "updated_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-                            "mobile": null,
-                            "official_website": null,
-                            "public_website": null,
-                            "social_account": null,
+                            "updated_by": "725b5eaa-022a-4207-a9ef-bbc08acca549",
                             "status": "ACTIVE",
+                            "industry": null,
+                            "mcc_id": null,
+                            "naics_id": null,
+                            "naics_code": null,
+                            "naics_title": null,
+                            "mcc_code": null,
+                            "mcc_title": null,
+                            "external_id": "unique_external_guid_01",
+                            "customer_id": "",
+                            "is_monitoring_enabled": false,
                             "subscription": {
-                              "status": "NOT_SUBSCRIBED",
-                              "created_at": "2024-02-08T14:57:38.903Z",
-                              "updated_at": "2024-02-08T14:57:38.903Z"
-                            }
+                              "status": "null",
+                              "created_at": "null",
+                              "updated_at": "null"
+                            },
+                            "business_names": [
+                              {
+                                "name": "Company Incorporated",
+                                "is_primary": true
+                              }
+                            ],
+                            "business_addresses": [
+                              {
+                                "line_1": "123 Testing Road",
+                                "apartment": null,
+                                "city": "New York",
+                                "state": "New York",
+                                "country": "US",
+                                "postal_code": "10038",
+                                "mobile": "+11231231234",
+                                "is_primary": true
+                              }
+                            ]
                           }
                         }
                       ]
@@ -7590,29 +7618,57 @@
                   "message": "Business fetched successfully",
                   "data": {
                     "id": "346ddd58-8850-4b4c-9781-501630eea4e6",
-                    "name": "dsfds",
+                    "name": "Company Incorporated",
                     "tin": "123123123",
+                    "mobile": "+11231231234",
+                    "official_website": null,
+                    "public_website": null,
+                    "social_account": null,
                     "address_apartment": null,
-                    "address_line_1": "123, William Street, Manhattan",
+                    "address_line_1": "123, Testing Street",
                     "address_line_2": null,
                     "address_city": "New York",
                     "address_state": "New York",
                     "address_postal_code": "10038",
-                    "address_country": "United States",
+                    "address_country": "US",
                     "created_at": "2024-01-24T10:23:44.602Z",
-                    "created_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
+                    "created_by": "725b5eaa-022a-4207-a9ef-bbc08acca549",
                     "updated_at": "2024-02-06T13:04:08.508Z",
-                    "updated_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-                    "mobile": null,
-                    "official_website": null,
-                    "public_website": null,
-                    "social_account": null,
+                    "updated_by": "725b5eaa-022a-4207-a9ef-bbc08acca549",
                     "status": "ACTIVE",
+                    "industry": null,
+                    "mcc_id": null,
+                    "naics_id": null,
+                    "naics_code": null,
+                    "naics_title": null,
+                    "mcc_code": null,
+                    "mcc_title": null,
+                    "external_id": "unique_external_guid_01",
+                    "customer_id": "",
+                    "is_monitoring_enabled": false,
                     "subscription": {
-                      "status": "NOT_SUBSCRIBED",
-                      "created_at": "2024-02-08T14:57:38.903Z",
-                      "updated_at": "2024-02-08T14:57:38.903Z"
-                    }
+                      "status": "null",
+                      "created_at": "null",
+                      "updated_at": "null"
+                    },
+                    "business_names": [
+                      {
+                        "name": "Company Incorporated",
+                        "is_primary": true
+                      }
+                    ],
+                    "business_addresses": [
+                      {
+                        "line_1": "123 Testing Road",
+                        "apartment": null,
+                        "city": "New York",
+                        "state": "New York",
+                        "country": "US",
+                        "postal_code": "10038",
+                        "mobile": "+11231231234",
+                        "is_primary": true
+                      }
+                    ]
                   }
                 }
               }
@@ -45110,38 +45166,7 @@
             "$ref": "#/components/schemas/Data40"
           }
         },
-        "examples": [
-          {
-            "status": "success",
-            "message": "Business fetched successfully",
-            "data": {
-              "id": "346ddd58-8850-4b4c-9781-501630eea4e6",
-              "name": "dsfds",
-              "tin": "123123123",
-              "address_apartment": null,
-              "address_line_1": "123, William Street, Manhattan",
-              "address_line_2": null,
-              "address_city": "New York",
-              "address_state": "New York",
-              "address_postal_code": "10038",
-              "address_country": "United States",
-              "created_at": "2024-01-24T10:23:44.602Z",
-              "created_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-              "updated_at": "2024-02-06T13:04:08.508Z",
-              "updated_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-              "mobile": null,
-              "official_website": null,
-              "public_website": null,
-              "social_account": null,
-              "status": "ACTIVE",
-              "subscription": {
-                "status": "NOT_SUBSCRIBED",
-                "created_at": "2024-02-08T14:57:38.903Z",
-                "updated_at": "2024-02-08T14:57:38.903Z"
-              }
-            }
-          }
-        ]
+        "examples": []
       },
       "Data40": {
         "title": "Data40",
@@ -45155,6 +45180,18 @@
           },
           "tin": {
             "type": "string"
+          },
+          "mobile": {
+            "type": ["string", "null"]
+          },
+          "official_website": {
+            "type": ["string", "null"]
+          },
+          "public_website": {
+            "type": ["string", "null"]
+          },
+          "social_account": {
+            "type": ["string", "null"]
           },
           "address_apartment": {
             "type": ["string", "null"]
@@ -45189,75 +45226,114 @@
           "updated_by": {
             "type": "string"
           },
-          "mobile": {
-            "type": ["string", "null"]
-          },
-          "official_website": {
-            "type": ["string", "null"]
-          },
-          "public_website": {
-            "type": ["string", "null"]
-          },
-          "social_account": {
-            "type": ["string", "null"]
-          },
           "status": {
             "type": "string"
           },
+          "industry": {
+            "type": ["string", "null"]
+          },
+          "mcc_id": {
+            "type": ["string", "null"]
+          },
+          "naics_id": {
+            "type": ["string", "null"]
+          },
+          "naics_code": {
+            "type": ["string", "null"]
+          },
+          "naics_title": {
+            "type": ["string", "null"]
+          },
+          "mcc_code": {
+            "type": ["string", "null"]
+          },
+          "mcc_title": {
+            "type": ["string", "null"]
+          },
+          "external_id": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          },
+          "is_monitoring_enabled": {
+            "type": "boolean"
+          },
           "subscription": {
             "$ref": "#/components/schemas/Subscription2"
-          }
-        },
-        "examples": [
-          {
-            "id": "346ddd58-8850-4b4c-9781-501630eea4e6",
-            "name": "dsfds",
-            "tin": "123123123",
-            "address_apartment": null,
-            "address_line_1": "123, William Street, Manhattan",
-            "address_line_2": null,
-            "address_city": "New York",
-            "address_state": "New York",
-            "address_postal_code": "10038",
-            "address_country": "United States",
-            "created_at": "2024-01-24T10:23:44.602Z",
-            "created_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-            "updated_at": "2024-02-06T13:04:08.508Z",
-            "updated_by": "725b5e6c-022a-4207-a9ef-bbc08acca549",
-            "mobile": null,
-            "official_website": null,
-            "public_website": null,
-            "social_account": null,
-            "status": "ACTIVE",
-            "subscription": {
-              "status": "NOT_SUBSCRIBED",
-              "created_at": "2024-02-08T14:57:38.903Z",
-              "updated_at": "2024-02-08T14:57:38.903Z"
+          },
+          "business_names": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "#/components/schemas/GBBIBusinessNameObj"
+            }
+          },
+          "business_addresses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "#/components/schemas/GBBIBusinessAddressObj"
             }
           }
-        ]
+        }
       },
       "Subscription2": {
         "title": "Subscription2",
         "type": "object",
         "properties": {
           "status": {
-            "type": "string"
+            "type": ["string", "null"]
           },
           "created_at": {
-            "type": "string"
+            "type": ["string", "null"]
           },
           "updated_at": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "GBBIBusinessNameObj": {
+        "title": "BusinessNameObject",
+        "type": "object",
+        "properties": {
+          "name": {
             "type": "string"
+          },
+          "is_primary": {
+            "type": "boolean"
           }
-        },
-        "examples": [
-          {
-            "status": "NOT_SUBSCRIBED",
-            "created_at": "2024-02-08T14:57:38.903Z",
-            "updated_at": "2024-02-08T14:57:38.903Z"
+        }
+      },
+      "GBBIBusinessAddressObj": {
+        "title": "BusinessAddressObject",
+        "type": "object",
+        "properties": {
+          "line_1": {
+            "type": "string"
+          },
+          "apartment": {
+            "type": ["string", "null"]
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "is_primary": {
+            "type": "boolean"
           }
-        ]
+        }
       },
       "Businesswithindustrydetails": {
         "title": "Businesswithindustrydetails",
