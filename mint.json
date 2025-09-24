@@ -100,7 +100,7 @@
         "api-reference/case/businesses/get-customer-businesses",
         "api-reference/case/businesses/get-business-cases",
         "api-reference/case/businesses/get-business-by-id",
-        "api-reference/case/related-businesses/get-releated-businesses"
+        "api-reference/case/related-businesses/get-related-businesses"
       ]
     },
     {
@@ -120,6 +120,7 @@
         "api-reference/integration/public-records/public-records",
         "api-reference/integration/verification/get-verification-details",
         "api-reference/integration/verification/get-business-website-data",
+        "api-reference/integration/verification/get-npi-details",
         "api-reference/files/case-files-download",
         "api-reference/integration/facts/kyb",
         "api-reference/integration/verification/kyc-ownership-verification"

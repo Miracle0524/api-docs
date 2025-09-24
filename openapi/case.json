@@ -38593,8 +38593,8 @@
     "/customers/{customerID}/businesses/{businessID}/related-businesses": {
       "get": {
         "tags": ["Related Businesses"],
-        "summary": "Get Releated Businesses",
-        "operationId": "GetReleatedBusinesses",
+        "summary": "Get Related Businesses",
+        "operationId": "GetRelatedBusinesses",
         "description": "Retrieves a list of businesses related to the one specified by the given businessID.",
         "parameters": [
           {
