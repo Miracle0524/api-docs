@@ -1,0 +1,232 @@
+---
+title: "Adding Custom Fields with POST Add Business"
+description: ""
+sidebarTitle: "Custom Fields via Add Business"
+---
+## Using POST Add Business with Custom Fields
+### Getting Started
+1. Ensure you are utilizing custom fields by contacting your Customer Success representative.
+2. Await confirmation that a custom field template has been added to your environment.
+3. Gather custom field IDs and review type structures in the "Custom Field Types" section.
+4. Utilize the "Adding to POST" section below to see payload structure and examples.
+5. POST
+### Custom Field Types
+Currently, the following custom field types are supported via a POST Add Business:
+- **Boolean**: Standard true/false boolean values.
+- **Integer**: Whole number types (1, 2, 100, -1000, 999999999, etc.)
+- **Decimal**: Decimal number types (1.1, 2.0195, -1000.0001, 999999.9999992, etc.)
+- **Text**: Single strings with no line breaks.
+- **Dropdown**: A label/value object pair, a stringifed object pair, or a string representing the selected dropdown value.
+    - **Example 1**: Dropdown JSON Object
+    ```JSON lines
+    {
+        "label": "Option1",
+        "value": "Option1"
+    }
+    ```
+    - **Example 2**: Stringified dropdown object: `"{\"label\": \"Option1\", \"value\": \"Option1\"}"`
+    - **Example 3**: String value: `"Option1"` _(Note: this is the value, not the label)_
+- **Checkbox**: An array of checkbox objects or a stringified array of checkbox objects representing the checked items.
+    - **Example 1**: Checkbox JSON Object Array - Single Checked Option
+    ```JSON lines
+    [
+        {
+            "label": "Option1",
+            "value": "Option1",
+            "checkbox_type": "",
+            "checked": true
+        }
+    ]
+    ```
+    - **Example 2**:  Checkbox JSON Object Array - Multiple Checked Options
+    ```JSON lines
+    [
+        {
+            "label": "Option1",
+            "value": "Option1",
+            "checkbox_type": "",
+            "checked": true
+        },
+        {
+            "label": "Option2",
+            "value": "Option2",
+            "checkbox_type": "",
+            "checked": true
+        }
+    ]
+    ```
+    - **Example 3**: Stringified checkbox object array: `"[{\"label\": \"Option1\", \"value\": \"Option1\", \"checkbox_type\": \"\", \"checked\": true}]"`
+### Adding to POST
+To add custom fields to the [POST Add Business payload](/api-reference/add-or-update-business/add-business), simply include them to the payload body using
+a combination of "custom:" prefix and custom field ID as the property name. Then type the data appropriately using the "Custom Field Types" as reference.
+#### POST examples
+<Tabs>
+    <Tab title="Simple Example 1">
+        Enabled Custom Fields:
+        - Age of Business (years):
+            - **Custom field ID**: age_of_business_years
+            - **Type**: `integer`
+        - Age of Business (months)
+            - **Custom field ID**: age_of_business_months
+            - **Type**: `integer`
+        - Business Fun Fact
+            - **Custom field ID**: fun_fact
+            - **Type**: `text`
+        
+        Minimum Add Business Payload:
+        ```JSON lines
+            {
+                "external_id": "Custom_Fields_Example_01",
+                "name": "Company Incorporated LLC"
+            }
+        ```
+        Add Business Payload with Custom Fields:
+        ```JSON lines wrap
+            {
+                "external_id": "Custom_Fields_Example_01",
+                "name": "Company Incorporated LLC",
+                "custom:age_of_business_years": 49,
+                "custom:age_of_business_months": 11,
+                "custom:fun_fact": "This business will always be one month short of 50 years old!"
+            }
+        ```
+    </Tab>
+    <Tab title="Extended Example 2">
+        Enabled Custom Fields:
+        - Age of Business (years):
+            - **Custom field ID**: age_of_business_years
+            - **Type**: `integer`
+        - Age of Business (months)
+            - **Custom field ID**: age_of_business_months
+            - **Type**: `integer`
+        - Business Fun Fact
+            - **Custom field ID**: fun_fact
+            - **Type**: `text`
+        - How Did You Hear About Us?
+            - **Custom field ID**: marketing_channel
+            - **Type**: `dropdown`
+            - **Options**:
+                - Label: "Web Ad", Value: "Web Ad"
+                - Label: "Phone Call", Value: "Phone Call"
+                - Label: "Recommendation", Value: "Recommendation"
+                - Label: "Other", Value: "Other"
+        - What Services Do You Need?
+            - **Custom field ID**: services_needed
+            - **Type**: `checkbox`
+            - **Options**:
+                - Label: "Loan", Value: "Loan"
+                - Label: "Business Advice", Value: "Business Advice"
+                - Label: "Other", Value: "Other"
+        
+        Minimum Add Business Payload:
+        ```JSON lines
+            {
+                "external_id": "Custom_Fields_Example_02",
+                "name": "Company Incorporated LLC"
+            }
+        ```
+        Add Business Payload with Custom Fields:
+        ```JSON lines wrap
+            {
+                "external_id": "Custom_Fields_Example_02",
+                "name": "Company Incorporated LLC",
+                "custom:age_of_business_years": 49,
+                "custom:age_of_business_months": 11,
+                "custom:fun_fact": "This business will always be one month short of 50 years old!",
+                "custom:marketing_channel": {
+                    "label": "Phone Call",
+                    "value": "Phone Call"
+                },
+                "custom:services_needed": [
+                    {
+                        "label": "Loan",
+                        "value": "Loan",
+                        "checkbox_type": "",
+                        "checked": true
+                    }
+                ]
+            }
+        ```
+    </Tab>
+    <Tab title="Advanced Example 3">
+        Enabled Custom Fields:
+        - Does Business Vertical Match Typical?
+            - **Custom field ID**: business_vertical_compatible
+            - **Type**: `boolean`
+            - _internal field_
+        - Age of Business (years):
+            - **Custom field ID**: age_of_business_years
+            - **Type**: `integer`
+            - _external field_
+        - Age of Business (months)
+            - **Custom field ID**: age_of_business_months
+            - **Type**: `integer`
+            - _external field_
+        - Business Fun Fact
+            - **Custom field ID**: fun_fact
+            - **Type**: `text`
+            - _external field_
+        - Business Un-fun Fact
+            - Custom field ID: un_fun_fact
+            - **Type**: `text`
+            - _external field_
+        - How Did You Hear About Us?
+            - **Custom field ID**: marketing_channel
+            - **Type**: `dropdown`
+            - **Options**:
+                - Label: "Web Ad", Value: "giggle_addcents"
+                - Label: "Phone Call", Value: "sales_channel-cold"
+                - Label: "Recommendation", Value: "partner_rec"
+                - Label: "Other", Value: "other"
+            - _external field_
+        - What Services Do You Need?
+            - **Custom field ID**: services_needed
+            - **Type**: `checkbox`
+            - **Options**:
+                - Label: "Loan", Value: "loan"
+                - Label: "Business Advice", Value: "business_advice"
+                - Label: "Other", Value: "other"
+            - _external field_
+        
+        Minimum Add Business Payload:
+        ```JSON lines
+            {
+                "external_id": "Custom_Fields_Example_03",
+                "name": "Company Incorporated LLC"
+            }
+        ```
+        Add Business Payload with Custom Fields:
+        ```JSON lines wrap
+            {
+                "external_id": "Custom_Fields_Example_03",
+                "name": "Company Incorporated LLC",
+                "custom:business_vertical_compatible": true,
+                "custom:age_of_business_years": 49,
+                "custom:age_of_business_months": 11,
+                "custom:un_fun_fact": "Fun facts are not fun.",
+                "custom:marketing_channel": "giggle_addcents",
+                "custom:services_needed": [
+                    {
+                        "label": "Loan",
+                        "value": "loan",
+                        "checkbox_type": "",
+                        "checked": true
+                    },
+                    {
+                        "label": "Business Advice",
+                        "value": "business_advice",
+                        "checkbox_type": "",
+                        "checked": true
+                    },
+                    {
+                        "label": "Other",
+                        "value": "other",
+                        "checkbox_type": "",
+                        "checked": true
+                    }
+                ]
+            }
+        ```
+        <Note>When a field is not needed, do not include it in the payload. Sending a blank or null value could lead to an empty field being returned later.</Note>
+    </Tab>
+</Tabs>

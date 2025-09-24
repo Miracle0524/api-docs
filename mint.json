@@ -137,6 +137,7 @@
     {
       "group": "Custom Fields",
       "pages": [
+        "api-reference/case/businesses/add-business-custom-fields",
         "api-reference/case/businesses/get-custom-fields"
       ]
     },

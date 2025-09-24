@@ -38989,7 +38989,7 @@
         "tags": ["Businesses"],
         "summary": "Get Business Custom Fields",
         "operationId": "GetBusinessCustomFields",
-        "description": "Retrieves custom fields associated with a specified business ID. Custom fields must be enabled to utilize this endpoint. To confirm if you have custom fields enabled, please reach out to your Custom Success representative.",
+        "description": "Retrieves custom fields associated with a specified business ID. Custom fields must be enabled to utilize this endpoint. To confirm if you have custom fields enabled, please reach out to your Customer Success representative.",
         "parameters": [
           {
             "name": "pagination",
