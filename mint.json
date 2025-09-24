@@ -121,7 +121,6 @@
         "api-reference/integration/verification/get-verification-details",
         "api-reference/integration/verification/get-business-website-data",
         "api-reference/integration/verification/get-npi-details",
-        "api-reference/files/case-files-download",
         "api-reference/integration/facts/kyb",
         "api-reference/integration/verification/kyc-ownership-verification"
       ]
@@ -133,6 +132,12 @@
         "api-reference/worth-360-report/generate-worth-360-report-using-customer",
         "api-reference/worth-360-report/get-worth-360-report-details",
         "api-reference/worth-360-report/download-worth-360-report"
+      ]
+    },
+    {
+      "group": "Custom Fields",
+      "pages": [
+        "api-reference/case/businesses/get-custom-fields"
       ]
     },
     {
