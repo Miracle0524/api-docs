@@ -1,0 +1,9 @@
+[
+    {
+      "group": "Owner Information",
+      "pages": [
+        "api-reference/integration/credit/credit_score",
+        "api-reference/integration/credit/credit_report"
+      ]
+    }
+]

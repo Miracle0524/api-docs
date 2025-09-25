@@ -1,0 +1,680 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Integration Service",
+    "description": "This service is responsible for all integrations and contains all integration information about the business.",
+    "contact": {},
+    "version": "1.0"
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://api.joinworth.com/integration/api/v1",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/bureau/score/customers/{customerID}/business/{businessID}/owners{?caseID}": {
+      "get": {
+        "tags": ["Credit", "Bureau"],
+        "summary": "Get Credit Score",
+        "description": "Retrieve banking information for a particular business.",
+        "operationId": "BusinessBankingInformation",
+        "parameters": [
+          {
+            "name": "customerID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["aabbccdd-eeff-aabb-ccdd-eeffaabbccdd"]
+            }
+          },
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["aabbccdd-eeff-aabb-ccdd-eeffaabbccdd"]
+            }
+          },
+          {
+            "name": "caseID",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "examples": ["aabbccdd-eeff-aabb-ccdd-eeffaabbccdd"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Fri, 28 Feb 2025 11:26:29 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "1422"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"58e-6iO8AFzxA2ctFVUAAop70CjggZc\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CreditScoreSuccess"
+                    },
+                    {
+                      "examples": [
+                        {
+                            "status": "success",
+                            "message": "Owner scores fetched successfully",
+                            "data": {
+                                "aabbccdd-eeff-aabb-ccdd-eeffaabbccdd": [
+                                    {
+                                        "as_of": "2025-09-25T00:00:00.000Z",
+                                        "score": 800,
+                                        "error": null,
+                                        "created_at": "2025-09-25T13:00:36.815Z",
+                                        "updated_at": null
+                                    }
+                                ]
+                            }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.joinworth.com/integration/api/v1",
+            "variables": {}
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/bureau/business/{businessID}/report{?caseID}": {
+      "get": {
+        "tags": ["Credit", "Bureau"],
+        "summary": "Get Credit Report",
+        "description": "Retrieve banking information for a particular business.",
+        "operationId": "BusinessBankingInformation",
+        "parameters": [
+          {
+            "name": "businessID",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "examples": ["aabbccdd-eeff-aabb-ccdd-eeffaabbccdd"]
+            }
+          },
+          {
+            "name": "caseID",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "examples": ["aabbccdd-eeff-aabb-ccdd-eeffaabbccdd"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Fri, 28 Feb 2025 11:26:29 GMT"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "1422"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              },
+              "Content-Security-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                  }
+                }
+              },
+              "Cross-Origin-Opener-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Cross-Origin-Resource-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "same-origin"
+                  }
+                }
+              },
+              "Origin-Agent-Cluster": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "?1"
+                  }
+                }
+              },
+              "Referrer-Policy": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "no-referrer"
+                  }
+                }
+              },
+              "Strict-Transport-Security": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "max-age=15552000; includeSubDomains"
+                  }
+                }
+              },
+              "X-Content-Type-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "nosniff"
+                  }
+                }
+              },
+              "X-DNS-Prefetch-Control": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "off"
+                  }
+                }
+              },
+              "X-Download-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "noopen"
+                  }
+                }
+              },
+              "X-Frame-Options": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "SAMEORIGIN"
+                  }
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "none"
+                  }
+                }
+              },
+              "X-XSS-Protection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "0"
+                  }
+                }
+              },
+              "Vary": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "Origin"
+                  }
+                }
+              },
+              "Access-Control-Allow-Credentials": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "true"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string",
+                      "contentMediaType": "text/plain"
+                    },
+                    "example": "W/\"58e-6iO8AFzxA2ctFVUAAop70CjggZc\""
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CreditReportSuccess"
+                    },
+                    {
+                      "examples": [
+                        {
+                            "status": "success",
+                            "message": "Report Signed URLs fetched successfully",
+                            "data": {
+                                "aabbccdd-eeff-aabb-ccdd-eeffaabbccdd": {
+                                    "fileName": "aabbccdd-eeff-aabb-ccdd-eeffaabbccdd.pdf",
+                                    "signedRequest": ""
+                                }
+                            }
+                        }
+                      ]
+                    }
+                  ],
+                  "contentMediaType": "application/json; charset=utf-8"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.joinworth.com/integration/api/v1",
+            "variables": {}
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreditScoreSuccess": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CreditScoreData"
+          }
+        }
+      },
+      "CreditScoreData": {
+        "type": "object",
+        "properties": {
+          "{owner_guid}": {
+            "$ref": "#/components/schemas/CreditScoreObject"
+          }
+        }
+      },
+      "CreditScoreObject": {
+        "type": "object",
+        "properties": {
+          "as_of": {
+            "type": "string"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "error": {
+            "type": ["string", "null"]
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          }
+        }
+      },
+      "CreditReportSuccess": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CreditReportData"
+          }
+        }
+      },
+      "CreditReportData": {
+        "type": "object",
+        "properties": {
+          "{owner_guid}": {
+            "$ref": "#/components/schemas/CreditReportObject"
+          }
+        }
+      },
+      "CreditReportObject": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string"
+          },
+          "signedRequest": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Personal Credit"
+    },
+    {
+      "name": "Buerau"
+    }
+  ]
+}
