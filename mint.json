@@ -120,7 +120,6 @@
         "api-reference/integration/public-records/public-records",
         "api-reference/integration/verification/get-verification-details",
         "api-reference/integration/verification/get-business-website-data",
-        "api-reference/integration/verification/get-npi-details",
         "api-reference/integration/facts/kyb",
         "api-reference/integration/facts/reviews",
         "api-reference/integration/facts/bankruptcies-judgements-&-liens-bjl",
@@ -134,6 +133,13 @@
         "api-reference/worth-360-report/generate-worth-360-report-using-customer",
         "api-reference/worth-360-report/get-worth-360-report-details",
         "api-reference/worth-360-report/download-worth-360-report"
+      ]
+    },
+    {
+      "group": "NPI",
+      "pages": [
+        "api-reference/case/businesses/npi-reverse-lookup",
+        "api-reference/integration/verification/get-npi-details"
       ]
     },
     {
