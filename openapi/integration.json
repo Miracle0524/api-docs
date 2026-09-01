@@ -45175,7 +45175,7 @@
       "get": {
         "tags": ["Facts"],
         "summary": "Reviews",
-        "description": "Retrieves 'Business Reviews' details for a given business identifier, including legal, formation, ownership, address, and match data from multiple sources.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service. For more details on using these endpoints, please reference the [Getting Started](https://docs.worthai.com/getting-started/overview) guide.",
+        "description": "Retrieves 'Business Reviews' for a given business identifier from multiple sources across several review platforms.\n\nPrior to utilizing this service, one must first obtain a businessID by creating a business via the [Add business](https://docs.worthai.com/api-reference/add-or-update-business/add-business) service. For more details on using these endpoints, please reference the [Getting Started](https://docs.worthai.com/getting-started/overview) guide.",
         "operationId": "Reviews",
         "parameters": [
           {
